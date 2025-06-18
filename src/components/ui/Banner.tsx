@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom'; // Esta linha foi removida
 
 interface BannerProps {
   title: string;
   subtitle?: string;
   description?: string;
   backgroundImage?: string;
-  buttonText?: string;
-  buttonLink?: string;
+  buttonText?: string; // Estas propriedades não serão mais usadas para os botões aqui
+  buttonLink?: string; // mas as mantenho na interface caso precise delas em outro lugar
   secondaryButtonText?: string;
   secondaryButtonLink?: string;
   bgColor?: string;
@@ -19,48 +19,29 @@ const Banner: React.FC<BannerProps> = ({
   subtitle,
   description,
   backgroundImage,
-  buttonText,
-  buttonLink,
-  secondaryButtonText,
-  secondaryButtonLink,
+  // Removi buttonText, buttonLink, secondaryButtonText, secondaryButtonLink das props desestruturadas
+  // pois não serão mais usadas diretamente neste componente para renderizar os botões.
   bgColor = 'bg-blue-900',
   height = 'h-[220px]'
 }) => {
   // Se não houver imagem de fundo, usar apenas o fundo azul
   const hasBgImage = backgroundImage && backgroundImage !== "";
-  
+
   return (
-    <div 
+    <div
       className={`relative ${height} ${hasBgImage ? 'bg-cover bg-center' : bgColor}`}
       style={hasBgImage ? { backgroundImage: `url(${backgroundImage})` } : {}}
     >
       <div className={`absolute inset-0 ${hasBgImage ? 'bg-blue-900 bg-opacity-80' : ''} flex items-center justify-center`}>
         <div className="text-center text-white px-4 max-w-4xl">
-          <h1 className="text-3xl md:text-4xl font-bold mb-3">{title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">{title}</h1>
           {subtitle && (
-            <h2 className="text-xl md:text-2xl font-semibold mb-3">{subtitle}</h2>
+            <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-10">{subtitle}</h2>
           )}
           {description && (
             <p className="text-base md:text-lg mb-6">{description}</p>
           )}
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            {buttonText && buttonLink && (
-              <Link 
-                to={buttonLink} 
-                className="bg-white text-blue-900 hover:bg-blue-100 px-5 py-2 rounded-md font-medium transition-colors"
-              >
-                {buttonText}
-              </Link>
-            )}
-            {secondaryButtonText && secondaryButtonLink && (
-              <Link 
-                to={secondaryButtonLink} 
-                className="bg-blue-700 text-white hover:bg-blue-800 px-5 py-2 rounded-md font-medium transition-colors"
-              >
-                {secondaryButtonText}
-              </Link>
-            )}
-          </div>
+          {/* O bloco dos botões foi removido daqui */}
         </div>
       </div>
     </div>
