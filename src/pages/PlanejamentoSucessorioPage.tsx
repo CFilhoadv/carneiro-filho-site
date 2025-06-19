@@ -7,9 +7,10 @@ const PlanejamentoSucessorioPage: React.FC = () => {
     <MainLayout>
       <div className="relative">
         {/* Banner Principal - FUNDO AZUL conforme identidade visual */}
+        {/* ATENÇÃO: INVERTIDO OS VALORES DE 'title' E 'subtitle' PARA CORRIGIR HIERARQUIA */}
         <Banner 
-          title="Planejamento Sucessório"
-          subtitle="Seu Legado, Nosso Planejamento: Evite Burocracia e Otimize Tributos."
+          title="Seu Legado, Nosso Planejamento: Evite Burocracia e Otimize Tributos." // Este agora será o h2 (frase de apoio)
+          subtitle="Planejamento Sucessório" // Este agora será o h1 (título principal)
           bgColor="bg-blue-900"
         />
         
@@ -17,7 +18,6 @@ const PlanejamentoSucessorioPage: React.FC = () => {
         <div className="relative py-16 bg-white">
           <div className="container mx-auto px-4">
             
-
             {/* Grid de Cards de Serviços - 2x2 + 1 centralizado */}
             <div className="max-w-6xl mx-auto">
               {/* Primeira linha - 2 cards */}

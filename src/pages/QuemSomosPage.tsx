@@ -7,9 +7,12 @@ const QuemSomosPage: React.FC = () => {
   return (
     <MainLayout>
       <div className="relative">
-        {/* Banner azul mantido conforme solicitado, com dimensões e fontes iguais ao Planejamento Sucessório */}
+        {/* Banner principal da página "Quem Somos" */}
+        {/* ATENÇÃO: INVERTIDO OS VALORES DE 'title' E 'subtitle' PARA CORRIGIR HIERARQUIA */}
+        {/* 'subtitle' será o H1 (título principal) e 'title' será o H2 (subtítulo/frase de apoio) */}
         <Banner 
-          title="Quem Somos"
+          subtitle="Quem Somos" // Este será o H1 (título principal)
+          title="Nossa História, Seu Futuro: Tradição e Expertise a Serviço do Seu Patrimônio." // Este será o H2 (subtítulo/frase de apoio)
           bgColor="bg-blue-900"
         />
 

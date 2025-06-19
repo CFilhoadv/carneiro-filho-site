@@ -1,21 +1,18 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
+import Banner from '../components/ui/Banner'; // Importado o componente Banner
 
 const ContatoPage: React.FC = () => {
   return (
     <MainLayout>
       <div className="relative">
-        {/* Banner Principal - FUNDO AZUL conforme identidade visual do site */}
-        <div className="relative py-16 bg-blue-900">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-white text-4xl md:text-5xl font-bold mb-6">
-              Entre em Contato
-            </h1>
-            <h2 className="text-white text-xl md:text-2xl font-light">
-              Estamos prontos para atender suas necessidades jurídicas
-            </h2>
-          </div>
-        </div>
+        {/* Banner Principal - AGORA USANDO O COMPONENTE <Banner /> PARA CONSISTÊNCIA */}
+        {/* 'subtitle' será o H1 (título principal) e 'title' será o H2 (subtítulo/frase de apoio) */}
+        <Banner 
+          subtitle="Entre em Contato" // Título principal para o H1
+          title="Estamos prontos para atender suas necessidades jurídicas" // Subtítulo para o H2
+          bgColor="bg-blue-900" // Cor de fundo padrão
+        />
 
         {/* Conteúdo Principal */}
         <section className="py-16 px-4 max-w-6xl mx-auto">
@@ -249,4 +246,3 @@ const ContatoPage: React.FC = () => {
 };
 
 export default ContatoPage;
-

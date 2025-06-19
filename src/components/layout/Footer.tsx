@@ -17,7 +17,21 @@ const Footer: React.FC = () => {
           {/* Coluna 2: Informações de contato */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Contato</h3>
-            <p className="mb-2">Telefone: (11) 4210-6194</p>
+            {/* Telefone como link clicável */}
+            <p className="mb-2">
+              Telefone: <a href="tel:+551142106194" className="hover:text-blue-400 transition-colors">(11) 4210-6194</a>
+            </p>
+            {/* NOVO: Link para WhatsApp Business */}
+            <p className="mb-2">
+              WhatsApp: <a 
+                href="https://wa.me/551142106194" // Link internacional para WhatsApp Business
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-blue-400 transition-colors"
+              >
+                (11) 4210-6194
+              </a>
+            </p>
             <p className="mb-2">Email: contato@carneirofilho.com.br</p>
             <p className="mb-2">
               Av. Brigadeiro Faria Lima, 1811 - ESC 1119, Jardim Paulistano

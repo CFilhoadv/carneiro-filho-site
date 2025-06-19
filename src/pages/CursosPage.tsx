@@ -7,9 +7,10 @@ const CursosPage: React.FC = () => {
     <MainLayout>
       <div className="relative">
         {/* Banner Principal - FUNDO AZUL conforme identidade visual do site */}
+        {/* ATENÇÃO: INVERTIDO OS VALORES DE 'title' E 'subtitle' PARA CORRIGIR HIERARQUIA */}
         <Banner 
-          title="Cursos e Capacitação"
-          subtitle="Impulsione Sua Carreira e Patrimônio com Conhecimento Essencial"
+          title="Impulsione Sua Carreira e Patrimônio com Conhecimento Essencial" // Este agora será o h2 (frase de apoio)
+          subtitle="Cursos e Capacitação" // Este agora será o h1 (título principal)
           bgColor="bg-blue-900"
         />
 

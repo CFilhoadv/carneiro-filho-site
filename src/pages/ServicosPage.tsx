@@ -7,16 +7,15 @@ const ServicosPage: React.FC = () => {
     <MainLayout>
       <div className="relative">
         {/* Banner Principal - FUNDO AZUL conforme identidade visual do site */}
+        {/* ATENÇÃO: INVERTIDO OS VALORES DE 'title' E 'subtitle' PARA CORRIGIR HIERARQUIA */}
         <Banner 
-          title="Nossos Serviços"
-          subtitle="Advocacia Personalizada e Estratégica para Pessoas e Empresas"
+          title="Advocacia Personalizada e Estratégica para Pessoas e Empresas" // Este agora será o h2 (frase de apoio)
+          subtitle="Nossos Serviços" // Este agora será o h1 (título principal)
           bgColor="bg-blue-900"
         />
 
         {/* Conteúdo Principal */}
         <section className="py-16 px-4 max-w-6xl mx-auto">
-
-
 
           {/* Seção: Áreas de Atuação */}
           <div className="mb-16">
@@ -174,7 +173,7 @@ const ServicosPage: React.FC = () => {
           </div>
 
           {/* Seção CTA Final */}
-          <div className="bg-blue-900 rounded-lg p-12 text-center text-white">
+          <div className="bg-blue-900 rounded-lg p-12 text-center text-white mt-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
               Precisa de assessoria jurídica especializada?
             </h2>
