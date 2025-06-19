@@ -34,10 +34,13 @@ const Banner: React.FC<BannerProps> = ({
     >
       <div className={`absolute inset-0 ${hasBgImage ? 'bg-blue-900 bg-opacity-80' : ''} flex items-center justify-center`}>
         <div className="text-center text-white px-4 max-w-4xl">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">{title}</h1>
-          {subtitle && (
-            <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-10">{subtitle}</h2>
-          )}
+          {/* O QUE ERA SUBTITLE VAI SER O TÍTULO PRINCIPAL (h1) */}
+          {/* Usamos 'title' como o principal e 'subtitle' como o de apoio na próxima linha */}
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">{subtitle}</h1> {/* O texto principal (ex: "Assessoria Jurídica...") */}
+          
+          {/* O QUE ERA TITLE VAI SER O SUBTÍTULO/FRASE DE APOIO (h2) */}
+          <h2 className="text-xl md:text-2xl font-semibold mb-6 md:mb-10">{title}</h2> {/* O texto de apoio (ex: "SEU DESAFIO...") */}
+          
           {description && (
             <p className="text-base md:text-lg mb-6">{description}</p>
           )}
