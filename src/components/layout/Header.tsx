@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // A importação do logo antigo foi removida, pois usaremos um URL direto
 // import logo from '../../assets/images/logo_carneiro_filho.png';
-import { FaWhatsapp } from 'react-icons/fa';
-import { AiOutlineMail } from 'react-icons/ai';
-import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
+// As importações de ícones de contato e redes sociais foram removidas por não estarem mais em uso no cabeçalho.
+// import { FaWhatsapp } from 'react-icons/fa';
+// import { AiOutlineMail } from 'react-icons/ai';
+// import { FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
