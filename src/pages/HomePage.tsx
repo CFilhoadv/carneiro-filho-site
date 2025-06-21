@@ -20,25 +20,27 @@ const HomePage: React.FC = () => {
   const banners = [
     {
       image: banner_advocacia_1,
-      // INVERTIDO: subtitle para h1, title para h2
+      // INVERTIDO: subtitle para h1, title para h2 (conforme ajuste no Banner.tsx)
       subtitle: "LEGADO SEGURO, FUTURO TRANQUILO",
       title: "Planejamento Sucessório Estratégico com Foco em Holding Familiar.",
       description: "",
-      buttonText: "Saiba Mais",
-      buttonLink: "/planejamento-sucessorio",
-      secondaryButtonText: "Agendar Consulta",
-      secondaryButtonLink: "/contato"
+      // PROPRIEDADES DE BOTÃO REMOVIDAS, POIS O BANNER NÃO AS USA MAIS
+      // buttonText: "Saiba Mais",
+      // buttonLink: "/planejamento-sucessorio",
+      // secondaryButtonText: "Agendar Consulta",
+      // secondaryButtonLink: "/contato"
     },
     {
       image: banner_advocacia_2,
-      // INVERTIDO: subtitle para h1, title para h2
+      // INVERTIDO: subtitle para h1, title para h2 (conforme ajuste no Banner.tsx)
       subtitle: "SEU DESAFIO, NOSSA SOLUÇÃO",
       title: "Assessoria Jurídica Abrangente para Pessoas e Empresas.",
       description: "",
-      buttonText: "Nossos Serviços",
-      buttonLink: "/servicos",
-      secondaryButtonText: "Agendar Consulta",
-      secondaryButtonText: "/contato"
+      // PROPRIEDADES DE BOTÃO REMOVIDAS, POIS O BANNER NÃO AS USA MAIS
+      // buttonText: "Nossos Serviços",
+      // buttonLink: "/servicos",
+      // secondaryButtonText: "Agendar Consulta",
+      // secondaryButtonText: "/contato"
     }
   ];
 
@@ -69,11 +71,11 @@ const HomePage: React.FC = () => {
           title={banners[currentSlide].title} // Passa para o H2
           description={banners[currentSlide].description}
           backgroundImage={banners[currentSlide].image}
-          // Botões do banner principal foram removidos no Banner.tsx, então estas props não são mais usadas
+          // As propriedades de botão não são mais passadas, pois o Banner.tsx não as utiliza
           // buttonText={banners[currentSlide].buttonText}
           // buttonLink={banners[currentSlide].buttonLink}
           // secondaryButtonText={banners[currentSlide].secondaryButtonText}
-          // secondaryButtonLink={banners[currentSlide].secondaryButtonText}
+          // secondaryButtonLink={banners[currentSlide].secondaryButtonLink}
           bgColor="bg-blue-900"
           height="h-[450px]" // Reduzindo a altura do banner carrossel para 450px
         />
@@ -209,6 +211,13 @@ const HomePage: React.FC = () => {
                   <Link to="/informativos/holding-familiar-reforma-tributaria" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Holding Familiar e a Reforma Tributária: Impactos e Estratégias
                   </Link>
+                  {/* LINKS REMOVIDOS TEMPORARIAMENTE: Planejamento Patrimonial em 2025 e Vantagens da Holding Familiar */}
+                  {/* <Link to="/informativos" className="block text-blue-600 hover:text-blue-800 text-sm">
+                    Planejamento Patrimonial em 2025
+                  </Link> */}
+                  {/* <Link to="/informativos" className="block text-blue-600 hover:text-blue-800 text-sm">
+                    Vantagens da Holding Familiar
+                  </Link> */}
                   {/* LINK "Ver todos os informativos" OCULTADO TEMPORARIAMENTE */}
                   {/* <Link 
                     to="/informativos" 
