@@ -20,8 +20,9 @@ const HomePage: React.FC = () => {
   const banners = [
     {
       image: banner_advocacia_1,
-      title: "LEGADO SEGURO, FUTURO TRANQUILO",
-      subtitle: "Planejamento Sucessório Estratégico com Foco em Holding Familiar.",
+      // INVERTIDO: subtitle para h1, title para h2
+      subtitle: "LEGADO SEGURO, FUTURO TRANQUILO",
+      title: "Planejamento Sucessório Estratégico com Foco em Holding Familiar.",
       description: "",
       buttonText: "Saiba Mais",
       buttonLink: "/planejamento-sucessorio",
@@ -30,13 +31,14 @@ const HomePage: React.FC = () => {
     },
     {
       image: banner_advocacia_2,
-      title: "SEU DESAFIO, NOSSA SOLUÇÃO",
-      subtitle: "Assessoria Jurídica Abrangente para Pessoas e Empresas.",
+      // INVERTIDO: subtitle para h1, title para h2
+      subtitle: "SEU DESAFIO, NOSSA SOLUÇÃO",
+      title: "Assessoria Jurídica Abrangente para Pessoas e Empresas.",
       description: "",
       buttonText: "Nossos Serviços",
       buttonLink: "/servicos",
       secondaryButtonText: "Agendar Consulta",
-      secondaryButtonLink: "/contato"
+      secondaryButtonText: "/contato"
     }
   ];
 
@@ -63,14 +65,15 @@ const HomePage: React.FC = () => {
       {/* Banner Carrossel */}
       <div className="relative">
         <Banner 
-          title={banners[currentSlide].title}
-          subtitle={banners[currentSlide].subtitle}
+          subtitle={banners[currentSlide].subtitle} // Passa para o H1
+          title={banners[currentSlide].title} // Passa para o H2
           description={banners[currentSlide].description}
           backgroundImage={banners[currentSlide].image}
-          buttonText={banners[currentSlide].buttonText}
-          buttonLink={banners[currentSlide].buttonLink}
-          secondaryButtonText={banners[currentSlide].secondaryButtonText}
-          secondaryButtonLink={banners[currentSlide].secondaryButtonLink}
+          // Botões do banner principal foram removidos no Banner.tsx, então estas props não são mais usadas
+          // buttonText={banners[currentSlide].buttonText}
+          // buttonLink={banners[currentSlide].buttonLink}
+          // secondaryButtonText={banners[currentSlide].secondaryButtonText}
+          // secondaryButtonLink={banners[currentSlide].secondaryButtonText}
           bgColor="bg-blue-900"
           height="h-[450px]" // Reduzindo a altura do banner carrossel para 450px
         />
@@ -194,21 +197,26 @@ const HomePage: React.FC = () => {
                   Informativos
                 </h3>
                 <div className="space-y-1">
-                  <Link to="/informativos" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Impactos da Reforma Tributária
+                  {/* LINK PARA A PUBLICAÇÃO 1 */}
+                  <Link to="/informativos/reforma-tributaria-parte-1" className="block text-blue-600 hover:text-blue-800 text-sm">
+                    Impactos da Reforma Tributária: Parte 1
                   </Link>
-                  <Link to="/informativos" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Planejamento Patrimonial em 2025
+                  {/* LINK PARA A PUBLICAÇÃO 2 - TÍTULO ATUALIZADO */}
+                  <Link to="/informativos/reforma-tributaria-parte-2" className="block text-blue-600 hover:text-blue-800 text-sm">
+                    Reforma Tributária: Impactos e Ações Estratégicas - Parte 2
                   </Link>
-                  <Link to="/informativos" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Vantagens da Holding Familiar
+                  {/* NOVO: LINK PARA A PUBLICAÇÃO 3 - TÍTULO ATUALIZADO */}
+                  <Link to="/informativos/holding-familiar-reforma-tributaria" className="block text-blue-600 hover:text-blue-800 text-sm">
+                    Holding Familiar e a Reforma Tributária: Impactos e Estratégias
                   </Link>
-                  <Link 
+                  {/* LINK "Ver todos os informativos" OCULTADO TEMPORARIAMENTE */}
+                  {/* <Link 
                     to="/informativos" 
                     className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
                   >
                     Ver todos os informativos
                   </Link>
+                  */}
                 </div>
               </div>
             </div>
