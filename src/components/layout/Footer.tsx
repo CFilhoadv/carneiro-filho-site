@@ -63,6 +63,12 @@ const Footer: React.FC = () => {
                   Contato
                 </Link>
               </li>
+              {/* NOVO: Link para a Política de Privacidade */}
+              <li>
+                <Link to="/politica-de-privacidade" className="hover:text-blue-400 transition-colors">
+                  Política de Privacidade
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
