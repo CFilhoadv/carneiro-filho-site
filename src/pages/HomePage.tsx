@@ -24,10 +24,11 @@ const HomePage: React.FC = () => {
       subtitle: "LEGADO SEGURO, FUTURO TRANQUILO",
       title: "Planejamento Sucessório Estratégico com Foco em Holding Familiar.",
       description: "",
-      buttonText: "Saiba Mais",
-      buttonLink: "/planejamento-sucessorio",
-      secondaryButtonText: "Agendar Consulta",
-      secondaryButtonLink: "/contato"
+      // ATENÇÃO: ESTAS PROPRIEDADES DE BOTÃO DEVEM ESTAR COMENTADAS OU REMOVIDAS
+      // buttonText: "Saiba Mais",
+      // buttonLink: "/planejamento-sucessorio",
+      // secondaryButtonText: "Agendar Consulta",
+      // secondaryButtonLink: "/contato"
     },
     {
       image: banner_advocacia_2,
@@ -35,10 +36,11 @@ const HomePage: React.FC = () => {
       subtitle: "SEU DESAFIO, NOSSA SOLUÇÃO",
       title: "Assessoria Jurídica Abrangente para Pessoas e Empresas.",
       description: "",
-      buttonText: "Nossos Serviços",
-      buttonLink: "/servicos",
-      secondaryButtonText: "Agendar Consulta",
-      secondaryButtonText: "/contato"
+      // ATENÇÃO: ESTAS PROPRIEDADES DE BOTÃO DEVEM ESTAR COMENTADAS OU REMOVIDAS
+      // buttonText: "Nossos Serviços",
+      // buttonLink: "/servicos",
+      // secondaryButtonText: "Agendar Consulta",
+      // secondaryButtonText: "/contato"
     }
   ];
 
@@ -69,7 +71,7 @@ const HomePage: React.FC = () => {
           title={banners[currentSlide].title} // Passa para o H2
           description={banners[currentSlide].description}
           backgroundImage={banners[currentSlide].image}
-          // Botões do banner principal foram removidos no Banner.tsx, então estas props não são mais usadas
+          // As propriedades de botão NÃO DEVEM SER PASSADAS, POIS O BANNER NÃO AS UTILIZA
           // buttonText={banners[currentSlide].buttonText}
           // buttonLink={banners[currentSlide].buttonLink}
           // secondaryButtonText={banners[currentSlide].secondaryButtonText}
@@ -209,15 +211,8 @@ const HomePage: React.FC = () => {
                   <Link to="/informativos/holding-familiar-reforma-tributaria" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Holding Familiar e a Reforma Tributária: Impactos e Estratégias
                   </Link>
-                  {/* BOTÃO "Em Breve" PARA INFORMATIVOS REMOVIDO COMPLETAMENTE */}
-                  {/*
-                  <button 
-                    disabled
-                    className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium cursor-not-allowed mt-2"
-                  >
-                    Em Breve
-                  </button>
-                  */}
+                  {/* BOTÃO "Ver todos os informativos" OCULTADO TOTALMENTE */}
+                  {/* Removido o <button> de "Em Breve" aqui */}
                 </div>
               </div>
             </div>
