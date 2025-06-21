@@ -20,27 +20,25 @@ const HomePage: React.FC = () => {
   const banners = [
     {
       image: banner_advocacia_1,
-      // INVERTIDO: subtitle para h1, title para h2 (conforme ajuste no Banner.tsx)
+      // INVERTIDO: subtitle para h1, title para h2
       subtitle: "LEGADO SEGURO, FUTURO TRANQUILO",
       title: "Planejamento Sucessório Estratégico com Foco em Holding Familiar.",
       description: "",
-      // PROPRIEDADES DE BOTÃO REMOVIDAS, POIS O BANNER NÃO AS USA MAIS
-      // buttonText: "Saiba Mais",
-      // buttonLink: "/planejamento-sucessorio",
-      // secondaryButtonText: "Agendar Consulta",
-      // secondaryButtonLink: "/contato"
+      buttonText: "Saiba Mais",
+      buttonLink: "/planejamento-sucessorio",
+      secondaryButtonText: "Agendar Consulta",
+      secondaryButtonLink: "/contato"
     },
     {
       image: banner_advocacia_2,
-      // INVERTIDO: subtitle para h1, title para h2 (conforme ajuste no Banner.tsx)
+      // INVERTIDO: subtitle para h1, title para h2
       subtitle: "SEU DESAFIO, NOSSA SOLUÇÃO",
       title: "Assessoria Jurídica Abrangente para Pessoas e Empresas.",
       description: "",
-      // PROPRIEDADES DE BOTÃO REMOVIDAS, POIS O BANNER NÃO AS USA MAIS
-      // buttonText: "Nossos Serviços",
-      // buttonLink: "/servicos",
-      // secondaryButtonText: "Agendar Consulta",
-      // secondaryButtonText: "/contato"
+      buttonText: "Nossos Serviços",
+      buttonLink: "/servicos",
+      secondaryButtonText: "Agendar Consulta",
+      secondaryButtonText: "/contato"
     }
   ];
 
@@ -71,11 +69,11 @@ const HomePage: React.FC = () => {
           title={banners[currentSlide].title} // Passa para o H2
           description={banners[currentSlide].description}
           backgroundImage={banners[currentSlide].image}
-          // As propriedades de botão não são mais passadas, pois o Banner.tsx não as utiliza
+          // Botões do banner principal foram removidos no Banner.tsx, então estas props não são mais usadas
           // buttonText={banners[currentSlide].buttonText}
           // buttonLink={banners[currentSlide].buttonLink}
           // secondaryButtonText={banners[currentSlide].secondaryButtonText}
-          // secondaryButtonLink={banners[currentSlide].secondaryButtonLink}
+          // secondaryButtonLink={banners[currentSlide].secondaryButtonText}
           bgColor="bg-blue-900"
           height="h-[450px]" // Reduzindo a altura do banner carrossel para 450px
         />
@@ -211,26 +209,20 @@ const HomePage: React.FC = () => {
                   <Link to="/informativos/holding-familiar-reforma-tributaria" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Holding Familiar e a Reforma Tributária: Impactos e Estratégias
                   </Link>
-                  {/* LINKS REMOVIDOS TEMPORARIAMENTE: Planejamento Patrimonial em 2025 e Vantagens da Holding Familiar */}
-                  {/* <Link to="/informativos" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Planejamento Patrimonial em 2025
-                  </Link> */}
-                  {/* <Link to="/informativos" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Vantagens da Holding Familiar
-                  </Link> */}
-                  {/* LINK "Ver todos os informativos" OCULTADO TEMPORARIAMENTE */}
-                  {/* <Link 
-                    to="/informativos" 
-                    className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
+                  {/* BOTÃO "Em Breve" PARA INFORMATIVOS REMOVIDO COMPLETAMENTE */}
+                  {/*
+                  <button 
+                    disabled
+                    className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium cursor-not-allowed mt-2"
                   >
-                    Ver todos os informativos
-                  </Link>
+                    Em Breve
+                  </button>
                   */}
                 </div>
               </div>
             </div>
 
-            {/* Card 4: CFilho em Mídia */}
+            {/* Card 4: CFilho em Mídia - OCULTANDO LINKS DE MÍDIA */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img 
                 src={midia} 
@@ -242,7 +234,8 @@ const HomePage: React.FC = () => {
                   CFilho em Mídia
                 </h3>
                 <div className="space-y-1">
-                  <Link to="/midia" className="block text-blue-600 hover:text-blue-800 text-sm">
+                  {/* LINKS DE MÍDIA REMOVIDOS TEMPORARIAMENTE: */}
+                  {/* <Link to="/midia" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Entrevista sobre Reforma Tributária
                   </Link>
                   <Link to="/midia" className="block text-blue-600 hover:text-blue-800 text-sm">
@@ -250,13 +243,14 @@ const HomePage: React.FC = () => {
                   </Link>
                   <Link to="/midia" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Debate: Holding Familiar
-                  </Link>
-                  <Link 
-                    to="/midia" 
-                    className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
+                  </Link> */}
+                  {/* BOTÃO "EM BREVE" PARA MÍDIA */}
+                  <button 
+                    disabled
+                    className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium cursor-not-allowed mt-2"
                   >
-                    Ver todas as participações
-                  </Link>
+                    Em Breve
+                  </button>
                 </div>
               </div>
             </div>
