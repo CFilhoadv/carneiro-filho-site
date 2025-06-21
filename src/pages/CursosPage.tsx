@@ -54,6 +54,8 @@ const CursosPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  {/* COMENTADO: Bloco de Preço e Botão de Inscrição */}
+                  {/*
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-2xl font-bold text-blue-900">R$ 1.490,00</span>
@@ -63,6 +65,11 @@ const CursosPage: React.FC = () => {
                       Inscreva-se (Em Breve)
                     </button>
                   </div>
+                  */}
+                  {/* NOVO BOTÃO: Sempre visível, mas desabilitado */}
+                  <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md cursor-not-allowed font-medium w-full">
+                    Inscreva-se (Em Breve)
+                  </button>
                 </div>
               </div>
             </div>
@@ -102,6 +109,8 @@ const CursosPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  {/* COMENTADO: Bloco de Preço e Botão de Inscrição */}
+                  {/*
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-2xl font-bold text-blue-900">R$ 1.200,00</span>
@@ -114,6 +123,11 @@ const CursosPage: React.FC = () => {
                       Inscrições em breve
                     </button>
                   </div>
+                  */}
+                  {/* NOVO BOTÃO: Sempre visível, mas desabilitado */}
+                  <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md cursor-not-allowed font-medium w-full">
+                    Inscrições em breve
+                  </button>
                 </div>
               </div>
             </div>
