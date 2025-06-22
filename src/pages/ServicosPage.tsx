@@ -16,6 +16,18 @@ const ServicosPage: React.FC = () => {
 
         {/* Conteúdo Principal */}
         <section className="py-16 px-4 max-w-6xl mx-auto">
+          
+          {/* NOVO: Botão Agendar Atendimento - Movido para o início do conteúdo */}
+          <div className="text-center mb-10"> {/* mb-10 para espaçamento abaixo do botão */}
+            <a 
+              href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+              target="_blank" // Abre em nova aba
+              rel="noopener noreferrer" // Prática de segurança para target="_blank"
+              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
+            >
+              Agendar Atendimento
+            </a>
+          </div>
 
           {/* Seção: Áreas de Atuação */}
           <div className="mb-16">
@@ -46,10 +58,12 @@ const ServicosPage: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-                
+                {/* REMOVIDO: Botão Consultar (Em Breve) */}
+                {/*
                 <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium w-full">
                   Consultar (Em Breve)
                 </button>
+                */}
               </div>
 
               {/* Direito Civil */}
@@ -69,9 +83,12 @@ const ServicosPage: React.FC = () => {
                   <li>• Questões de Posse e Propriedade</li>
                 </ul>
                 
+                {/* REMOVIDO: Botão Consultar (Em Breve) */}
+                {/*
                 <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium w-full">
                   Consultar (Em Breve)
                 </button>
+                */}
               </div>
 
               {/* Direito Empresarial */}
@@ -93,9 +110,12 @@ const ServicosPage: React.FC = () => {
                   <li>• Compliance e governança corporativa</li>
                 </ul>
                 
+                {/* REMOVIDO: Botão Consultar (Em Breve) */}
+                {/*
                 <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium w-full">
                   Consultar (Em Breve)
                 </button>
+                */}
               </div>
 
               {/* Direito Tributário */}
@@ -117,9 +137,12 @@ const ServicosPage: React.FC = () => {
                   <li>• Análise de Benefícios Fiscais</li>
                 </ul>
                 
+                {/* REMOVIDO: Botão Consultar (Em Breve) */}
+                {/*
                 <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium w-full">
                   Consultar (Em Breve)
                 </button>
+                */}
               </div>
 
               {/* Direito Previdenciário */}
@@ -141,9 +164,12 @@ const ServicosPage: React.FC = () => {
                   <li>• Revisão de Benefícios Previdenciários</li>
                 </ul>
                 
+                {/* REMOVIDO: Botão Consultar (Em Breve) */}
+                {/*
                 <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium w-full">
                   Consultar (Em Breve)
                 </button>
+                */}
               </div>
 
               {/* Consultoria Jurídica */}
@@ -165,36 +191,37 @@ const ServicosPage: React.FC = () => {
                   <li>• Planejamento Jurídico Estratégico</li>
                 </ul>
                 
+                {/* REMOVIDO: Botão Consultar (Em Breve) */}
+                {/*
                 <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium w-full">
                   Consultar (Em Breve)
                 </button>
+                */}
               </div>
             </div>
           </div>
 
-          {/* Seção CTA Final */}
-          <div className="bg-blue-900 rounded-lg p-12 text-center text-white mt-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
+          {/* Seção CTA Final - Botão Agendar Atendimento */}
+          {/* ATENÇÃO: Esta seção é a que será removida completamente */}
+          {/* O botão "Agendar Atendimento" já foi movido para o topo da página */}
+          {/*
+          <div className="text-center mt-16">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
               Precisa de assessoria jurídica especializada?
             </h2>
             <p className="text-lg mb-8 opacity-90">
               Entre em contato conosco para uma consulta inicial e descubra como podemos ajudar você ou sua empresa.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#/contato" 
-                className="bg-white text-blue-900 px-8 py-4 rounded-md hover:bg-gray-100 transition-colors font-medium text-lg"
-              >
-                Agendar Consulta
-              </a>
-              <a 
-                href="#/contato" 
-                className="bg-blue-700 text-white px-8 py-4 rounded-md hover:bg-blue-600 transition-colors font-medium text-lg"
-              >
-                Fale Conosco
-              </a>
-            </div>
+            <a 
+              href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
+            >
+              Agendar Atendimento
+            </a>
           </div>
+          */}
         </section>
       </div>
     </MainLayout>

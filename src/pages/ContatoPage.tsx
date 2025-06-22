@@ -15,134 +15,25 @@ const ContatoPage: React.FC = () => {
         />
 
         {/* Conteúdo Principal */}
-        <section className="py-16 px-4 max-w-6xl mx-auto">
+        <section className="py-16 px-4 max-w-6xl mx-auto text-gray-800 leading-relaxed">
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Parágrafo introdutório para preencher o espaço */}
+          <p className="text-center text-lg mb-12">
+            Utilize os canais abaixo para entrar em contato conosco ou agendar um atendimento inicial com nossa equipe.
+          </p>
+
+          {/* Container das Informações de Contato e Botão Agendar Atendimento */}
+          {/* Removido flex-col items-center justify-center, pois o grid e mx-auto centralizarão */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12"> {/* NOVO: Grid de 2 colunas para desktop */}
             
-            {/* Coluna esquerda - Formulário */}
-            <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-8">
-                Envie sua mensagem
-              </h2>
-              
-              <form className="space-y-6">
-                {/* Nome completo */}
-                <div>
-                  <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nome completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Digite seu nome completo"
-                  />
-                </div>
-
-                {/* E-mail e Telefone */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      E-mail *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="seu@email.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="telefone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Telefone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="telefone"
-                      name="telefone"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="(11) 99999-9999"
-                    />
-                  </div>
-                </div>
-
-                {/* Assunto */}
-                <div>
-                  <label htmlFor="assunto" className="block text-sm font-medium text-gray-700 mb-2">
-                    Assunto *
-                  </label>
-                  <select
-                    id="assunto"
-                    name="assunto"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option value="">Selecione um assunto</option>
-                    <option value="holding-familiar">Holding Familiar</option>
-                    <option value="direito-empresarial">Direito Empresarial</option>
-                    <option value="direito-civil">Direito Civil</option>
-                    <option value="direito-familia">Direito de Família</option>
-                    <option value="direito-tributario">Direito Tributário</option>
-                    <option value="cursos-capacitacao">Cursos e Capacitação</option>
-                    <option value="outro">Outro Assunto</option>
-                  </select>
-                </div>
-
-                {/* Mensagem */}
-                <div>
-                  <label htmlFor="mensagem" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mensagem *
-                  </label>
-                  <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    rows={6}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                    placeholder="Descreva sua necessidade jurídica..."
-                  ></textarea>
-                </div>
-
-                {/* Política de Privacidade */}
-                <div className="flex items-start">
-                  <input
-                    type="checkbox"
-                    id="politica"
-                    name="politica"
-                    required
-                    className="mt-1 mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="politica" className="text-sm text-gray-700">
-                    Concordo com a{' '}
-                    <a href="#" className="text-blue-600 hover:text-blue-800 underline">
-                      Política de Privacidade
-                    </a>
-                  </label>
-                </div>
-
-                {/* Botão Enviar */}
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
-                >
-                  Enviar Mensagem
-                </button>
-              </form>
-            </div>
-
-            {/* Coluna direita - Informações de Contato */}
+            {/* Coluna 1 do Grid: Informações de Contato */}
+            {/* O h2 e os itens de contato ficam agora dentro de uma coluna do grid */}
             <div>
               <h2 className="text-2xl font-bold text-gray-800 mb-8">
                 Informações de Contato
               </h2>
               
-              <div className="space-y-8">
+              <div className="space-y-8 text-left"> {/* Removido max-w-sm, mantido text-left */}
                 {/* Endereço */}
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4">
@@ -207,38 +98,28 @@ const ContatoPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-              {/* Seção Agende uma Consulta */}
-              <div className="mt-12 bg-blue-600 rounded-lg p-8 text-white">
-                <h3 className="text-xl font-bold mb-4">
-                  Agende uma Consulta
-                </h3>
-                <p className="mb-6 opacity-90">
-                  Prefere agendar uma consulta diretamente? Utilize nosso sistema de agendamento online.
-                </p>
-                <a 
-                  href="#" 
-                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md hover:bg-gray-100 transition-colors font-medium"
-                >
-                  Agendar Agora
-                </a>
-              </div>
             </div>
-          </div>
 
-          {/* Seção Como Chegar */}
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-              Como Chegar
-            </h2>
-            
-            {/* Placeholder para Mapa */}
-            <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-              <p className="text-gray-600 text-lg">
-                Mapa será carregado aqui
+            {/* Coluna 2 do Grid (Vazia, mas pode ser usada para um mapa no futuro, por exemplo) */}
+            {/* Para preencher o espaço, podemos adicionar um texto simples ou uma imagem aqui, ou centralizar o botão */}
+            <div className="flex flex-col items-center justify-center mt-12 md:mt-0"> {/* mt-12 para mobile, mt-0 para desktop */}
+              <h3 className="text-xl font-bold text-gray-800 mb-6">
+                Agende Seu Atendimento Inicial
+              </h3>
+              <p className="text-gray-600 mb-8 text-center max-w-sm">
+                Prefere agendar diretamente um horário para conversarmos sobre suas necessidades jurídicas?
               </p>
+              <a 
+                href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
+              >
+                Agendar Atendimento
+              </a>
             </div>
-          </div>
+
+          </div> {/* Fim do grid (anteriormente removido, agora reintroduzido para a estrutura) */}
         </section>
       </div>
     </MainLayout>

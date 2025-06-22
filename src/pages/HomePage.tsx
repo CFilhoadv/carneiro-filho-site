@@ -28,7 +28,7 @@ const HomePage: React.FC = () => {
       // buttonText: "Saiba Mais",
       // buttonLink: "/planejamento-sucessorio",
       // secondaryButtonText: "Agendar Consulta",
-      // secondaryButtonLink: "/contato"
+      // secondaryButtonText: "/contato"
     },
     {
       image: banner_advocacia_2,
@@ -212,7 +212,7 @@ const HomePage: React.FC = () => {
                     Holding Familiar e a Reforma Tributária: Impactos e Estratégias
                   </Link>
                   {/* BOTÃO "Ver todos os informativos" OCULTADO TOTALMENTE */}
-                  {/* Removido o <button> de "Em Breve" aqui */}
+                  {/* Este espaço deve ficar em branco */}
                 </div>
               </div>
             </div>
@@ -262,12 +262,15 @@ const HomePage: React.FC = () => {
           <p className="text-lg mb-6 max-w-3xl mx-auto">
             Entre em contato para uma consultoria personalizada e descubra a melhor estratégia para seu planejamento sucessório.
           </p>
-          <Link 
-            to="/contato" 
+          {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
+          <a // Alterado de <Link> para <a>
+            href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+            target="_blank" // Abre em nova aba
+            rel="noopener noreferrer" // Prática de segurança para target="_blank"
             className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
           >
-            Agende uma consulta
-          </Link>
+            Agendar Atendimento {/* Alterado texto do botão */}
+          </a>
         </div>
       </section>
     </MainLayout>

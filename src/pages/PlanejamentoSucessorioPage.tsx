@@ -18,6 +18,18 @@ const PlanejamentoSucessorioPage: React.FC = () => {
         <div className="relative py-16 bg-white">
           <div className="container mx-auto px-4">
             
+            {/* NOVO: Botão Agendar Atendimento - Movido para o início do conteúdo */}
+            <div className="text-center mb-10"> {/* mb-10 para espaçamento abaixo do botão */}
+              <a 
+                href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+                target="_blank" // Abre em nova aba
+                rel="noopener noreferrer" // Prática de segurança para target="_blank"
+                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
+              >
+                Agendar Atendimento {/* Texto do botão ajustado */}
+              </a>
+            </div>
+
             {/* Grid de Cards de Serviços - 2x2 + 1 centralizado */}
             <div className="max-w-6xl mx-auto">
               {/* Primeira linha - 2 cards */}
@@ -33,6 +45,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                   <a href="https://altftect.manus.space/doacoes_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
+                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
 
                 {/* Card: Holding Familiar */}
@@ -45,6 +58,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                   <a href="https://altftect.manus.space/holding_familiar_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
+                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
               </div>
 
@@ -55,12 +69,13 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                 <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Inventários</h3>
                   <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    Oferecemos suporte completo no processo de inventário, buscando soluções ágeis e menos 
+                    Oferecemos suporte completo no processo de inventário, buscando soluções ágéis e menos 
                     onerosas para a partilha de bens, seja judicial ou extrajudicial.
                   </p>
                   <a href="https://altftect.manus.space/inventarios_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
+                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
 
                 {/* Card: Testamentos */}
@@ -73,12 +88,14 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                   <a href="https://altftect.manus.space/testamentos_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
+                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
               </div>
 
               {/* Terceira linha - 1 card centralizado */}
-              <div className="flex justify-center">
-                <div className="w-full md:w-1/2">
+              {/* ATENÇÃO: Alterado justify-center para justify-start para alinhar à esquerda, mantendo w-full md:w-1/2 */}
+              <div className="flex justify-start"> {/* Alterado justify-center para justify-start */}
+                <div className="w-full md:w-1/2"> {/* Mantido w-full para mobile, md:w-1/2 para desktop */}
                   {/* Card: Administradora de Bens Imóveis Próprios */}
                   <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
                        <h3 className="text-xl font-bold text-gray-800 mb-2">Administradora de Bens Imóveis Próprios</h3>
@@ -89,12 +106,15 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                   <a href="https://altftect.manus.space/administradora_bens_imoveis_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
+                  {/* Removido o botão Consultar se existisse aqui */}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Seção CTA */}
+            {/* SEÇÃO CTA ORIGINAL REMOVIDA DESTE LOCAL (agora o botão está no início) */}
+            {/* A div abaixo foi removida para eliminar o texto e o botão no final da página */}
+            {/*
             <div className="text-center mt-16">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
                 Precisa de ajuda com seu Planejamento Sucessório?
@@ -103,6 +123,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                 Consultar (Em Breve)
               </button>
             </div>
+            */}
           </div>
         </div>
       </div>
