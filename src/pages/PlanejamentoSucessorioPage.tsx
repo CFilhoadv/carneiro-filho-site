@@ -21,7 +21,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
             {/* NOVO: Botão Agendar Atendimento - Movido para o início do conteúdo */}
             <div className="text-center mb-10"> {/* mb-10 para espaçamento abaixo do botão */}
               <a 
-                href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+                href="https://calendly.com/contato-carneirofilho/planejamento_sucessorio" // URL do Calendly CORRIGIDA
                 target="_blank" // Abre em nova aba
                 rel="noopener noreferrer" // Prática de segurança para target="_blank"
                 className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
@@ -98,15 +98,15 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                 <div className="w-full md:w-1/2"> {/* Mantido w-full para mobile, md:w-1/2 para desktop */}
                   {/* Card: Administradora de Bens Imóveis Próprios */}
                   <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-                       <h3 className="text-xl font-bold text-gray-800 mb-2">Administradora de Bens Imóveis Próprios</h3>
-                  <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    Implemente um sistema de estruturação patrimonial familiar que gerencia e organiza seus bens 
-                    imóveis, garantindo proteção e eficiência na sucessão.
-                  </p>
-                  <a href="https://altftect.manus.space/administradora_bens_imoveis_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
-                    Saiba Mais
-                  </a>
-                  {/* Removido o botão Consultar se existisse aqui */}
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">Administradora de Bens Imóveis Próprios</h3>
+                    <p className="text-gray-700 text-base leading-relaxed mb-4">
+                      Implemente um sistema de estruturação patrimonial familiar que gerencia e organiza seus bens 
+                      imóveis, garantindo proteção e eficiência na sucessão.
+                    </p>
+                    <a href="https://altftect.manus.space/administradora_bens_imoveis_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                      Saiba Mais
+                    </a>
+                    {/* Removido o botão Consultar se existisse aqui */}
                   </div>
                 </div>
               </div>

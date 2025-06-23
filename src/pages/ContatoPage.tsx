@@ -100,7 +100,7 @@ const ContatoPage: React.FC = () => {
               {/* Botão Agendar Atendimento para o Calendly - Alinhado no final da 2ª coluna */}
               <div className="text-center mt-auto md:text-left"> {/* mt-auto para empurrar para o final da coluna, md:text-left para alinhar à esquerda em desktop */}
                 <a 
-                  href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+                  href="https://calendly.com/contato-carneirofilho" // URL do Calendly CORRIGIDA
                   target="_blank" // Abre em nova aba
                   rel="noopener noreferrer" // Prática de segurança para target="_blank"
                   className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
