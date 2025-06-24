@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import Banner from '../components/ui/Banner';
+import Banner from '../components/ui/Banner'; // Importar o componente Banner
 
 const ServicosPage: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const ServicosPage: React.FC = () => {
           {/* NOVO: Botão Agendar Atendimento - Movido para o início do conteúdo */}
           <div className="text-center mb-10"> {/* mb-10 para espaçamento abaixo do botão */}
             <a 
-              href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+              href="https://calendly.com/contato-carneirofilho" // URL do Calendly CORRIGIDA
               target="_blank" // Abre em nova aba
               rel="noopener noreferrer" // Prática de segurança para target="_blank"
               className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
@@ -55,6 +55,7 @@ const ServicosPage: React.FC = () => {
                       <li>• Guarda e regulamentação de visitas</li>
                       <li>• Inventário e partilha de bens</li>
                       <li>• Testamentos e doações</li>
+                      <li>• Administradoras de Bens Próprios</li> {/* Corrigido o texto aqui se necessário */}
                     </ul>
                   </div>
                 </div>
