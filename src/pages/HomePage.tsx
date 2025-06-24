@@ -264,7 +264,7 @@ const HomePage: React.FC = () => {
           </p>
           {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
           <a // Alterado de <Link> para <a>
-            href="https://calendly.com/contato-carneirofilho/30min" // URL do Calendly
+            href="https://calendly.com/contato-carneirofilho" // URL do Calendly CORRIGIDA
             target="_blank" // Abre em nova aba
             rel="noopener noreferrer" // Prática de segurança para target="_blank"
             className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
