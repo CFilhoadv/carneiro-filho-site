@@ -99,7 +99,6 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                       Implemente um sistema de estruturação patrimonial familiar que gerencia e organiza seus bens 
                       imóveis, garantindo proteção e eficiência na sucessão.
                     </p>
-                    {/* **** CORREÇÃO AQUI: LINK ATUALIZADO PARA PÁGINA INTERNA **** */}
                     <a href="/administradora-imoveis" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                       Saiba Mais
                     </a>

@@ -14,7 +14,7 @@ import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage';
 import HoldingFamiliarPage from './pages/HoldingFamiliarPage'; 
 import InventarioPage from './pages/InventarioPage';
 import TestamentoPage from './pages/TestamentoPage'; 
-import AdministradoraBensImoveisPage from './pages/AdministradoraBensImoveisPage'; // **** NOVO: IMPORTA A PÁGINA DE ADMINISTRADORA DE BENS IMÓVEIS ****
+import AdministradoraBensImoveisPage from './pages/AdministradoraBensImoveisPage'; 
 // ********************************************************************************
 import './App.css';
 
@@ -39,7 +39,7 @@ function App() {
         <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
         <Route path="/inventario" element={<InventarioPage />} />
         <Route path="/testamento" element={<TestamentoPage />} /> 
-        <Route path="/administradora-imoveis" element={<AdministradoraBensImoveisPage />} /> {/* **** NOVO: ROTA PARA A PÁGINA DE ADMINISTRADORA DE BENS IMÓVEIS **** */}
+        <Route path="/administradora-imoveis" element={<AdministradoraBensImoveisPage />} /> 
         {/* ************************************************************************** */}
       </Routes>
     </Router>

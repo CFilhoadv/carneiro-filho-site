@@ -1,8 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-// IMPORTAÇÃO DA SUA NOVA IMAGEM DE BANNER PARA ADMINISTRADORA DE BENS IMÓVEIS
-// Certifique-se de que o nome do arquivo na pasta 'src/assets/images/' é 'administradora_imoveis_banner.jpeg'
 import administradoraImoveisBanner from '../assets/images/administradora_imoveis_banner.jpeg';
 
 const AdministradoraBensImoveisPage: React.FC = () => {
@@ -10,11 +8,8 @@ const AdministradoraBensImoveisPage: React.FC = () => {
     <MainLayout>
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
-        {/* Usando a tag <img> padrão com styling Tailwind.
-            Se você estiver usando Next.js e o componente <Image>, adapte conforme a documentação deles.
-        */}
         <img
-          src={administradoraImoveisBanner.src || administradoraImoveisBanner}
+          src={administradoraImoveisBanner} // CORRIGIDO: Removido .src ||
           alt="Lupa sobre modelos de casas, simbolizando gestão e proteção de imóveis"
           className="w-full h-full object-cover object-center"
         />
