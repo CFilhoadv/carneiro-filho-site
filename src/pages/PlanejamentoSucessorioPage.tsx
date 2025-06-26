@@ -70,7 +70,6 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Oferecemos suporte completo no processo de inventário, buscando soluções ágeis e menos 
                     onerosas para a partilha de bens, seja judicial ou extrajudicial.
                   </p>
-                  {/* **** CORREÇÃO AQUI: LINK ATUALIZADO PARA PÁGINA INTERNA **** */}
                   <a href="/inventario" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
@@ -83,7 +82,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Elabore seu testamento com segurança jurídica, garantindo que seus desejos sejam respeitados 
                     e evitando litígios na transmissão de seu patrimônio.
                   </p>
-                  <a href="https://altftect.manus.space/testamentos_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                  <a href="/testamento" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
                 </div>
@@ -100,7 +99,8 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                       Implemente um sistema de estruturação patrimonial familiar que gerencia e organiza seus bens 
                       imóveis, garantindo proteção e eficiência na sucessão.
                     </p>
-                    <a href="https://altftect.manus.space/administradora_bens_imoveis_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                    {/* **** CORREÇÃO AQUI: LINK ATUALIZADO PARA PÁGINA INTERNA **** */}
+                    <a href="/administradora-imoveis" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                       Saiba Mais
                     </a>
                   </div>

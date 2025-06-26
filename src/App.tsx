@@ -9,11 +9,13 @@ import ReformaTributariaParte1Page from './pages/ReformaTributariaParte1Page';
 import ReformaTributariaParte2Page from './pages/ReformaTributariaParte2Page';
 import HoldingFamiliarReformaTributariaPage from './pages/HoldingFamiliarReformaTributariaPage';
 import PoliticaDePrivacidadePage from './pages/PoliticaDePrivacidadePage';
-// **** NOVO: IMPORTA AS NOVAS PÁGINAS ****
+// **** IMPORTAÇÕES DE TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO ****
 import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage'; 
 import HoldingFamiliarPage from './pages/HoldingFamiliarPage'; 
-import InventarioPage from './pages/InventarioPage'; // **** NOVO: IMPORTA A PÁGINA DE INVENTÁRIO ****
-// ****************************************
+import InventarioPage from './pages/InventarioPage';
+import TestamentoPage from './pages/TestamentoPage'; 
+import AdministradoraBensImoveisPage from './pages/AdministradoraBensImoveisPage'; // **** NOVO: IMPORTA A PÁGINA DE ADMINISTRADORA DE BENS IMÓVEIS ****
+// ********************************************************************************
 import './App.css';
 
 function App() {
@@ -26,17 +28,19 @@ function App() {
         <Route path="/servicos" element={<ServicosPage />} />
         <Route path="/cursos" element={<CursosPage />} />
         <Route path="/contato" element={<ContatoPage />} />
-        {/* Rota para as Publicações de Informativos */}
+        {/* Rotas para as Publicações de Informativos */}
         <Route path="/informativos/reforma-tributaria-parte-1" element={<ReformaTributariaParte1Page />} /> 
         <Route path="/informativos/reforma-tributaria-parte-2" element={<ReformaTributariaParte2Page />} />
         <Route path="/informativos/holding-familiar-reforma-tributaria" element={<HoldingFamiliarReformaTributariaPage />} />
-        {/* NOVO: Rota para a Página de Política de Privacidade */}
+        {/* Rota para a Página de Política de Privacidade */}
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
-        {/* **** NOVAS ROTAS PARA AS PÁGINAS DE CONTEÚDO **** */}
+        {/* **** ROTAS PARA TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO **** */}
         <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
         <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
-        <Route path="/inventario" element={<InventarioPage />} /> {/* **** NOVO: ROTA PARA A PÁGINA DE INVENTÁRIO **** */}
-        {/* ************************************************** */}
+        <Route path="/inventario" element={<InventarioPage />} />
+        <Route path="/testamento" element={<TestamentoPage />} /> 
+        <Route path="/administradora-imoveis" element={<AdministradoraBensImoveisPage />} /> {/* **** NOVO: ROTA PARA A PÁGINA DE ADMINISTRADORA DE BENS IMÓVEIS **** */}
+        {/* ************************************************************************** */}
       </Routes>
     </Router>
   );
