@@ -9,7 +9,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
         {/* Banner Principal - FUNDO AZUL conforme identidade visual */}
         {/* ATENÇÃO: INVERTIDO OS VALORES DE 'title' E 'subtitle' PARA CORRIGIR HIERARQUIA */}
         <Banner 
-          title="Seu Legado, Nosso Planejamento: Evite Burocracia e Otimize Tributos." // Este agora será o h2 (frase de apoio)
+          title="Seu Legado, Nosso Planejamento: Evite Burocracia e Otime Tributos." // Este agora será o h2 (frase de apoio)
           subtitle="Planejamento Sucessório" // Este agora será o h1 (título principal)
           bgColor="bg-blue-900"
         />
@@ -42,7 +42,8 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Maximize o impacto de suas doações enquanto otimiza a carga tributária, garantindo que seu 
                     legado beneficie as causas e pessoas que você mais valoriza.
                   </p>
-                  <a href="https://altftect.manus.space/doacoes_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                  {/* ALTERADO: Link atualizado para apontar para a nova página interna */}
+                  <a href="/doacao-com-usufruto" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
                   {/* Removido o botão Consultar se existisse aqui */}
@@ -69,7 +70,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                 <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">Inventários</h3>
                   <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    Oferecemos suporte completo no processo de inventário, buscando soluções ágéis e menos 
+                    Oferecemos suporte completo no processo de inventário, buscando soluções ágeis e menos 
                     onerosas para a partilha de bens, seja judicial ou extrajudicial.
                   </p>
                   <a href="https://altftect.manus.space/inventarios_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">

@@ -9,6 +9,7 @@ import ReformaTributariaParte1Page from './pages/ReformaTributariaParte1Page';
 import ReformaTributariaParte2Page from './pages/ReformaTributariaParte2Page';
 import HoldingFamiliarReformaTributariaPage from './pages/HoldingFamiliarReformaTributariaPage';
 import PoliticaDePrivacidadePage from './pages/PoliticaDePrivacidadePage'; // NOVO: Importa a página da Política de Privacidade
+import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage'; // **** NOVO: IMPORTA A PÁGINA DE DOAÇÃO COM USUFRUTO ****
 import './App.css';
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
         <Route path="/informativos/holding-familiar-reforma-tributaria" element={<HoldingFamiliarReformaTributariaPage />} />
         {/* NOVO: Rota para a Página de Política de Privacidade */}
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
+        {/* **** NOVO: ROTA PARA A PÁGINA DE DOAÇÃO COM USUFRUTO **** */}
+        <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
       </Routes>
     </Router>
   );
