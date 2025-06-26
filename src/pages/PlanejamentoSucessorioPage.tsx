@@ -42,11 +42,9 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Maximize o impacto de suas doações enquanto otimiza a carga tributária, garantindo que seu 
                     legado beneficie as causas e pessoas que você mais valoriza.
                   </p>
-                  {/* ALTERADO: Link atualizado para apontar para a nova página interna */}
                   <a href="/doacao-com-usufruto" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
-                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
 
                 {/* Card: Holding Familiar */}
@@ -56,10 +54,9 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Crie uma holding familiar para proteger e gerenciar seu patrimônio, facilitando a sucessão e 
                     reduzindo custos e conflitos futuros.
                   </p>
-                  <a href="https://altftect.manus.space/holding_familiar_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                  <a href="/holding-familiar" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
-                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
               </div>
 
@@ -73,10 +70,10 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Oferecemos suporte completo no processo de inventário, buscando soluções ágeis e menos 
                     onerosas para a partilha de bens, seja judicial ou extrajudicial.
                   </p>
-                  <a href="https://altftect.manus.space/inventarios_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                  {/* **** CORREÇÃO AQUI: LINK ATUALIZADO PARA PÁGINA INTERNA **** */}
+                  <a href="/inventario" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
-                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
 
                 {/* Card: Testamentos */}
@@ -89,7 +86,6 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                   <a href="https://altftect.manus.space/testamentos_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
-                  {/* Removido o botão Consultar se existisse aqui */}
                 </div>
               </div>
 
@@ -107,7 +103,6 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     <a href="https://altftect.manus.space/administradora_bens_imoveis_modal.html" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                       Saiba Mais
                     </a>
-                    {/* Removido o botão Consultar se existisse aqui */}
                   </div>
                 </div>
               </div>

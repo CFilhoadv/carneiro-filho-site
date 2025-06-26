@@ -8,8 +8,12 @@ import ContatoPage from './pages/ContatoPage';
 import ReformaTributariaParte1Page from './pages/ReformaTributariaParte1Page';
 import ReformaTributariaParte2Page from './pages/ReformaTributariaParte2Page';
 import HoldingFamiliarReformaTributariaPage from './pages/HoldingFamiliarReformaTributariaPage';
-import PoliticaDePrivacidadePage from './pages/PoliticaDePrivacidadePage'; // NOVO: Importa a página da Política de Privacidade
-import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage'; // **** NOVO: IMPORTA A PÁGINA DE DOAÇÃO COM USUFRUTO ****
+import PoliticaDePrivacidadePage from './pages/PoliticaDePrivacidadePage';
+// **** NOVO: IMPORTA AS NOVAS PÁGINAS ****
+import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage'; 
+import HoldingFamiliarPage from './pages/HoldingFamiliarPage'; 
+import InventarioPage from './pages/InventarioPage'; // **** NOVO: IMPORTA A PÁGINA DE INVENTÁRIO ****
+// ****************************************
 import './App.css';
 
 function App() {
@@ -28,8 +32,11 @@ function App() {
         <Route path="/informativos/holding-familiar-reforma-tributaria" element={<HoldingFamiliarReformaTributariaPage />} />
         {/* NOVO: Rota para a Página de Política de Privacidade */}
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
-        {/* **** NOVO: ROTA PARA A PÁGINA DE DOAÇÃO COM USUFRUTO **** */}
+        {/* **** NOVAS ROTAS PARA AS PÁGINAS DE CONTEÚDO **** */}
         <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
+        <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
+        <Route path="/inventario" element={<InventarioPage />} /> {/* **** NOVO: ROTA PARA A PÁGINA DE INVENTÁRIO **** */}
+        {/* ************************************************** */}
       </Routes>
     </Router>
   );
