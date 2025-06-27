@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-import doacaoUsufrutoBanner from '../assets/images/doação_usufruto.png'; 
+import doacaoUsufrutoBanner from '../assets/images/doacao_usufruto_banner.png'; // Caminho da imagem após renomear
 
 const DoacaoComUsufrutoPage: React.FC = () => {
   return (
@@ -184,7 +184,7 @@ const DoacaoComUsufrutoPage: React.FC = () => {
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
                   <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Incomunicabilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Exclui o bem de partilhas em divórcios ou dissolução de união estável do beneficiário.</td>
+                  <td className="py-4 px-6 text-gray-700 text-base">Evita que o bem entre na comunhão de bens em caso de casamento do beneficiário.</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
                   <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Reversão</strong></td>
@@ -234,7 +234,7 @@ const DoacaoComUsufrutoPage: React.FC = () => {
             <div className="bg-gray-50 p-6 rounded-lg shadow">
               <h4 className="text-xl font-semibold text-blue-700 mb-2">▶ Caso 2: Idoso com herdeiros problemáticos</h4>
               <p className="text-gray-700 mb-2"><strong>Situação:</strong> Viúvo com filho viciado em jogos.</p>
-              <p className="text-gray-700"><strong>Solução:</strong> Doação progressiva (ex: 25% a cada 5 anos) + impenhorabilidade.</p>
+              <p className="text-gray-700"><strong>Solução:</strong> Doação progressiva (25% a cada 5 anos) + impenhorabilidade.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg shadow">
               <h4 className="text-xl font-semibold text-blue-700 mb-2">▶ Caso 3: Empresário endividado</h4>

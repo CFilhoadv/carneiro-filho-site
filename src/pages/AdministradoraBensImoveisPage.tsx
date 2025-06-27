@@ -9,7 +9,7 @@ const AdministradoraBensImoveisPage: React.FC = () => {
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
         <img
-          src={administradoraImoveisBanner} // CORRIGIDO: Removido .src ||
+          src={administradoraImoveisBanner}
           alt="Lupa sobre modelos de casas, simbolizando gestão e proteção de imóveis"
           className="w-full h-full object-cover object-center"
         />

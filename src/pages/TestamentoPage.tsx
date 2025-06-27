@@ -177,7 +177,7 @@ const TestamentoPage: React.FC = () => {
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>
-              <span><strong className="text-gray-800">Não evita o inventário</strong> (ainda é necessário para transferir bens).</span>
+              <span><strong className="text-gray-800">Não evita o inventário</strong> (um processo legal para transferir bens aos herdeiros).</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>

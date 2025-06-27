@@ -251,7 +251,7 @@ const InventarioPage: React.FC = () => {
             Para evitar as armadilhas do inventário e garantir que seu legado seja transferido de forma eficiente e tranquila, o planejamento sucessório é a chave. Conte com o suporte de profissionais especializados para analisar seu caso.
           </p>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
-            Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar seu patrimônio com segurança jurídica, evitando custos desnecessários e conflitos familiares.
+            Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar sua vontade com segurança jurídica, evitando custos desnecessários e conflitos familiares.
           </p>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
             Se você precisa de um <strong className="text-gray-800">modelo de testamento</strong> ou de uma <strong className="text-gray-800">análise personalizada</strong> da sua situação, nossa equipe oferece soluções sob medida para garantir a tranquilidade do seu futuro e de sua família.
