@@ -1,5 +1,5 @@
-import clsx from 'clsx';
 import React from 'react';
+// import clsx from 'clsx'; // CORRIGIDO: Esta linha foi removida pois 'clsx' não está sendo utilizada.
 // import { Link } from 'react-router-dom'; // Esta linha foi removida
 
 interface BannerProps {
