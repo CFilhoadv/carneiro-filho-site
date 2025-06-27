@@ -1,8 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-// IMPORTAÇÃO DA SUA NOVA IMAGEM DE BANNER PARA TESTAMENTO
-// Certifique-se de que o arquivo na pasta 'src/assets/images/' é 'testamento_banner.jpeg'
 import testamentoBanner from '../assets/images/testamento_banner.jpeg'; 
 
 const TestamentoPage: React.FC = () => {
@@ -11,7 +9,7 @@ const TestamentoPage: React.FC = () => {
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
         <img
-          src={testamentoBanner.src || testamentoBanner} 
+          src={testamentoBanner} // CORRIGIDO: Removido .src ||
           alt="Pessoas assinando documentos importantes, simbolizando a elaboração de um testamento"
           className="w-full h-full object-cover object-center" 
         />

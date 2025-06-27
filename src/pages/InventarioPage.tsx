@@ -1,11 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-// Importe 'Image' do Next.js se você estiver usando Next.js para otimização de imagens.
-// Caso contrário, você pode usar a tag <img> padrão.
-// import Image from 'next/image';
 
-// **** IMPORTAÇÃO DA SUA NOVA IMAGEM DE BANNER PARA INVENTÁRIO ****
-// O nome do arquivo DEVE ser inventario_banner.webp após a correção
 import inventarioBanner from '../assets/images/inventario_banner.webp'; 
 
 const InventarioPage: React.FC = () => {
@@ -13,13 +8,10 @@ const InventarioPage: React.FC = () => {
     <MainLayout>
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
-        {/* Usando a tag <img> padrão com styling Tailwind.
-            Se você estiver usando Next.js e o componente <Image>, adapte conforme a documentação deles.
-        */}
         <img
-          src={inventarioBanner.src || inventarioBanner} // Adaptação para Next.js Image (.src) e img padrão
+          src={inventarioBanner} // CORRIGIDO: Removido .src ||
           alt="Pessoas discutindo documentos, simbolizando o processo de inventário"
-          className="w-full h-full object-cover object-center" // Garante que a imagem cubra a área e seja responsiva
+          className="w-full h-full object-cover object-center" 
         />
       </div>
 
@@ -260,6 +252,9 @@ const InventarioPage: React.FC = () => {
           </p>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
             Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar seu patrimônio com segurança jurídica, evitando custos desnecessários e conflitos familiares.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
+            Se você precisa de um <strong className="text-gray-800">modelo de testamento</strong> ou de uma <strong className="text-gray-800">análise personalizada</strong> da sua situação, nossa equipe oferece soluções sob medida para garantir a tranquilidade do seu futuro e de sua família.
           </p>
           <div className="mt-8">
             <a

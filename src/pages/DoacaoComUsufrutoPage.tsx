@@ -1,10 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-// Importe 'Image' do Next.js se você estiver usando Next.js para otimização de imagens.
-// Caso contrário, você pode usar a tag <img> padrão.
-// import Image from 'next/image'; 
 
-// IMPORTAÇÃO DA SUA NOVA IMAGEM COM A EXTENSÃO .png
 import doacaoUsufrutoBanner from '../assets/images/doação_usufruto.png'; 
 
 const DoacaoComUsufrutoPage: React.FC = () => {
@@ -12,13 +8,10 @@ const DoacaoComUsufrutoPage: React.FC = () => {
     <MainLayout>
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
-        {/* Usando a tag <img> padrão com styling Tailwind.
-            Se você estiver usando Next.js e o componente <Image>, adapte conforme a documentação deles.
-        */}
         <img 
-          src={doacaoUsufrutoBanner.src || doacaoUsufrutoBanner} // Adaptação para Next.js Image (.src) e img padrão
+          src={doacaoUsufrutoBanner} // CORRIGIDO: Removido .src ||
           alt="Profissionais e balança da justiça, representando doação e usufruto"
-          className="w-full h-full object-cover object-center" // Garante que a imagem cubra a área e seja responsiva
+          className="w-full h-full object-cover object-center" 
         />
       </div>
 
@@ -280,15 +273,15 @@ const DoacaoComUsufrutoPage: React.FC = () => {
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">ITCMD (imposto)</strong></td>
+                      <td className="py-4 px-6 text-gray-700 text-base">ITCMD (imposto)</td>
                       <td className="py-4 px-6 text-gray-700 text-base">4% a 8% do valor venal do bem (varia por estado)</td>
                     </tr>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Escritura Pública</strong></td>
+                      <td className="py-4 px-6 text-gray-700 text-base">Escritura Pública</td>
                       <td className="py-4 px-6 text-gray-700 text-base">R$ 1.000 a R$ 5.000 (depende do tabelião e valor do bem)</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Registro no Cartório</strong></td>
+                      <td className="py-4 px-6 text-gray-700 text-base">Registro no Cartório</td>
                       <td className="py-4 px-6 text-gray-700 text-base">R$ 200 a R$ 1.000</td>
                     </tr>
                   </tbody>
@@ -330,127 +323,66 @@ const DoacaoComUsufrutoPage: React.FC = () => {
             <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
               <thead>
                 <tr className="bg-blue-100 border-b border-gray-200">
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Estratégia</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Vantagens</th>
+                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Critério</th>
+                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Doação com Usufruto</th>
                   <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Desvantagens</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Doação com Usufruto</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Controle em vida; evita inventário; agilidade</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">ITCMD devido; irrevogável (salvo exceções)</td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Tempo</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base">1 a 5+ anos</td>
+                  <td className="py-4 px-6 text-gray-700 text-base">Imediato (em vida)</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Testamento</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Pode ser alterado; só vale após morte</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Só vale após a morte; os bens ainda entram em processo de inventário</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Inventário Extrajudicial</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Processo mais rápido (se houver consenso e maiores de idade)</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Custo médio de 3% a 5% do patrimônio; exige total acordo entre herdeiros</td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Custo</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base">Alto (ITCMD + taxas + honorários)</td>
+                  <td className="py-4 px-6 text-gray-700 text-base">Potencialmente mais baixo (ex.: doação paga ITCMD apenas uma vez)</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Holdings Familiares</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Benefícios fiscais e de gestão patrimonial a longo prazo</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Maior complexidade e custo inicial elevado; exige estrutura mais robusta</td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Controle</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base">Decisão judicial</td>
+                  <td className="py-4 px-6 text-gray-700 text-base">Vontade do titular (controle total)</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
-            Passo a Passo para Fazer uma Doação com Usufruto
-          </h2>
-          <ul className="space-y-6 text-gray-700 text-lg list-decimal pl-6">
-            <li>
-              <strong className="text-gray-800">Diagnóstico Patrimonial:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Liste todos os seus bens (imóveis, investimentos, veículos, etc.).</li>
-                <li>Calcule a <strong className="text-gray-800">parte disponível</strong> (máximo de 50% se houver herdeiros necessários) para garantir a legalidade da doação.</li>
-              </ul>
-            </li>
-            <li>
-              <strong className="text-gray-800">Escolha do Beneficiário:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Pode ser um filho, cônjuge, outro parente ou até terceiros (como um cuidador).</li>
-                <li><strong className="text-gray-800">Dica:</strong> Em famílias reconstituídas, especifique claramente os direitos para evitar conflitos futuros.</li>
-              </ul>
-            </li>
-            <li>
-              <strong className="text-gray-800">Redação do Instrumento Jurídico:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li><strong className="text-gray-800">Exigências legais:</strong></li>
-                <ul className="list-circle pl-5 mt-1">
-                  <li>Escritura pública para imóveis.</li>
-                  <li>Cláusulas de usufruto e proteção expressas e detalhadas.</li>
-                  <li>Assinatura de 2 testemunhas (em alguns casos).</li>
-                </ul>
-              </ul>
-            </li>
-            <li>
-              <strong className="text-gray-800">Pagamento de Tributos:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>O ITCMD deve ser quitado antes do registro do imóvel.</li>
-              </ul>
-            </li>
-            <li>
-              <strong className="text-gray-800">Registro em Cartório:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li><strong className="text-gray-800">Imóveis:</strong> Registro de Imóveis competente.</li>
-                <li><strong className="text-gray-800">Veículos:</strong> Averbação do usufruto no Detran.</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
         <section className="text-center py-8 bg-blue-50 rounded-lg shadow-inner">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Conclusão</h2>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
-            A doação com usufruto é uma ferramenta poderosa para <strong className="text-gray-800">tranquilidade sucessória</strong> e controle patrimonial em vida. No entanto, sua aplicação exige <strong className="text-gray-800">assessoria jurídica especializada</strong> para:
+            A doação com usufruto é <strong className="text-gray-800">útil para expressar vontades específicas</strong>, mas <strong className="text-gray-800">não é suficiente</strong> para um planejamento sucessório eficaz. Combine-o com outras estratégias para uma solução completa, como:
           </p>
           <ul className="space-y-2 text-gray-700 text-lg mt-4 list-none pl-0 inline-block text-left">
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> Calcular a parte disponível do patrimônio de forma precisa.
+              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong className="text-gray-800">Doações em vida</strong> (para evitar o inventário em parte do patrimônio).
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> Redigir o contrato com cláusulas personalizadas e seguras.
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> Antecipar riscos fiscais, jurídicos e familiares, garantindo que a sua vontade seja plenamente respeitada.
+              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong className="text-gray-800">Holding familiar</strong> (para patrimônios complexos que buscam otimização e proteção).
             </li>
           </ul>
+
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 mt-8">Ação Recomendada: Sua Orientação Especializada</h3>
+          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
+            Garantir que sua última vontade seja plenamente respeitada e que seu legado seja transferido sem imprevistos exige mais do que um simples testamento. A complexidade das leis de sucessão demanda uma assessoria jurídica especializada e um planejamento estratégico.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
+            Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar sua vontade com segurança jurídica, evitando custos desnecessários e conflitos familiares.
+          </p>
+          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
+            Se você precisa de um <strong className="text-gray-800">modelo de testamento</strong> ou de uma <strong className="text-gray-800">análise personalizada</strong> da sua situação, nossa equipe oferece soluções sob medida para garantir a tranquilidade do seu futuro e de sua família.
+          </p>
           <div className="mt-8">
-            <a 
-              href="https://calendly.com/contato-carneirofilho/planejamento_sucessorio" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://calendly.com/contato-carneirofilho/planejamento_sucessorio"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg shadow-lg"
             >
               Agende uma Consulta
             </a>
           </div>
-        </section>
-
-        <section className="mt-10 py-8 bg-gray-100 rounded-lg shadow">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 text-center">Próximos Passos Recomendados</h3>
-          <ul className="space-y-4 text-gray-700 text-lg max-w-2xl mx-auto list-none pl-0">
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">●</span>
-              <span><strong className="text-gray-800">Agende uma avaliação patrimonial conosco:</strong> Entenda como a doação com usufruto se encaixa na sua situação específica.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">●</span>
-              <span><strong className="text-gray-800">Compare os custos de ITCMD no seu estado:</strong> Obtenha uma estimativa precisa dos impostos envolvidos.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">●</span>
-              <span><strong className="text-gray-800">Reúna documentos:</strong> Matrícula atualizada do imóvel, CPF e RG de doador e beneficiário, Certidão de casamento.</span>
-            </li>
-          </ul>
         </section>
       </div>
     </MainLayout>

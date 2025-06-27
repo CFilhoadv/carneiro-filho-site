@@ -32,7 +32,7 @@ const AdministradoraBensImoveisPage: React.FC = () => {
           <p className="text-gray-700 leading-relaxed text-lg">
             A Administradora de Bens Imóveis Próprios é uma empresa especializada na <strong className="text-gray-800">gestão centralizada</strong> de patrimônio imobiliário familiar, com três objetivos principais:
           </p>
-          <ul className="space-y-2 text-gray-700 text-lg mt-4 list-decimal pl-6">
+          <ul className="space-y-2 text-gray-700 text-lg list-decimal pl-6">
             <li><strong className="text-gray-800">Otimização tributária</strong>: Redução legal de impostos na locação e sucessão.</li>
             <li><strong className="text-gray-800">Proteção patrimonial</strong>: Separação entre bens pessoais e empresariais.</li>
             <li><strong className="text-gray-800">Gestão profissionalizada</strong>: Controle unificado de múltiplos imóveis.</li>
