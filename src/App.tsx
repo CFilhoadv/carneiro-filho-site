@@ -10,11 +10,11 @@ import ReformaTributariaParte2Page from './pages/ReformaTributariaParte2Page';
 import HoldingFamiliarReformaTributariaPage from './pages/HoldingFamiliarReformaTributariaPage';
 import PoliticaDePrivacidadePage from './pages/PoliticaDePrivacidadePage';
 // **** IMPORTAÇÕES DE TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO ****
-import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage'; 
-import HoldingFamiliarPage from './pages/HoldingFamiliarPage'; 
+import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage';
+import HoldingFamiliarPage from './pages/HoldingFamiliarPage';
 import InventarioPage from './pages/InventarioPage';
-import TestamentoPage from './pages/TestamentoPage'; 
-import AdministradoraBensImoveisPage from './pages/AdministradoraBensImoveisPage'; 
+import TestamentoPage from './pages/TestamentoPage';
+import AdministradoraBensImoveisPage from './pages/AdministradoraBensImoveisPage';
 // ********************************************************************************
 import './App.css';
 
@@ -29,7 +29,7 @@ function App() {
         <Route path="/cursos" element={<CursosPage />} />
         <Route path="/contato" element={<ContatoPage />} />
         {/* Rotas para as Publicações de Informativos */}
-        <Route path="/informativos/reforma-tributaria-parte-1" element={<ReformaTributariaParte1Page />} /> 
+        <Route path="/informativos/reforma-tributaria-parte-1" element={<ReformaTributariaParte1Page />} />
         <Route path="/informativos/reforma-tributaria-parte-2" element={<ReformaTributariaParte2Page />} />
         <Route path="/informativos/holding-familiar-reforma-tributaria" element={<HoldingFamiliarReformaTributariaPage />} />
         {/* Rota para a Página de Política de Privacidade */}
@@ -37,9 +37,9 @@ function App() {
         {/* **** ROTAS PARA TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO **** */}
         <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
         <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
-        <Route path="/inventario" element={<InventarioPage />} />
-        <Route path="/testamento" element={<TestamentoPage />} /> 
-        <Route path="/administradora-imoveis" element={<AdministradoraBensImoveisPage />} /> 
+        <Route path="/inventarios" element={<InventarioPage />} /> {/* ALTERADO: de /inventario para /inventarios */}
+        <Route path="/testamentos" element={<TestamentoPage />} /> {/* ALTERADO: de /testamento para /testamentos */}
+        <Route path="/administradoras-de-bens-proprios" element={<AdministradoraBensImoveisPage />} /> {/* ALTERADO: de /administradora-imoveis para /administradoras-de-bens-proprios */}
         {/* ************************************************************************** */}
       </Routes>
     </Router>
