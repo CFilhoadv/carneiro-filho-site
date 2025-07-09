@@ -135,7 +135,7 @@ const InventarioPage: React.FC = () => {
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>
-              <span><strong className="text-gray-800">Custos:</strong> ITCMD + taxas judiciais + honorários (em grandes fortunas, como a de Roberto Marinho, o ITCMD chegaria a <strong className="text-gray-800">R$ 2,4 bilhões</strong>).</span>
+              <span><strong className="text-gray-800">Custos:</strong> ITCMD + taxas + honorários (em grandes fortunas, como a de Roberto Marinho, o ITCMD chegaria a <strong className="text-gray-800">R$ 2,4 bilhões</strong>).</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>

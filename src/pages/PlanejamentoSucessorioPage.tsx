@@ -70,7 +70,8 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Oferecemos suporte completo no processo de inventário, buscando soluções ágeis e menos 
                     onerosas para a partilha de bens, seja judicial ou extrajudicial.
                   </p>
-                  <a href="/inventario" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                  {/* CORREÇÃO APLICADA AQUI: O href foi alterado para o caminho correto "/inventarios" */}
+                  <a href="/inventarios" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
                 </div>
@@ -82,7 +83,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                     Elabore seu testamento com segurança jurídica, garantindo que seus desejos sejam respeitados 
                     e evitando litígios na transmissão de seu patrimônio.
                   </p>
-                  <a href="/testamento" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                  <a href="/testamentos" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                     Saiba Mais
                   </a>
                 </div>
@@ -99,7 +100,7 @@ const PlanejamentoSucessorioPage: React.FC = () => {
                       Implemente um sistema de estruturação patrimonial familiar que gerencia e organiza seus bens 
                       imóveis, garantindo proteção e eficiência na sucessão.
                     </p>
-                    <a href="/administradora-imoveis" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
+                    <a href="/administradoras-de-bens-proprios" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
                       Saiba Mais
                     </a>
                   </div>
