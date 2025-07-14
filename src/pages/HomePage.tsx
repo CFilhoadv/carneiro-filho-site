@@ -57,7 +57,6 @@ const HomePage: React.FC = () => {
           title={banners[currentSlide].title}
           description={banners[currentSlide].description}
           backgroundImage={banners[currentSlide].image}
-          className="bg-transparent" // Adicionado para forçar a transparência do fundo do banner
           height="h-[450px]"
         />
         
