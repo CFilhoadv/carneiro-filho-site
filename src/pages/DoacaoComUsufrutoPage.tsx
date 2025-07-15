@@ -1,17 +1,17 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-import doacaoUsufrutoBanner from '../assets/images/doacao_usufruto_banner.png'; // Caminho da imagem após renomear
+import doacaoUsufrutoBanner from '../assets/images/doacao_usufruto_banner.webp'; // CORRIGIDO: de .png para .webp
 
 const DoacaoComUsufrutoPage: React.FC = () => {
   return (
     <MainLayout>
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
-        <img 
-          src={doacaoUsufrutoBanner} // CORRIGIDO: Removido .src ||
+        <img
+          src={doacaoUsufrutoBanner}
           alt="Profissionais e balança da justiça, representando doação e usufruto"
-          className="w-full h-full object-cover object-center" 
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
@@ -163,46 +163,6 @@ const DoacaoComUsufrutoPage: React.FC = () => {
 
         <section className="mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
-            Cláusulas Protetivas Recomendadas
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-              <thead>
-                <tr className="bg-blue-100 border-b border-gray-200">
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Cláusula</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Objetivo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Inalienabilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Impede a venda ou doação do bem pelo beneficiário, garantindo sua permanência no patrimônio familiar.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Impenhorabilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Protege o bem contra penhoras por dívidas ou ações judiciais do beneficiário, preservando o patrimônio familiar.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Incomunicabilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Evita que o bem entre na comunhão de bens em caso de casamento do beneficiário.</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Reversão</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Permite que o doador retome o bem se o beneficiário falecer antes dele.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div className="bg-blue-50 p-6 rounded-lg shadow-inner mt-8">
-            <h3 className="text-xl font-semibold text-blue-800 mb-3">Modelo de Cláusula para Escritura (Trecho adaptável):</h3>
-            <p className="text-gray-700 leading-relaxed italic">
-              "Fica estabelecido usufruto vitalício ao doador, que manterá posse direta do imóvel, podendo perceber todos os frutos e rendimentos. O donatário fica proibido de alienar, gravar ou onerar o bem até o falecimento do doador, sob pena de nulidade. Em caso de descumprimento, o bem retornará integralmente ao patrimônio do doador."
-            </p>
-          </div>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
             Quando Vale a Pena Usar Essa Estratégia?
           </h2>
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
@@ -255,7 +215,7 @@ const DoacaoComUsufrutoPage: React.FC = () => {
                 Sim. O usufruto vitalício garante seu direito de moradia até o falecimento. Porém, atenção:
               </p>
               <ul className="space-y-2 text-gray-700 text-lg mt-2 list-disc pl-5">
-                <li>Se o imóvel for <strong className="text-gray-800">bem de família</strong> (único da família), ele já possui proteção contra credores.</li>
+                <li>Se o imóvel for <strong>bem de família</strong> (único da família), ele já possui proteção contra credores.</li>
                 <li>Herdeiros necessários podem contestar se a doação comprometer seu direito à legítima.</li>
               </ul>
             </div>
@@ -288,7 +248,7 @@ const DoacaoComUsufrutoPage: React.FC = () => {
                 </table>
               </div>
               <p className="text-gray-700 leading-relaxed text-lg mt-4">
-                <strong className="text-gray-800">Exemplo:</strong> Para um imóvel de R$ 500.000 em São Paulo (ITCMD 4%), os custos totais ficariam em aproximadamente R$ 23.000.
+                <strong>Exemplo:</strong> Para um imóvel de R$ 500.000 em São Paulo (ITCMD 4%), os custos totais ficariam em aproximadamente R$ 23.000.
               </p>
             </div>
 
@@ -297,19 +257,13 @@ const DoacaoComUsufrutoPage: React.FC = () => {
               <p className="text-gray-700 leading-relaxed text-lg">
                 Sim. É comum estabelecer condições como:
               </p>
-              <ul className="space-y-2 text-gray-700 text-lg mt-2 list-none pl-0">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 text-xl">✓</span> "O imóvel não poderá ser vendido até que meu neto complete 25 anos."
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 text-xl">✓</span> "Meu filho só poderá alugar o apartamento com meu consentimento."
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2 text-xl">✓</span> "Se meu beneficiário falecer antes de mim, o bem retorna ao meu patrimônio."
-                </li>
+              <ul className="space-y-2 text-gray-700 text-lg mt-2 list-disc pl-5">
+                <li>"O imóvel não poderá ser vendido até que meu neto complete 25 anos."</li>
+                <li>"Meu filho só poderá alugar o apartamento com meu consentimento."</li>
+                <li>"Se meu beneficiário falecer antes de mim, o bem retorna ao meu patrimônio."</li>
               </ul>
               <p className="text-gray-700 leading-relaxed text-lg mt-4">
-                <strong className="text-red-600">Cuidado:</strong> Condições abusivas ou impossíveis de cumprir podem ser anuladas judicialmente.
+                <strong>Cuidado:</strong> Condições abusivas ou impossíveis de cumprir podem ser anuladas judicialmente.
               </p>
             </div>
           </div>
@@ -330,17 +284,17 @@ const DoacaoComUsufrutoPage: React.FC = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Tempo</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Tempo</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">1 a 5+ anos</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Imediato (em vida)</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Custo</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Custo</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Alto (ITCMD + taxas + honorários)</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Potencialmente mais baixo (ex.: doação paga ITCMD apenas uma vez)</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Controle</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Controle</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Decisão judicial</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Vontade do titular (controle total)</td>
                 </tr>
@@ -352,14 +306,14 @@ const DoacaoComUsufrutoPage: React.FC = () => {
         <section className="text-center py-8 bg-blue-50 rounded-lg shadow-inner">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Conclusão</h2>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
-            A doação com usufruto é <strong className="text-gray-800">útil para expressar vontades específicas</strong>, mas <strong className="text-gray-800">não é suficiente</strong> para um planejamento sucessório eficaz. Combine-o com outras estratégias para uma solução completa, como:
+            A doação com usufruto é <strong>útil para expressar vontades específicas</strong>, mas <strong>não é suficiente</strong> para um planejamento sucessório eficaz. Combine-o com outras estratégias para uma solução completa, como:
           </p>
           <ul className="space-y-2 text-gray-700 text-lg mt-4 list-none pl-0 inline-block text-left">
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong className="text-gray-800">Doações em vida</strong> (para evitar o inventário em parte do patrimônio).
+              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong>Doações em vida</strong> (para evitar o inventário em parte do patrimônio).
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong className="text-gray-800">Holding familiar</strong> (para patrimônios complexos que buscam otimização e proteção).
+              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong>Holding familiar</strong> (para patrimônios complexos que buscam otimização e proteção).
             </li>
           </ul>
 
@@ -368,10 +322,10 @@ const DoacaoComUsufrutoPage: React.FC = () => {
             Garantir que sua última vontade seja plenamente respeitada e que seu legado seja transferido sem imprevistos exige mais do que um simples testamento. A complexidade das leis de sucessão demanda uma assessoria jurídica especializada e um planejamento estratégico.
           </p>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
-            Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar sua vontade com segurança jurídica, evitando custos desnecessários e conflitos familiares.
+            Nossa equipe na <strong>Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar sua vontade com segurança jurídica, evitando custos desnecessários e conflitos familiares.
           </p>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
-            Se você precisa de um <strong className="text-gray-800">modelo de testamento</strong> ou de uma <strong className="text-gray-800">análise personalizada</strong> da sua situação, nossa equipe oferece soluções sob medida para garantir a tranquilidade do seu futuro e de sua família.
+            Se você precisa de um <strong>modelo de testamento</strong> ou de uma <strong>análise personalizada</strong> da sua situação, nossa equipe oferece soluções sob medida para garantir a tranquilidade do seu futuro e de sua família.
           </p>
           <div className="mt-8">
             <a

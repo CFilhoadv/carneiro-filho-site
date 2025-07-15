@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-import administradoraImoveisBanner from '../assets/images/administradora_imoveis_banner.jpeg';
+import administradoraImoveisBanner from '../assets/images/administradora_imoveis_banner.webp'; // CORRIGIDO: de .jpeg para .webp
 
 const AdministradoraBensImoveisPage: React.FC = () => {
   return (
@@ -248,6 +248,23 @@ const AdministradoraBensImoveisPage: React.FC = () => {
               </tbody>
             </table>
           </div>
+          <p className="text-gray-700 leading-relaxed text-lg mt-4 mb-4">
+            <strong className="text-gray-800">Dados do Exemplo</strong>:
+          </p>
+          <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
+            <li className="flex items-start">
+              <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">●</span>
+              <span>Patrimônio: R$ 5 milhões.</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">●</span>
+              <span>Receita anual: R$ 300 mil (aluguéis).</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">●</span>
+              <span>Período de simulação: 10 anos.</span>
+            </li>
+          </ul>
         </section>
 
         <section className="mb-10">
@@ -294,17 +311,17 @@ const AdministradoraBensImoveisPage: React.FC = () => {
           </p>
           <ul className="space-y-2 text-gray-700 text-lg mt-4 list-none pl-0 inline-block text-left">
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong className="text-gray-800">Eficiência tributária</strong> (com uma média de 62% de redução nos impostos sobre aluguéis).
+              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong>Eficiência tributária</strong> (com uma média de 62% de redução nos impostos sobre aluguéis).
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong className="text-gray-800">Segurança jurídica</strong> (através da blindagem patrimonial e separação de bens).
+              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong>Segurança jurídica</strong> (através da blindagem patrimonial e separação de bens).
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong className="text-gray-800">Controle familiar</strong> (com governança compartilhada e regras claras para o futuro).
+              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong>Controle familiar</strong> (com governança compartilhada e regras claras para o futuro).
             </li>
           </ul>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
-            <strong className="text-red-600">Atenção</strong>: A implementação dessa estrutura é complexa e exige assessoria especializada para:
+            <strong>Atenção</strong>: A implementação dessa estrutura é complexa e exige assessoria especializada para:
           </p>
           <ul className="space-y-2 text-gray-700 text-lg mt-2 list-disc pl-5 inline-block text-left">
             <li>Evitar a caracterização como atividade imobiliária preponderante (o que poderia anular benefícios fiscais).</li>
@@ -314,7 +331,7 @@ const AdministradoraBensImoveisPage: React.FC = () => {
 
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 mt-8">Próximos Passos: Sua Orientação Especializada</h3>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
-            Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong> possui a expertise necessária em Direito de Família e Sucessões, Direito Societário e Planejamento Tributário para analisar seu caso específico e propor a melhor estrutura de gestão e proteção para seu patrimônio imobiliário.
+            Nossa equipe na <strong>Carneiro Filho Advocacia</strong> possui a expertise necessária em Direito de Família e Sucessões, Direito Societário e Planejamento Tributário para analisar seu caso específico e propor a melhor estrutura de gestão e proteção para seu patrimônio imobiliário.
           </p>
           <div className="mt-8">
             <a

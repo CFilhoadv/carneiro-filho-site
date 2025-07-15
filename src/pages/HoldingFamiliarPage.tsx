@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-import holdingFamiliarBanner from '../assets/images/holding_familiar_banner.png.webp';
+import holdingFamiliarBanner from '../assets/images/holding_familiar_banner.webp'; // CORRIGIDO: de .png.webp para .webp
 
 const HoldingFamiliarPage: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const HoldingFamiliarPage: React.FC = () => {
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
         <img
-          src={holdingFamiliarBanner} 
+          src={holdingFamiliarBanner}
           alt="Mãos protegendo uma casa, simbolizando Holding Familiar e proteção patrimonial"
           className="w-full h-full object-cover object-center"
         />
@@ -67,11 +67,11 @@ const HoldingFamiliarPage: React.FC = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Isenção de ITBI</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Isenção de ITBI</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Na transferência de imóveis para a holding (integralização como capital social) é isenta do ITBI.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Redução de ITCMD</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Redução de ITCMD</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">A sucessão ocorre pela doação das cotas da holding aos herdeiros, incidindo ITCMD sobre o valor das cotas.</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
@@ -83,7 +83,7 @@ const HoldingFamiliarPage: React.FC = () => {
           </div>
 
           <p className="text-gray-700 leading-relaxed text-lg mb-4">
-            <strong className="text-gray-800">Comparativo de ITCMD: Valor Venal x Valor de Aquisição (IR)</strong>
+            <strong>Comparativo de ITCMD: Valor Venal x Valor de Aquisição (IR)</strong>
             A base de cálculo do ITCMD nos sistemas de sucessão é o VALOR VENAL ou o de mercado, enquanto numa holding familiar é o valor declarado no imposto de renda, O VALOR DE AQUISIÇÃO, o que faz uma grande diferença tributária.
           </p>
           <div className="overflow-x-auto mb-8">
@@ -163,35 +163,35 @@ const HoldingFamiliarPage: React.FC = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Inalienabilidade</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Inalienabilidade</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Impede a venda ou transferência dos bens da holding sem autorização dos demais sócios.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Impenhorabilidade</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Impenhorabilidade</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Protege os bens contra penhoras e execuções judiciais.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Irrenunciabilidade</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Irrenunciabilidade</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Proíbe a renúncia aos direitos sobre os bens da holding.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Sucessão</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Sucessão</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Define a sucessão dos bens em caso de falecimento de um sócio.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Administração</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Administração</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Estabelece regras sobre a gestão da holding e a tomada de decisões.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Exclusão</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Exclusão</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Permite a exclusão de sócios em situações específicas.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Arrependimento</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Arrependimento</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Permite que um sócio se retrate de sua decisão de ingressar ou permanecer na holding dentro de um prazo estipulado, garantindo assim uma saída sem penalidades.</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Golden Share</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Golden Share</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Confere a um ou mais sócios direitos especiais, como veto em decisões estratégicas, assegurando que certos interesses da família sejam protegidos, mesmo que a participação acionária seja minoritária.</td>
                 </tr>
               </tbody>
@@ -205,15 +205,15 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Evita <strong className="text-gray-800">inventário judicial</strong> (bens são transferidos via alteração societária).</span>
+              <span>Evita <strong>inventário judicial</strong> (bens são transferidos via alteração societária).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Permite <strong className="text-gray-800">testamento privado</strong> (regras de herança nas quotas).</span>
+              <span>Permite <strong>testamento privado</strong> (regras de herança nas quotas).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Protege <strong className="text-gray-800">herdeiros incapazes</strong> (gestão por administradores designados).</span>
+              <span>Protege <strong>herdeiros incapazes</strong> (gestão por administradores designados).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
@@ -237,15 +237,15 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Tomada de decisão centralizada</strong> (evita dispersão de patrimônio).</span>
+              <span><strong>Tomada de decisão centralizada</strong> (evita dispersão de patrimônio).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Contratos personalizados</strong> (pacto societário, acordos de acionistas).</span>
+              <span><strong>Contratos personalizados</strong> (pacto societário, acordos de acionistas).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Otimização de custos</strong> (contratação coletiva, assessoria especializada).</span>
+              <span><strong>Otimização de custos</strong> (contratação coletiva, assessoria especializada).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
@@ -273,23 +273,23 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Famílias com patrimônio acima de R$ 2 milhões</strong> (imóveis, empresas, investimentos).</span>
+              <span><strong>Famílias com patrimônio acima de R$ 2 milhões</strong> (imóveis, empresas, investimentos).</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Empresários</strong> que querem separar patrimônio pessoal e empresarial e garantir a continuidade dos negócios.</span>
+              <span><strong>Empresários</strong> que querem separar patrimônio pessoal e empresarial e garantir a continuidade dos negócios.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Casais em segundas uniões</strong> com filhos de relacionamentos anteriores.</span>
+              <span><strong>Casais em segundas uniões</strong> com filhos de relacionamentos anteriores.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Pais de herdeiros menores ou com necessidades especiais</strong>.</span>
+              <span><strong>Pais de herdeiros menores ou com necessidades especiais</strong>.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Investidores</strong> com múltiplos imóveis ou ativos financeiros.</span>
+              <span><strong>Investidores</strong> com múltiplos imóveis ou ativos financeiros.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
@@ -313,17 +313,17 @@ const HoldingFamiliarPage: React.FC = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Pura</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Pura</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Só administra patrimônio (não opera negócios).</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Famílias com foco em imóveis e investimentos.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Mista</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Mista</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Controla empresas ativas + patrimônio.</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Empresários com negócios em operação.</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Patrimonial</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Patrimonial</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Foco em proteção de bens (blindagem).</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Quem busca segurança contra riscos jurídicos.</td>
                 </tr>
@@ -339,7 +339,7 @@ const HoldingFamiliarPage: React.FC = () => {
           <h3 className="text-2xl font-semibold text-gray-800 mt-4 mb-4">Passo a Passo da Constituição:</h3>
           <ul className="space-y-6 text-gray-700 text-lg list-decimal pl-6">
             <li>
-              <strong className="text-gray-800">Planejamento Inicial:</strong>
+              <strong>Planejamento Inicial:</strong>
               <ul className="list-disc pl-5 mt-2">
                 <li>Identificar objetivos familiares e patrimoniais.</li>
                 <li>Conhecer o regime de casamento, pois impacta no planejamento.</li>
@@ -347,21 +347,21 @@ const HoldingFamiliarPage: React.FC = () => {
               </ul>
             </li>
             <li>
-              <strong className="text-gray-800">Diagnóstico Patrimonial:</strong>
+              <strong>Diagnóstico Patrimonial:</strong>
               <ul className="list-disc pl-5 mt-2">
                 <li>Levantar e organizar todos os bens da família (imóveis, investimentos, empresas etc.).</li>
                 <li>Estimar o valor do patrimônio.</li>
               </ul>
             </li>
             <li>
-              <strong className="text-gray-800">Escolha da Estrutura Jurídica / Tipo Societário:</strong>
+              <strong>Escolha da Estrutura Jurídica / Tipo Societário:</strong>
               <ul className="list-disc pl-5 mt-2">
                 <li>Decidir qual tipo de holding será utilizada (pura, mista, patrimonial etc.).</li>
                 <li>Escolher entre LTDA (mais flexível para famílias) ou SA (indicado para grandes patrimônios).</li>
               </ul>
             </li>
             <li>
-              <strong className="text-gray-800">Constituição da Holding / Elaboração de Contratos:</strong>
+              <strong>Constituição da Holding / Elaboração de Contratos:</strong>
               <ul className="list-disc pl-5 mt-2">
                 <li>Elaborar o contrato ou estatuto social.</li>
                 <li>Registrar a holding na Junta Comercial.</li>
@@ -369,21 +369,21 @@ const HoldingFamiliarPage: React.FC = () => {
               </ul>
             </li>
             <li>
-              <strong className="text-gray-800">Transferência de Bens / Integralização dos Bens:</strong>
+              <strong>Transferência de Bens / Integralização dos Bens:</strong>
               <ul className="list-disc pl-5 mt-2">
                 <li>Realizar a integralização do capital social com os bens da família.</li>
                 <li>Formalizar a transferência dos ativos para o CNPJ da holding.</li>
               </ul>
             </li>
             <li>
-              <strong className="text-gray-800">Gestão e Governança:</strong>
+              <strong>Gestão e Governança:</strong>
               <ul className="list-disc pl-5 mt-2">
                 <li>Definir regras de administração e governança.</li>
                 <li>Estabelecer acordo de sócios (se necessário).</li>
               </ul>
             </li>
             <li>
-              <strong className="text-gray-800">Manutenção Contábil e Tributária:</strong>
+              <strong>Manutenção Contábil e Tributária:</strong>
               <ul className="list-disc pl-5 mt-2">
                 <li>Garantir que a holding esteja em conformidade com as legislações.</li>
                 <li>Gerenciar impostos e relatórios financeiros.</li>
@@ -399,15 +399,15 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">⚠</span>
-              <span><strong className="text-gray-800">Custo de Manutenção:</strong> A holding tem custos fixos (contabilidade, impostos anuais, taxas).</span>
+              <span><strong>Custo de Manutenção:</strong> A holding tem custos fixos (contabilidade, impostos anuais, taxas).</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">⚠</span>
-              <span><strong className="text-gray-800">Risco de Fraude Fiscal:</strong> É preciso comprovar que a holding não é "fachada" ou meramente para sonegação.</span>
+              <span><strong>Risco de Fraude Fiscal:</strong> É preciso comprovar que a holding não é "fachada" ou meramente para sonegação.</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">⚠</span>
-              <span><strong className="text-gray-800">Complexidade Jurídica:</strong> A constituição e gestão exigem assessoria especializada em direito societário e sucessório.</span>
+              <span><strong>Complexidade Jurídica:</strong> A constituição e gestão exigem assessoria especializada em direito societário e sucessório.</span>
             </li>
           </ul>
         </section>
@@ -420,19 +420,19 @@ const HoldingFamiliarPage: React.FC = () => {
             <div>
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">1. Qual o patrimônio mínimo para valer a pena?</h3>
               <p className="text-gray-700 leading-relaxed text-lg">
-                É recomendado a partir de <strong className="text-gray-800">R$ 2 milhões</strong> (custos fixos podem não compensar para patrimônios menores). Para patrimônios menores, pode não haver tantas vantagens.
+                É recomendado a partir de <strong>R$ 2 milhões</strong> (custos fixos podem não compensar para patrimônios menores). Para patrimônios menores, pode não haver tantas vantagens.
               </p>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">2. Posso transferir meu imóvel residencial para a holding?</h3>
               <p className="text-700 leading-relaxed text-lg">
-                Sim, mas perde-se a <strong className="text-gray-800">isenção de IR na venda</strong> (para Pessoa Física, imóvel próprio é isento até R$ 440 mil).
+                Sim, mas perde-se a <strong>isenção de IR na venda</strong> (para Pessoa Física, imóvel próprio é isento até R$ 440 mil).
               </p>
             </div>
             <div>
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">3. Quanto custa para constituir?</h3>
               <p className="text-gray-700 leading-relaxed text-lg">
-                Entre <strong className="text-gray-800">R$ 15.000 e R$ 50.000</strong> (depende da complexidade e dos serviços).
+                Entre <strong>R$ 15.000 e R$ 50.000</strong> (depende da complexidade e dos serviços).
               </p>
             </div>
           </div>
@@ -453,27 +453,27 @@ const HoldingFamiliarPage: React.FC = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Proteção Patrimonial</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Proteção Patrimonial</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Oferece maior proteção contra dívidas e ações judiciais (blindagem).</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Não proporciona a mesma segurança contra dívidas pessoais do donatário.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Gestão</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Gestão</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Permite gestão centralizada e profissional dos bens.</td>
                   <td className="py-4 px-6 text-gray-700 text-base">A gestão dos bens doados geralmente permanece com o usufrutuário, mas não há centralização empresarial.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Planejamento Sucessório</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Planejamento Sucessório</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Facilita a sucessão sem necessidade de inventário tradicional (cotas).</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Pode envolver mais burocracia e custos de inventário para outros bens.</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Flexibilidade</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Flexibilidade</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Maior flexibilidade para ajustar participações e estrutura societária.</td>
                   <td className="py-4 px-6 text-gray-700 text-base">É uma transferência definitiva; menos flexível para mudanças futuras.</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Benefícios Fiscais</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Benefícios Fiscais</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Potenciais vantagens fiscais na gestão e sucessão.</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Vantagens fiscais mais focadas no ITCMD da doação.</td>
                 </tr>
@@ -485,17 +485,17 @@ const HoldingFamiliarPage: React.FC = () => {
         <section className="text-center py-8 bg-blue-50 rounded-lg shadow-inner">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Conclusão</h2>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
-            A Holding Familiar é a <strong className="text-gray-800">solução mais completa e estratégica</strong> para quem busca:
+            A Holding Familiar é a <strong>solução mais completa e estratégica</strong> para quem busca:
           </p>
           <ul className="space-y-2 text-gray-700 text-lg mt-4 list-none pl-0 inline-block text-left">
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong className="text-gray-800">Proteger</strong> o patrimônio contra riscos.
+              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong>Proteger</strong> o patrimônio contra riscos.
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong className="text-gray-800">Otimizar</strong> impostos na sucessão e na gestão.
+              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong>Otimizar</strong> impostos na sucessão e na gestão.
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong className="text-gray-800">Profissionalizar</strong> a administração dos bens.
+              <span className="text-blue-600 mr-2 text-xl">✓</span> <strong>Profissionalizar</strong> a administração dos bens.
             </li>
           </ul>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
@@ -504,7 +504,7 @@ const HoldingFamiliarPage: React.FC = () => {
 
           <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 mt-8">Próximos Passos: Sua Orientação Especializada</h3>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
-            Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong> possui a expertise necessária em Direito de Família e Sucessões, Direito Societário e Planejamento Tributário para analisar seu caso específico e propor a melhor estrutura de gestão e proteção para seu patrimônio imobiliário.
+            Nossa equipe na <strong>Carneiro Filho Advocacia</strong> possui a expertise necessária em Direito de Família e Sucessões, Direito Societário e Planejamento Tributário para analisar seu caso específico e propor a melhor estrutura de gestão e proteção para seu patrimônio imobiliário.
           </p>
           <div className="mt-8">
             <a

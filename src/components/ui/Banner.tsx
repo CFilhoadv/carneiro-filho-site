@@ -22,7 +22,7 @@ const Banner: React.FC<BannerProps> = ({
   backgroundImage,
   // Removi buttonText, buttonLink, secondaryButtonText, secondaryButtonLink das props desestruturadas
   // pois não serão mais usadas diretamente neste componente para renderizar os botões.
-  bgColor = 'bg-blue-900',
+  bgColor = 'bg-blue-950', // CORRIGIDO: Alterado para bg-blue-950 para um tom mais escuro
   height = 'h-[220px]'
 }) => {
   // Se não houver imagem de fundo, usar apenas o fundo azul
@@ -33,7 +33,7 @@ const Banner: React.FC<BannerProps> = ({
       className={`relative ${height} ${hasBgImage ? 'bg-cover bg-center' : bgColor}`}
       style={hasBgImage ? { backgroundImage: `url(${backgroundImage})` } : {}}
     >
-      <div className={`absolute inset-0 ${hasBgImage ? 'bg-blue-900 bg-opacity-80' : ''} flex items-center justify-center`}>
+      <div className={`absolute inset-0 ${hasBgImage ? 'bg-blue-950 bg-opacity-80' : ''} flex items-center justify-center`}> {/* CORRIGIDO: Alterado para bg-blue-950 aqui também */}
         <div className="text-center text-white px-4 max-w-4xl">
           {/* O QUE ERA SUBTITLE VAI SER O TÍTULO PRINCIPAL (h1) */}
           {/* Usamos 'title' como o principal e 'subtitle' como o de apoio na próxima linha */}

@@ -8,10 +8,11 @@ import bannerFamilia from '../assets/images/banner_família.webp';
 import bannerEmpresarial from '../assets/images/banner_empresarial.webp';
 // ************************************************************
 
-import planejamentoSucessorio from '../assets/images/planejamento_sucessorio.png';
-import cursos from '../assets/images/cursos.png';
-import informativos from '../assets/images/informativos.png';
-import midia from '../assets/images/midia.png';
+// IMPORTS CORRIGIDOS PARA AS IMAGENS .WEBP E REMOÇÃO DE .PNG
+import planejamentoSucessorio from '../assets/images/planejamento_sucessorio.webp'; 
+import cursos from '../assets/images/cursos.webp'; 
+import informativos from '../assets/images/informativos.webp'; 
+import midia from '../assets/images/midia.webp'; 
 
 
 const HomePage: React.FC = () => {
@@ -27,8 +28,8 @@ const HomePage: React.FC = () => {
     },
     {
       image: bannerEmpresarial, // Banner 2: Direito Empresarial (gráfico)
-      subtitle: "SEU NEGÓCIO, NOSSA ESTRATÉGIA", // Texto atualizado para focar em empresas
-      title: "Assessoria Jurídica Estratégica para o Crescimento da sua Empresa.", // Texto atualizado para focar em empresas
+      subtitle: "SEU NEGÓCIO, NOSSA ESTRATÉGIA", 
+      title: "Assessoria Jurídica Estratégica para o Crescimento da sua Empresa.", 
       description: "",
     }
   ];
@@ -235,7 +236,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Seção CTA */}
-      <section className="py-12 bg-blue-900 text-white">
+      <section className="py-12 bg-blue-950 text-white"> {/* CORRIGIDO: Alterado para bg-blue-950 */}
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-5">
             Proteja seu patrimônio e garanta o futuro da sua família
@@ -244,13 +245,13 @@ const HomePage: React.FC = () => {
             Entre em contato para uma consultoria personalizada e descubra a melhor estratégia para seu planejamento sucessório.
           </p>
           {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
-          <a // Alterado de <Link> para <a>
-            href="https://calendly.com/contato-carneirofilho" // URL do Calendly CORRIGIDA
-            target="_blank" // Abre em nova aba
-            rel="noopener noreferrer" // Prática de segurança para target="_blank"
+          <a 
+            href="https://calendly.com/contato-carneirofilho" 
+            target="_blank" 
+            rel="noopener noreferrer" 
             className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
           >
-            Agendar Atendimento {/* Alterado texto do botão */}
+            Agendar Atendimento 
           </a>
         </div>
       </section>

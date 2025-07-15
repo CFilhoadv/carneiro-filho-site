@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
-import testamentoBanner from '../assets/images/testamento_banner.jpeg'; 
+import testamentoBanner from '../assets/images/testamento_banner.webp'; // CORRIGIDO: de .jpeg para .webp
 
 const TestamentoPage: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const TestamentoPage: React.FC = () => {
       {/* Banner/Cabeçalho da Página com a nova imagem */}
       <div className="relative w-full h-80 md:h-96 flex items-center justify-center overflow-hidden">
         <img
-          src={testamentoBanner} // CORRIGIDO: Removido .src ||
+          src={testamentoBanner} 
           alt="Pessoas assinando documentos importantes, simbolizando a elaboração de um testamento"
           className="w-full h-full object-cover object-center" 
         />
@@ -60,7 +60,7 @@ const TestamentoPage: React.FC = () => {
                   <td className="py-4 px-6 text-gray-700 text-base">Pode ser alterado ou cancelado a qualquer momento.</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Efeitos</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Efeitos</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Só produz efeitos após o falecimento do testador.</td>
                 </tr>
               </tbody>
@@ -78,13 +78,13 @@ const TestamentoPage: React.FC = () => {
               <ul className="space-y-2 text-gray-700 text-lg list-disc pl-5 mb-4">
                 <li>Feito em cartório com tabelião e 2 testemunhas.</li>
               </ul>
-              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong className="text-gray-800">Vantagens:</strong></p>
+              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong>Vantagens:</strong></p>
               <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2 text-xl">✔</span> Maior segurança jurídica, registro público (sigiloso até a morte).
                 </li>
               </ul>
-              <p className="text-gray-700 leading-relaxed text-lg mt-4 mb-2"><strong className="text-gray-800">Desvantagens:</strong></p>
+              <p className="text-gray-700 leading-relaxed text-lg mt-4 mb-2"><strong>Desvantagens:</strong></p>
               <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
                 <li className="flex items-start">
                   <span className="text-red-600 mr-2 text-xl">⚠</span> Custo cartorário.
@@ -96,13 +96,13 @@ const TestamentoPage: React.FC = () => {
               <ul className="space-y-2 text-gray-700 text-lg list-disc pl-5 mb-4">
                 <li>Escrito pelo testador, lacrado em cartório com 2 testemunhas.</li>
               </ul>
-              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong className="text-gray-800">Vantagens:</strong></p>
+              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong>Vantagens:</strong></p>
               <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2 text-xl">✔</span> Conteúdo secreto (só revelado após a morte).
                 </li>
               </ul>
-              <p className="text-gray-700 leading-relaxed text-lg mt-4 mb-2"><strong className="text-gray-800">Desvantagens:</strong></p>
+              <p className="text-gray-700 leading-relaxed text-lg mt-4 mb-2"><strong>Desvantagens:</strong></p>
               <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
                 <li className="flex items-start">
                   <span className="text-red-600 mr-2 text-xl">⚠</span> Risco de extravio ou nulidade se o envelope for violado.
@@ -117,13 +117,13 @@ const TestamentoPage: React.FC = () => {
               <ul className="space-y-2 text-gray-700 text-lg list-disc pl-5 mb-4">
                 <li>Feito pelo próprio testador + 3 testemunhas (não pode ser digitado por terceiros).</li>
               </ul>
-              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong className="text-gray-800">Vantagens:</strong></p>
+              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong>Vantagens:</strong></p>
               <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2 text-xl">✔</span> Sem custos cartoriais.
                 </li>
               </ul>
-              <p className="text-gray-700 leading-relaxed text-lg mt-4 mb-2"><strong className="text-gray-800">Desvantagens:</strong></p>
+              <p className="text-gray-700 leading-relaxed text-lg mt-4 mb-2"><strong>Desvantagens:</strong></p>
               <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
                 <li className="flex items-start">
                   <span className="text-red-600 mr-2 text-xl">⚠</span> Pode ser perdido ou contestado.
@@ -133,10 +133,10 @@ const TestamentoPage: React.FC = () => {
             <div>
               <h3 className="text-2xl font-semibold text-gray-800 mb-3">4. Testamentos Especiais</h3>
               <ul className="space-y-2 text-gray-700 text-lg list-disc pl-5 mb-4">
-                <li><strong className="text-gray-800">Marítimo/Aeronáutico:</strong> Para quem está em viagem.</li>
-                <li><strong className="text-gray-800">Militar:</strong> Para combatentes em guerra.</li>
+                <li><strong>Marítimo/Aeronáutico:</strong> Para quem está em viagem.</li>
+                <li><strong>Militar:</strong> Para combatentes em guerra.</li>
               </ul>
-              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong className="text-gray-800">Vantagem:</strong></p>
+              <p className="text-gray-700 leading-relaxed text-lg mb-2"><strong>Vantagem:</strong></p>
               <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2 text-xl">✔</span> Validade em situações excepcionais.
@@ -153,19 +153,19 @@ const TestamentoPage: React.FC = () => {
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Expressa sua vontade</strong> (inclusive para não herdeiros, como amigos ou instituições).</span>
+              <span><strong>Expressa sua vontade</strong> (inclusive para não herdeiros, como amigos ou instituições).</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Nomeia tutores</strong> para filhos menores.</span>
+              <span><strong>Nomeia tutores</strong> para filhos menores.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Reconhece filhos</strong> não registrados.</span>
+              <span><strong>Reconhece filhos</strong> não registrados.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong className="text-gray-800">Estabelece condições</strong> para herdeiros (ex.: "Meu filho só recebe se concluir a faculdade").</span>
+              <span><strong>Estabelece condições</strong> para herdeiros (ex.: "Meu filho só recebe se concluir a faculdade").</span>
             </li>
           </ul>
         </section>
@@ -177,19 +177,19 @@ const TestamentoPage: React.FC = () => {
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>
-              <span><strong className="text-gray-800">Não evita o inventário</strong> (um processo legal para transferir bens aos herdeiros).</span>
+              <span><strong>Não evita o inventário</strong> (um processo legal para transferir bens aos herdeiros).</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>
-              <span><strong className="text-gray-800">Pode ser contestado</strong> por herdeiros (ex.: alegação de "incapacidade mental" do testador).</span>
+              <span><strong>Pode ser contestado</strong> por herdeiros (ex.: alegação de "incapacidade mental" do testador).</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>
-              <span><strong className="text-gray-800">Não reduz impostos</strong> (ITCMD incide normalmente).</span>
+              <span><strong>Não reduz impostos</strong> (ITCMD incide normalmente).</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">❌</span>
-              <span><strong className="text-gray-800">Demora judicial:</strong> Se houver conflitos, a partilha pode levar anos (ex.: casos de Chico Anysio e Betty Lago).</span>
+              <span><strong>Demora judicial:</strong> Se houver conflitos, a partilha pode levar anos (ex.: casos de Chico Anysio e Betty Lago).</span>
             </li>
           </ul>
 
@@ -232,11 +232,11 @@ const TestamentoPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Transfere bens em vida, mas mantém o uso vitalício.</strong></span>
+              <span><strong>Transfere bens em vida, mas mantém o uso vitalício.</strong></span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Vantagem:</strong> Reduz burocracia do inventário e potenciais conflitos.</span>
+              <span><strong>Vantagem:</strong> Reduz burocracia do inventário e potenciais conflitos.</span>
             </li>
           </ul>
 
@@ -244,11 +244,11 @@ const TestamentoPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Centraliza bens em um CNPJ, facilitando a sucessão.</strong></span>
+              <span><strong>Centraliza bens em um CNPJ, facilitando a sucessão.</strong></span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Vantagem:</strong> Economia tributária e proteção patrimonial.</span>
+              <span><strong>Vantagem:</strong> Economia tributária e proteção patrimonial.</span>
             </li>
           </ul>
 
@@ -264,17 +264,17 @@ const TestamentoPage: React.FC = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Inventário</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Inventário</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Necessário</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Não elimina, mas simplifica e otimiza</td>
                 </tr>
                 <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Controle</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Controle</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">Limitado à legítima</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Total (via pacto societário)</td>
                 </tr>
                 <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong className="text-gray-800">Custo</strong></td>
+                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Custo</strong></td>
                   <td className="py-4 px-6 text-gray-700 text-base">ITCMD + taxas judiciais</td>
                   <td className="py-4 px-6 text-gray-700 text-base">Custos fixos de CNPJ (com benefícios a longo prazo)</td>
                 </tr>
@@ -286,14 +286,14 @@ const TestamentoPage: React.FC = () => {
         <section className="text-center py-8 bg-blue-50 rounded-lg shadow-inner">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Conclusão</h2>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
-            O testamento é <strong className="text-gray-800">útil para expressar vontades específicas</strong>, mas <strong className="text-gray-800">não é suficiente</strong> para um planejamento sucessório eficaz. Combine-o com outras estratégias para uma solução completa, como:
+            O testamento é <strong>útil para expressar vontades específicas</strong>, mas <strong>não é suficiente</strong> para um planejamento sucessório eficaz. Combine-o com outras estratégias para uma solução completa, como:
           </p>
           <ul className="space-y-2 text-gray-700 text-lg mt-4 list-none pl-0 inline-block text-left">
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong className="text-gray-800">Doações em vida</strong> (para evitar o inventário em parte do patrimônio).
+              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong>Doações em vida</strong> (para evitar o inventário em parte do patrimônio).
             </li>
             <li className="flex items-start">
-              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong className="text-gray-800">Holding familiar</strong> (para patrimônios complexos que buscam otimização e proteção).
+              <span className="text-blue-600 mr-2 text-xl">✔</span> <strong>Holding familiar</strong> (para patrimônios complexos que buscam otimização e proteção).
             </li>
           </ul>
 
@@ -302,10 +302,10 @@ const TestamentoPage: React.FC = () => {
             Garantir que sua última vontade seja plenamente respeitada e que seu legado seja transferido sem imprevistos exige mais do que um simples testamento. A complexidade das leis de sucessão demanda uma assessoria jurídica especializada e um planejamento estratégico.
           </p>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
-            Nossa equipe na <strong className="text-gray-800">Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar sua vontade com segurança jurídica, evitando custos desnecessários e conflitos familiares.
+            Nossa equipe na <strong>Carneiro Filho Advocacia</strong>, especialista em Direito de Família e Sucessões, está pronta para ajudá-lo a estruturar sua vontade com segurança jurídica, evitando custos desnecessários e conflitos familiares.
           </p>
           <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
-            Se você precisa de um <strong className="text-gray-800">modelo de testamento</strong> ou de uma <strong className="text-gray-800">análise personalizada</strong> da sua situação, nossa equipe oferece soluções sob medida para garantir a tranquilidade do seu futuro e de sua família.
+            Se você precisa de um <strong>modelo de testamento</strong> ou de uma <strong>análise personalizada</strong> da sua situação, nossa equipe oferece soluções sob medida para garantir a tranquilidade do seu futuro e de sua família.
           </p>
           <div className="mt-8">
             <a

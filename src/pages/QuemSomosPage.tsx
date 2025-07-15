@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Banner from '../components/ui/Banner';
-import DrFranciscoPhoto from '../assets/images/dr_francisco_nova_foto_grande.jpeg';
+import DrFranciscoPhoto from '../assets/images/dr_francisco_nova_foto_grande.webp'; // CORRIGIDO: de .jpeg para .webp
 
 const QuemSomosPage: React.FC = () => {
   return (
