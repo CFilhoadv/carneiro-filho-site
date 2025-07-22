@@ -16,18 +16,18 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, initiall
   return (
     <div className="border-b border-gray-200 last:border-b-0">
       <button
-        // Ajuste CRÍTICO aqui: flex-grow removido do h3, e flex no button com gap-2 para proximidade
-        // py-4 px-4 para espaçamento do botão
+        // Removido justify-between para que título e seta fiquem agrupados à esquerda
         className="flex items-center w-full py-4 px-4 text-left font-semibold text-gray-800 focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         {/* Título do Acordeão - Removido flex-grow aqui para que a seta fique ao lado */}
-        <h3 className="text-xl md:text-2xl font-semibold text-blue-800"> {/* Font size adjusted */}
+        <h3 className="text-xl md:text-2xl font-semibold text-blue-800">
           {title}
         </h3>
-        {/* Seta do Acordeão - agora com ml-auto para empurrar para a direita mas junto ao título */}
+        {/* Seta do Acordeão - AGORA REALMENTE PRÓXIMA AO TÍTULO */}
+        {/* Usando ml-2 para espaçamento e flex-shrink-0 para evitar que encolha */}
         <svg
-          className={`w-5 h-5 ml-auto transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} // ml-auto para empurrar à direita
+          className={`w-5 h-5 ml-2 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -35,14 +35,16 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, initiall
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
         </svg>
+        {/* Adiciona um flex-grow para empurrar o espaço restante para a direita, mas mantendo a seta próxima */}
+        <div className="flex-grow"></div> 
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-screen opacity-100 py-2' : 'max-h-0 opacity-0'
         }`}
       >
-        {/* Conteúdo do Acordeão com padding ajustado */}
-        <div className="px-4 pb-4 text-gray-700 leading-relaxed text-lg"> {/* Font size adjusted */}
+        {/* Conteúdo do Acordeão com padding e font size ajustados */}
+        <div className="px-4 pb-4 text-gray-700 text-xl"> {/* Font size adjusted to text-xl */}
           {children}
         </div>
       </div>
@@ -72,24 +74,21 @@ const HoldingFamiliarPage: React.FC = () => {
       </div>
 
       {/* Conteúdo Principal da Página */}
-      {/* py ajustado no container principal */}
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        {/* mb ajustado na seção */}
-        <section className="mb-10">
-          {/* H2 ajustado */}
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2">
+      <div className="container mx-auto px-4 py-12 md:py-16"> {/* py ajustado */}
+        <section className="mb-10"> {/* mb ajustado */}
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2"> {/* H2 ajustado */}
             O que é uma Holding Familiar?
           </h2>
-          {/* Font size adjusted */}
-          <p className="text-gray-700 leading-relaxed text-lg">
+          {/* Font size adjusted to text-xl, removed leading-relaxed */}
+          <p className="text-gray-700 text-xl"> 
             A <strong className="text-gray-800">Holding Familiar</strong> é uma empresa criada para <strong className="text-gray-800">centralizar, administrar e proteger</strong> o patrimônio de uma família. Ela funciona como uma "guarda-chuva" que detém bens imóveis (casas, terrenos, fazendas), participações societárias (empresas da família) e ativos financeiros (investimentos, direitos). Também é definida como uma empresa para administrar bens e interesses familiares, controlada pelos membros da família, e possui ações de outras empresas, imóveis, investimentos, etc.
           </p>
-          {/* Font size & mt adjusted */}
-          <p className="text-gray-700 leading-relaxed text-lg mt-4">
+          {/* Font size & mt adjusted, removed leading-relaxed */}
+          <p className="text-gray-700 text-xl mt-4"> 
             <strong className="text-gray-800">Como funciona?</strong>
           </p>
-          {/* space-y & font size adjusted */}
-          <ul className="space-y-2 text-gray-700 text-lg mt-2 list-none pl-0">
+          {/* space-y ajustado, font size text-xl */}
+          <ul className="space-y-3 text-gray-700 text-xl mt-2 list-none pl-0"> 
             <li className="flex items-start">
               <span className="mr-2 text-xl font-bold">&#8226;</span>
               <span className="flex-grow">
@@ -112,31 +111,24 @@ const HoldingFamiliarPage: React.FC = () => {
         </section>
 
         {/* Frase instrutiva para os acordeões */}
-        <p className="text-gray-700 text-lg leading-relaxed mb-4">
+        <p className="text-gray-700 text-xl leading-relaxed mb-4"> {/* Font size adjusted */}
           <strong className="text-blue-800">Clique nos títulos abaixo para explorar detalhadamente:</strong>
         </p>
 
-        {/* mb ajustado na seção */}
-        <section className="mb-10">
-          {/* H2 ajustado */}
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2">
+        <section className="mb-10"> {/* mb ajustado */}
+          <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2"> {/* H2 ajustado */}
             Por que Criar uma Holding Familiar?
           </h2>
-          {/* Espaçamento entre os acordeões ajustado */}
-          <div className="space-y-4">
+          <div className="space-y-4"> {/* Espaçamento entre os acordeões ajustado */}
             <AccordionItem title="Vantagens Tributárias" initiallyOpen>
-              {/* Font size & mb adjusted */}
-              <p className="mb-4 text-lg">
+              <p className="mb-4 text-xl"> {/* Font size & mb adjusted */}
                 A holding pode proporcionar uma eficiência tributária significativa na constituição e sucessão do patrimônio, além de otimizar os rendimentos.
               </p>
               {/* Tabela de Vantagens Tributárias como layout de cards em mobile */}
               <div className="md:hidden">
-                {/* gap e padding dos cards ajustados */}
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-1 gap-4"> {/* gap e padding dos cards ajustados */}
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                    {/* Font size & mb adjusted */}
                     <div className="font-semibold text-blue-800 mb-2 text-lg">Benefício: <strong className="text-gray-800">Isenção de ITBI</strong></div>
-                    {/* Font size adjusted */}
                     <div className="text-gray-700 text-base">Como Funciona: Na transferência de imóveis para a holding (integralização como capital social) é isenta do ITBI.</div>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
@@ -149,19 +141,16 @@ const HoldingFamiliarPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              {/* mb ajustado */}
-              <div className="hidden md:block overflow-x-auto mb-8">
+              <div className="hidden md:block overflow-x-auto mb-8"> {/* mb ajustado */}
                 <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
                   <thead>
                     <tr className="bg-blue-100 border-b border-gray-200">
-                      {/* Font size & padding adjusted */}
                       <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Benefício</th>
                       <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Como Funciona</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      {/* Font size & padding adjusted */}
                       <td className="py-4 px-6 text-gray-700 text-base"><strong>Isenção de ITBI</strong></td>
                       <td className="py-4 px-6 text-gray-700 text-base">Na transferência de imóveis para a holding (integralização como capital social) é isenta do ITBI.</td>
                     </tr>
@@ -177,17 +166,18 @@ const HoldingFamiliarPage: React.FC = () => {
                 </table>
               </div>
 
-              {/* Font size & mb adjusted */}
-              <p className="text-gray-700 leading-relaxed text-lg mb-4">
+              {/* Removendo a tabela "Comparativo de ITCMD: Valor Venal x Valor de Aquisição (IR)" */}
+              {/* O texto introdutório da tabela foi mantido, mas a tabela em si foi removida. */}
+              <p className="text-gray-700 text-xl mb-4">
                 <strong>Comparativo de ITCMD: Valor Venal x Valor de Aquisição (IR)</strong>
                 A base de cálculo do ITCMD nos sistemas de sucessão é o VALOR VENAL ou o de mercado, enquanto numa holding familiar é o valor declarado no imposto de renda, O VALOR DE AQUISIÇÃO, o que faz uma grande diferença tributária.
               </p>
-              {/* Ajustes para a tabela de Comparativo de ITCMD */}
-              <div className="overflow-x-auto mb-8"> {/* mb ajustado */}
+              {/* REMOVIDO: Bloco da tabela "Comparativo de ITCMD" */}
+              {/*
+              <div className="overflow-x-auto mb-8">
                 <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
                   <thead>
                     <tr className="bg-blue-100 border-b border-gray-200">
-                      {/* Font size & padding ajustados para thead */}
                       <th className="py-2 px-3 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">SISTEMA DE SUCESSÃO</th>
                       <th className="py-2 px-3 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">PATRIMÔNIO</th>
                       <th className="py-2 px-3 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">BASE DE CÁLCULOS</th>
@@ -197,7 +187,6 @@ const HoldingFamiliarPage: React.FC = () => {
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      {/* Font size & padding ajustados para tbody */}
                       <td className="py-3 px-3 text-gray-700 text-sm">Doação c/reserva de usufruto</td>
                       <td className="py-3 px-3 text-gray-700 text-sm">R$ 2.000.000,00</td>
                       <td className="py-3 px-3 text-gray-700 text-sm">R$ 2.000.000,00</td>
@@ -228,11 +217,11 @@ const HoldingFamiliarPage: React.FC = () => {
                   </tbody>
                 </table>
               </div>
+              */}
             </AccordionItem>
 
             <AccordionItem title="Proteção Patrimonial">
-              {/* space-y & font size adjusted */}
-              <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
+              <ul className="space-y-3 text-gray-700 text-xl list-none pl-0">
                 <li className="flex items-start">
                   <span className="mr-2 text-xl font-bold">&#8226;</span>
                   <span className="flex-grow">
@@ -253,10 +242,8 @@ const HoldingFamiliarPage: React.FC = () => {
                 </li>
               </ul>
 
-              {/* Font size & mb/mt adjusted */}
               <h4 className="text-lg font-semibold text-gray-800 mt-4 mb-3">Cláusulas Especiais de Proteção e Administração:</h4>
               <div className="md:hidden">
-                {/* gap e padding dos cards ajustados */}
                 <div className="grid grid-cols-1 gap-4">
                   <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                     <div className="font-semibold text-blue-800 mb-2 text-lg">Cláusula: <strong className="text-gray-800">Inalienabilidade</strong></div>
@@ -292,19 +279,16 @@ const HoldingFamiliarPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              {/* mb ajustado */}
               <div className="hidden md:block overflow-x-auto mb-8">
                 <table className="w-full bg-white border border-gray-200 rounded-lg shadow-sm">
                   <thead>
                     <tr className="bg-blue-100 border-b border-gray-200">
-                      {/* Font size & padding adjusted */}
                       <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider w-1/4">Cláusula</th>
                       <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider w-3/4">Objetivo</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-200 hover:bg-gray-50">
-                      {/* Font size & padding adjusted */}
                       <td className="py-4 px-6 text-gray-700 text-base"><strong>Inalienabilidade</strong></td>
                       <td className="py-4 px-6 text-gray-700 text-base">Impede a venda ou transferência dos bens da holding sem autorização dos demais sócios.</td>
                     </tr>
@@ -339,15 +323,11 @@ const HoldingFamiliarPage: React.FC = () => {
                   </tbody>
                 </table>
               </div>
-              {/* Font size & mt adjusted */}
-              <p className="text-gray-700 leading-relaxed text-lg mt-4">
-                Essas cláusulas adicionais fortalecem a proteção patrimonial e a governança da holding familiar, oferecendo maior segurança e controle sobre o patrimônio.
-              </p>
+              <p className="text-gray-700 text-xl mt-4">Essas cláusulas adicionais fortalecem a proteção patrimonial e a governança da holding familiar, oferecendo maior segurança e controle sobre o patrimônio.</p>
             </AccordionItem>
 
             <AccordionItem title="Sucessão Planejada">
-              {/* space-y & font size adjusted */}
-              <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
+              <ul className="space-y-3 text-gray-700 text-xl list-none pl-0">
                 <li className="flex items-start">
                   <span className="mr-2 text-xl font-bold">&#8226;</span>
                   <span className="flex-grow">Evita <strong>inventário judicial</strong> (bens são transferidos via alteração societária).</span>
@@ -380,8 +360,7 @@ const HoldingFamiliarPage: React.FC = () => {
             </AccordionItem>
 
             <AccordionItem title="Gestão Profissionalizada e Centralizada">
-              {/* space-y & font size adjusted */}
-              <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
+              <ul className="space-y-3 text-gray-700 text-xl list-none pl-0">
                 <li className="flex items-start">
                   <span className="mr-2 text-xl font-bold">&#8226;</span>
                   <span className="flex-grow"><strong>Tomada de decisão centralizada</strong> (evita dispersão de patrimônio).</span>
@@ -406,8 +385,7 @@ const HoldingFamiliarPage: React.FC = () => {
             </AccordionItem>
 
             <AccordionItem title="Privacidade">
-              {/* space-y & font size adjusted */}
-              <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
+              <ul className="space-y-3 text-gray-700 text-xl list-none pl-0">
                 <li className="flex items-start">
                   <span className="mr-2 text-xl font-bold">&#8226;</span>
                   <span className="flex-grow">A estrutura de uma holding pode oferecer maior privacidade em relação aos bens da família, uma vez que as informações financeiras podem ser menos acessíveis ao público.</span>
@@ -417,14 +395,11 @@ const HoldingFamiliarPage: React.FC = () => {
           </div>
         </section>
 
-        {/* mb ajustado na seção */}
         <section className="mb-10">
-          {/* H2 ajustado */}
           <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2">
             Para Quem a Holding Familiar é Indicada?
           </h2>
-          {/* space-y & font size adjusted */}
-          <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
+          <ul className="space-y-3 text-gray-700 text-xl list-none pl-0">
             <li className="flex items-start">
               <span className="mr-2 text-xl font-bold">&#8226;</span>
               <span className="flex-grow"><strong>Famílias com patrimônio acima de R$ 2 milhões</strong> (imóveis, empresas, investimentos).</span>
@@ -452,11 +427,9 @@ const HoldingFamiliarPage: React.FC = () => {
           </ul>
         </section>
 
-        {/* mb ajustado na seção */}
         <section className="mb-10">
-          <AccordionItem title="Tipos de Holdings Familiares"> {/* H3 ajustado e seção colapsável */}
+          <AccordionItem title="Tipos de Holdings Familiares">
             <div className="md:hidden">
-              {/* gap e padding dos cards ajustados */}
               <div className="grid grid-cols-1 gap-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                   <div className="font-semibold text-blue-800 mb-2 text-lg">Tipo: <strong className="text-gray-800">Pura</strong></div>
@@ -479,7 +452,6 @@ const HoldingFamiliarPage: React.FC = () => {
               <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
                 <thead>
                   <tr className="bg-blue-100 border-b border-gray-200">
-                    {/* Font size & padding adjusted */}
                     <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Tipo</th>
                     <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Objetivo Principal</th>
                     <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Melhor Para</th>
@@ -487,7 +459,6 @@ const HoldingFamiliarPage: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    {/* Font size & padding adjusted */}
                     <td className="py-4 px-6 text-gray-700 text-base"><strong>Pura</strong></td>
                     <td className="py-4 px-6 text-gray-700 text-base">Só administra patrimônio (não opera negócios).</td>
                     <td className="py-4 px-6 text-gray-700 text-base">Famílias com foco em imóveis e investimentos.</td>
@@ -508,74 +479,68 @@ const HoldingFamiliarPage: React.FC = () => {
           </AccordionItem>
         </section>
 
-        {/* mb ajustado na seção */}
         <section className="mb-10">
-          <AccordionItem title="Como Montar uma Holding Familiar?"> {/* Seção colapsável */}
-            {/* Font size & mt/mb adjusted */}
+          <AccordionItem title="Como Montar uma Holding Familiar?">
             <h3 className="text-xl font-semibold text-gray-800 mt-4 mb-4">Passo a Passo da Constituição:</h3>
-            {/* space-y & font size adjusted */}
-            <ul className="space-y-4 text-gray-700 text-lg list-decimal pl-6">
+            <ul className="space-y-4 text-gray-700 text-xl list-decimal pl-6">
               <li>
                 <strong>Planejamento Inicial:</strong>
-                {/* mt & space-y adjusted */}
                 <ul className="list-disc pl-5 mt-2 space-y-2">
-                  <li className="text-lg">Identificar objetivos familiares e patrimoniais.</li>
-                  <li className="text-lg">Conhecer o regime de casamento, pois impacta no planejamento.</li>
-                  <li className="text-lg">Avaliação da estrutura familiar e suas complexidades.</li>
+                  <li className="text-xl">Identificar objetivos familiares e patrimoniais.</li>
+                  <li className="text-xl">Conhecer o regime de casamento, pois impacta no planejamento.</li>
+                  <li className="text-xl">Avaliação da estrutura familiar e suas complexidades.</li>
                 </ul>
               </li>
               <li>
                 <strong>Diagnóstico Patrimonial:</strong>
                 <ul className="list-disc pl-5 mt-2 space-y-2">
-                  <li className="text-lg">Levantar e organizar todos os bens da família (imóveis, investimentos, empresas etc.).</li>
-                  <li className="text-lg">Estimar o valor do patrimônio.</li>
+                  <li className="text-xl">Levantar e organizar todos os bens da família (imóveis, investimentos, empresas etc.).</li>
+                  <li className="text-xl">Estimar o valor do patrimônio.</li>
                 </ul>
               </li>
               <li>
                 <strong>Escolha da Estrutura Jurídica / Tipo Societário:</strong>
                 <ul className="list-disc pl-5 mt-2 space-y-2">
-                  <li className="text-lg">Decidir qual tipo de holding será utilizada (pura, mista, patrimonial etc.).</li>
-                  <li className="text-lg">Escolher entre LTDA (mais flexível para famílias) ou SA (indicado para grandes patrimônios).</li>
+                  <li className="text-xl">Decidir qual tipo de holding será utilizada (pura, mista, patrimonial etc.).</li>
+                  <li className="text-xl">Escolher entre LTDA (mais flexível para famílias) ou SA (indicado para grandes patrimônios).</li>
                 </ul>
               </li>
               <li>
                 <strong>Constituição da Holding / Elaboração de Contratos:</strong>
                 <ul className="list-disc pl-5 mt-2 space-y-2">
-                  <li className="text-lg">Elaborar o contrato ou estatuto social.</li>
-                  <li className="text-lg">Registrar a holding na Junta Comercial.</li>
-                  <li className="text-lg">Incluir pacto societário com cláusulas de preferência familiar (venda de quotas só para parentes) e gestão por conselho (evita conflitos entre herdeiros).</li>
+                  <li className="text-xl">Elaborar o contrato ou estatuto social.</li>
+                  <li className="text-xl">Registrar a holding na Junta Comercial.</li>
+                  <li className="text-xl">Incluir pacto societário com cláusulas de preferência familiar (venda de quotas só para parentes) e gestão por conselho (evita conflitos entre herdeiros).</li>
                 </ul>
               </li>
               <li>
                 <strong>Transferência de Bens / Integralização dos Bens:</strong>
                 <ul className="list-disc pl-5 mt-2 space-y-2">
-                  <li className="text-lg">Realizar a integralização do capital social com os bens da família.</li>
-                  <li className="text-lg">Formalizar a transferência dos ativos para o CNPJ da holding.</li>
+                  <li className="text-xl">Realizar a integralização do capital social com os bens da família.</li>
+                  <li className="text-xl">Formalizar a transferência dos ativos para o CNPJ da holding.</li>
                 </ul>
               </li>
               <li>
                 <strong>Gestão e Governança:</strong>
                 <ul className="list-disc pl-5 mt-2 space-y-2">
-                  <li className="text-lg">Definir regras de administração e governança.</li>
-                  <li className="text-lg">Estabelecer acordo de sócios (se necessário).</li>
+                  <li className="text-xl">Definir regras de administração e governança.</li>
+                  <li className="text-xl">Estabelecer acordo de sócios (se necessário).</li>
                 </ul>
               </li>
               <li>
                 <strong>Manutenção Contábil e Tributária:</strong>
                 <ul className="list-disc pl-5 mt-2 space-y-2">
-                  <li className="text-lg">Garantir que a holding esteja em conformidade com as legislações.</li>
-                  <li className="text-lg">Gerenciar impostos e relatórios financeiros.</li>
+                  <li className="text-xl">Garantir que a holding esteja em conformidade com as legislações.</li>
+                  <li className="text-xl">Gerenciar impostos e relatórios financeiros.</li>
                 </ul>
               </li>
             </ul>
           </AccordionItem>
         </section>
 
-        {/* mb ajustado na seção */}
         <section className="mb-10">
-          <AccordionItem title="Cuidados Essenciais"> {/* Seção colapsável */}
-            {/* space-y & font size adjusted */}
-            <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
+          <AccordionItem title="Cuidados Essenciais">
+            <ul className="space-y-3 text-gray-700 text-xl list-none pl-0">
               <li className="flex items-start">
                 <span className="mr-2 text-xl font-bold">&#8226;</span>
                 <span className="flex-grow"><strong>Custo de Manutenção:</strong> A holding tem custos fixos (contabilidade, impostos anuais, taxas).</span>
@@ -592,28 +557,24 @@ const HoldingFamiliarPage: React.FC = () => {
           </AccordionItem>
         </section>
 
-        {/* mb ajustado na seção */}
         <section className="mb-10">
-          <AccordionItem title="Perguntas Frequentes sobre Holding Familiar"> {/* Seção colapsável */}
-            {/* space-y ajustado */}
+          <AccordionItem title="Perguntas Frequentes sobre Holding Familiar">
             <div className="space-y-8">
               <div>
-                {/* Font size & mb adjusted */}
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">1. Qual o patrimônio mínimo para valer a pena?</h3>
-                {/* Font size adjusted */}
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 text-xl">
                   É recomendado a partir de <strong>R$ 2 milhões</strong> (custos fixos podem não compensar para patrimônios menores). Para patrimônios menores, pode não haver tantas vantagens.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">2. Posso transferir meu imóvel residencial para a holding?</h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 text-xl">
                   Sim, mas perde-se a <strong>isenção de IR na venda</strong> (para Pessoa Física, imóvel próprio é isento até R$ 440 mil).
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">3. Quanto custa para constituir?</h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 text-xl">
                   Entre <strong>R$ 15.000 e R$ 50.000</strong> (depende da complexidade e dos serviços).
                 </p>
               </div>
@@ -621,11 +582,9 @@ const HoldingFamiliarPage: React.FC = () => {
           </AccordionItem>
         </section>
 
-        {/* mb ajustado na seção */}
         <section className="mb-10">
-          <AccordionItem title="Comparativo: Holding Familiar vs. Doação Com Usufruto"> {/* Seção colapsável */}
+          <AccordionItem title="Comparativo: Holding Familiar vs. Doação Com Usufruto">
             <div className="md:hidden">
-              {/* gap e padding dos cards ajustados */}
               <div className="grid grid-cols-1 gap-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
                   <div className="font-semibold text-blue-800 mb-2 text-lg">Critério: <strong className="text-gray-800">Proteção Patrimonial</strong></div>
@@ -658,7 +617,6 @@ const HoldingFamiliarPage: React.FC = () => {
               <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
                 <thead>
                   <tr className="bg-blue-100 border-b border-gray-200">
-                    {/* Font size & padding adjusted */}
                     <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Critério</th>
                     <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Holding Familiar</th>
                     <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Doação com Usufruto</th>
@@ -666,7 +624,6 @@ const HoldingFamiliarPage: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-200 hover:bg-gray-50">
-                    {/* Font size & padding adjusted */}
                     <td className="py-4 px-6 text-gray-700 text-base"><strong>Proteção Patrimonial</strong></td>
                     <td className="py-4 px-6 text-gray-700 text-base">Oferece maior proteção contra dívidas e ações judiciais (blindagem).</td>
                     <td className="py-4 px-6 text-gray-700 text-base">Não proporciona a mesma segurança contra dívidas pessoais do donatário.</td>
@@ -697,13 +654,12 @@ const HoldingFamiliarPage: React.FC = () => {
           </AccordionItem>
         </section>
 
-        {/* mb ajustado na seção */}
         <section className="text-center py-8 bg-blue-50 rounded-lg shadow-inner mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">Conclusão</h2>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mb-4">
+          <p className="text-gray-700 text-xl max-w-3xl mx-auto mb-4">
             A Holding Familiar é a <strong>solução mais completa e estratégica</strong> para quem busca:
           </p>
-          <ul className="space-y-2 text-gray-700 text-lg mt-4 list-none pl-0 inline-block text-left">
+          <ul className="space-y-2 text-gray-700 text-xl mt-4 list-none pl-0 inline-block text-left">
             <li className="flex items-start">
               <span className="mr-2 text-xl font-bold">&#8226;</span>
               <strong>Proteger</strong> o patrimônio contra riscos.
@@ -717,12 +673,12 @@ const HoldingFamiliarPage: React.FC = () => {
               <strong>Profissionalizar</strong> a administração dos bens.
             </li>
           </ul>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
+          <p className="text-gray-700 text-xl max-w-3xl mx-auto mt-4">
             É uma alternativa atrativa para proteção e gestão do patrimônio, mas geralmente é mais vantajosa para patrimônios superiores a R$ 1 milhão ou R$ 2 milhões, quando os benefícios superam os custos administrativos e tributários. Em qualquer caso, é sempre recomendável consultar um advogado especializado para avaliar a viabilidade.
           </p>
 
           <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 mt-8">Próximos Passos: Sua Orientação Especializada</h3>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mb-4">
+          <p className="text-gray-700 text-xl max-w-3xl mx-auto mb-4">
             Nossa equipe na <strong>Carneiro Filho Advocacia</strong> possui a expertise necessária em Direito de Família e Sucessões, Direito Societário e Planejamento Tributário para analisar seu caso específico e propor a melhor estrutura de gestão e proteção para seu patrimônio imobiliário.
           </p>
           <div className="mt-8">
