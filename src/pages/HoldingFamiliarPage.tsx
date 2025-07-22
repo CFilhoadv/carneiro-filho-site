@@ -37,13 +37,22 @@ const HoldingFamiliarPage: React.FC = () => {
           </p>
           <ul className="space-y-2 text-gray-700 text-lg mt-2 list-none pl-0">
             <li className="flex items-start">
-              <span className="text-green-500 mr-2 text-xl">✔</span> Os bens saem do <strong className="text-gray-800">CPF dos familiares</strong> e passam para o <strong className="text-gray-800">CNPJ da holding</strong>.
+              <span className="text-green-500 mr-2 text-xl flex-shrink-0">✔</span> {/* Adicionado flex-shrink-0 para o ícone */}
+              <span className="flex-grow"> {/* Adicionado flex-grow para o texto ocupar o espaço restante */}
+                Os bens saem do <strong className="text-gray-800">CPF dos familiares</strong> e passam para o <strong className="text-gray-800">CNPJ da holding</strong>.
+              </span>
             </li>
             <li className="flex items-start">
-              <span className="text-green-500 mr-2 text-xl">✔</span> A família controla tudo por meio de <strong className="text-gray-800">quotas ou ações</strong>.
+              <span className="text-green-500 mr-2 text-xl flex-shrink-0">✔</span>
+              <span className="flex-grow">
+                A família controla tudo por meio de <strong className="text-gray-800">quotas ou ações</strong>.
+              </span>
             </li>
             <li className="flex items-start">
-              <span className="text-green-500 mr-2 text-xl">✔</span> A gestão é feita de forma <strong className="text-gray-800">profissional e estratégica</strong>.
+              <span className="text-green-500 mr-2 text-xl flex-shrink-0">✔</span>
+              <span className="flex-grow">
+                A gestão é feita de forma <strong className="text-gray-800">profissional e estratégica</strong>.
+              </span>
             </li>
           </ul>
         </section>
@@ -57,6 +66,7 @@ const HoldingFamiliarPage: React.FC = () => {
           <p className="text-gray-700 leading-relaxed text-lg mb-4">
             A holding pode proporcionar uma eficiência tributária significativa na constituição e sucessão do patrimônio, além de otimizar os rendimentos.
           </p>
+          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
           <div className="overflow-x-auto mb-8">
             <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
               <thead>
@@ -86,6 +96,7 @@ const HoldingFamiliarPage: React.FC = () => {
             <strong>Comparativo de ITCMD: Valor Venal x Valor de Aquisição (IR)</strong>
             A base de cálculo do ITCMD nos sistemas de sucessão é o VALOR VENAL ou o de mercado, enquanto numa holding familiar é o valor declarado no imposto de renda, O VALOR DE AQUISIÇÃO, o que faz uma grande diferença tributária.
           </p>
+          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
           <div className="overflow-x-auto mb-8">
             <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
               <thead>
@@ -134,25 +145,26 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>
+              <span className="flex-grow">
                 <strong className="text-gray-800">Blindagem contra:</strong> Dívidas pessoais (impenhorabilidade parcial) e ações judiciais (ex.: divórcios, disputas societárias).
               </span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Os bens da holding podem ser protegidos contra credores, reduzindo riscos em caso de falências ou litígios.</span>
+              <span className="flex-grow">Os bens da holding podem ser protegidos contra credores, reduzindo riscos em caso de falências ou litígios.</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong className="text-gray-800">Cláusulas de restrição</strong> (ex.: venda só com consentimento familiar).</span>
+              <span className="flex-grow"><strong className="text-gray-800">Cláusulas de restrição</strong> (ex.: venda só com consentimento familiar).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Na constituição, os imóveis são gravados com cláusulas especiais que visam resguardá-los no seio da família, conhecidas como "cláusulas de blindagem" (inalienabilidade, incomunicabilidade, impenhorabilidade etc.).</span>
+              <span className="flex-grow">Na constituição, os imóveis são gravados com cláusulas especiais que visam resguardá-los no seio da família, conhecidas como "cláusulas de blindagem" (inalienabilidade, incomunicabilidade, impenhorabilidade etc.).</span>
             </li>
           </ul>
 
           <h4 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Cláusulas Especiais de Proteção e Administração:</h4>
+          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
           <div className="overflow-x-auto mb-8">
             <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
               <thead>
@@ -205,31 +217,31 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Evita <strong>inventário judicial</strong> (bens são transferidos via alteração societária).</span>
+              <span className="flex-grow">Evita <strong>inventário judicial</strong> (bens são transferidos via alteração societária).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Permite <strong>testamento privado</strong> (regras de herança nas quotas).</span>
+              <span className="flex-grow">Permite <strong>testamento privado</strong> (regras de herança nas quotas).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Protege <strong>herdeiros incapazes</strong> (gestão por administradores designados).</span>
+              <span className="flex-grow">Protege <strong>herdeiros incapazes</strong> (gestão por administradores designados).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Facilita a transferência de bens e direitos entre gerações, evitando conflitos familiares.</span>
+              <span className="flex-grow">Facilita a transferência de bens e direitos entre gerações, evitando conflitos familiares.</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Permite que a sucessão seja feita de forma planejada e estruturada.</span>
+              <span className="flex-grow">Permite que a sucessão seja feita de forma planejada e estruturada.</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Se todo o patrimônio relevante da família estiver integralizado na holding e as regras sucessórias das cotas forem bem estruturadas, isso reduz drasticamente a necessidade de um inventário tradicional.</span>
+              <span className="flex-grow">Se todo o patrimônio relevante da família estiver integralizado na holding e as regras sucessórias das cotas forem bem estruturadas, isso reduz drasticamente a necessidade de um inventário tradicional.</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>A sucessão das cotas sociais pode ser realizada diretamente via contrato e regularizada em cartório, dependendo das legislações locais e estaduais.</span>
+              <span className="flex-grow">A sucessão das cotas sociais pode ser realizada diretamente via contrato e regularizada em cartório, dependendo das legislações locais e estaduais.</span>
             </li>
           </ul>
 
@@ -237,23 +249,23 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong>Tomada de decisão centralizada</strong> (evita dispersão de patrimônio).</span>
+              <span className="flex-grow"><strong>Tomada de decisão centralizada</strong> (evita dispersão de patrimônio).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong>Contratos personalizados</strong> (pacto societário, acordos de acionistas).</span>
+              <span className="flex-grow"><strong>Contratos personalizados</strong> (pacto societário, acordos de acionistas).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span><strong>Otimização de custos</strong> (contratação coletiva, assessoria especializada).</span>
+              <span className="flex-grow"><strong>Otimização de custos</strong> (contratação coletiva, assessoria especializada).</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>Proporciona uma gestão centralizada dos ativos familiares, facilitando a tomada de decisões e a administração dos bens.</span>
+              <span className="flex-grow">Proporciona uma gestão centralizada dos ativos familiares, facilitando a tomada de decisões e a administração dos bens.</span>
             </li>
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>A holding pode investir em novos negócios ou melhorar a gestão dos ativos existentes, potencializando seu valor.</span>
+              <span className="flex-grow">A holding pode investir em novos negócios ou melhorar a gestão dos ativos existentes, potencializando seu valor.</span>
             </li>
           </ul>
 
@@ -261,7 +273,7 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-blue-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✔</span>
-              <span>A estrutura de uma holding pode oferecer maior privacidade em relação aos bens da família, uma vez que as informações financeiras podem ser menos acessíveis ao público.</span>
+              <span className="flex-grow">A estrutura de uma holding pode oferecer maior privacidade em relação aos bens da família, uma vez que as informações financeiras podem ser menos acessíveis ao público.</span>
             </li>
           </ul>
         </section>
@@ -273,27 +285,27 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong>Famílias com patrimônio acima de R$ 2 milhões</strong> (imóveis, empresas, investimentos).</span>
+              <span className="flex-grow"><strong>Famílias com patrimônio acima de R$ 2 milhões</strong> (imóveis, empresas, investimentos).</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong>Empresários</strong> que querem separar patrimônio pessoal e empresarial e garantir a continuidade dos negócios.</span>
+              <span className="flex-grow"><strong>Empresários</strong> que querem separar patrimônio pessoal e empresarial e garantir a continuidade dos negócios.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong>Casais em segundas uniões</strong> com filhos de relacionamentos anteriores.</span>
+              <span className="flex-grow"><strong>Casais em segundas uniões</strong> com filhos de relacionamentos anteriores.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong>Pais de herdeiros menores ou com necessidades especiais</strong>.</span>
+              <span className="flex-grow"><strong>Pais de herdeiros menores ou com necessidades especiais</strong>.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span><strong>Investidores</strong> com múltiplos imóveis ou ativos financeiros.</span>
+              <span className="flex-grow"><strong>Investidores</strong> com múltiplos imóveis ou ativos financeiros.</span>
             </li>
             <li className="flex items-start">
               <span className="text-green-500 mr-3 flex-shrink-0 mt-1 text-xl font-bold">✅</span>
-              <span>Pessoas com estrutura familiar complexa.</span>
+              <span className="flex-grow">Pessoas com estrutura familiar complexa.</span>
             </li>
           </ul>
         </section>
@@ -302,6 +314,7 @@ const HoldingFamiliarPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
             Tipos de Holding Familiar
           </h2>
+          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
               <thead>
@@ -399,15 +412,15 @@ const HoldingFamiliarPage: React.FC = () => {
           <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">⚠</span>
-              <span><strong>Custo de Manutenção:</strong> A holding tem custos fixos (contabilidade, impostos anuais, taxas).</span>
+              <span className="flex-grow"><strong>Custo de Manutenção:</strong> A holding tem custos fixos (contabilidade, impostos anuais, taxas).</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">⚠</span>
-              <span><strong>Risco de Fraude Fiscal:</strong> É preciso comprovar que a holding não é "fachada" ou meramente para sonegação.</span>
+              <span className="flex-grow"><strong>Risco de Fraude Fiscal:</strong> É preciso comprovar que a holding não é "fachada" ou meramente para sonegação.</span>
             </li>
             <li className="flex items-start">
               <span className="text-red-600 mr-3 flex-shrink-0 mt-1 text-xl font-bold">⚠</span>
-              <span><strong>Complexidade Jurídica:</strong> A constituição e gestão exigem assessoria especializada em direito societário e sucessório.</span>
+              <span className="flex-grow"><strong>Complexidade Jurídica:</strong> A constituição e gestão exigem assessoria especializada em direito societário e sucessório.</span>
             </li>
           </ul>
         </section>
@@ -442,6 +455,7 @@ const HoldingFamiliarPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
             Comparativo: Holding Familiar vs. Doação Com Usufruto
           </h2>
+          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
               <thead>
