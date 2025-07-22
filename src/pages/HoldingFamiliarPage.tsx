@@ -1,7 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react'; // Importado useState
 import MainLayout from '../components/layout/MainLayout';
 
-import holdingFamiliarBanner from '../assets/images/holding_familiar_banner.webp'; // CORRIGIDO: de .png.webp para .webp
+import holdingFamiliarBanner from '../assets/images/holding_familiar_banner.webp';
+
+// Componente AccordionItem para reutilização
+interface AccordionItemProps {
+  title: string;
+  children: React.ReactNode;
+  initiallyOpen?: boolean;
+}
+
+const AccordionItem: React.FC<AccordionItemProps> = ({ title, children, initiallyOpen = false }) => {
+  const [isOpen, setIsOpen] = useState(initiallyOpen);
+
+  return (
+    <div className="border-b border-gray-200 last:border-b-0">
+      <button
+        // Ajuste aqui: Seta ao lado do título e menor padding vertical
+        className="flex items-center w-full py-3 px-4 text-left font-semibold text-gray-800 focus:outline-none"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {/* Título do Acordeão */}
+        <h3 className="text-lg md:text-xl font-semibold text-blue-800 flex-grow">
+          {title}
+        </h3>
+        {/* Seta do Acordeão (agora mais próxima) */}
+        <svg
+          className={`w-4 h-4 ml-2 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-screen opacity-100 py-2' : 'max-h-0 opacity-0'
+        }`}
+      >
+        {/* Conteúdo do Acordeão com padding reduzido */}
+        <div className="px-4 pb-3 text-gray-700 leading-relaxed text-base"> {/* Font size adjusted */}
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const HoldingFamiliarPage: React.FC = () => {
   return (
@@ -24,35 +71,34 @@ const HoldingFamiliarPage: React.FC = () => {
       </div>
 
       {/* Conteúdo Principal da Página */}
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
+      {/* Redução do py no container principal */}
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2"> {/* Reduzido mb-6 para mb-4 */}
             O que é uma Holding Familiar?
           </h2>
-          <p className="text-gray-700 leading-relaxed text-lg">
+          <p className="text-gray-700 leading-relaxed text-base"> {/* Font size adjusted */}
             A <strong className="text-gray-800">Holding Familiar</strong> é uma empresa criada para <strong className="text-gray-800">centralizar, administrar e proteger</strong> o patrimônio de uma família. Ela funciona como uma "guarda-chuva" que detém bens imóveis (casas, terrenos, fazendas), participações societárias (empresas da família) e ativos financeiros (investimentos, direitos). Também é definida como uma empresa para administrar bens e interesses familiares, controlada pelos membros da família, e possui ações de outras empresas, imóveis, investimentos, etc.
           </p>
-          <p className="text-gray-700 leading-relaxed text-lg mt-4">
+          <p className="text-gray-700 leading-relaxed text-base mt-3"> {/* Font size & mt adjusted */}
             <strong className="text-gray-800">Como funciona?</strong>
           </p>
-          <ul className="space-y-2 text-gray-700 text-lg mt-2 list-none pl-0">
-            {/* Ícone removido */}
+          <ul className="space-y-1 text-gray-700 text-base mt-2 list-none pl-0"> {/* space-y & font size adjusted */}
             <li className="flex items-start">
-              <span className="mr-2 text-xl">&#8226;</span> {/* Marcador simples ou vazio para manter estrutura */}
+              <span className="mr-2 text-lg font-bold">&#8226;</span> {/* Marcador ligeiramente menor */}
               <span className="flex-grow">
                 Os bens saem do <strong className="text-gray-800">CPF dos familiares</strong> e passam para o <strong className="text-gray-800">CNPJ da holding</strong>.
               </span>
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-2 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow">
                 A família controla tudo por meio de <strong className="text-gray-800">quotas ou ações</strong>.
               </span>
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-2 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow">
                 A gestão é feita de forma <strong className="text-gray-800">profissional e estratégica</strong>.
               </span>
@@ -60,507 +106,599 @@ const HoldingFamiliarPage: React.FC = () => {
           </ul>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
+        {/* Frase instrutiva para os acordeões */}
+        <p className="text-gray-700 text-base leading-relaxed mb-4">
+          <strong className="text-blue-800">Clique nos títulos abaixo para explorar detalhadamente:</strong>
+        </p>
+
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2">
             Por que Criar uma Holding Familiar?
           </h2>
+          <div className="space-y-3"> {/* Espaçamento entre os acordeões reduzido */}
+            <AccordionItem title="Vantagens Tributárias" initiallyOpen>
+              <p className="mb-3 text-base"> {/* Font size & mb adjusted */}
+                A holding pode proporcionar uma eficiência tributária significativa na constituição e sucessão do patrimônio, além de otimizar os rendimentos.
+              </p>
+              {/* Tabela de Vantagens Tributárias como layout de cards em mobile */}
+              <div className="md:hidden"> {/* Visível apenas em mobile */}
+                {/* Redução do gap e padding dos cards */}
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Benefício: <strong className="text-gray-800">Isenção de ITBI</strong></div> {/* Font size & mb adjusted */}
+                    <div className="text-gray-700 text-sm">Como Funciona: Na transferência de imóveis para a holding (integralização como capital social) é isenta do ITBI.</div> {/* Font size adjusted */}
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Benefício: <strong className="text-gray-800">Redução de ITCMD</strong></div>
+                    <div className="text-gray-700 text-sm">Como Funciona: A sucessão ocorre pela doação das cotas da holding aos herdeiros, incidindo ITCMD sobre o valor das cotas.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Benefício: <strong className="text-gray-800">Economia no IR e Dividendos</strong></div>
+                    <div className="text-gray-700 text-sm">Como Funciona: Lucros distribuídos da holding são isentos de IR para pessoas físicas.</div>
+                  </div>
+                </div>
+              </div>
+              <div className="hidden md:block overflow-x-auto mb-6"> {/* Visível apenas em desktop, mb ajustado */}
+                <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                  <thead>
+                    <tr className="bg-blue-100 border-b border-gray-200">
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Benefício</th> {/* Font size & padding adjusted */}
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Como Funciona</th> {/* Font size & padding adjusted */}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Isenção de ITBI</strong></td> {/* Font size & padding adjusted */}
+                      <td className="py-3 px-4 text-gray-700 text-sm">Na transferência de imóveis para a holding (integralização como capital social) é isenta do ITBI.</td> {/* Font size & padding adjusted */}
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Redução de ITCMD</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">A sucessão ocorre pela doação das cotas da holding aos herdeiros, incidindo ITCMD sobre o valor das cotas.</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm">Economia no IR e Dividendos</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Lucros distribuídos da holding são isentos de IR para pessoas físicas.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">▶ Vantagens Tributárias</h3>
-          <p className="text-gray-700 leading-relaxed text-lg mb-4">
-            A holding pode proporcionar uma eficiência tributária significativa na constituição e sucessão do patrimônio, além de otimizar os rendimentos.
-          </p>
-          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
-          <div className="overflow-x-auto mb-8">
-            <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-              <thead>
-                <tr className="bg-blue-100 border-b border-gray-200">
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Benefício</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Como Funciona</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Isenção de ITBI</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Na transferência de imóveis para a holding (integralização como capital social) é isenta do ITBI.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Redução de ITCMD</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">A sucessão ocorre pela doação das cotas da holding aos herdeiros, incidindo ITCMD sobre o valor das cotas.</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base">Economia no IR e Dividendos</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Lucros distribuídos da holding são isentos de IR para pessoas físicas.</td>
-                </tr>
-              </tbody>
-            </table>
+              <p className="text-gray-700 leading-relaxed text-base mb-3"> {/* Font size & mb adjusted */}
+                <strong>Comparativo de ITCMD: Valor Venal x Valor de Aquisição (IR)</strong>
+                A base de cálculo do ITCMD nos sistemas de sucessão é o VALOR VENAL ou o de mercado, enquanto numa holding familiar é o valor declarado no imposto de renda, O VALOR DE AQUISIÇÃO, o que faz uma grande diferença tributária.
+              </p>
+              {/* Tabela de Comparativo de ITCMD - mantida com overflow-x-auto por ter muitas colunas */}
+              <div className="overflow-x-auto mb-6"> {/* mb ajustado */}
+                <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                  <thead>
+                    <tr className="bg-blue-100 border-b border-gray-200">
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">SISTEMA DE SUCESSÃO</th> {/* Font size & padding adjusted */}
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">PATRIMÔNIO</th> {/* Font size & padding adjusted */}
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">BASE DE CÁLCULOS</th> {/* Font size & padding adjusted */}
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">ITCMD/RJ</th> {/* Font size & padding adjusted */}
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">ITCMD RS</th> {/* Font size & padding adjusted */}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm">Doação c/reserva de usufruto</td> {/* Font size & padding adjusted */}
+                      <td className="py-3 px-4 text-gray-700 text-sm">R$ 2.000.000,00</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">R$ 2.000.000,00</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">8%</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">R$ 160.000,00</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm">Holding Familiar</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">R$ 2.000.000,00</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">R$ 800.000,00</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">2%</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">R$ 16.000,00</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm"></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Economia</td>
+                      <td className="py-3 px-4 text-gray-700 text-sm"></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">R$ 144.000,00</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm"></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm"></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm"></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">90%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </AccordionItem>
+
+            <AccordionItem title="Proteção Patrimonial">
+              <ul className="space-y-1 text-gray-700 text-base list-none pl-0"> {/* space-y & font size adjusted */}
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">
+                    <strong className="text-gray-800">Blindagem contra:</strong> Dívidas pessoais (impenhorabilidade parcial) e ações judiciais (ex.: divórcios, disputas societárias).
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Os bens da holding podem ser protegidos contra credores, reduzindo riscos em caso de falências ou litígios.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow"><strong className="text-gray-800">Cláusulas de restrição</strong> (ex.: venda só com consentimento familiar).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Na constituição, os imóveis são gravados com cláusulas especiais que visam resguardá-los no seio da família, conhecidas como "cláusulas de blindagem" (inalienabilidade, incomunicabilidade, impenhorabilidade etc.).</span>
+                </li>
+              </ul>
+
+              <h4 className="text-base font-semibold text-gray-800 mt-4 mb-2">Cláusulas Especiais de Proteção e Administração:</h4> {/* Font size & mb/mt adjusted */}
+              {/* Tabela de Cláusulas Especiais como layout de cards em mobile */}
+              <div className="md:hidden"> {/* Visível apenas em mobile */}
+                {/* Redução do gap e padding dos cards */}
+                <div className="grid grid-cols-1 gap-3">
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Inalienabilidade</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Impede a venda ou transferência dos bens da holding sem autorização dos demais sócios.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Impenhorabilidade</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Protege os bens contra penhoras e execuções judiciais.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Irrenunciabilidade</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Proíbe a renúncia aos direitos sobre os bens da holding.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Sucessão</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Define a sucessão dos bens em caso de falecimento de um sócio.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Administração</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Estabelece regras sobre a gestão da holding e a tomada de decisões.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Exclusão</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Permite a exclusão de sócios em situações específicas.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Arrependimento</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Permite que um sócio se retrate de sua decisão de ingressar ou permanecer na holding dentro de um prazo estipulado, garantindo assim uma saída sem penalidades.</div>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                    <div className="font-semibold text-blue-800 mb-1 text-base">Cláusula: <strong className="text-gray-800">Golden Share</strong></div>
+                    <div className="text-gray-700 text-sm">Objetivo: Confere a um ou mais sócios direitos especiais, como veto em decisões estratégicas, assegurando que certos interesses da família sejam protegidos, mesmo que a participação acionária seja minoritária.</div>
+                  </div>
+                </div>
+              </div>
+              <div className="hidden md:block overflow-x-auto mb-6"> {/* Visível apenas em desktop, mb ajustado */}
+                <table className="w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                  <thead>
+                    <tr className="bg-blue-100 border-b border-gray-200">
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider w-1/4">Cláusula</th>
+                      <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider w-3/4">Objetivo</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Inalienabilidade</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Impede a venda ou transferência dos bens da holding sem autorização dos demais sócios.</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Impenhorabilidade</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Protege os bens contra penhoras e execuções judiciais.</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Irrenunciabilidade</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Proíbe a renúncia aos direitos sobre os bens da holding.</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Sucessão</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Define a sucessão dos bens em caso de falecimento de um sócio.</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Administração</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Estabelece regras sobre a gestão da holding e a tomada de decisões.</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Exclusão</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Permite a exclusão de sócios em situações específicas.</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Arrependimento</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Permite que um sócio se retrate de sua decisão de ingressar ou permanecer na holding dentro de um prazo estipulado, garantindo assim uma saída sem penalidades.</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="py-3 px-4 text-gray-700 text-sm"><strong>Golden Share</strong></td>
+                      <td className="py-3 px-4 text-gray-700 text-sm">Confere a um ou mais sócios direitos especiais, como veto em decisões estratégicas, assegurando que certos interesses da família sejam protegidos, mesmo que a participação acionária seja minoritária.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-base mt-3"> {/* Font size & mt adjusted */}
+                Essas cláusulas adicionais fortalecem a proteção patrimonial e a governança da holding familiar, oferecendo maior segurança e controle sobre o patrimônio.
+              </p>
+            </AccordionItem>
+
+            <AccordionItem title="Sucessão Planejada">
+              <ul className="space-y-1 text-gray-700 text-base list-none pl-0"> {/* space-y & font size adjusted */}
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Evita <strong>inventário judicial</strong> (bens são transferidos via alteração societária).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Permite <strong>testamento privado</strong> (regras de herança nas quotas).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Protege <strong>herdeiros incapazes</strong> (gestão por administradores designados).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Facilita a transferência de bens e direitos entre gerações, evitando conflitos familiares.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Permite que a sucessão seja feita de forma planejada e estruturada.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Se todo o patrimônio relevante da família estiver integralizado na holding e as regras sucessórias das cotas forem bem estruturadas, isso reduz drasticamente a necessidade de um inventário tradicional.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">A sucessão das cotas sociais pode ser realizada diretamente via contrato e regularizada em cartório, dependendo das legislações locais e estaduais.</span>
+                </li>
+              </ul>
+            </AccordionItem>
+
+            <AccordionItem title="Gestão Profissionalizada e Centralizada">
+              <ul className="space-y-1 text-gray-700 text-base list-none pl-0"> {/* space-y & font size adjusted */}
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow"><strong>Tomada de decisão centralizada</strong> (evita dispersão de patrimônio).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow"><strong>Contratos personalizados</strong> (pacto societário, acordos de acionistas).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow"><strong>Otimização de custos</strong> (contratação coletiva, assessoria especializada).</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">Proporciona uma gestão centralizada dos ativos familiares, facilitando a tomada de decisões e a administração dos bens.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">A holding pode investir em novos negócios ou melhorar a gestão dos ativos existentes, potencializando seu valor.</span>
+                </li>
+              </ul>
+            </AccordionItem>
+
+            <AccordionItem title="Privacidade">
+              <ul className="space-y-1 text-gray-700 text-base list-none pl-0"> {/* space-y & font size adjusted */}
+                <li className="flex items-start">
+                  <span className="mr-2 text-lg font-bold">&#8226;</span>
+                  <span className="flex-grow">A estrutura de uma holding pode oferecer maior privacidade em relação aos bens da família, uma vez que as informações financeiras podem ser menos acessíveis ao público.</span>
+                </li>
+              </ul>
+            </AccordionItem>
           </div>
-
-          <p className="text-gray-700 leading-relaxed text-lg mb-4">
-            <strong>Comparativo de ITCMD: Valor Venal x Valor de Aquisição (IR)</strong>
-            A base de cálculo do ITCMD nos sistemas de sucessão é o VALOR VENAL ou o de mercado, enquanto numa holding familiar é o valor declarado no imposto de renda, O VALOR DE AQUISIÇÃO, o que faz uma grande diferença tributária.
-          </p>
-          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
-          <div className="overflow-x-auto mb-8">
-            <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-              <thead>
-                <tr className="bg-blue-100 border-b border-gray-200">
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">SISTEMA DE SUCESSÃO</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">PATRIMÔNIO</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">BASE DE CÁLCULOS</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">ITCMD/RJ</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">ITCMD RS</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base">Doação c/reserva de usufruto</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">R$ 2.000.000,00</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">R$ 2.000.000,00</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">8%</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">R$ 160.000,00</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base">Holding Familiar</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">R$ 2.000.000,00</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">R$ 800.000,00</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">2%</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">R$ 16.000,00</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"></td>
-                  <td className="py-4 px-6 text-gray-700 text-base"></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Economia</td>
-                  <td className="py-4 px-6 text-gray-700 text-base"></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">R$ 144.000,00</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"></td>
-                  <td className="py-4 px-6 text-gray-700 text-base"></td>
-                  <td className="py-4 px-6 text-gray-700 text-base"></td>
-                  <td className="py-4 px-6 text-gray-700 text-base"></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">90%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">▶ Proteção Patrimonial</h3>
-          <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">
-                <strong className="text-gray-800">Blindagem contra:</strong> Dívidas pessoais (impenhorabilidade parcial) e ações judiciais (ex.: divórcios, disputas societárias).
-              </span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Os bens da holding podem ser protegidos contra credores, reduzindo riscos em caso de falências ou litígios.</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow"><strong className="text-gray-800">Cláusulas de restrição</strong> (ex.: venda só com consentimento familiar).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Na constituição, os imóveis são gravados com cláusulas especiais que visam resguardá-los no seio da família, conhecidas como "cláusulas de blindagem" (inalienabilidade, incomunicabilidade, impenhorabilidade etc.).</span>
-            </li>
-          </ul>
-
-          <h4 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Cláusulas Especiais de Proteção e Administração:</h4>
-          <div className="overflow-x-auto mb-8">
-            <table className="w-full bg-white border border-gray-200 rounded-lg shadow-sm table-auto"> {/* Adicionado w-full e table-auto */}
-              <thead>
-                <tr className="bg-blue-100 border-b border-gray-200">
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider w-1/3">Cláusula</th> {/* Ajustado largura */}
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider w-2/3">Objetivo</th> {/* Ajustado largura */}
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Inalienabilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Impede a venda ou transferência dos bens da holding sem autorização dos demais sócios.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Impenhorabilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Protege os bens contra penhoras e execuções judiciais.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Irrenunciabilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Proíbe a renúncia aos direitos sobre os bens da holding.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Sucessão</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Define a sucessão dos bens em caso de falecimento de um sócio.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Administração</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Estabelece regras sobre a gestão da holding e a tomada de decisões.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Exclusão</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Permite a exclusão de sócios em situações específicas.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Arrependimento</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Permite que um sócio se retrate de sua decisão de ingressar ou permanecer na holding dentro de um prazo estipulado, garantindo assim uma saída sem penalidades.</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base w-1/3"><strong>Golden Share</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base w-2/3">Confere a um ou mais sócios direitos especiais, como veto em decisões estratégicas, assegurando que certos interesses da família sejam protegidos, mesmo que a participação acionária seja minoritária.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="text-gray-700 leading-relaxed text-lg mt-4">
-            Essas cláusulas adicionais fortalecem a proteção patrimonial e a governança da holding familiar, oferecendo maior segurança e controle sobre o patrimônio.
-          </p>
-
-          <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">▶ Sucessão Planejada</h3>
-          <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Evita <strong>inventário judicial</strong> (bens são transferidos via alteração societária).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Permite <strong>testamento privado</strong> (regras de herança nas quotas).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Protege <strong>herdeiros incapazes</strong> (gestão por administradores designados).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Facilita a transferência de bens e direitos entre gerações, evitando conflitos familiares.</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Permite que a sucessão seja feita de forma planejada e estruturada.</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Se todo o patrimônio relevante da família estiver integralizado na holding e as regras sucessórias das cotas forem bem estruturadas, isso reduz drasticamente a necessidade de um inventário tradicional.</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">A sucessão das cotas sociais pode ser realizada diretamente via contrato e regularizada em cartório, dependendo das legislações locais e estaduais.</span>
-            </li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">▶ Gestão Profissionalizada e Centralizada</h3>
-          <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow"><strong>Tomada de decisão centralizada</strong> (evita dispersão de patrimônio).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow"><strong>Contratos personalizados</strong> (pacto societário, acordos de acionistas).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow"><strong>Otimização de custos</strong> (contratação coletiva, assessoria especializada).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">Proporciona uma gestão centralizada dos ativos familiares, facilitando a tomada de decisões e a administração dos bens.</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">A holding pode investir em novos negócios ou melhorar a gestão dos ativos existentes, potencializando seu valor.</span>
-            </li>
-          </ul>
-
-          <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">▶ Privacidade</h3>
-          <ul className="space-y-2 text-gray-700 text-lg list-none pl-0">
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow">A estrutura de uma holding pode oferecer maior privacidade em relação aos bens da família, uma vez que as informações financeiras podem ser menos acessíveis ao público.</span>
-            </li>
-          </ul>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4 border-b-2 border-blue-200 pb-2">
             Para Quem a Holding Familiar é Indicada?
           </h2>
-          <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
-            {/* Ícone removido */}
+          <ul className="space-y-1 text-gray-700 text-base list-none pl-0"> {/* space-y & font size adjusted */}
             <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow"><strong>Famílias com patrimônio acima de R$ 2 milhões</strong> (imóveis, empresas, investimentos).</span>
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow"><strong>Empresários</strong> que querem separar patrimônio pessoal e empresarial e garantir a continuidade dos negócios.</span>
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow"><strong>Casais em segundas uniões</strong> com filhos de relacionamentos anteriores.</span>
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow"><strong>Pais de herdeiros menores ou com necessidades especiais</strong>.</span>
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow"><strong>Investidores</strong> com múltiplos imóveis ou ativos financeiros.</span>
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <span className="flex-grow">Pessoas com estrutura familiar complexa.</span>
             </li>
           </ul>
         </section>
 
-        <section className="mb-10">
-          {/* Correção de concordância: "Tipos de Holding Familiar" para "Tipos de Holdings Familiares" */}
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
-            Tipos de Holdings Familiares
-          </h2>
-          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-              <thead>
-                <tr className="bg-blue-100 border-b border-gray-200">
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Tipo</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Objetivo Principal</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Melhor Para</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Pura</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Só administra patrimônio (não opera negócios).</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Famílias com foco em imóveis e investimentos.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Mista</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Controla empresas ativas + patrimônio.</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Empresários com negócios em operação.</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Patrimonial</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Foco em proteção de bens (blindagem).</td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Quem busca segurança contra riscos jurídicos.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
-            Como Montar uma Holding Familiar?
-          </h2>
-          <h3 className="text-2xl font-semibold text-gray-800 mt-4 mb-4">Passo a Passo da Constituição:</h3>
-          <ul className="space-y-6 text-gray-700 text-lg list-decimal pl-6">
-            <li>
-              <strong>Planejamento Inicial:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Identificar objetivos familiares e patrimoniais.</li>
-                <li>Conhecer o regime de casamento, pois impacta no planejamento.</li>
-                <li>Avaliação da estrutura familiar e suas complexidades.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Diagnóstico Patrimonial:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Levantar e organizar todos os bens da família (imóveis, investimentos, empresas etc.).</li>
-                <li>Estimar o valor do patrimônio.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Escolha da Estrutura Jurídica / Tipo Societário:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Decidir qual tipo de holding será utilizada (pura, mista, patrimonial etc.).</li>
-                <li>Escolher entre LTDA (mais flexível para famílias) ou SA (indicado para grandes patrimônios).</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Constituição da Holding / Elaboração de Contratos:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Elaborar o contrato ou estatuto social.</li>
-                <li>Registrar a holding na Junta Comercial.</li>
-                <li>Incluir pacto societário com cláusulas de preferência familiar (venda de quotas só para parentes) e gestão por conselho (evita conflitos entre herdeiros).</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Transferência de Bens / Integralização dos Bens:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Realizar a integralização do capital social com os bens da família.</li>
-                <li>Formalizar a transferência dos ativos para o CNPJ da holding.</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Gestão e Governança:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Definir regras de administração e governança.</li>
-                <li>Estabelecer acordo de sócios (se necessário).</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Manutenção Contábil e Tributária:</strong>
-              <ul className="list-disc pl-5 mt-2">
-                <li>Garantir que a holding esteja em conformidade com as legislações.</li>
-                <li>Gerenciar impostos e relatórios financeiros.</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
-            Cuidados Essenciais
-          </h2>
-          <ul className="space-y-4 text-gray-700 text-lg list-none pl-0">
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow"><strong>Custo de Manutenção:</strong> A holding tem custos fixos (contabilidade, impostos anuais, taxas).</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow"><strong>Risco de Fraude Fiscal:</strong> É preciso comprovar que a holding não é "fachada" ou meramente para sonegação.</span>
-            </li>
-            {/* Ícone removido */}
-            <li className="flex items-start">
-              <span className="mr-3 flex-shrink-0 mt-1 text-xl">&#8226;</span>
-              <span className="flex-grow"><strong>Complexidade Jurídica:</strong> A constituição e gestão exigem assessoria especializada em direito societário e sucessório.</span>
-            </li>
-          </ul>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
-            Perguntas Frequentes sobre Holding Familiar
-          </h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-3">1. Qual o patrimônio mínimo para valer a pena?</h3>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                É recomendado a partir de <strong>R$ 2 milhões</strong> (custos fixos podem não compensar para patrimônios menores). Para patrimônios menores, pode não haver tantas vantagens.
-              </p>
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <AccordionItem title="Tipos de Holdings Familiares"> {/* Seção colapsável */}
+            <div className="md:hidden"> {/* Visível apenas em mobile */}
+              {/* Redução do gap e padding dos cards */}
+              <div className="grid grid-cols-1 gap-3">
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Tipo: <strong className="text-gray-800">Pura</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Objetivo Principal: Só administra patrimônio (não opera negócios).</div> {/* Font size adjusted */}
+                  <div className="text-gray-700 text-sm">Melhor Para: Famílias com foco em imóveis e investimentos.</div> {/* Font size adjusted */}
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Tipo: <strong className="text-gray-800">Mista</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Objetivo Principal: Controla empresas ativas + patrimônio.</div>
+                  <div className="text-gray-700 text-sm">Melhor Para: Empresários com negócios em operação.</div>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Tipo: <strong className="text-gray-800">Patrimonial</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Objetivo Principal: Foco em proteção de bens (blindagem).</div>
+                  <div className="text-gray-700 text-sm">Melhor Para: Quem busca segurança contra riscos jurídicos.</div>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-3">2. Posso transferir meu imóvel residencial para a holding?</h3>
-              <p className="text-700 leading-relaxed text-lg">
-                Sim, mas perde-se a <strong>isenção de IR na venda</strong> (para Pessoa Física, imóvel próprio é isento até R$ 440 mil).
-              </p>
+            <div className="hidden md:block overflow-x-auto"> {/* Visível apenas em desktop */}
+              <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                <thead>
+                  <tr className="bg-blue-100 border-b border-gray-200">
+                    <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Tipo</th>
+                    <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Objetivo Principal</th>
+                    <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Melhor Para</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Pura</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Só administra patrimônio (não opera negócios).</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Famílias com foco em imóveis e investimentos.</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Mista</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Controla empresas ativas + patrimônio.</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Empresários com negócios em operação.</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Patrimonial</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Foco em proteção de bens (blindagem).</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Quem busca segurança contra riscos jurídicos.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-800 mb-3">3. Quanto custa para constituir?</h3>
-              <p className="text-gray-700 leading-relaxed text-lg">
-                Entre <strong>R$ 15.000 e R$ 50.000</strong> (depende da complexidade e dos serviços).
-              </p>
-            </div>
-          </div>
+          </AccordionItem>
         </section>
 
-        <section className="mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-blue-200 pb-2">
-            Comparativo: Holding Familiar vs. Doação Com Usufruto
-          </h2>
-          {/* O overflow-x-auto já está presente e é a solução recomendada para tabelas */}
-          <div className="overflow-x-auto">
-            <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-              <thead>
-                <tr className="bg-blue-100 border-b border-gray-200">
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Critério</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Holding Familiar</th>
-                  <th className="py-3 px-6 text-left text-sm font-semibold text-blue-800 uppercase tracking-wider">Doação com Usufruto</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Proteção Patrimonial</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Oferece maior proteção contra dívidas e ações judiciais (blindagem).</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Gestão</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Permite gestão centralizada e profissional dos bens.</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Planejamento Sucessório</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Facilita a sucessão sem necessidade de inventário tradicional (cotas).</td>
-                </tr>
-                <tr className="border-b border-gray-200 hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Flexibilidade</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Maior flexibilidade para ajustar participações e estrutura societária.</td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="py-4 px-6 text-gray-700 text-base"><strong>Benefícios Fiscais</strong></td>
-                  <td className="py-4 px-6 text-gray-700 text-base">Potenciais vantagens fiscais na gestão e sucessão.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <AccordionItem title="Como Montar uma Holding Familiar?"> {/* Seção colapsável */}
+            <h3 className="text-base font-semibold text-gray-800 mt-3 mb-3">Passo a Passo da Constituição:</h3> {/* Font size & mt/mb adjusted */}
+            <ul className="space-y-3 text-gray-700 text-base list-decimal pl-6"> {/* space-y & font size adjusted */}
+              <li>
+                <strong>Planejamento Inicial:</strong>
+                <ul className="list-disc pl-5 mt-1 space-y-1"> {/* mt & space-y adjusted */}
+                  <li className="text-base">Identificar objetivos familiares e patrimoniais.</li> {/* Font size adjusted */}
+                  <li className="text-base">Conhecer o regime de casamento, pois impacta no planejamento.</li>
+                  <li className="text-base">Avaliação da estrutura familiar e suas complexidades.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Diagnóstico Patrimonial:</strong>
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li className="text-base">Levantar e organizar todos os bens da família (imóveis, investimentos, empresas etc.).</li>
+                  <li className="text-base">Estimar o valor do patrimônio.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Escolha da Estrutura Jurídica / Tipo Societário:</strong>
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li className="text-base">Decidir qual tipo de holding será utilizada (pura, mista, patrimonial etc.).</li>
+                  <li className="text-base">Escolher entre LTDA (mais flexível para famílias) ou SA (indicado para grandes patrimônios).</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Constituição da Holding / Elaboração de Contratos:</strong>
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li className="text-base">Elaborar o contrato ou estatuto social.</li>
+                  <li className="text-base">Registrar a holding na Junta Comercial.</li>
+                  <li className="text-base">Incluir pacto societário com cláusulas de preferência familiar (venda de quotas só para parentes) e gestão por conselho (evita conflitos entre herdeiros).</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Transferência de Bens / Integralização dos Bens:</strong>
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li className="text-base">Realizar a integralização do capital social com os bens da família.</li>
+                  <li className="text-base">Formalizar a transferência dos ativos para o CNPJ da holding.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Gestão e Governança:</strong>
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li className="text-base">Definir regras de administração e governança.</li>
+                  <li className="text-base">Estabelecer acordo de sócios (se necessário).</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Manutenção Contábil e Tributária:</strong>
+                <ul className="list-disc pl-5 mt-1 space-y-1">
+                  <li className="text-base">Garantir que a holding esteja em conformidade com as legislações.</li>
+                  <li className="text-base">Gerenciar impostos e relatórios financeiros.</li>
+                </ul>
+              </li>
+            </ul>
+          </AccordionItem>
         </section>
 
-        <section className="text-center py-8 bg-blue-50 rounded-lg shadow-inner">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Conclusão</h2>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <AccordionItem title="Cuidados Essenciais"> {/* Seção colapsável */}
+            <ul className="space-y-1 text-gray-700 text-base list-none pl-0"> {/* space-y & font size adjusted */}
+              <li className="flex items-start">
+                <span className="mr-2 text-lg font-bold">&#8226;</span>
+                <span className="flex-grow"><strong>Custo de Manutenção:</strong> A holding tem custos fixos (contabilidade, impostos anuais, taxas).</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2 text-lg font-bold">&#8226;</span>
+                <span className="flex-grow"><strong>Risco de Fraude Fiscal:</strong> É preciso comprovar que a holding não é "fachada" ou meramente para sonegação.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2 text-lg font-bold">&#8226;</span>
+                <span className="flex-grow"><strong>Complexidade Jurídica:</strong> A constituição e gestão exigem assessoria especializada em direito societário e sucessório.</span>
+              </li>
+            </ul>
+          </AccordionItem>
+        </section>
+
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <AccordionItem title="Perguntas Frequentes sobre Holding Familiar"> {/* Seção colapsável */}
+            <div className="space-y-6"> {/* space-y ajustado */}
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">1. Qual o patrimônio mínimo para valer a pena?</h3> {/* Font size & mb adjusted */}
+                <p className="text-gray-700 leading-relaxed text-base"> {/* Font size adjusted */}
+                  É recomendado a partir de <strong>R$ 2 milhões</strong> (custos fixos podem não compensar para patrimônios menores). Para patrimônios menores, pode não haver tantas vantagens.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">2. Posso transferir meu imóvel residencial para a holding?</h3>
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Sim, mas perde-se a <strong>isenção de IR na venda</strong> (para Pessoa Física, imóvel próprio é isento até R$ 440 mil).
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">3. Quanto custa para constituir?</h3>
+                <p className="text-gray-700 leading-relaxed text-base">
+                  Entre <strong>R$ 15.000 e R$ 50.000</strong> (depende da complexidade e dos serviços).
+                </p>
+              </div>
+            </div>
+          </AccordionItem>
+        </section>
+
+        {/* Redução do mb na seção */}
+        <section className="mb-8">
+          <AccordionItem title="Comparativo: Holding Familiar vs. Doação Com Usufruto"> {/* Seção colapsável */}
+            <div className="md:hidden"> {/* Visível apenas em mobile */}
+              {/* Redução do gap e padding dos cards */}
+              <div className="grid grid-cols-1 gap-3">
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Critério: <strong className="text-gray-800">Proteção Patrimonial</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Holding Familiar: Oferece maior proteção contra dívidas e ações judiciais (blindagem).</div>
+                  <div className="text-gray-700 text-sm">Doação com Usufruto: Não proporciona a mesma segurança contra dívidas pessoais do donatário.</div>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Critério: <strong className="text-gray-800">Gestão</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Holding Familiar: Permite gestão centralizada e profissional dos bens.</div>
+                  <div className="text-gray-700 text-sm">Doação com Usufruto: A gestão dos bens doados geralmente permanece com o usufrutuário, mas não há centralização empresarial.</div>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Critério: <strong className="text-gray-800">Planejamento Sucessório</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Holding Familiar: Facilita a sucessão sem necessidade de inventário tradicional (cotas).</div>
+                  <div className="text-gray-700 text-sm">Doação com Usufruto: Pode envolver mais burocracia e custos de inventário para outros bens.</div>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Critério: <strong className="text-gray-800">Flexibilidade</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Holding Familiar: Maior flexibilidade para ajustar participações e estrutura societária.</div>
+                  <div className="text-gray-700 text-sm">Doação com Usufruto: É uma transferência definitiva; menos flexível para mudanças futuras.</div>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                  <div className="font-semibold text-blue-800 mb-1 text-base">Critério: <strong className="text-gray-800">Benefícios Fiscais</strong></div>
+                  <div className="text-gray-700 mb-1 text-sm">Holding Familiar: Potenciais vantagens fiscais na gestão e sucessão.</div>
+                  <div className="text-gray-700 text-sm">Doação com Usufruto: Vantagens fiscais mais focadas no ITCMD da doação.</div>
+                </div>
+              </div>
+            </div>
+            <div className="hidden md:block overflow-x-auto"> {/* Visível apenas em desktop */}
+              <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                <thead>
+                  <tr className="bg-blue-100 border-b border-gray-200">
+                    <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Critério</th>
+                    <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Holding Familiar</th>
+                    <th className="py-2 px-4 text-left text-xs font-semibold text-blue-800 uppercase tracking-wider">Doação com Usufruto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Proteção Patrimonial</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Oferece maior proteção contra dívidas e ações judiciais (blindagem).</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Não proporciona a mesma segurança contra dívidas pessoais do donatário.</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Gestão</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Permite gestão centralizada e profissional dos bens.</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">A gestão dos bens doados geralmente permanece com o usufrutuário, mas não há centralização empresarial.</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Planejamento Sucessório</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Facilita a sucessão sem necessidade de inventário tradicional (cotas).</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Pode envolver mais burocracia e custos de inventário para outros bens.</td>
+                  </tr>
+                  <tr className="border-b border-gray-200 hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Flexibilidade</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Maior flexibilidade para ajustar participações e estrutura societária.</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">É uma transferência definitiva; menos flexível para mudanças futuras.</td>
+                  </tr>
+                  <tr className="hover:bg-gray-50">
+                    <td className="py-3 px-4 text-gray-700 text-sm"><strong>Benefícios Fiscais</strong></td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Potenciais vantagens fiscais na gestão e sucessão.</td>
+                    <td className="py-3 px-4 text-gray-700 text-sm">Vantagens fiscais mais focadas no ITCMD da doação.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </AccordionItem>
+        </section>
+
+        {/* Redução do mb na seção */}
+        <section className="text-center py-6 bg-blue-50 rounded-lg shadow-inner mb-8"> {/* py & mb adjusted */}
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-3">Conclusão</h2> {/* mb adjusted */}
+          <p className="text-gray-700 leading-relaxed text-base max-w-3xl mx-auto mb-3"> {/* Font size & mb adjusted */}
             A Holding Familiar é a <strong>solução mais completa e estratégica</strong> para quem busca:
           </p>
-          <ul className="space-y-2 text-gray-700 text-lg mt-4 list-none pl-0 inline-block text-left">
-            {/* Ícone removido */}
+          <ul className="space-y-1 text-gray-700 text-base mt-3 list-none pl-0 inline-block text-left"> {/* space-y & font size & mt adjusted */}
             <li className="flex items-start">
-              <span className="mr-2 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <strong>Proteger</strong> o patrimônio contra riscos.
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-2 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <strong>Otimizar</strong> impostos na sucessão e na gestão.
             </li>
-            {/* Ícone removido */}
             <li className="flex items-start">
-              <span className="mr-2 text-xl">&#8226;</span>
+              <span className="mr-2 text-lg font-bold">&#8226;</span>
               <strong>Profissionalizar</strong> a administração dos bens.
             </li>
           </ul>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto mt-4">
+          <p className="text-gray-700 leading-relaxed text-base max-w-3xl mx-auto mt-3"> {/* Font size & mt adjusted */}
             É uma alternativa atrativa para proteção e gestão do patrimônio, mas geralmente é mais vantajosa para patrimônios superiores a R$ 1 milhão ou R$ 2 milhões, quando os benefícios superam os custos administrativos e tributários. Em qualquer caso, é sempre recomendável consultar um advogado especializado para avaliar a viabilidade.
           </p>
 
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 mt-8">Próximos Passos: Sua Orientação Especializada</h3>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-3xl mx-auto">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 mt-6">Próximos Passos: Sua Orientação Especializada</h3> {/* Font size & mb/mt adjusted */}
+          <p className="text-gray-700 leading-relaxed text-base max-w-3xl mx-auto mb-3"> {/* Font size & mb adjusted */}
             Nossa equipe na <strong>Carneiro Filho Advocacia</strong> possui a expertise necessária em Direito de Família e Sucessões, Direito Societário e Planejamento Tributário para analisar seu caso específico e propor a melhor estrutura de gestão e proteção para seu patrimônio imobiliário.
           </p>
-          <div className="mt-8">
+          <div className="mt-6"> {/* mt adjusted */}
             <a
               href="https://calendly.com/contato-carneirofilho/planejamento_sucessorio"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg shadow-lg"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium text-base shadow-lg" /* padding & font size adjusted */
             >
               Agende uma Consultoria
             </a>
           </div>
-          <p className="text-gray-700 text-sm italic mt-8">
+          <p className="text-gray-700 text-xs italic mt-6"> {/* Font size & mt adjusted */}
             (Atualizado em outubro/2024 conforme jurisprudência do CARF e legislação tributária vigente)
           </p>
         </section>
