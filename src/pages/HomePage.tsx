@@ -211,7 +211,16 @@ const HomePage: React.FC = () => {
                   CFilho em Mídia
                 </h3>
                 <div className="space-y-1">
-                  {/* CONTEÚDO PARA DOWNLOAD DE FOLDERS */}
+                  {/* NOVO CONTEÚDO PARA DOWNLOAD */}
+                  <a
+                    href="/arquivos/reforma-tributaria-nova-era.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-blue-600 hover:text-blue-800 text-sm"
+                  >
+                    Reforma Tributária: Uma Nova Era de Oportunidades Profissionais
+                  </a>
+                  {/* CONTEÚDO ANTERIOR */}
                   <a
                     href="/arquivos/reforma-tributaria-o-que-muda.pdf"
                     target="_blank"
