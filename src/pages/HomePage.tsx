@@ -213,12 +213,12 @@ const HomePage: React.FC = () => {
                 <div className="space-y-1">
                   {/* NOVO CONTEÚDO PARA DOWNLOAD */}
                   <a
-                    href="/arquivos/reforma-tributaria-nova-era.pdf"
+                    href="/arquivos/A-verdade-sobre-quem-paga-mais-impostos-no-Brasil.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-blue-600 hover:text-blue-800 text-sm"
                   >
-                    Reforma Tributária: Uma Nova Era de Oportunidades Profissionais
+                    A verdade sobre quem paga mais impostos no Brasil
                   </a>
                   {/* CONTEÚDO ANTERIOR */}
                   <a
