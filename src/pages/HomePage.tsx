@@ -17,7 +17,7 @@ import midia from '../assets/images/midia.webp';
 
 const HomePage: React.FC = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
-  
+   
   // Array de banners para o carrossel - IMAGENS E TEXTOS ATUALIZADOS
   const banners = [
     {
@@ -28,8 +28,8 @@ const HomePage: React.FC = () => {
     },
     {
       image: bannerEmpresarial, // Banner 2: Direito Empresarial (gráfico)
-      subtitle: "SEU NEGÓCIO, NOSSA ESTRATÉGIA", 
-      title: "Assessoria Jurídica Estratégica para o Crescimento da sua Empresa.", 
+      subtitle: "SEU NEGÓCIO, NOSSA ESTRATÉGIA",  
+      title: "Assessoria Jurídica Estratégica para o Crescimento da sua Empresa.",  
       description: "",
     }
   ];
@@ -53,16 +53,16 @@ const HomePage: React.FC = () => {
     <MainLayout>
       {/* Banner Carrossel */}
       <div className="relative">
-        <Banner 
+        <Banner  
           subtitle={banners[currentSlide].subtitle}
           title={banners[currentSlide].title}
           description={banners[currentSlide].description}
           backgroundImage={banners[currentSlide].image}
           height="h-[450px]"
         />
-        
+         
         {/* Controles do carrossel */}
-        <button 
+        <button  
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
           aria-label="Slide anterior"
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <button 
+        <button  
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 rounded-full p-2"
           aria-label="Próximo slide"
@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
-        
+         
         {/* Indicadores de slide */}
         <div className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2">
           {banners.map((_, index) => (
@@ -102,15 +102,15 @@ const HomePage: React.FC = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
             Soluções jurídicas e estratégicas com resultados eficazes
           </h2>
-          
+           
           {/* Cards de serviços */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+             
             {/* Card 1: Planejamento Sucessório Familiar e Patrimonial */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img 
-                src={planejamentoSucessorio} 
-                alt="Planejamento Sucessório" 
+              <img  
+                src={planejamentoSucessorio}  
+                alt="Planejamento Sucessório"  
                 className="w-full h-40 object-cover"
               />
               <div className="p-5">
@@ -140,9 +140,9 @@ const HomePage: React.FC = () => {
 
             {/* Card 2: Cursos */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img 
-                src={cursos} 
-                alt="Cursos" 
+              <img  
+                src={cursos}  
+                alt="Cursos"  
                 className="w-full h-40 object-cover"
               />
               <div className="p-5">
@@ -159,8 +159,8 @@ const HomePage: React.FC = () => {
                   <Link to="/cursos" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Planejamento Sucessório Avançado
                   </Link>
-                  <Link 
-                    to="/cursos" 
+                  <Link  
+                    to="/cursos"  
                     className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
                   >
                     Ver todos os cursos
@@ -171,9 +171,9 @@ const HomePage: React.FC = () => {
 
             {/* Card 3: Informativos */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img 
-                src={informativos} 
-                alt="Informativos" 
+              <img  
+                src={informativos}  
+                alt="Informativos"  
                 className="w-full h-40 object-cover"
               />
               <div className="p-5">
@@ -199,7 +199,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Card 4: CFilho em Mídia - OCULTANDO LINKS DE MÍDIA */}
+            {/* Card 4: CFilho em Mídia */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img 
                 src={midia} 
@@ -211,23 +211,15 @@ const HomePage: React.FC = () => {
                   CFilho em Mídia
                 </h3>
                 <div className="space-y-1">
-                  {/* LINKS DE MÍDIA REMOVIDOS TEMPORARIAMENTE: */}
-                  {/* <Link to="/midia" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Entrevista sobre Reforma Tributária
-                  </Link>
-                  <Link to="/midia" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Palestra: Sucessão Familiar
-                  </Link>
-                  <Link to="/midia" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Debate: Holding Familiar
-                  </Link> */}
-                  {/* BOTÃO "EM BREVE" PARA MÍDIA */}
-                  <button 
-                    disabled
-                    className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium cursor-not-allowed mt-2"
+                  {/* CONTEÚDO PARA DOWNLOAD DE FOLDERS */}
+                  <a
+                    href="/arquivos/reforma-tributaria-o-que-muda.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-blue-600 hover:text-blue-800 text-sm"
                   >
-                    Em Breve
-                  </button>
+                    Reforma Tributária: O Que Muda Para Seu Negócio e Patrimônio?
+                  </a>
                 </div>
               </div>
             </div>
@@ -236,7 +228,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Seção CTA */}
-      <section className="py-12 bg-blue-950 text-white"> {/* CORRIGIDO: Alterado para bg-blue-950 */}
+      <section className="py-12 bg-blue-950 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-5">
             Proteja seu patrimônio e garanta o futuro da sua família
@@ -245,13 +237,13 @@ const HomePage: React.FC = () => {
             Entre em contato para uma consultoria personalizada e descubra a melhor estratégia para seu planejamento sucessório.
           </p>
           {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
-          <a 
-            href="https://calendly.com/contato-carneirofilho" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://calendly.com/contato-carneirofilho"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
           >
-            Agendar Atendimento 
+            Agendar Atendimento
           </a>
         </div>
       </section>
