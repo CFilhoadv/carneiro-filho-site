@@ -12,8 +12,7 @@ import bannerEmpresarial from '../assets/images/banner_empresarial.webp';
 import planejamentoSucessorio from '../assets/images/planejamento_sucessorio.webp'; 
 import cursos from '../assets/images/cursos.webp'; 
 import informativos from '../assets/images/informativos.webp'; 
-import midia from '../assets/images/midia.webp'; 
-// NOVO IMPORT DA SUA FOTO PARA A SEÇÃO "CFilho em Mídia"
+// AQUI: A VARIÁVEL 'midia' FOI REMOVIDA POIS NÃO É MAIS USADA
 import midiaComMinhaFoto from '../assets/images/midia com minha foto.webp';
 
 // NOVO ARRAY DE PUBLICAÇÕES PARA A SEÇÃO "CFilho em Mídia"
