@@ -16,6 +16,9 @@ import InventarioPage from './pages/InventarioPage';
 import TestamentoPage from './pages/TestamentoPage';
 import AdministradoraBensImoveisPage from './pages/AdministradoraBensImoveisPage';
 // ********************************************************************************
+// IMPORTAÇÃO DA NOVA PÁGINA PARA LISTAR TODOS OS CONTEÚDOS DE MÍDIA
+import MidiaPage from './pages/MidiaPage';
+
 import './App.css';
 
 function App() {
@@ -37,10 +40,14 @@ function App() {
         {/* **** ROTAS PARA TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO **** */}
         <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
         <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
-        <Route path="/inventarios" element={<InventarioPage />} /> {/* ALTERADO: de /inventario para /inventarios */}
-        <Route path="/testamentos" element={<TestamentoPage />} /> {/* ALTERADO: de /testamento para /testamentos */}
-        <Route path="/administradoras-de-bens-proprios" element={<AdministradoraBensImoveisPage />} /> {/* ALTERADO: de /administradora-imoveis para /administradoras-de-bens-proprios */}
+        <Route path="/inventarios" element={<InventarioPage />} />
+        <Route path="/testamentos" element={<TestamentoPage />} />
+        <Route path="/administradoras-de-bens-proprios" element={<AdministradoraBensImoveisPage />} />
         {/* ************************************************************************** */}
+        
+        {/* NOVO: ROTA PARA A PÁGINA DE MÍDIA */}
+        <Route path="/midia" element={<MidiaPage />} />
+
       </Routes>
     </Router>
   );
