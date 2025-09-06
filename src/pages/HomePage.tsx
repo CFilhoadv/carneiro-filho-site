@@ -13,6 +13,8 @@ import planejamentoSucessorio from '../assets/images/planejamento_sucessorio.web
 import cursos from '../assets/images/cursos.webp'; 
 import informativos from '../assets/images/informativos.webp'; 
 import midia from '../assets/images/midia.webp'; 
+// NOVO IMPORT DA SUA FOTO PARA A SEÇÃO "CFilho em Mídia"
+import midiaComMinhaFoto from '../assets/images/midia com minha foto.webp';
 
 // NOVO ARRAY DE PUBLICAÇÕES PARA A SEÇÃO "CFilho em Mídia"
 // Adicione novas publicações aqui. O sistema pegará automaticamente as 3 últimas.
@@ -220,7 +222,7 @@ const HomePage: React.FC = () => {
             {/* Card 4: CFilho em Mídia */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img 
-                src={midia} 
+                src={midiaComMinhaFoto} 
                 alt="CFilho em Mídia" 
                 className="w-full h-40 object-cover"
               />
