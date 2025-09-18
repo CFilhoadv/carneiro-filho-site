@@ -40,7 +40,7 @@ function App() {
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
         {/* ROTAS PARA TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO */}
         <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
-        {/* ROTAS PARA A PÁGINA DE VENDAS */}
+        {/* ROTA CORRETA PARA A PÁGINA DE VENDAS */}
         <Route path="/domine-a-reforma-tributaria" element={<SalesPage />} />
         <Route path="/inventarios" element={<InventarioPage />} />
         <Route path="/testamentos" element={<TestamentoPage />} />
