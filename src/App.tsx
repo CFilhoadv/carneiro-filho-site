@@ -9,15 +9,16 @@ import ReformaTributariaParte1Page from './pages/ReformaTributariaParte1Page';
 import ReformaTributariaParte2Page from './pages/ReformaTributariaParte2Page';
 import HoldingFamiliarReformaTributariaPage from './pages/HoldingFamiliarReformaTributariaPage';
 import PoliticaDePrivacidadePage from './pages/PoliticaDePrivacidadePage';
-// **** IMPORTAÇÕES DE TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO ****
+// IMPORTAÇÕES DE TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO
 import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage';
-import HoldingFamiliarPage from './pages/HoldingFamiliarPage';
 import InventarioPage from './pages/InventarioPage';
 import TestamentoPage from './pages/TestamentoPage';
 import AdministradoraBensImoveisPage from './pages/AdministradoraBensImoveisPage';
 // ********************************************************************************
 // IMPORTAÇÃO DA NOVA PÁGINA PARA LISTAR TODOS OS CONTEÚDOS DE MÍDIA
 import MidiaPage from './pages/MidiaPage';
+// IMPORTAÇÃO DA NOVA PÁGINA DE VENDAS
+import SalesPage from './pages/domine-a-reforma-tributaria';
 
 import './App.css';
 
@@ -37,9 +38,10 @@ function App() {
         <Route path="/informativos/holding-familiar-reforma-tributaria" element={<HoldingFamiliarReformaTributariaPage />} />
         {/* Rota para a Página de Política de Privacidade */}
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
-        {/* **** ROTAS PARA TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO **** */}
+        {/* ROTAS PARA TODAS AS PÁGINAS DE CONTEÚDO DE PLANEJAMENTO SUCESSÓRIO */}
         <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
-        <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
+        {/* ROTAS PARA A PÁGINA DE VENDAS */}
+        <Route path="/domine-a-reforma-tributaria" element={<SalesPage />} />
         <Route path="/inventarios" element={<InventarioPage />} />
         <Route path="/testamentos" element={<TestamentoPage />} />
         <Route path="/administradoras-de-bens-proprios" element={<AdministradoraBensImoveisPage />} />
