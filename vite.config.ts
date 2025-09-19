@@ -13,8 +13,6 @@ export default defineConfig({
     host: true,
     allowedHosts: [
       'localhost',
-      '5173-imrib6lakd5du9chnk199-d5a63d21.manusvm.computer',
-      '.manusvm.computer'
     ]
   }
 })
