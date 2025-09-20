@@ -63,6 +63,12 @@ const Header: React.FC = () => {
                   Cursos
                 </Link>
               </li>
+              {/* NOVO LINK ADICIONADO AQUI */}
+              <li>
+                <Link to="/domine-a-reforma-tributaria" className="text-blue-900 hover:text-blue-700 font-medium transition-colors">
+                  Reforma Tributária
+                </Link>
+              </li>
               <li>
                 <Link to="/contato" className="text-blue-900 hover:text-blue-700 font-medium transition-colors">
                   Contato
@@ -110,6 +116,12 @@ const Header: React.FC = () => {
             <li>
               <Link to="/cursos" onClick={toggleMobileMenu} className="text-blue-900 hover:text-blue-700 font-medium transition-colors text-lg">
                 Cursos
+              </Link>
+            </li>
+            {/* NOVO LINK ADICIONADO AQUI TAMBÉM */}
+            <li>
+              <Link to="/domine-a-reforma-tributaria" onClick={toggleMobileMenu} className="text-blue-900 hover:text-blue-700 font-medium transition-colors text-lg">
+                Reforma Tributária
               </Link>
             </li>
             <li>

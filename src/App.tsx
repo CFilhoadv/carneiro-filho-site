@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import QuemSomosPage from './pages/QuemSomosPage';
 import PlanejamentoSucessorioPage from './pages/PlanejamentoSucessorioPage';
@@ -21,7 +20,6 @@ import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/quem-somos" element={<QuemSomosPage />} />
@@ -34,7 +32,8 @@ function App() {
         <Route path="/informativos/reforma-tributaria-parte-1" element={<ReformaTributariaParte1Page />} />
         <Route path="/informativos/reforma-tributaria-parte-2" element={<ReformaTributariaParte2Page />} />
 
-        <Route path="/planejamento-sucessorio/domine-a-reforma-tributaria" element={<SalesPage />} />
+        {/* CORRIGIDO: A rota agora corresponde ao link no menu */}
+        <Route path="/domine-a-reforma-tributaria" element={<SalesPage />} />
 
         <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
         <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
@@ -45,7 +44,6 @@ function App() {
         <Route path="/midia" element={<MidiaPage />} />
 
       </Routes>
-    </Router>
   );
 }
 
