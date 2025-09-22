@@ -24,21 +24,20 @@ export default function SalesPage() {
           <h2 className="text-4xl font-bold text-blue-950 mb-6">
             Para Quem É Este Curso?
           </h2>
-          {/* Conteúdo direcionado ao público-alvo com foco nas dores e desejos */}
           <div className="max-w-3xl mx-auto text-xl leading-relaxed mb-8 text-gray-700">
             <p className="mb-4">
-              Este curso foi desenhado para você, profissional que conquistou o sucesso com seu talento único, mas que ainda não encontrou a estratégia única para proteger esse sucesso. Você domina a sua arte, mas o sistema tributário e jurídico parece um adversário complexo e ameaçador. Sua habilidade gera riqueza, mas você sente que os impostos, os riscos legais e a falta de um planejamento estão constantemente ameaçando o futuro da sua família.
+              Este curso foi desenhado para o profissional estratégico que enxerga na Reforma Tributária não apenas uma mudança na lei, mas uma redefinição completa do tabuleiro onde negócios e patrimônios são construídos e protegidos.
             </p>
             <p>
-              Transforme sua alta renda em um patrimônio blindado, eficiente e perpétuo. Aprenda as estratégias que eu aplico para proteger cirurgiões, advogados, artistas e atletas de elite dos riscos que só quem está no topo enfrenta.
+              Ele é para você, que precisa ir muito além de uma compreensão superficial, dominando a análise crítica do novo sistema e as ferramentas práticas para navegar por ele com segurança e vantagem competitiva.
             </p>
           </div>
           <ul className="list-disc list-inside space-y-2 text-xl leading-relaxed text-gray-700">
-            <li>Administradores e Gestores</li>
-            <li>Contadores e Consultores Tributários</li>
-            <li>Advogados atuantes em Direito Empresarial, Tributário ou de Família</li>
-            <li>Profissionais Liberais de alto rendimento (médicos, engenheiros, etc.)</li>
-            <li>Famílias e indivíduos com patrimônio a ser preservado</li>
+            <li>Contadores e Consultores Tributários que desejam transcender a rotina de compliance e oferecer uma consultoria estratégica de alto nível, antecipando os impactos da reforma para seus clientes.</li>
+            <li>Advogados (Tributário, Empresarial, de Família) que precisam dissecar a letra da lei (como o PLP 108/2024) para construir defesas robustas, planejar operações e assessorar com autoridade incontestável no novo cenário.</li>
+            <li>Gestores Financeiros, CFOs e Diretores de empresas que são responsáveis por planejar e executar a transição tributária, protegendo margens e identificando oportunidades a partir de 2026.</li>
+            <li>Profissionais de Planejamento Patrimonial que precisam reavaliar todas as estratégias de holdings, sucessões e proteção de patrimônio à luz das novas regras do ITCMD e da fiscalização.</li>
+            <li>Profissionais de Grandes Escritórios que assessoram clientes de alta renda e não podem ficar reféns de interpretações simplistas da reforma.</li>
           </ul>
         </section>
 
