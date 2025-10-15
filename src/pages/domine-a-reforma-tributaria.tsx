@@ -1,5 +1,7 @@
-// MainLayout Component integrado para autocontenção e correção de erro de importação
-const MainLayout = ({ children }) => (
+import React from 'react';
+
+// MainLayout Component com tipagem TypeScript correta
+const MainLayout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen bg-gray-50">
     <header className="bg-blue-950 text-white p-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
@@ -89,7 +91,7 @@ export default function SalesPage() {
                   <li>Não é Teoria, é Prática: Cada crítica é acompanhada de uma alternativa prática, legal e segura.</li>
                   <li>Foco Preventivo: Ensino de como estruturar os negócios e o patrimônio desde o início para minimizar conflitos e evitar litígios futuros.</li>
                   <li>Estratégias Pós-Reforma: Como se adaptar e até se beneficiar das novas regras.</li>
-                  <li>Checklists e Modelos: Fornecimento de ferramentas práticas para a implementação imediata das estratégias.</li>
+                  <li>Checklists e Modelos: Fornecimento de ferramentas práticas para a implementation imediata das estratégias.</li>
                 </ul>
               </div>
             </div>
