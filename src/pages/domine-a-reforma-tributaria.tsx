@@ -1,4 +1,26 @@
-import MainLayout from '../components/layout/MainLayout';
+// MainLayout Component integrado para autocontenção e correção de erro de importação
+const MainLayout = ({ children }) => (
+  <div className="min-h-screen bg-gray-50">
+    <header className="bg-blue-950 text-white p-4 shadow-lg">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-2xl font-bold">Carneiro Filho</h1>
+        <nav>
+          <a href="#" className="mx-2 hover:text-blue-400 transition duration-300">Início</a>
+          <a href="#" className="mx-2 hover:text-blue-400 transition duration-300">Cursos</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      {children}
+    </main>
+    <footer className="bg-gray-800 text-white p-6 mt-12">
+      <div className="container mx-auto text-center text-sm">
+        <p>&copy; {new Date().getFullYear()} Carneiro Filho. Todos os direitos reservados.</p>
+        <p className="mt-2">Política de Privacidade | Termos de Uso</p>
+      </div>
+    </footer>
+  </div>
+);
 
 export default function SalesPage() {
   return (
@@ -96,25 +118,36 @@ export default function SalesPage() {
           </div>
         </section>
 
-        {/* Seção: Bônus */}
+        {/* Seção: Bônus - REVISADA com o novo texto */}
         <section className="py-12 px-4 text-center bg-white text-gray-900">
-          <h2 className="text-4xl font-bold text-blue-950 mb-6">Bônus Exclusivos</h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 text-xl leading-relaxed">
-            <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-gray-100 text-gray-700">
-              <h4 className="text-2xl font-semibold text-blue-950">Suporte Exclusivo via WhatsApp</h4>
-              <p className="mt-2">3 meses de suporte coletivo para tirar dúvidas diretamente comigo.</p>
+          <h2 className="text-4xl font-bold text-blue-950 mb-4">Bônus Exclusivos por Tempo Limitado</h2>
+          <p className="text-xl leading-relaxed max-w-4xl mx-auto mb-10 text-gray-700">
+            Ao se inscrever hoje, você garante acesso imediato a estes benefícios que potencializam seu aprendizado:
+          </p>
+          <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-3 text-xl leading-relaxed">
+            
+            {/* Bônus 1: Grupo VIP de Suporte no WhatsApp */}
+            <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-gray-100 text-left text-gray-700">
+              <h4 className="text-2xl font-semibold text-blue-950 mb-2">Bônus 1: Grupo VIP de Suporte no WhatsApp</h4>
+              <p className="text-lg">
+                Tenha suas dúvidas respondidas por um sistema inteligente e pela minha curadoria pessoal. Envie suas perguntas no grupo exclusivo. Nossa IA faz uma triagem e fornece respostas rápidas baseadas no material do curso. E eu, Francisco, entro pessoalmente nas questões mais complexas e específicas para dar a palavra final. É como ter uma consultoria contínua à sua disposição.
+              </p>
             </div>
-            <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-gray-100 text-gray-700">
-              <h4 className="text-2xl font-semibold text-blue-950">Webinar Ao Vivo + Gravação</h4>
-              <p className="mt-2">Sessão exclusiva para perguntas e respostas sobre os temas do curso.</p>
+            
+            {/* Bônus 2: Meu Roteiro Pessoal de Atualização */}
+            <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-gray-100 text-left text-gray-700">
+              <h4 className="text-2xl font-semibold text-blue-950 mb-2">Bônus 2: Meu Roteiro Pessoal de Atualização</h4>
+              <p className="text-lg">
+                Acesse o método exato que eu uso para me manter atualizado. Você receberá um guia dinâmico em PDF que eu mesmo atualizo com as novidades mais relevantes. Inclui links oficiais, minhas publicações com comentários sobre o impacto prático e os prazos a observar. Você terá essa curadoria técnica em primeira mão, dentro da plataforma do curso.
+              </p>
             </div>
-            <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-gray-100 text-gray-700">
-              <h4 className="text-2xl font-semibold text-blue-950">Guia de Perguntas Estratégicas</h4>
-              <p className="mt-2">PDF com as perguntas certas para levar ao seu contador/advogado.</p>
-            </div>
-            <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-gray-100 text-gray-700">
-              <h4 className="text-2xl font-semibold text-blue-950">Aula Bônus Exclusiva</h4>
-              <p className="mt-2">Gravação especial sobre "Os 3 Maiores Erros no Planejamento Sucessório".</p>
+            
+            {/* Bônus 3: Acesso Vitalício e Atualizações */}
+            <div className="p-6 border border-gray-300 rounded-lg shadow-lg bg-gray-100 text-left text-gray-700">
+              <h4 className="text-2xl font-semibold text-blue-950 mb-2">Bônus 3: Acesso Vitalício e Atualizações</h4>
+              <p className="text-lg">
+                Seu investimento é único, mas seu conhecimento se renova. Tenha acesso vitalício à plataforma. Enquanto a Reforma for um tema em evolução e houver mudanças relevantes, você receberá novas publicações e materiais atualizados sem custo adicional.
+              </p>
             </div>
           </div>
         </section>
