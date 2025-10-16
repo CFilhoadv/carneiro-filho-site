@@ -65,20 +65,32 @@ export default function SalesPage() {
           </ul>
         </section>
         
-        {/* INÍCIO: Formulário de Captura de E-mails - Posição Estratégica */}
-        <section className="py-10 px-4 text-center bg-blue-100 rounded-lg shadow-xl mx-auto max-w-4xl my-8">
-          {/*             O código do formulário ConvertKit será renderizado aqui. 
-            Ele é uma tag script, que no React deve ser inserida via dangerouslySetInnerHTML ou, 
-            como ele é um script assíncrono que carrega o formulário, pode ser inserido 
-            diretamente se a ferramenta de build permitir ou se for a única forma. 
-            Para garantir a compatibilidade e seguir sua instrução de "inserir o código completo", 
-            estou adicionando o script tag como você forneceu.
-          */}
+        {/* INÍCIO: Formulário de Captura de E-mails - Versão HTML Nativa */}
+        <section className="py-10 px-4 text-center bg-blue-100 rounded-lg shadow-xl mx-auto max-w-lg my-8">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-blue-950 mb-2">DOMINE A REFORMA TRIBUTÁRIA</h3>
             <p className="text-xl text-gray-700 mb-6">Seja avisado do lançamento com condições exclusivas</p>
-            {/* Código de Integração do ConvertKit */}
-            <script async data-uid="dcca91f77e" src="https://carneiro-filho-advocacia.kit.com/dcca91f77e/index.js"></script>
+            
+            {/* Código de Integração do ConvertKit - Versão HTML Nativa */}
+            <form action="https://app.convertkit.com/forms/dcca91f77e/subscriptions" method="post" className="seva-form flex flex-col items-center space-y-4">
+              <div className="seva-fields w-full max-w-sm">
+                <div className="seva-field w-full">
+                  <input 
+                    type="email" 
+                    name="email_address" 
+                    placeholder="Seu melhor e-mail" 
+                    required 
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                  />
+                </div>
+                <button 
+                  type="submit"
+                  className="w-full mt-4 inline-block rounded-md bg-blue-950 px-8 py-3 text-lg font-bold text-white transition duration-300 hover:bg-blue-800 shadow-md"
+                >
+                  QUERO SER AVISADO
+                </button>
+              </div>
+            </form>
           </div>
         </section>
         {/* FIM: Formulário de Captura de E-mails */}
@@ -109,7 +121,7 @@ export default function SalesPage() {
                 <ul className="list-disc list-inside space-y-2 text-gray-700">
                   <li>Não é Teoria, é Prática: Cada crítica é acompanhada de uma alternativa prática, legal e segura.</li>
                   <li>Foco Preventivo: Ensino de como estruturar os negócios e o patrimônio desde o início para minimizar conflitos e evitar litígios futuros.</li>
-                  <li>Estratégias Pós-Reforma: Como se adaptar e até se beneficiar das novas regras.</li>
+        1          <li>Estratégias Pós-Reforma: Como se adaptar e até se beneficiar das novas regras.</li>
                   <li>Checklists e Modelos: Fornecimento de ferramentas práticas para a implementation imediata das estratégias.</li>
                 </ul>
               </div>
