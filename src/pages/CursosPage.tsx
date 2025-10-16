@@ -1,130 +1,121 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import Banner from '../components/ui/Banner';
-import { Link } from 'react-router-dom';
+// Importação do Link é mantida para o CTA final
+import { Link } from 'react-router-dom'; 
 
 const CursosPage: React.FC = () => {
+
+  // FUNÇÃO ADICIONADA: Força a rolagem para o topo ao clicar no link.
+  const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <MainLayout>
       <div className="relative">
-        {/* Banner Principal - FUNDO AZUL conforme identidade visual do site */}
-        {/* ATENÇÃO: INVERTIDO OS VALORES DE 'title' E 'subtitle' PARA CORRIGIR HIERARQUIA */}
-        <Banner 
-          title="Impulsione Sua Carreira e Patrimônio com Conhecimento Essencial" // Este agora será o h2 (frase de apoio)
-          subtitle="Cursos e Capacitação" // Este agora será o h1 (título principal)
-          bgColor="bg-blue-900"
-        />
-
-        {/* Conteúdo Principal */}
-        <section className="py-12 px-4 max-w-6xl mx-auto">
-
-          {/* Lista de Cursos (um embaixo do outro) */}
-          <div className="space-y-12 mb-12">
-            
-            {/* Curso 1: Reforma Tributária */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/4 bg-blue-600 flex items-center justify-center p-8">
-                  <div className="text-center text-white">
-                    <div className="bg-yellow-500 text-blue-900 px-3 py-1 rounded-full text-sm font-bold mb-4 inline-block">
-                      NOVO
-                    </div>
-                    <h3 className="text-2xl font-bold">Reforma Tributária</h3>
-                  </div>
-                </div>
-                <div className="md:w-3/4 p-8">
-                  <h3 className="text-3xl font-bold text-gray-800 mb-4 leading-relaxed">
-                    Domine a Reforma Tributária: Estratégias para o Sucesso no Novo Cenário Fiscal
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed text-xl">
-                    Curso completo sobre a Reforma Tributária brasileira, seus impactos e estratégias para 
-                    adaptação. Ministrado por Francisco de Assis Carneiro Filho, este curso oferece uma visão 
-                    abrangente das mudanças fiscais e como se preparar para o novo cenário tributário.
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-800 mb-3 text-2xl">Conteúdo do curso:</h4>
-                    <ul className="text-gray-600 space-y-2 text-xl leading-relaxed">
-                      <li>• Módulo 1: Fundamentos do Sistema Atual</li>
-                      <li>• Módulo 2: Análise Estratégica - A Inversão do Poder Fiscal</li>
-                      <li>• Módulo 3: A Regulamentação em Andamento</li>
-                      <li>• Módulo 4: Preparação e Transição</li>
-                      <li>• Módulo 5: Impactos Setoriais e Oportunidades</li>
-                    </ul>
-                  </div>
-
-                  {/* NOVO LINK/BOTÃO para a página de vendas */}
-                  <Link to="/domine-a-reforma-tributaria">
-                    <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium w-full text-xl">
-                      Saiba Mais
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Curso 2: Planejamento Sucessório e Holding Familiar */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="flex flex-col md:flex-row">
-                <div className="md:w-1/4 bg-gray-300 flex items-center justify-center p-8">
-                  <div className="text-center text-gray-600">
-                    <div className="bg-yellow-500 text-gray-800 px-3 py-1 rounded-full text-sm font-bold mb-4 inline-block">
-                      EM BREVE
-                    </div>
-                    <span className="text-xl">Imagem do Curso</span>
-                  </div>
-                </div>
-                <div className="md:w-3/4 p-8">
-                  <h3 className="text-3xl font-bold text-gray-800 mb-4 leading-relaxed">
-                    Planejamento Sucessório e Holding Familiar
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed text-xl">
-                    Este curso aborda os fundamentos do planejamento sucessório, com foco na estruturação 
-                    de holdings familiares. Ideal para advogados, contadores, administradores e empresários 
-                    que desejam compreender as vantagens jurídicas e tributárias deste instrumento.
-                  </p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-800 mb-3 text-2xl">O que você vai aprender:</h4>
-                    <ul className="text-gray-600 space-y-2 text-xl leading-relaxed">
-                      <li>• Conceitos fundamentais de planejamento sucessório</li>
-                      <li>• Aspectos jurídicos e tributários da holding familiar</li>
-                      <li>• Proteção patrimonial e blindagem de bens</li>
-                      <li>• Estruturação societária e governança familiar</li>
-                      <li>• Estudos de caso e aplicações práticas</li>
-                  </ul>
-                  </div>
-
-                  {/* NOVO BOTÃO: Sempre visível, mas desabilitado */}
-                  <button disabled className="bg-blue-600 text-white px-6 py-3 rounded-md cursor-not-allowed font-medium w-full text-xl">
-                    Inscrições em breve
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Seção: Newsletter */}
-          <div className="bg-blue-50 rounded-lg p-6 text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-800 mb-3">
-              Assine nossa newsletter.
-            </h3>
-            <p className="text-xl text-gray-600 mb-4 leading-relaxed">
-              Receba nossas atualizações sobre novos cursos e insights semanais sobre o cenário tributário, empresarial e de planejamento sucessório.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Seu melhor e-mail"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors font-medium text-xl">
-                Cadastrar
-              </button>
-            </div>
-          </div>
-
+        
+        {/* HEADLINE E SUBHEADLINE - Adaptado para o novo COPY */}
+        <section className="text-center py-16 px-4 bg-blue-950 rounded-b-xl text-white">
+          <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">
+            Domine a Reforma Tributária Antes dos Seus Concorrentes
+          </h1>
+          <h2 className="mt-4 text-xl sm:text-2xl leading-relaxed max-w-4xl mx-auto">
+            Curso Prático para Advogados, Contadores e Empresários que Precisam de Estratégias Reais, Não Apenas Teoria
+          </h2>
         </section>
+
+        {/* SEÇÃO: POR QUE ESTE CURSO É DIFERENTE? */}
+        <section className="py-12 px-4 max-w-6xl mx-auto bg-gray-50">
+          <h3 className="text-4xl font-bold text-blue-950 text-center mb-10">
+            Por Que Este Curso É Diferente?
+          </h3>
+          <p className="text-center text-xl text-gray-700 max-w-3xl mx-auto mb-10">
+            Ministrado por <strong className="font-bold">Francisco Carneiro Filho</strong> - uma combinação rara de expertise jurídica, contábil e executiva que você não encontra em outros cursos.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 text-left text-lg">
+            {/* Cartão 1: Abordagem Crítica */}
+            <div className="p-6 bg-white rounded-lg shadow-lg border-t-4 border-blue-600">
+              <h4 className="text-2xl font-bold text-blue-950 mb-3">✅ ABORDAGEM CRÍTICA E ESTRATÉGICA</h4>
+              <p className="text-gray-700">
+                Não vamos apenas repetir o que a lei diz. Ensinamos você a <strong className="font-semibold text-blue-800">pensar como o legislador</strong> - antecipando impactos, identificando armadilhas e construindo estratégias robustas para seus clientes ou negócio.
+              </p>
+            </div>
+
+            {/* Cartão 2: Visão Multidisciplinar */}
+            <div className="p-6 bg-white rounded-lg shadow-lg border-t-4 border-blue-600">
+              <h4 className="text-2xl font-bold text-blue-950 mb-3">✅ VISÃO MULTIDISCIPLINAR ÚNICA</h4>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <li>Advogado com 30+ anos de experiência</li>
+                <li>Contabilista com Pós-Graduação em Contabilidade Tributária</li>
+                <li>Ex-executivo de multinacionais (Enron, Gas Natural, Castrol)</li>
+                <li>MBA em Gestão Executiva pela FGV</li>
+              </ul>
+            </div>
+            
+            {/* Cartão 3: Focado em Resultados */}
+            <div className="p-6 bg-white rounded-lg shadow-lg border-t-4 border-blue-600">
+              <h4 className="text-2xl font-bold text-blue-950 mb-3">✅ FOCADO EM RESULTADOS PRÁTICOS</h4>
+              <p className="text-gray-700 mb-2">Cada módulo é acompanhado de:</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700">
+                <li>Checklists de implementação</li>
+                <li>Análise de casos reais</li>
+                <li>Ferramentas de aplicação imediata</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SEÇÃO: GARANTA SEU LUGAR NA LISTA DE ESPERA (FORMULÁRIO CONVERTKIT) */}
+        <section className="py-10 px-4 text-center bg-blue-100 rounded-lg shadow-xl mx-auto max-w-lg my-12">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold text-blue-950 mb-2">DOMINE A REFORMA TRIBUTÁRIA</h3>
+            <p className="text-xl text-gray-700 mb-6">Seja avisado com antecedência do lançamento e garanta condições exclusivas de fundador.</p>
+            
+            {/* FORMULÁRIO CONVERTKIT - HTML Nativo (JÁ INTEGRADO E FUNCIONAL) */}
+            <form action="https://app.convertkit.com/forms/dcca91f77e/subscriptions" method="post" className="seva-form flex flex-col items-center space-y-4">
+              <div className="seva-fields w-full max-w-sm">
+                <div className="seva-field w-full">
+                  <input 
+                    type="email" 
+                    name="email_address" 
+                    placeholder="Seu melhor e-mail" 
+                    required 
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 text-gray-900"
+                  />
+                </div>
+                <button 
+                  type="submit"
+                  className="w-full mt-4 inline-block rounded-md bg-blue-950 px-8 py-3 text-lg font-bold text-white transition duration-300 hover:bg-blue-800 shadow-md"
+                >
+                  QUERO SER AVISADO
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        {/* SEÇÃO: QUER VER O CONTEÚDO COMPLETO AGORA? (CTA) */}
+        <section className="py-12 px-4 text-center bg-white max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold text-blue-950 mb-6">QUER VER O CONTEÚDO COMPLETO AGORA?</h3>
+          <Link 
+            to="/domine-a-reforma-tributaria" 
+            className="inline-block"
+            onClick={handleScrollToTop} // CHAMADA ADICIONADA AQUI!
+          >
+            <button className="bg-green-600 text-white px-10 py-4 rounded-lg hover:bg-green-700 transition-colors font-extrabold text-2xl shadow-xl transform hover:scale-105 duration-300">
+              👉 QUERO VER O CONTEÚDO DETALHADO DO CURSO
+            </button>
+          </Link>
+        </section>
+
+        {/* COPY FINAL DE PERSUASÃO */}
+        <section className="py-12 px-4 text-center bg-gray-100 mb-12">
+          <p className="text-2xl italic leading-relaxed max-w-5xl mx-auto text-gray-700">
+            "Este não é apenas 'mais um curso sobre a reforma'. É uma <strong className="font-bold text-blue-950">imersão estratégica</strong> que vai equipar você com a mesma metodologia que usei por décadas em multinacionais e no meu escritório - uma visão <strong className="font-bold text-blue-950">integrada</strong> que une o jurídico, o contábil e o negocial."
+          </p>
+        </section>
+
       </div>
     </MainLayout>
   );
