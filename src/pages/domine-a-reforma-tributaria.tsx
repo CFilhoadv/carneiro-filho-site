@@ -1,6 +1,6 @@
 import React from 'react';
 
-// MainLayout Component com tipagem TypeScript correta
+// === COMPONENTE MainLayout (MANTIDO) ===
 const MainLayout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen bg-gray-50">
     <header className="bg-blue-950 text-white p-4 shadow-lg">
@@ -23,27 +23,83 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => (
     </footer>
   </div>
 );
+// =======================================
 
 export default function SalesPage() {
   return (
     <MainLayout>
       <div className="container mx-auto px-4 font-inter">
-        {/* Seção Hero */}
-        <section className="text-center py-16 px-4 bg-blue-950 rounded-b-xl text-white">
+        
+        {/* SEÇÃO HERO - REFORMULADA COM URGÊNCIA E PREÇO DE FUNDADOR */}
+        <section className="text-center py-12 px-4 bg-blue-950 rounded-b-xl text-white shadow-2xl">
           <h1 className="text-5xl font-extrabold sm:text-6xl md:text-7xl">
             Domine a Reforma Tributária
           </h1>
           <h2 className="mt-4 text-2xl sm:text-3xl leading-relaxed">
             Estratégias Práticas para Empresas e Famílias no Novo Cenário Fiscal
           </h2>
+
+          {/* Contador de Urgência (Simulado) */}
+          <div className="mt-8 bg-red-600 text-white p-3 rounded-lg max-w-sm mx-auto shadow-lg animate-pulse">
+            <p className="text-xl font-bold">O preço SUPER DESCONTO termina em:</p>
+            <p className="text-3xl font-extrabold">01:14:32</p>
+          </div>
+
+          {/* Oferta e Preço da Fase 1 */}
+          <div className="mt-6 bg-blue-800 p-6 rounded-lg shadow-inner max-w-md mx-auto border-4 border-yellow-400">
+            <span className="inline-block bg-yellow-400 text-blue-950 px-4 py-1 rounded-full text-lg font-extrabold mb-2 transform rotate-1">
+              PREÇO DE FUNDADOR
+            </span>
+            <p className="text-xl text-gray-300">De <span className="line-through font-bold">R$ 1.210,00</span> por:</p>
+            <p className="text-6xl font-extrabold text-white mt-1">
+              🔥 R$ 797,00
+            </p>
+            <p className="text-sm font-light text-gray-300">Apenas para os Primeiros Alunos (SUPER DESCONTO)</p>
+          </div>
+          
           <a
-            className="mt-8 inline-block rounded-md bg-blue-400 px-8 py-3 text-lg font-bold text-white transition duration-300 hover:bg-blue-500"
+            className="mt-8 inline-block rounded-md bg-green-500 px-12 py-4 text-xl font-extrabold text-white transition duration-300 hover:bg-green-600 shadow-2xl transform hover:scale-105"
+            href="#inscricao-final" // Linka para a seção final de preços
           >
-            INSCRIÇÕES EM BREVE
+            GARANTIR MINHA VAGA COM SUPER DESCONTO
           </a>
+          <p className="mt-4 text-yellow-400 font-semibold text-lg">
+            O preço sobe em breve - Garanta seu desconto agora!
+          </p>
         </section>
 
-        {/* Seção: Para Quem É */}
+        {/* NOVA SEÇÃO: Explicação da Estrutura de Preços Escalados */}
+        <section className="py-8 px-4 text-center bg-gray-100 text-gray-900 shadow-inner">
+          <h3 className="text-3xl font-bold text-blue-950 mb-4">
+            ESTE É UM LANÇAMENTO ESPECIAL COM PREÇOS PROGRESSIVOS
+          </h3>
+          <div className="max-w-3xl mx-auto text-lg leading-relaxed text-gray-700 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+            <p className="p-3 bg-white border-b-4 border-red-500 font-semibold">
+              • Primeiras 72h: Preço Máximo de Desconto (R$ 797)
+            </p>
+            <p className="p-3 bg-white border-b-4 border-yellow-500 font-semibold">
+              • Dias 4-12: Preço Oficial de Lançamento (R$ 900)
+            </p>
+            <p className="p-3 bg-white border-b-4 border-orange-500 font-semibold">
+              • Dias 13-15: Última Oportunidade (R$ 997)
+            </p>
+            <p className="p-3 bg-white border-b-4 border-gray-500 font-semibold">
+              • Após: Valor Integral (R$ 1.210)
+            </p>
+          </div>
+          {/* Barra de Progresso Simulado */}
+          <div className="max-w-2xl mx-auto mt-8">
+            <p className="text-lg font-bold text-gray-700 mb-2">Progresso do Lançamento: 8/15 dias</p>
+            <div className="w-full bg-gray-300 rounded-full h-4">
+              <div className="bg-red-500 h-4 rounded-full" style={{ width: '53%' }}></div>
+            </div>
+            <p className="mt-2 text-sm text-red-600 font-semibold">
+              Últimas vagas com preço especial de fundador. O preço sobe amanhã!
+            </p>
+          </div>
+        </section>
+
+        {/* Seção: Para Quem É (MANTIDA) */}
         <section className="py-12 px-4 text-center bg-white text-gray-900">
           <h2 className="text-4xl font-bold text-blue-950 mb-6">
             Para Quem É Este Curso?
@@ -65,7 +121,7 @@ export default function SalesPage() {
           </ul>
         </section>
         
-        {/* INÍCIO: Formulário de Captura de E-mails - Versão HTML Nativa */}
+        {/* Formulário de Captura de E-mails (MANTIDO) - Idealmente, este seria removido se o curso estivesse aberto para vendas */}
         <section className="py-10 px-4 text-center bg-blue-100 rounded-lg shadow-xl mx-auto max-w-lg my-8">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-blue-950 mb-2">DOMINE A REFORMA TRIBUTÁRIA</h3>
@@ -96,7 +152,7 @@ export default function SalesPage() {
         {/* FIM: Formulário de Captura de E-mails */}
 
 
-        {/* Seção: O Que Você Vai Aprender */}
+        {/* Seção: O Que Você Vai Aprender (MANTIDA) */}
         <section className="py-12 px-4 text-center bg-gray-100 text-gray-900">
           <h2 className="text-4xl font-bold text-blue-950 mb-6">
             O Que Você Vai Aprender
@@ -151,7 +207,7 @@ export default function SalesPage() {
           </div>
         </section>
 
-        {/* Seção: Bônus - REVISADA com o novo texto */}
+        {/* Seção: Bônus - REVISADA com o novo texto (MANTIDA) */}
         <section className="py-12 px-4 text-center bg-white text-gray-900">
           <h2 className="text-4xl font-bold text-blue-950 mb-4">Bônus Exclusivos por Tempo Limitado</h2>
           <p className="text-xl leading-relaxed max-w-4xl mx-auto mb-10 text-gray-700">
@@ -185,7 +241,7 @@ export default function SalesPage() {
           </div>
         </section>
 
-        {/* Seção: Sobre o Professor */}
+        {/* Seção: Sobre o Professor (MANTIDA) */}
         <section className="py-12 px-4 text-center bg-blue-950 text-white">
           <h2 className="text-4xl font-bold text-white mb-6">Sobre o Professor</h2>
           <div className="text-xl leading-relaxed max-w-2xl mx-auto">
@@ -195,22 +251,46 @@ export default function SalesPage() {
           </div>
         </section>
 
-        {/* Seção: Call to Action Final */}
-        <section className="py-12 px-4 text-center bg-white text-gray-900">
+        {/* SEÇÃO CALL TO ACTION FINAL - REFORMULADA COM PREÇOS ESCALONADOS E GARANTIA */}
+        <section id="inscricao-final" className="py-12 px-4 text-center bg-white text-gray-900 shadow-2xl">
           <h2 className="text-4xl font-bold text-blue-950 mb-6">Invista no Seu Futuro Profissional</h2>
-          {/* Preço ajustado para destacar a oferta de lançamento */}
-          <p className="text-xl text-gray-500 mt-4">
-            De <span className="line-through font-bold">R$ 2.497,00</span> por
-          </p>
-          <p className="text-5xl font-extrabold text-blue-950 mt-2">R$ 1.997,00</p>
-          <p className="mt-2 text-2xl font-medium text-gray-700">
-            ou em 12x de R$ 249,00
-          </p>
-          <a
-            className="mt-8 inline-block rounded-md bg-blue-400 px-8 py-3 text-lg font-bold text-white transition duration-300 hover:bg-blue-500"
-          >
-            INSCRIÇÕES EM BREVE
-          </a>
+          
+          {/* Bloco de Preço Atual (Fase 1: R$ 797) */}
+          <div className="max-w-md mx-auto p-6 border-4 border-green-500 rounded-xl bg-green-50 shadow-2xl">
+            <p className="text-xl text-gray-500 mt-2">
+              De <span className="line-through font-bold">R$ 1.210,00</span> por
+            </p>
+            <p className="text-5xl font-extrabold text-blue-950 mt-2">R$ 797,00</p>
+            <p className="mt-2 text-2xl font-medium text-red-600">
+              SUPER DESCONTO (Primeiras 72h)
+            </p>
+            <p className="mt-4 text-gray-700 font-semibold">
+              Amanhã este curso custará R$ 900. Não perca esta chance.
+            </p>
+            <a
+              className="mt-6 inline-block w-full rounded-md bg-green-500 px-8 py-3 text-2xl font-extrabold text-white transition duration-300 hover:bg-green-600"
+              href="#" // Inserir o link de pagamento real aqui!
+            >
+              GARANTIR MINHA VAGA AGORA
+            </a>
+          </div>
+
+          {/* Seção de Garantia Reforçada */}
+          <div className="max-w-xl mx-auto mt-8 p-4 border border-gray-300 rounded-lg text-left bg-white">
+            <h3 className="text-xl font-bold text-blue-950 mb-3">Seu Risco é Zero:</h3>
+            <ul className="list-disc list-inside space-y-2 text-gray-700 text-lg">
+              <li className="font-semibold">
+                GARANTIA INCONDICIONAL DE 7 DIAS: Satisfação ou 100% do seu dinheiro de volta.
+              </li>
+              <li>
+                ACESSO VITALÍCIO às atualizações do curso sobre o tema (sem custo extra).
+              </li>
+              <li>
+                SUPORTE DIRETO comigo (Francisco Carneiro Filho) e minha equipe.
+              </li>
+            </ul>
+          </div>
+
         </section>
       </div>
     </MainLayout>
