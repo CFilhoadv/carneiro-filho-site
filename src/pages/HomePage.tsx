@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import Banner from '../components/ui/Banner';
+
+// IMPORTAÇÃO DA NOVA LISTA DE DADOS CENTRALIZADA
+import { ALL_INFORMATIVOS } from '../data/informativos.tsx'; // <--- NOVO IMPORT
 
 // **** NOVAS REFERÊNCIAS PARA IMAGENS NA PASTA SRC/ASSETS ****
 import bannerFamilia from '../assets/images/banner_família.webp';
@@ -15,8 +18,7 @@ import informativos from '../assets/images/informativos.webp';
 // AQUI: A VARIÁVEL 'midia' FOI REMOVIDA POIS NÃO É MAIS USADA
 import midiaComMinhaFoto from '../assets/images/midia com minha foto.webp';
 
-// NOVO ARRAY DE PUBLICAÇÕES PARA A SEÇÃO "CFilho em Mídia"
-// Adicione novas publicações aqui. O sistema pegará automaticamente as 5 últimas.
+// ARRAY midiaPublications MANTIDO, POIS AINDA É USADO NO CARD 'CFilho em Mídia'
 const midiaPublications = [
   {
     title: "Reforma Tributária: Uma Nova Era de Oportunidades",
@@ -36,6 +38,16 @@ const midiaPublications = [
 
 const HomePage: React.FC = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  // LÓGICA DE ORDENAÇÃO E LIMITE PARA EXIBIR OS 4 INFORMATIVOS MAIS RECENTES
+  // Usa o campo 'order' para garantir a sequência correta.
+  const latestInformativos = useMemo(() => {
+    return ALL_INFORMATIVOS
+      .slice()
+      // Ordena por ordem decrescente (o número maior é o mais recente)
+      .sort((a, b) => b.order - a.order) 
+      .slice(0, 4); // Limita aos 4 posts mais recentes
+  }, []);
     
   // Array de banners para o carrossel - IMAGENS E TEXTOS ATUALIZADOS
   const banners = [
@@ -154,7 +166,6 @@ const HomePage: React.FC = () => {
                     Administradoras de Bens Próprios
                   </Link>
                 </div>
-                {/* Botão Ver todos os serviços (se houver) */}
                 <Link   
                     to="/servicos"   
                     className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
@@ -207,20 +218,24 @@ const HomePage: React.FC = () => {
                   Informativos
                 </h3>
                 <div className="space-y-1">
-                  {/* LINK PARA A PUBLICAÇÃO 1 */}
-                  <Link to="/informativos/reforma-tributaria-parte-1" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Impactos da Reforma Tributária: Parte 1
+                  {/* NOVO CÓDIGO: Renderiza os 4 informativos mais recentes */}
+                  {latestInformativos.map((item, index) => (
+                    <Link 
+                      key={index} 
+                      to={item.path} 
+                      className="block text-blue-600 hover:text-blue-800 text-sm"
+                    >
+                      {item.title.substring(4)} {/* Remove o "1 - " para exibição limpa */}
+                    </Link>
+                  ))}
+                  
+                  {/* BOTÃO "Outros Informativos" */}
+                  <Link
+                    to="/informativos"
+                    className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
+                  >
+                    Outros Informativos
                   </Link>
-                  {/* LINK PARA A PUBLICAÇÃO 2 - TÍTULO ATUALIZADO */}
-                  <Link to="/informativos/reforma-tributaria-parte-2" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Reforma Tributária: Impactos e Ações Estratégicas - Parte 2
-                  </Link>
-                  {/* NOVO: LINK PARA A PUBLICAÇÃO 3 - TÍTULO ATUALIZADO */}
-                  <Link to="/informativos/holding-familiar-reforma-tributaria" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Holding Familiar e a Reforma Tributária: Impactos e Estratégias
-                  </Link>
-                  {/* BOTÃO "Ver todos os informativos" OCULTADO TOTALMENTE */}
-                  {/* Este espaço deve ficar em branco */}
                 </div>
               </div>
             </div>
