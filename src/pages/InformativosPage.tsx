@@ -1,8 +1,7 @@
-// src/pages/InformativosPage.tsx (Versão CORRIGIDA para caminhos de importação)
+// src/pages/InformativosPage.tsx
 
 import React, { useMemo } from 'react';
 import MainLayout from '../components/layout/MainLayout';
-// CORREÇÃO AQUI: Importa a lista de dados, especificando o nome do arquivo .tsx
 import { ALL_INFORMATIVOS } from '../data/informativos.tsx'; 
 import { Link } from 'react-router-dom';
 
@@ -27,8 +26,9 @@ const InformativosPage: React.FC = () => {
     <MainLayout>
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold text-center mb-4">Informativos e Publicações</h1>
+        {/* TEXTO ALTERADO AQUI: */}
         <p className="text-center text-gray-600 mb-10">
-          Confira os 5 artigos e análises mais recentes sobre planejamento patrimonial e questões fiscais.
+          Confira os nossos artigos e análises mais recentes sobre questões tributárias e planejamento.
         </p>
 
         <div className="space-y-6 max-w-4xl mx-auto">
