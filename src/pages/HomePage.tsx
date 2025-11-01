@@ -39,15 +39,15 @@ const midiaPublications = [
 const HomePage: React.FC = () => {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
-  // LÓGICA DE ORDENAÇÃO E LIMITE PARA EXIBIR OS 4 INFORMATIVOS MAIS RECENTES
-  // Usa o campo 'order' para garantir a sequência correta.
-  const latestInformativos = useMemo(() => {
-    return ALL_INFORMATIVOS
-      .slice()
-      // Ordena por ordem decrescente (o número maior é o mais recente)
-      .sort((a, b) => b.order - a.order) 
-      .slice(0, 4); // Limita aos 4 posts mais recentes
-  }, []);
+  // LÓGICA DE ORDENAÇÃO E LIMITE PARA EXIBIR OS 4 INFORMATIVOS MAIS RECENTES
+  // Usa o campo 'order' para garantir a sequência correta.
+  const latestInformativos = useMemo(() => {
+    return ALL_INFORMATIVOS
+      .slice()
+      // Ordena por ordem decrescente (o número maior é o mais recente)
+      .sort((a, b) => b.order - a.order) 
+      .slice(0, 4); // Limita aos 4 posts mais recentes
+  }, []);
     
   // Array de banners para o carrossel - IMAGENS E TEXTOS ATUALIZADOS
   const banners = [
@@ -160,7 +160,7 @@ const HomePage: React.FC = () => {
                     Inventários
                   </Link>
                   <Link to="/testamentos" className="block text-blue-600 hover:text-blue-800 text-sm">
-                    Testamentos
+      _G__G_             Testamentos
                   </Link>
                   <Link to="/administradoras-de-bens-proprios" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Administradoras de Bens Próprios
@@ -184,7 +184,7 @@ const HomePage: React.FC = () => {
               />
               <div className="p-5">
                 <h3 className="text-lg font-bold text-gray-800 mb-3">
-                  Cursos
+Acesso Negado                 Cursos
                 </h3>
                 <div className="space-y-1">
                   <Link to="/cursos" className="block text-blue-600 hover:text-blue-800 text-sm">
@@ -206,6 +206,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
+            {/* ===== INÍCIO DA MODIFICAÇÃO ===== */}
             {/* Card 3: Informativos */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img   
@@ -217,17 +218,19 @@ const HomePage: React.FC = () => {
                 <h3 className="text-lg font-bold text-gray-800 mb-3">
                   Informativos
                 </h3>
-                <div className="space-y-1">
-                  {/* NOVO CÓDIGO: Renderiza os 4 informativos mais recentes */}
-                  {latestInformativos.map((item, index) => (
-                    <Link 
-                      key={index} 
-                      to={item.path} 
-                      className="block text-blue-600 hover:text-blue-800 text-sm"
-                    >
-                      {item.title.substring(4)} {/* Remove o "1 - " para exibição limpa */}
-                    </Link>
-                  ))}
+        _G_G_G__G_G_G__G_G_G_       <div className="space-y-1">
+                  {/* CÓDIGO ALTERADO: Renderiza os 4 informativos mais recentes como links <a> para PDFs */}
+                  {latestInformativos.map((item, index) => (
+                    <a 
+                      key={index} 
+                      href={item.pdfLink} // 1. MUDADO: de 'to={item.path}' para 'href={item.pdfLink}'
+                      target="_blank" // 2. ADICIONADO: para abrir em nova aba
+                      rel="noopener noreferrer"
+                      className="block text-blue-600 hover:text-blue-800 text-sm"
+                    >
+                      {item.title.substring(4)} {/* Remove o "1 - " para exibição limpa */}
+                    </a>
+                  ))}
                   
                   {/* BOTÃO "Outros Informativos" */}
                   <Link
@@ -239,6 +242,7 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
+            {/* ===== FIM DA MODIFICAÇÃO ===== */}
 
             {/* Card 4: CFilho em Mídia */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -253,16 +257,16 @@ const HomePage: React.FC = () => {
                 </h3>
                 <div className="space-y-1">
                   {/* Renderiza as 5 últimas publicações do array */}
-                  {midiaPublications.slice(-5).reverse().map((item, index) => (
+        _G_G_G__G_G_G__G_G_G_       {midiaPublications.slice(-5).reverse().map((item, index) => (
                     <a
                       key={index}
-                      href={item.path}
+Acesso Negado                     href={item.path}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block text-blue-600 hover:text-blue-800 text-sm"
                     >
                       {item.title}
-                    </a>
+Acesso Negado                     </a>
                   ))}
                   {/* Adiciona o link para a página de mídia se houver mais de 5 publicações */}
                   {midiaPublications.length > 5 && (
@@ -271,7 +275,7 @@ const HomePage: React.FC = () => {
                       className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
                     >
                       Ver todos os conteúdos
-                    </Link>
+section-card-end                   </Link>
                   )}
                 </div>
               </div>
@@ -287,14 +291,14 @@ const HomePage: React.FC = () => {
             Proteja seu patrimônio e garanta o futuro da sua família
           </h2>
           <p className="text-lg mb-6 max-w-3xl mx-auto">
-            Entre em contato para uma consultoria personalizada e descubra a melhor estratégia para seu planejamento sucessório.
+Acesso Negado           Entre em contato para uma consultoria personalizada e descubra a melhor estratégia para seu planejamento sucessório.
           </p>
-          {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
+  g__G_G_G__G_G_G__G_G_G_       {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
           <a
             href="https://calendly.com/contato-carneirofilho"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
+      Não foi possível gerar a resposta     className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
           >
             Agendar Atendimento
           </a>
