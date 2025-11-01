@@ -19,38 +19,48 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 
 // NOVO IMPORT: Página Central de Listagem de Informativos
-import InformativosPage from './pages/InformativosPage'; // <--- ESTE É O NOVO IMPORT
+import InformativosPage from './pages/InformativosPage';
+
+// ===== INÍCIO DA MODIFICAÇÃO =====
+// 1. ADICIONADO O IMPORT DA NOVA PÁGINA
+import EspecialistaMaisBuscadoPage from './pages/EspecialistaMaisBuscadoPage';
+// ===== FIM DA MODIFICAÇÃO =====
 
 function App() {
   return (
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/quem-somos" element={<QuemSomosPage />} />
-        <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioPage />} />
-        <Route path="/servicos" element={<ServicosPage />} />
-        <Route path="/cursos" element={<CursosPage />} />
-        <Route path="/contato" element={<ContatoPage />} />
+    	<Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioPage />} />
+  	<Route path="/servicos" element={<ServicosPage />} />
+  	<Route path="/cursos" element={<CursosPage />} />
+  	<Route path="/contato" element={<ContatoPage />} />
 
-        {/* ROTA CENTRAL DE LISTAGEM DE INFORMATIVOS */}
-        <Route path="/informativos" element={<InformativosPage />} /> {/* <--- ESTA É A NOVA ROTA */}
-        
-        {/* ROTAS INDIVIDUAIS EXISTENTES (mantidas) */}
-        <Route path="/informativos/holding-familiar-reforma-tributaria" element={<HoldingFamiliarReformaTributariaPage />} />
-        <Route path="/informativos/reforma-tributaria-parte-1" element={<ReformaTributariaParte1Page />} />
-        <Route path="/informativos/reforma-tributaria-parte-2" element={<ReformaTributariaParte2Page />} />
+  	{/* ROTA CENTRAL DE LISTAGEM DE INFORMATIVOS */}
+  	<Route path="/informativos" element={<InformativosPage />} />
+  	
+  	{/* ROTAS INDIVIDUAIS EXISTENTES (mantidas) */}
+  	<Route path="/informativos/holding-familiar-reforma-tributaria" element={<HoldingFamiliarReformaTributariaPage />} />
+  	<Route path="/informativos/reforma-tributaria-parte-1" element={<ReformaTributariaParte1Page />} />
+  	<Route path="/informativos/reforma-tributaria-parte-2" element={<ReformaTributariaParte2Page />} />
 
-        {/* CORRIGIDO: A rota agora corresponde ao link no menu */}
-        <Route path="/domine-a-reforma-tributaria" element={<SalesPage />} />
+  	{/* ===== INÍCIO DA MODIFICAÇÃO ===== */}
+  	{/* 2. ADICIONADA A ROTA PARA A NOVA PÁGINA */}
+  	<Route path="/informativos/especialista-mais-buscado" element={<EspecialistaMaisBuscadoPage />} />
+  	{/* ===== FIM DA MODIFICAÇÃO ===== */}
 
-        <Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
-        <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
-        <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
-        <Route path="/inventarios" element={<InventarioPage />} />
-        <Route path="/testamentos" element={<TestamentoPage />} />
-        <Route path="/administradoras-de-bens-proprios" element={<AdministradoraBensImoveisPage />} />
-        <Route path="/midia" element={<MidiaPage />} />
+  	{/* CORRIGIDO: A rota agora corresponde ao link no menu */}
+  	<Route path="/domine-a-reforma-tributaria" element={<SalesPage />} />
 
-      </Routes>
+  	<Route path="/politica-de-privacidade" element={<PoliticaDePrivacidadePage />} />
+  	<Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
+  	<Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
+  	<Route path="/inventarios" element={<InventarioPage />} />
+  	<Route path="/testamentos" element={<TestamentoPage />} />
+  	<Route path="/administradoras-de-bens-proprios" element={<AdministradoraBensImoveisPage />} />
+  	<Route path="/midia" element={<MidiaPage />} />
+
+  </Routes>
   );
 }
 
