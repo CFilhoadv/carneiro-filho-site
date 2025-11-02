@@ -3,7 +3,7 @@
 import React, { useMemo } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { ALL_INFORMATIVOS } from '../data/informativos.tsx'; 
-import { Link } from 'react-router-dom';
+// IMPORT DO LINK FOI REMOVIDO DAQUI
 
 const InformativosPage: React.FC = () => {
 
@@ -50,8 +50,6 @@ const InformativosPage: React.FC = () => {
               </p>
 
               <div className="flex space-x-4">
-                {/* O LINK "LER NA ÍNTEGRA (WEB)" FOI REMOVIDO PARA EVITAR A PÁGINA EM BRANCO */}
-
                 {/* Link Direto para o PDF (MANTIDO) */}
                 <a
                   href={item.pdfLink}
