@@ -160,7 +160,7 @@ const HomePage: React.FC = () => {
                     Inventários
                   </Link>
                   <Link to="/testamentos" className="block text-blue-600 hover:text-blue-800 text-sm">
-      _G__G_             Testamentos
+                    Testamentos
                   </Link>
                   <Link to="/administradoras-de-bens-proprios" className="block text-blue-600 hover:text-blue-800 text-sm">
                     Administradoras de Bens Próprios
@@ -184,7 +184,7 @@ const HomePage: React.FC = () => {
               />
               <div className="p-5">
                 <h3 className="text-lg font-bold text-gray-800 mb-3">
-Acesso Negado                 Cursos
+                  Cursos
                 </h3>
                 <div className="space-y-1">
                   <Link to="/cursos" className="block text-blue-600 hover:text-blue-800 text-sm">
@@ -206,7 +206,6 @@ Acesso Negado                 Cursos
               </div>
             </div>
 
-            {/* ===== INÍCIO DA MODIFICAÇÃO ===== */}
             {/* Card 3: Informativos */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img   
@@ -218,7 +217,7 @@ Acesso Negado                 Cursos
                 <h3 className="text-lg font-bold text-gray-800 mb-3">
                   Informativos
                 </h3>
-        _G_G_G__G_G_G__G_G_G_       <div className="space-y-1">
+                <div className="space-y-1">
                   {/* CÓDIGO ALTERADO: Renderiza os 4 informativos mais recentes como links <a> para PDFs */}
                   {latestInformativos.map((item, index) => (
                     <a 
@@ -242,7 +241,6 @@ Acesso Negado                 Cursos
                 </div>
               </div>
             </div>
-            {/* ===== FIM DA MODIFICAÇÃO ===== */}
 
             {/* Card 4: CFilho em Mídia */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -257,16 +255,16 @@ Acesso Negado                 Cursos
                 </h3>
                 <div className="space-y-1">
                   {/* Renderiza as 5 últimas publicações do array */}
-        _G_G_G__G_G_G__G_G_G_       {midiaPublications.slice(-5).reverse().map((item, index) => (
+                  {midiaPublications.slice(-5).reverse().map((item, index) => (
                     <a
                       key={index}
-Acesso Negado                     href={item.path}
+                      href={item.path}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block text-blue-600 hover:text-blue-800 text-sm"
                     >
                       {item.title}
-Acesso Negado                     </a>
+                    </a>
                   ))}
                   {/* Adiciona o link para a página de mídia se houver mais de 5 publicações */}
                   {midiaPublications.length > 5 && (
@@ -275,7 +273,7 @@ Acesso Negado                     </a>
                       className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
                     >
                       Ver todos os conteúdos
-section-card-end                   </Link>
+                    </Link>
                   )}
                 </div>
               </div>
@@ -291,14 +289,14 @@ section-card-end                   </Link>
             Proteja seu patrimônio e garanta o futuro da sua família
           </h2>
           <p className="text-lg mb-6 max-w-3xl mx-auto">
-Acesso Negado           Entre em contato para uma consultoria personalizada e descubra a melhor estratégia para seu planejamento sucessório.
+            Entre em contato para uma consultoria personalizada e descubra a melhor estratégia para seu planejamento sucessório.
           </p>
-  g__G_G_G__G_G_G__G_G_G_       {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
+          {/* ATENÇÃO: LINK "AGENDAR UMA CONSULTA" DIRECIONANDO PARA O CALENDLY */}
           <a
             href="https://calendly.com/contato-carneirofilho"
             target="_blank"
             rel="noopener noreferrer"
-      Não foi possível gerar a resposta     className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
+            className="inline-block bg-white text-blue-900 hover:bg-blue-100 px-6 py-3 rounded-md font-medium text-base transition-colors"
           >
             Agendar Atendimento
           </a>
