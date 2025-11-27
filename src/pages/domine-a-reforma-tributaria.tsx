@@ -59,7 +59,7 @@ export default function SalesPage() {
           
           <a
             className="mt-8 inline-block rounded-md bg-green-500 px-12 py-4 text-xl font-extrabold text-white transition duration-300 hover:bg-green-600 shadow-2xl transform hover:scale-105"
-            href="#inscricao-final" // Linka para a seção final de preços
+            href="https://pay.hotmart.com/6721394?off=qyp0inwd" // NOVO LINK DE R$ 797,00 INSERIDO AQUI
           >
             GARANTIR MINHA VAGA COM SUPER DESCONTO
           </a>
@@ -269,7 +269,7 @@ export default function SalesPage() {
             </p>
             <a
               className="mt-6 inline-block w-full rounded-md bg-green-500 px-8 py-3 text-2xl font-extrabold text-white transition duration-300 hover:bg-green-600"
-              href="#" // Inserir o link de pagamento real aqui!
+              href="https://pay.hotmart.com/6721394?off=qyp0inwd" // NOVO LINK DE R$ 797,00 INSERIDO AQUI
             >
               GARANTIR MINHA VAGA AGORA
             </a>
