@@ -67,11 +67,12 @@ const ContatoPage: React.FC = () => {
               </div>
 
               <div className="text-center md:text-left">
+                {/* LINK CORRIGIDO PARA APONTAR PARA A NOVA PÁGINA FUNCIONAL */}
                 <Link 
-                  to="/solicitacao-analise" 
+                  to="/analise-preliminar" 
                   className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md hover:bg-blue-800 transition-colors font-medium text-lg w-full text-center"
                 >
-                  Solicitar análise preliminar
+                  Encaminhar informações para análise preliminar
                 </Link>
                 
                 <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded text-xs text-gray-600 text-justify">

@@ -14,7 +14,7 @@ const ServicosPage: React.FC = () => {
         />
 
         <main className="py-16 px-4 max-w-6xl mx-auto">
-          {/* TEXTO INTRODUTÓRIO (SUBSTITUIÇÃO INTEGRAL) */}
+          {/* TEXTO INTRODUTÓRIO */}
           <div className="max-w-4xl mx-auto mb-16 text-gray-700 leading-relaxed text-justify">
             <p className="mb-6">
               O escritório Carneiro Filho Advocacia atua em demandas selecionadas do Direito Civil, Direito de Família e das Sucessões, Direito Empresarial, Direito Tributário, Direito Previdenciário e Direito do Trabalho, com ênfase em contencioso patrimonial, familiar, empresarial, fiscal e trabalhista, inclusive em casos de elevada complexidade fática e processual.
@@ -99,10 +99,10 @@ const ServicosPage: React.FC = () => {
             </div>
           </div>
 
-          {/* CTA FINAL (ÚNICO) */}
+          {/* CTA FINAL (ÚNICO) - LINK CORRIGIDO */}
           <div className="max-w-2xl mx-auto text-center">
             <Link 
-              to="/contato" 
+              to="/analise-preliminar" 
               className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md hover:bg-blue-800 transition-colors font-medium text-lg w-full md:w-auto uppercase tracking-tighter"
             >
               👉 Encaminhar informações para análise preliminar

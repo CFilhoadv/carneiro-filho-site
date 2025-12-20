@@ -36,31 +36,31 @@ const AdministradoraBensImoveisPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Informações Técnicas sobre a Atividade */}
+        {/* Informações Técnicas - FONTES CORRIGIDAS PARA text-base */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-blue-900 mb-6 border-b pb-2">Aspectos Jurídicos e Operacionais</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-5 bg-gray-50 rounded border border-gray-100">
-              <h4 className="font-bold text-blue-900 text-sm mb-2">Gestão Centralizada</h4>
-              <p className="text-gray-600 text-xs text-justify">
+            <div className="p-5 bg-gray-50 rounded border border-gray-100 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Gestão Centralizada</h4>
+              <p className="text-gray-700 text-base leading-relaxed text-justify">
                 Estruturação de veículos jurídicos para a administração unificada de imóveis e ativos, visando a eficiência na conservação e exploração dos bens.
               </p>
             </div>
-            <div className="p-5 bg-gray-50 rounded border border-gray-100">
-              <h4 className="font-bold text-blue-900 text-sm mb-2">Regime Tributário</h4>
-              <p className="text-gray-600 text-xs text-justify">
+            <div className="p-5 bg-gray-50 rounded border border-gray-100 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Regime Tributário</h4>
+              <p className="text-gray-700 text-base leading-relaxed text-justify">
                 Análise das normas fiscais aplicáveis às receitas decorrentes da exploração de bens próprios, observando a legislação federal e municipal vigente.
               </p>
             </div>
-            <div className="p-5 bg-gray-50 rounded border border-gray-100">
-              <h4 className="font-bold text-blue-900 text-sm mb-2">Conformidade Legal</h4>
-              <p className="text-gray-600 text-xs text-justify">
+            <div className="p-5 bg-gray-50 rounded border border-gray-100 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Conformidade Legal</h4>
+              <p className="text-gray-700 text-base leading-relaxed text-justify">
                 Observância às normas regulatórias sobre o objeto social das empresas e os limites constitucionais relacionados à integralização de capital.
               </p>
             </div>
-            <div className="p-5 bg-gray-50 rounded border border-gray-100">
-              <h4 className="font-bold text-blue-900 text-sm mb-2">Organização Sucessória</h4>
-              <p className="text-gray-600 text-xs text-justify">
+            <div className="p-5 bg-gray-50 rounded border border-gray-100 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Organização Sucessória</h4>
+              <p className="text-gray-700 text-base leading-relaxed text-justify">
                 Integração da gestão de bens com estratégias sucessórias para facilitar a transição patrimonial entre gerações conforme o direito civil.
               </p>
             </div>
@@ -68,22 +68,22 @@ const AdministradoraBensImoveisPage: React.FC = () => {
         </section>
 
         {/* Ação Ética Recomendada */}
-        <section className="text-center py-10 bg-gray-50 rounded-lg border border-gray-200">
+        <section className="text-center py-10 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
           <h3 className="text-xl font-bold text-gray-800 mb-6">Encaminhamento para Análise</h3>
           <Link
-            to="/solicitacao-analise"
+            to="/analise-preliminar"
             className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md hover:bg-blue-800 transition-colors font-medium text-lg"
           >
             Encaminhar informações para análise preliminar
           </Link>
-          <p className="text-xs text-gray-500 mt-4 max-w-md mx-auto">
+          <p className="text-sm text-gray-500 mt-4 max-w-md mx-auto italic">
             O envio das informações não constitui contratação de serviços advocatícios nem cria expectativa de resultado.
           </p>
         </section>
 
-        {/* Nota de Encerramento */}
-        <section className="mt-12 text-gray-600 text-sm bg-blue-50 p-6 rounded border-l-4 border-blue-900 text-justify">
-          <p>
+        {/* Nota de Encerramento - FONTES CORRIGIDAS PARA text-base */}
+        <section className="mt-12 text-gray-700 text-base bg-blue-50 p-6 rounded border-l-4 border-blue-900 shadow-sm">
+          <p className="text-justify leading-relaxed">
             <strong>Nota Técnica:</strong> A administração de bens por meio de pessoa jurídica deve considerar a preponderância da atividade para fins de benefícios fiscais, como a isenção de ITBI, conforme previsto no Art. 156 da Constituição Federal e no Código Tributário Nacional. A viabilidade técnica da estrutura depende da análise da realidade específica de cada titular de bens.
           </p>
         </section>

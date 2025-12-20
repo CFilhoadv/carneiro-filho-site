@@ -31,10 +31,10 @@ const PlanejamentoSucessorioPage: React.FC = () => {
               </p>
             </div>
 
-            {/* Ação Ética Centralizada */}
+            {/* Ação Ética Centralizada - LINK CORRIGIDO */}
             <div className="text-center mb-16">
               <Link
-                to="/solicitacao-analise" 
+                to="/analise-preliminar" 
                 className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md hover:bg-blue-800 transition-colors font-medium text-lg"
               >
                 👉 Encaminhar informações para análise preliminar

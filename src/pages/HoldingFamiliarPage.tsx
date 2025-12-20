@@ -36,49 +36,49 @@ const HoldingFamiliarPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Informações sobre Cláusulas de Governança */}
+        {/* Informações sobre Cláusulas de Governança - FONTES CORRIGIDAS */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-blue-900 mb-6 border-b pb-2">Aspectos de Governança e Proteção</h2>
-          <p className="text-gray-700 mb-6 text-sm">
+          <p className="text-gray-700 mb-6 text-base leading-relaxed">
             A estruturação de uma holding permite a inclusão de dispositivos contratuais específicos que visam regular a administração do patrimônio e a relação entre os sócios:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 border border-gray-100 rounded bg-gray-50">
-              <h4 className="font-bold text-blue-900 text-sm mb-1">Inalienabilidade e Impenhorabilidade</h4>
-              <p className="text-gray-600 text-xs text-justify">Cláusulas que visam restringir a transferência de quotas e proteger o patrimônio social frente a obrigações de terceiros, conforme previsão legal.</p>
+            <div className="p-5 border border-gray-100 rounded bg-gray-50 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Inalienabilidade e Impenhorabilidade</h4>
+              <p className="text-gray-700 text-base text-justify leading-relaxed">Cláusulas que visam restringir a transferência de quotas e proteger o patrimônio social frente a obrigações de terceiros, conforme previsão legal.</p>
             </div>
-            <div className="p-4 border border-gray-100 rounded bg-gray-50">
-              <h4 className="font-bold text-blue-900 text-sm mb-1">Regras Sucessórias</h4>
-              <p className="text-gray-600 text-xs text-justify">Definição de procedimentos para a sucessão das quotas em caso de falecimento, buscando a continuidade da administração dos bens.</p>
+            <div className="p-5 border border-gray-100 rounded bg-gray-50 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Regras Sucessórias</h4>
+              <p className="text-gray-700 text-base text-justify leading-relaxed">Definição de procedimentos para a sucessão das quotas em caso de falecimento, buscando a continuidade da administração dos bens.</p>
             </div>
-            <div className="p-4 border border-gray-100 rounded bg-gray-50">
-              <h4 className="font-bold text-blue-900 text-sm mb-1">Administração e Veto</h4>
-              <p className="text-gray-600 text-xs text-justify">Estabelecimento de critérios para a tomada de decisões estratégicas e direitos especiais de gestão para fundadores.</p>
+            <div className="p-5 border border-gray-100 rounded bg-gray-50 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Administração e Veto</h4>
+              <p className="text-gray-700 text-base text-justify leading-relaxed">Estabelecimento de critérios para a tomada de decisões estratégicas e direitos especiais de gestão para fundadores.</p>
             </div>
-            <div className="p-4 border border-gray-100 rounded bg-gray-50">
-              <h4 className="font-bold text-blue-900 text-sm mb-1">Pacto de Sócios</h4>
-              <p className="text-gray-600 text-xs text-justify">Instrumento para regular direitos de preferência, retirada de sócios e resolução de impasses no âmbito familiar.</p>
+            <div className="p-5 border border-gray-100 rounded bg-gray-50 shadow-sm">
+              <h4 className="font-bold text-blue-900 text-base mb-2">Pacto de Sócios</h4>
+              <p className="text-gray-700 text-base text-justify leading-relaxed">Instrumento para regular direitos de preferência, retirada de sócios e resolução de impasses no âmbito familiar.</p>
             </div>
           </div>
         </section>
 
         {/* Ação Ética Recomendada */}
-        <section className="text-center py-10 bg-gray-50 rounded-lg border border-gray-200">
+        <section className="text-center py-10 bg-gray-50 rounded-lg border border-gray-200 shadow-sm">
           <h3 className="text-xl font-bold text-gray-800 mb-6">Encaminhamento para Análise</h3>
           <Link
-            to="/solicitacao-analise"
+            to="/analise-preliminar"
             className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md hover:bg-blue-800 transition-colors font-medium text-lg"
           >
             Encaminhar informações para análise preliminar
           </Link>
-          <p className="text-xs text-gray-500 mt-4 max-w-md mx-auto">
+          <p className="text-sm text-gray-500 mt-4 max-w-md mx-auto italic">
             O envio das informações não constitui contratação de serviços advocatícios nem cria expectativa de resultado.
           </p>
         </section>
 
-        {/* Observações Técnicas Adicionais */}
-        <section className="mt-12 text-gray-600 text-sm bg-blue-50 p-6 rounded border-l-4 border-blue-900">
-          <p className="text-justify">
+        {/* Observações Técnicas Adicionais - FONTES CORRIGIDAS */}
+        <section className="mt-12 text-gray-700 text-base bg-blue-50 p-6 rounded border-l-4 border-blue-900 shadow-sm">
+          <p className="text-justify leading-relaxed">
             <strong>Consideração Importante:</strong> A constituição de uma holding familiar demanda a conformidade com as normas da Junta Comercial e da Receita Federal, além de gerar obrigações contábeis e fiscais periódicas. A viabilidade econômica da estrutura deve ser confrontada com os custos de manutenção e os objetivos de longo prazo da família.
           </p>
         </section>
