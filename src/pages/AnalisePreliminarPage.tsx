@@ -6,95 +6,124 @@ const AnalisePreliminarPage: React.FC = () => {
   // Função para lidar com o envio do formulário e redirecionar para o Calendly
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Impede o recarregamento da página
-    window.location.href = "https://calendly.com/contato-carneirofilho"; // Redireciona para o link único
+    window.location.href = "https://calendly.com/contato-carneirofilho"; // Link único do evento
   };
 
   return (
     <MainLayout>
       <div className="relative">
-        <Banner 
-          subtitle="Fluxo de Atendimento Institucional" 
-          title="Análise Preliminar da Demanda" 
-          bgColor="bg-blue-900" 
+        <Banner
+          subtitle="Fluxo de Atendimento Institucional"
+          title="Análise Preliminar da Demanda"
+          bgColor="bg-blue-900"
         />
 
         <main className="py-16 px-4 max-w-4xl mx-auto">
+          
           {/* TÍTULO E TEXTO EXPLICATIVO */}
           <div className="mb-10 text-gray-800 leading-relaxed">
-            <h1 className="text-3xl font-bold mb-6 text-gray-900">Análise Preliminar da Demanda</h1>
-            <p className="mb-4 text-justify">
-              Este espaço destina-se ao envio de informações iniciais para análise preliminar da demanda, com a finalidade de compreender, de forma geral, o contexto apresentado e verificar, em tese, a viabilidade jurídica do caso.
+            <h1 className="text-3xl font-bold mb-6 text-gray-900">
+              Análise Preliminar da Demanda
+            </h1>
+            <p className="mb-4 text-justify text-lg">
+              Para oferecermos um atendimento especializado, solicitamos o preenchimento das informações abaixo. 
+              Esta etapa nos permite compreender o contexto do seu caso e verificar a viabilidade jurídica inicial.
             </p>
           </div>
 
-          {/* AVISO ÉTICO EM BLOCO DESTACADO */}
+          {/* AVISO ÉTICO */}
           <div className="mb-12 p-6 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
-            <h2 className="text-lg font-bold text-amber-900 mb-3">Aviso Importante</h2>
+            <h2 className="text-lg font-bold text-amber-900 mb-3">
+              Aviso Importante
+            </h2>
             <p className="text-sm text-amber-900">
-              O envio das informações por meio deste formulário não constitui contratação de serviços advocatícios, nos termos da Lei nº 8.906/94 e do Código de Ética e Disciplina da OAB.
+              O envio das informações por meio deste formulário não constitui contratação de serviços
+              advocatícios, nem gera obrigação de resposta, nos termos da Lei nº 8.906/94 e do
+              Código de Ética e Disciplina da OAB.
             </p>
           </div>
 
-          {/* FORMULÁRIO PERSONALIZADO COMPLETO COM ONSUBMIT IMPLEMENTADO */}
-          <form 
-            onSubmit={handleSubmit} 
+          {/* FORMULÁRIO */}
+          <form
+            onSubmit={handleSubmit}
             className="space-y-6 bg-white p-8 rounded-lg border border-gray-200 shadow-md"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Nome completo */}
+              
+              {/* Nome */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">Nome completo *</label>
-                <input 
-                  type="text" 
-                  required 
-                  className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none" 
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Nome completo *
+                </label>
+                <input
+                  type="text"
+                  placeholder="Digite seu nome"
+                  required
+                  className="w-full p-3 border border-gray-300 rounded
+                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
                 />
               </div>
 
-              {/* E-mail */}
+              {/* Email */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">E-mail *</label>
-                <input 
-                  type="email" 
-                  required 
-                  className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none" 
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  E-mail de contato *
+                </label>
+                <input
+                  type="email"
+                  placeholder="exemplo@email.com"
+                  required
+                  className="w-full p-3 border border-gray-300 rounded
+                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
               {/* WhatsApp */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">WhatsApp *</label>
-                <input 
-                  type="tel" 
-                  required 
-                  className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none" 
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  WhatsApp com DDD *
+                </label>
+                <input
+                  type="tel"
+                  placeholder="(00) 00000-0000"
+                  required
+                  className="w-full p-3 border border-gray-300 rounded
+                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
                 />
               </div>
 
               {/* Cidade / Estado */}
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">Cidade / Estado *</label>
-                <input 
-                  type="text" 
-                  required 
-                  className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none" 
+                <label className="block text-sm font-semibold text-gray-700 mb-1">
+                  Cidade / Estado *
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ex: São Paulo / SP"
+                  required
+                  className="w-full p-3 border border-gray-300 rounded
+                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
                 />
               </div>
             </div>
 
-            {/* Natureza da demanda - LISTA SUSPENSA (SELECT) */}
+            {/* Natureza da demanda */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1">Natureza da demanda *</label>
-              <select 
-                required 
-                className="w-full p-3 border border-gray-300 rounded bg-white focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Área de interesse da demanda *
+              </label>
+              <select
+                required
+                className="w-full p-3 border border-gray-300 rounded bg-white
+                           focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
               >
-                <option value="">Selecione uma opção...</option>
+                <option value="">Selecione a área...</option>
                 <option value="Direito Civil">Direito Civil</option>
                 <option value="Direito de Família">Direito de Família</option>
-                <option value="Sucessões">Sucessões</option>
+                <option value="Sucessões">Sucessões (Inventário/Herança)</option>
                 <option value="Direito Empresarial">Direito Empresarial</option>
                 <option value="Direito Tributário">Direito Tributário</option>
                 <option value="Direito Previdenciário">Direito Previdenciário</option>
@@ -103,24 +132,40 @@ const AnalisePreliminarPage: React.FC = () => {
               </select>
             </div>
 
-            {/* Breve descrição do caso - TEXTAREA */}
+            {/* Descrição do caso */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1">Breve descrição do caso *</label>
-              <textarea 
-                required 
-                rows={6} 
-                className="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                placeholder="Descreva aqui os pontos fundamentais da sua demanda..."
-              ></textarea>
+              <label className="block text-sm font-semibold text-gray-700 mb-1">
+                Resumo da sua necessidade *
+              </label>
+              <textarea
+                required
+                rows={6}
+                className="w-full p-3 border border-gray-300 rounded
+                           focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
+                placeholder="Por favor, descreva brevemente o que ocorreu para que possamos nos preparar para o agendamento."
+              />
             </div>
 
-            {/* BOTÃO DO FORMULÁRIO */}
+            {/* BLOCO DE ORIENTAÇÃO FINAL PARA MINIMIZAR IMPACTO DO INGLÊS */}
+            <div className="p-4 bg-blue-50 border border-blue-100 rounded-lg text-center">
+              <p className="text-sm text-blue-900 font-medium">
+                <span className="block mb-1 font-bold">Próxima Etapa: Agendamento</span>
+                Ao clicar no botão abaixo, você será levado ao nosso calendário. 
+                Para concluir, basta escolher o horário e confirmar clicando em 
+                <span className="bg-blue-900 text-white px-2 py-0.5 rounded text-xs mx-1">Schedule Event</span> 
+                (Agendar Evento).
+              </p>
+            </div>
+
+            {/* BOTÃO */}
             <div className="pt-4 text-center">
-              <button 
-                type="submit" 
-                className="bg-blue-900 text-white px-12 py-4 rounded-md hover:bg-blue-800 transition-all font-bold text-lg shadow-lg hover:shadow-xl active:transform active:scale-95"
+              <button
+                type="submit"
+                className="bg-blue-900 text-white px-12 py-4 rounded-md
+                           hover:bg-blue-800 transition-all font-bold text-lg
+                           shadow-lg hover:shadow-xl active:transform active:scale-95 w-full md:w-auto"
               >
-                👉 Prosseguir para agendamento
+                👉 Confirmar Informações e Escolher Horário
               </button>
             </div>
           </form>
