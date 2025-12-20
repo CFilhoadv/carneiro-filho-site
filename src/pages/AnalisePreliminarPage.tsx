@@ -3,10 +3,9 @@ import MainLayout from '../components/layout/MainLayout';
 import Banner from '../components/ui/Banner';
 
 const AnalisePreliminarPage: React.FC = () => {
-  // Função para lidar com o envio do formulário e redirecionar para o Calendly
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // Impede o recarregamento da página
-    window.location.href = "https://calendly.com/contato-carneirofilho"; // Link único do evento
+    e.preventDefault();
+    window.location.href = "https://calendly.com/contato-carneirofilho";
   };
 
   return (
@@ -19,8 +18,6 @@ const AnalisePreliminarPage: React.FC = () => {
         />
 
         <main className="py-16 px-4 max-w-4xl mx-auto">
-          
-          {/* TÍTULO E TEXTO EXPLICATIVO */}
           <div className="mb-10 text-gray-800 leading-relaxed">
             <h1 className="text-3xl font-bold mb-6 text-gray-900">
               Análise Preliminar da Demanda
@@ -31,7 +28,6 @@ const AnalisePreliminarPage: React.FC = () => {
             </p>
           </div>
 
-          {/* AVISO ÉTICO */}
           <div className="mb-12 p-6 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
             <h2 className="text-lg font-bold text-amber-900 mb-3">
               Aviso Importante
@@ -43,14 +39,11 @@ const AnalisePreliminarPage: React.FC = () => {
             </p>
           </div>
 
-          {/* FORMULÁRIO */}
           <form
             onSubmit={handleSubmit}
             className="space-y-6 bg-white p-8 rounded-lg border border-gray-200 shadow-md"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* Nome */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">
                   Nome completo *
@@ -64,7 +57,6 @@ const AnalisePreliminarPage: React.FC = () => {
                 />
               </div>
 
-              {/* Email */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">
                   E-mail de contato *
@@ -80,8 +72,6 @@ const AnalisePreliminarPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* WhatsApp */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">
                   WhatsApp com DDD *
@@ -95,7 +85,6 @@ const AnalisePreliminarPage: React.FC = () => {
                 />
               </div>
 
-              {/* Cidade / Estado */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">
                   Cidade / Estado *
@@ -110,7 +99,6 @@ const AnalisePreliminarPage: React.FC = () => {
               </div>
             </div>
 
-            {/* Natureza da demanda */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1">
                 Área de interesse da demanda *
@@ -132,7 +120,6 @@ const AnalisePreliminarPage: React.FC = () => {
               </select>
             </div>
 
-            {/* Descrição do caso */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-1">
                 Resumo da sua necessidade *
@@ -146,7 +133,6 @@ const AnalisePreliminarPage: React.FC = () => {
               />
             </div>
 
-            {/* ORIENTAÇÃO FINAL */}
             <div className="p-4 bg-blue-50 border border-blue-100 rounded-lg text-center">
               <p className="text-sm text-blue-900 font-medium">
                 <span className="block mb-1 font-bold">Próxima Etapa: Agendamento</span>
@@ -155,7 +141,6 @@ const AnalisePreliminarPage: React.FC = () => {
               </p>
             </div>
 
-            {/* BOTÃO PRINCIPAL */}
             <div className="pt-4 text-center">
               <button
                 type="submit"
@@ -167,7 +152,7 @@ const AnalisePreliminarPage: React.FC = () => {
               </button>
             </div>
 
-            {/* OBSERVAÇÃO – SUPORTE VIA WHATSAPP (CONFORME SOLICITADO) */}
+            {/* OBSERVAÇÃO – SUPORTE VIA WHATSAPP (CORRIGIDO COM LINK EXTERNO PARA O ÍCONE) */}
             <div className="pt-4 text-sm text-gray-600 text-center">
               <p className="mb-2">
                 Observação: caso encontre alguma dificuldade técnica para concluir o agendamento,
@@ -181,8 +166,9 @@ const AnalisePreliminarPage: React.FC = () => {
                 aria-label="Contato via WhatsApp"
                 className="inline-flex justify-center"
               >
+                {/* Usando imagem oficial do WhatsApp via link direto */}
                 <img
-                  src="/icons/whatsapp.svg"
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                   alt="WhatsApp"
                   className="w-10 h-10 hover:opacity-80 transition-opacity"
                 />
