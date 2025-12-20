@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import Banner from '../components/ui/Banner';
 
@@ -6,120 +7,111 @@ const PlanejamentoSucessorioPage: React.FC = () => {
   return (
     <MainLayout>
       <div className="relative">
-        {/* Banner Principal - FUNDO AZUL conforme identidade visual */}
-        {/* ATENÇÃO: INVERTIDO OS VALORES DE 'title' E 'subtitle' PARA CORRIGIR HIERARQUIA */}
+        {/* Banner Principal - Informativo e Institucional */}
         <Banner
-          title="Seu Legado, Nosso Planejamento: Evite Burocracia e Otimize Tributos." // CORRIGIDO: "Otimize"
-          subtitle="Planejamento Sucessório" // Este agora será o h1 (título principal)
+          subtitle="Planejamento Sucessório" 
+          title="Planejamento Sucessório e Organização Patrimonial" 
           bgColor="bg-blue-900"
         />
 
         {/* Conteúdo Principal */}
         <div className="relative py-16 bg-white">
           <div className="container mx-auto px-4">
-
-            {/* NOVO: Botão Agendar Atendimento - Movido para o início do conteúdo */}
-            <div className="text-center mb-10"> {/* mb-10 para espaçamento abaixo do botão */}
-              <a
-                href="https://calendly.com/contato-carneirofilho/planejamento_sucessorio" // URL do Calendly CORRIGIDA
-                target="_blank" // Abre em nova aba
-                rel="noopener noreferrer" // Prática de segurança para target="_blank"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg"
-              >
-                Agendar Atendimento {/* Texto do botão ajustado */}
-              </a>
+            
+            {/* Texto Institucional Principal */}
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                O planejamento sucessório é uma abordagem jurídica que visa organizar a transmissão do patrimônio de forma ordenada, conforme os objetivos e a situação específica de cada família ou empresário.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                Neste espaço são apresentadas informações sobre os principais instrumentos jurídicos utilizados no planejamento sucessório, suas características gerais e aspectos que devem ser considerados na tomada de decisões.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                A escolha das alternativas juridicamente adequadas depende de análise individualizada das circunstâncias fáticas, familiares, patrimoniais e legais de cada caso.
+              </p>
             </div>
 
-            {/* Grid de Cards de Serviços - 2x2 + 1 centralizado */}
+            {/* Ação Ética Centralizada */}
+            <div className="text-center mb-16">
+              <Link
+                to="/solicitacao-analise" 
+                className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md hover:bg-blue-800 transition-colors font-medium text-lg"
+              >
+                👉 Encaminhar informações para análise preliminar
+              </Link>
+              <p className="text-xs text-gray-500 mt-4 max-w-md mx-auto">
+                O envio das informações não constitui contratação de serviços advocatícios nem cria expectativa de resultado.
+              </p>
+            </div>
+
+            {/* Grid de Cards de Navegação para Áreas Específicas */}
             <div className="max-w-6xl mx-auto">
-              {/* Primeira linha - 2 cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 
                 {/* Card: Doação com Usufruto */}
-                <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Doação com Usufruto</h3>
-                  <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    Maximize o impacto de suas doações enquanto otimiza a carga tributária, garantindo que seu
-                    legado beneficie as causas e pessoas que você mais valoriza.
+                <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+                  <h3 className="text-xl font-bold text-blue-900 mb-4">Doação com Usufruto</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Informações sobre o instituto jurídico que permite a transmissão da propriedade com reserva de direitos de uso.
                   </p>
-                  <a href="/doacao-com-usufruto" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
-                    Saiba Mais
-                  </a>
+                  <Link to="/doacao-com-usufruto" className="text-blue-700 hover:text-blue-900 text-sm font-bold uppercase tracking-wider">
+                    Acessar detalhes →
+                  </Link>
                 </div>
 
                 {/* Card: Holding Familiar */}
-                <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Holding Familiar</h3>
-                  <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    Crie uma holding familiar para proteger e gerenciar seu patrimônio, facilitando a sucessão e
-                    reduzindo custos e conflitos futuros.
+                <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+                  <h3 className="text-xl font-bold text-blue-900 mb-4">Holding Familiar</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Aspectos gerais sobre estruturas societárias voltadas à administração de bens e direitos familiares.
                   </p>
-                  <a href="/holding-familiar" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
-                    Saiba Mais
-                  </a>
+                  <Link to="/holding-familiar" className="text-blue-700 hover:text-blue-900 text-sm font-bold uppercase tracking-wider">
+                    Acessar detalhes →
+                  </Link>
                 </div>
               </div>
 
-              {/* Segunda linha - 2 cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 
                 {/* Card: Inventários */}
-                <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Inventários</h3>
-                  <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    Oferecemos suporte completo no processo de inventário, buscando soluções ágeis e menos
-                    onerosas para a partilha de bens, seja judicial ou extrajudicial.
+                <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+                  <h3 className="text-xl font-bold text-blue-900 mb-4">Inventários</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Orientações sobre os procedimentos destinados à partilha de bens conforme a legislação civil.
                   </p>
-                  {/* CORREÇÃO APLICADA AQUI: O href foi alterado para o caminho correto "/inventarios" */}
-                  <a href="/inventarios" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
-                    Saiba Mais
-                  </a>
+                  <Link to="/inventarios" className="text-blue-700 hover:text-blue-900 text-sm font-bold uppercase tracking-wider">
+                    Acessar detalhes →
+                  </Link>
                 </div>
 
                 {/* Card: Testamentos */}
-                <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">Testamentos</h3>
-                  <p className="text-gray-700 text-base leading-relaxed mb-4">
-                    Elabore seu testamento com segurança jurídica, garantindo que seus desejos sejam respeitados
-                    e evitando litígios na transmissão de seu patrimônio.
+                <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+                  <h3 className="text-xl font-bold text-blue-900 mb-4">Testamentos</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                    Informações sobre as modalidades de disposição de bens respeitando os limites legais vigentes.
                   </p>
-                  <a href="/testamentos" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
-                    Saiba Mais
-                  </a>
+                  <Link to="/testamentos" className="text-blue-700 hover:text-blue-900 text-sm font-bold uppercase tracking-wider">
+                    Acessar detalhes →
+                  </Link>
                 </div>
               </div>
 
-              {/* Terceira linha - 1 card centralizado */}
-              {/* ATENÇÃO: Alterado justify-center para justify-start para alinhar à esquerda, mantendo w-full md:w-1/2 */}
-              <div className="flex justify-start"> {/* Alterado justify-center para justify-start */}
-                <div className="w-full md:w-1/2"> {/* Mantido w-full para mobile, md:w-1/2 para desktop */}
-                  {/* Card: Administradora de Bens Imóveis Próprios */}
-                  <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">Administradora de Bens Imóveis Próprios</h3>
-                    <p className="text-gray-700 text-base leading-relaxed mb-4">
-                      Implemente um sistema de estruturação patrimonial familiar que gerencia e organiza seus bens
-                      imóveis, garantindo proteção e eficiência na sucessão.
+              <div className="flex justify-start">
+                <div className="w-full md:w-1/2">
+                  {/* Card: Administração de Bens Próprios */}
+                  <div className="bg-white rounded-lg shadow-md p-8 border border-gray-100">
+                    <h3 className="text-xl font-bold text-blue-900 mb-4">Administração de Bens Próprios</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                      Aspectos jurídicos relacionados à gestão, conservação e exploração econômica de ativos.
                     </p>
-                    <a href="/administradoras-de-bens-proprios" className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-medium">
-                      Saiba Mais
-                    </a>
+                    <Link to="/administradoras-de-bens-proprios" className="text-blue-700 hover:text-blue-900 text-sm font-bold uppercase tracking-wider">
+                      Acessar detalhes →
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* SEÇÃO CTA ORIGINAL REMOVIDA DESTE LOCAL (agora o botão está no início) */}
-            {/* A div abaixo foi removida para eliminar o texto e o botão no final da página */}
-            {/*
-            <div className="text-center mt-16">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8">
-                Precisa de ajuda com seu Planejamento Sucessório?
-              </h2>
-              <button disabled className="bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-medium text-lg">
-                Consultar (Em Breve)
-              </button>
-            </div>
-            */}
           </div>
         </div>
       </div>
