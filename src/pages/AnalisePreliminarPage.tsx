@@ -146,18 +146,16 @@ const AnalisePreliminarPage: React.FC = () => {
               />
             </div>
 
-            {/* BLOCO DE ORIENTAÇÃO FINAL PARA MINIMIZAR IMPACTO DO INGLÊS */}
+            {/* ORIENTAÇÃO FINAL */}
             <div className="p-4 bg-blue-50 border border-blue-100 rounded-lg text-center">
               <p className="text-sm text-blue-900 font-medium">
                 <span className="block mb-1 font-bold">Próxima Etapa: Agendamento</span>
-                Ao clicar no botão abaixo, você será levado ao nosso calendário. 
-                Para concluir, basta escolher o horário e confirmar clicando em 
-                <span className="bg-blue-900 text-white px-2 py-0.5 rounded text-xs mx-1">Schedule Event</span> 
-                (Agendar Evento).
+                Ao clicar no botão abaixo, você será levado ao nosso calendário para escolher o horário e confirmar clicando em 
+                <span className="bg-blue-900 text-white px-2 py-0.5 rounded text-xs mx-1">Schedule Event</span>.
               </p>
             </div>
 
-            {/* BOTÃO */}
+            {/* BOTÃO PRINCIPAL */}
             <div className="pt-4 text-center">
               <button
                 type="submit"
@@ -165,8 +163,30 @@ const AnalisePreliminarPage: React.FC = () => {
                            hover:bg-blue-800 transition-all font-bold text-lg
                            shadow-lg hover:shadow-xl active:transform active:scale-95 w-full md:w-auto"
               >
-                👉 Confirmar Informações e Escolher Horário
+                👉 Prosseguir para agendamento
               </button>
+            </div>
+
+            {/* OBSERVAÇÃO – SUPORTE VIA WHATSAPP (CONFORME SOLICITADO) */}
+            <div className="pt-4 text-sm text-gray-600 text-center">
+              <p className="mb-2">
+                Observação: caso encontre alguma dificuldade técnica para concluir o agendamento,
+                clique no ícone do <strong>WhatsApp</strong> abaixo e teremos prazer em orientar.
+              </p>
+
+              <a
+                href="https://wa.me/551142106194"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contato via WhatsApp"
+                className="inline-flex justify-center"
+              >
+                <img
+                  src="/icons/whatsapp.svg"
+                  alt="WhatsApp"
+                  className="w-10 h-10 hover:opacity-80 transition-opacity"
+                />
+              </a>
             </div>
           </form>
         </main>
