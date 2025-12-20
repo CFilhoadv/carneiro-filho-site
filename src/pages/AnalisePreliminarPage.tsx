@@ -3,6 +3,12 @@ import MainLayout from '../components/layout/MainLayout';
 import Banner from '../components/ui/Banner';
 
 const AnalisePreliminarPage: React.FC = () => {
+  // Função para lidar com o envio do formulário e redirecionar para o Calendly
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Impede o recarregamento da página
+    window.location.href = "https://calendly.com/contato-carneirofilho"; // Redireciona para o link único
+  };
+
   return (
     <MainLayout>
       <div className="relative">
@@ -29,8 +35,11 @@ const AnalisePreliminarPage: React.FC = () => {
             </p>
           </div>
 
-          {/* FORMULÁRIO PERSONALIZADO COMPLETO */}
-          <form className="space-y-6 bg-white p-8 rounded-lg border border-gray-200 shadow-md">
+          {/* FORMULÁRIO PERSONALIZADO COMPLETO COM ONSUBMIT IMPLEMENTADO */}
+          <form 
+            onSubmit={handleSubmit} 
+            className="space-y-6 bg-white p-8 rounded-lg border border-gray-200 shadow-md"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Nome completo */}
               <div>
