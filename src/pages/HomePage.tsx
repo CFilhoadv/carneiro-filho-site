@@ -140,7 +140,7 @@ const HomePage: React.FC = () => {
           {/* Cards de serviços */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               
-            {/* Card 1: Planejamento Sucessório Familiar e Patrimonial */}
+            {/* Card 1: Planejamento Sucessório Familiar e Patrimonial - CORRIGIDO */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <img   
                 src={planejamentoSucessorio}   
@@ -168,11 +168,12 @@ const HomePage: React.FC = () => {
                     Administradoras de Bens Próprios
                   </Link>
                 </div>
+                {/* BOTÃO CORRIGIDO: TEXTO E LINK ALTERADOS */}
                 <Link   
-                    to="/servicos"   
+                    to="/planejamento-sucessorio"   
                     className="inline-block bg-blue-900 text-white px-3 py-1 rounded text-xs font-medium hover:bg-blue-800 transition-colors mt-2"
                 >
-                    Ver todas as áreas
+                    Saiba mais sobre Planejamento Sucessório
                 </Link>
               </div>
             </div>
