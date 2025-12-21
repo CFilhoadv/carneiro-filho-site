@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import HomeStaging from './pages/HomeStaging'; // IMPORTAÇÃO DA NOVA HOME (STAGING)
 import PlanejamentoSucessorioPage from './pages/PlanejamentoSucessorioPage';
 import ServicosPage from './pages/ServicosPage';
 import ContatoPage from './pages/ContatoPage';
@@ -31,6 +32,9 @@ function App() {
       <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} />
       {/* NOVA ROTA CONECTADA */}
       <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
+      
+      {/* ROTA DE STAGING PARA VALIDAÇÃO DA NOVA HOME */}
+      <Route path="/home-staging" element={<HomeStaging />} />
     </Routes>
   );
 }
