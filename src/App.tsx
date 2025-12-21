@@ -2,9 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import HomeStaging from './pages/HomeStaging'; 
 import QuemSomosPage from './pages/QuemSomosPage';
-import QuemSomosStaging from './pages/QuemSomosStaging'; // IMPORTAÇÃO DA NOVA QUEM SOMOS (STAGING)
-import PlanejamentoSucessorioPage from './pages/PlanejamentoSucessorioPage';
+import QuemSomosStaging from './pages/QuemSomosStaging';
 import ServicosPage from './pages/ServicosPage';
+import ServicosStaging from './pages/ServicosStaging'; // IMPORTAÇÃO DA NOVA PÁGINA SERVIÇOS
+import PlanejamentoSucessorioPage from './pages/PlanejamentoSucessorioPage';
 import ContatoPage from './pages/ContatoPage';
 import CursosPage from './pages/CursosPage';
 import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage';
@@ -35,6 +36,7 @@ function App() {
       {/* ROTAS DE STAGING PARA VALIDAÇÃO */}
       <Route path="/home-staging" element={<HomeStaging />} />
       <Route path="/quem-somos-staging" element={<QuemSomosStaging />} />
+      <Route path="/servicos-staging" element={<ServicosStaging />} />
     </Routes>
   );
 }
