@@ -5,20 +5,20 @@ import MainLayout from '../components/layout/MainLayout';
 const QuemSomosStaging: React.FC = () => {
   return (
     <MainLayout>
-      {/* Cabeçalho da Página - Sóbrio */}
-      <section className="bg-gray-50 py-12 border-b border-gray-200">
+      {/* Cabeçalho da Página - Ajuste de Espaçamento e Hierarquia */}
+      <section className="bg-gray-50 pt-6 pb-10 border-b border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">QUEM SOMOS</h1>
-          <p className="text-xl text-blue-900 font-medium tracking-wide uppercase">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">QUEM SOMOS</h1>
+          <p className="text-lg text-gray-500 font-medium tracking-wide uppercase">
             Carneiro Filho Advocacia
           </p>
         </div>
       </section>
 
       {/* Conteúdo Principal */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="space-y-8 text-gray-700 leading-relaxed text-lg">
+          <div className="space-y-8 text-gray-700 leading-relaxed text-lg text-justify">
             <p>
               O escritório Carneiro Filho Advocacia atua de forma técnica, ética e responsável na condução de demandas jurídicas cíveis, familiares, sucessórias e patrimoniais, com especial atenção à organização preventiva do patrimônio e à adequada gestão de conflitos jurídicos.
             </p>
@@ -27,8 +27,8 @@ const QuemSomosStaging: React.FC = () => {
             </p>
 
             {/* Subseção: Formação */}
-            <div className="pt-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">
+            <div className="pt-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 text-left">
                 Atuação profissional e formação multidisciplinar
               </h2>
               <div className="space-y-4">
@@ -45,8 +45,8 @@ const QuemSomosStaging: React.FC = () => {
             </div>
 
             {/* Subseção: Forma de Atuação */}
-            <div className="pt-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">
+            <div className="pt-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 text-left">
                 Forma de atuação
               </h2>
               <p>
@@ -57,9 +57,19 @@ const QuemSomosStaging: React.FC = () => {
               </p>
             </div>
 
-            {/* Subseção: Compromisso Ético */}
-            <div className="pt-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">
+            {/* CTA Posicionado após Forma de Atuação */}
+            <div className="py-8 text-center">
+              <Link 
+                to="/analise-preliminar" 
+                className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-800 transition-colors"
+              >
+                Encaminhar informações para análise preliminar
+              </Link>
+            </div>
+
+            {/* Subseção: Compromisso Ético (Fechamento sem CTA posterior) */}
+            <div className="pt-6">
+              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 text-left">
                 Compromisso ético
               </h2>
               <p>
@@ -69,16 +79,6 @@ const QuemSomosStaging: React.FC = () => {
                 O envio de informações ou o contato inicial não implica contratação automática de serviços advocatícios, nem gera obrigação de resposta ou resultado, sendo a análise jurídica realizada exclusivamente em atendimento apropriado.
               </p>
             </div>
-          </div>
-
-          {/* CTA Único e Final */}
-          <div className="mt-16 pt-12 border-t border-gray-100 text-center">
-            <Link 
-              to="/analise-preliminar" 
-              className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-800 transition-colors"
-            >
-              Encaminhar informações para análise preliminar
-            </Link>
           </div>
         </div>
       </section>
