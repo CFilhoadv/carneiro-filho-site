@@ -9,7 +9,7 @@ import bannerFamilia from '../assets/images/banner_família.webp';
 const HomeStaging: React.FC = () => {
   return (
     <MainLayout>
-      {/* Banner Principal - Ajustado conforme hierarquia oficial */}
+      {/* Banner Principal */}
       <div className="relative">
         <Banner   
           title="Advocacia técnica, responsável e estratégica."
@@ -135,9 +135,11 @@ const HomeStaging: React.FC = () => {
           <p className="text-gray-700 mb-8">
             Caso deseje iniciar o contato, encaminhe as informações iniciais para análise preliminar. O atendimento será conduzido de forma ética, organizada e transparente.
           </p>
+          
+          {/* CTA FINAL SUAVIZADO: Borda em vez de fundo sólido */}
           <Link 
             to="/analise-preliminar" 
-            className="inline-block bg-blue-900 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors mb-10"
+            className="inline-block border-2 border-gray-400 text-gray-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors mb-10"
           >
             Encaminhar informações para análise preliminar
           </Link>
