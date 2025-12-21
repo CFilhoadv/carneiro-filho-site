@@ -5,8 +5,8 @@ import MainLayout from '../components/layout/MainLayout';
 const QuemSomosStaging: React.FC = () => {
   return (
     <MainLayout>
-      {/* Cabeçalho da Página - Ajuste de Espaçamento e Hierarquia */}
-      <section className="bg-gray-50 pt-6 pb-10 border-b border-gray-200">
+      {/* Cabeçalho da Página */}
+      <section className="bg-gray-50 pt-6 pb-8 border-b border-gray-200">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">QUEM SOMOS</h1>
           <p className="text-lg text-gray-500 font-medium tracking-wide uppercase">
@@ -16,9 +16,9 @@ const QuemSomosStaging: React.FC = () => {
       </section>
 
       {/* Conteúdo Principal */}
-      <section className="py-12 bg-white">
+      <section className="py-10 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="space-y-8 text-gray-700 leading-relaxed text-lg text-justify">
+          <div className="space-y-6 text-gray-700 leading-relaxed text-lg text-justify">
             <p>
               O escritório Carneiro Filho Advocacia atua de forma técnica, ética e responsável na condução de demandas jurídicas cíveis, familiares, sucessórias e patrimoniais, com especial atenção à organização preventiva do patrimônio e à adequada gestão de conflitos jurídicos.
             </p>
@@ -27,8 +27,8 @@ const QuemSomosStaging: React.FC = () => {
             </p>
 
             {/* Subseção: Formação */}
-            <div className="pt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 text-left">
+            <div className="pt-4">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-left">
                 Atuação profissional e formação multidisciplinar
               </h2>
               <div className="space-y-4">
@@ -45,8 +45,8 @@ const QuemSomosStaging: React.FC = () => {
             </div>
 
             {/* Subseção: Forma de Atuação */}
-            <div className="pt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 text-left">
+            <div className="pt-4">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-left">
                 Forma de atuação
               </h2>
               <p>
@@ -58,8 +58,8 @@ const QuemSomosStaging: React.FC = () => {
             </div>
 
             {/* Subseção: Compromisso Ético */}
-            <div className="pt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 text-left">
+            <div className="pt-4">
+              <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-left">
                 Compromisso ético
               </h2>
               <p>
@@ -70,11 +70,11 @@ const QuemSomosStaging: React.FC = () => {
               </p>
             </div>
 
-            {/* CTA FINAL - POSICIONADO EXATAMENTE COMO O ÚLTIMO ELEMENTO DA PÁGINA (DEPOIS DE TUDO) */}
-            <div className="pt-12 pb-8 text-center">
+            {/* CTA FINAL - Padronizado com a Home */}
+            <div className="pt-10 pb-6 text-center">
               <Link 
                 to="/analise-preliminar" 
-                className="inline-block border-2 border-gray-400 text-gray-600 px-8 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors"
+                className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-800 transition-colors"
               >
                 Encaminhar informações para análise preliminar
               </Link>
