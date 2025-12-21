@@ -27,7 +27,7 @@ const ServicosStaging: React.FC = () => {
             </p>
           </div>
 
-          {/* Listagem de Áreas de Atuação - Ajustada conforme Referência Definitiva */}
+          {/* Listagem de Áreas de Atuação - Ajustada conforme Unificação Conceitual */}
           <div className="space-y-10">
             
             <div className="border-l-4 border-blue-900 pl-6">
@@ -37,17 +37,11 @@ const ServicosStaging: React.FC = () => {
               </p>
             </div>
 
+            {/* ÁREA AJUSTADA: DIREITO DE FAMÍLIA E SUCESSÕES */}
             <div className="border-l-4 border-blue-900 pl-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Direito de Família</h2>
+              <h2 className="text-xl font-bold text-gray-900 mb-3">Direito de Família e Sucessões</h2>
               <p className="text-gray-700 leading-relaxed">
-                Atuação em demandas de família, incluindo alimentos e suas revisões, guarda, interdições civis, alvarás judiciais, internação compulsória e demais medidas previstas na legislação civil, com experiência na condução de litígios estruturados, incidentes processuais e atuação em múltiplas instâncias, conforme as particularidades de cada caso.
-              </p>
-            </div>
-
-            <div className="border-l-4 border-blue-900 pl-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-3">Direito das Sucessões</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Atuação em inventários judiciais e extrajudiciais, partilhas, testamentos, ações de sonegados, reserva de bens, habilitação de crédito e litígios sucessórios complexos, inclusive com desdobramentos em instâncias superiores, quando presentes controvérsias patrimoniais relevantes.
+                Atuação em demandas de família e sucessórias, incluindo inventários judiciais e extrajudiciais, partilhas, alimentos e suas revisões, guarda, interdições civis, alvarás judiciais, internação compulsória e demais medidas previstas na legislação civil, com experiência na condução de litígios estruturados, incidentes processuais e atuação em múltiplas instâncias, conforme as particularidades de cada caso.
               </p>
             </div>
 
