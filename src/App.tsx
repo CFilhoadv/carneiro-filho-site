@@ -7,7 +7,8 @@ import ServicosPage from './pages/ServicosPage';
 import ServicosStaging from './pages/ServicosStaging';
 import PlanejamentoSucessorioPage from './pages/PlanejamentoSucessorioPage';
 import PlanejamentoSucessorioStaging from './pages/PlanejamentoSucessorioStaging';
-import HoldingStaging from './pages/HoldingStaging'; // NOVA IMPORTAÇÃO
+import HoldingStaging from './pages/HoldingStaging';
+import DoacaoStaging from './pages/DoacaoStaging'; // NOVA IMPORTAÇÃO
 import ContatoPage from './pages/ContatoPage';
 import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
 import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
@@ -43,6 +44,7 @@ function App() {
       <Route path="/servicos-staging" element={<ServicosStaging />} />
       <Route path="/planejamento-sucessorio-staging" element={<PlanejamentoSucessorioStaging />} />
       <Route path="/holding-staging" element={<HoldingStaging />} />
+      <Route path="/doacao-staging" element={<DoacaoStaging />} />
     </Routes>
   );
 }
