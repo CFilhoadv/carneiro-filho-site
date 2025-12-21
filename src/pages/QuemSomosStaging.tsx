@@ -57,17 +57,7 @@ const QuemSomosStaging: React.FC = () => {
               </p>
             </div>
 
-            {/* CTA Posicionado após Forma de Atuação */}
-            <div className="py-8 text-center">
-              <Link 
-                to="/analise-preliminar" 
-                className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-800 transition-colors"
-              >
-                Encaminhar informações para análise preliminar
-              </Link>
-            </div>
-
-            {/* Subseção: Compromisso Ético (Fechamento sem CTA posterior) */}
+            {/* Subseção: Compromisso Ético */}
             <div className="pt-6">
               <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2 text-left">
                 Compromisso ético
@@ -79,6 +69,17 @@ const QuemSomosStaging: React.FC = () => {
                 O envio de informações ou o contato inicial não implica contratação automática de serviços advocatícios, nem gera obrigação de resposta ou resultado, sendo a análise jurídica realizada exclusivamente em atendimento apropriado.
               </p>
             </div>
+
+            {/* CTA FINAL - POSICIONADO EXATAMENTE COMO O ÚLTIMO ELEMENTO DA PÁGINA (DEPOIS DE TUDO) */}
+            <div className="pt-12 pb-8 text-center">
+              <Link 
+                to="/analise-preliminar" 
+                className="inline-block border-2 border-gray-400 text-gray-600 px-8 py-3 rounded-md font-medium hover:bg-gray-50 transition-colors"
+              >
+                Encaminhar informações para análise preliminar
+              </Link>
+            </div>
+
           </div>
         </div>
       </section>
