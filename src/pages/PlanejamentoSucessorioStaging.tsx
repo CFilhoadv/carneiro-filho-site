@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 
 const PlanejamentoSucessorioStaging: React.FC = () => {
+  // Lista atualizada: Remoção de Inventários por critério conceitual (preventivo vs sucessório)
   const subpaginas = [
-    { title: "Inventários", href: "/inventarios-staging" },
     { title: "Doação com Usufruto", href: "/doacao-staging" },
     { title: "Testamentos", href: "/testamentos-staging" },
     { title: "Holding Familiar", href: "/holding-staging" },
@@ -35,7 +35,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
             </p>
           </div>
 
-          {/* Menu de Subpáginas (Navegação Estruturada) */}
+          {/* Menu de Subpáginas (Navegação Estruturada com Instrumentos Preventivos) */}
           <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Instrumentos e Soluções</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
