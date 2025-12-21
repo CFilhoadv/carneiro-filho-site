@@ -6,12 +6,13 @@ import QuemSomosStaging from './pages/QuemSomosStaging';
 import ServicosPage from './pages/ServicosPage';
 import ServicosStaging from './pages/ServicosStaging';
 import PlanejamentoSucessorioPage from './pages/PlanejamentoSucessorioPage';
-import PlanejamentoSucessorioStaging from './pages/PlanejamentoSucessorioStaging'; // NOVA IMPORTAÇÃO
+import PlanejamentoSucessorioStaging from './pages/PlanejamentoSucessorioStaging';
+import HoldingStaging from './pages/HoldingStaging'; // NOVA IMPORTAÇÃO
 import ContatoPage from './pages/ContatoPage';
 import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
 import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
 
-// Rotas de subpáginas atuais (para manter funcionamento)
+// Outras páginas atuais
 import DoacaoComUsufrutoPage from './pages/DoacaoComUsufrutoPage';
 import HoldingFamiliarPage from './pages/HoldingFamiliarPage';
 import InventarioPage from './pages/InventarioPage';
@@ -29,7 +30,7 @@ function App() {
       <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} />
       <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
       
-      {/* MANUTENÇÃO DAS SUBPÁGINAS ATUAIS */}
+      {/* MANUTENÇÃO DAS PÁGINAS ORIGINAIS */}
       <Route path="/doacao-com-usufruto" element={<DoacaoComUsufrutoPage />} />
       <Route path="/holding-familiar" element={<HoldingFamiliarPage />} />
       <Route path="/inventarios" element={<InventarioPage />} />
@@ -41,6 +42,7 @@ function App() {
       <Route path="/quem-somos-staging" element={<QuemSomosStaging />} />
       <Route path="/servicos-staging" element={<ServicosStaging />} />
       <Route path="/planejamento-sucessorio-staging" element={<PlanejamentoSucessorioStaging />} />
+      <Route path="/holding-staging" element={<HoldingStaging />} />
     </Routes>
   );
 }
