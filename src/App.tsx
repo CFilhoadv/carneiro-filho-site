@@ -22,6 +22,7 @@ import PlanejamentoSucessorioStaging from './pages/PlanejamentoSucessorioStaging
 import HoldingStaging from './pages/HoldingStaging';
 import DoacaoStaging from './pages/DoacaoStaging';
 import TestamentosStaging from './pages/TestamentosStaging';
+import AbipStaging from './pages/AbipStaging'; // IMPORTAÇÃO DA NOVA PÁGINA ABIP
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
       <Route path="/holding-staging" element={<HoldingStaging />} />
       <Route path="/doacao-staging" element={<DoacaoStaging />} />
       <Route path="/testamentos-staging" element={<TestamentosStaging />} />
+      <Route path="/abip-staging" element={<AbipStaging />} />
     </Routes>
   );
 }
