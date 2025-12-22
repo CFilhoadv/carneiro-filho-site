@@ -21,16 +21,16 @@ const DoacaoStaging: React.FC = () => {
               (Instrumento de Planejamento Sucessório)
             </p>
             <p>
-              A doação com reserva de usufruto consiste na transferência da propriedade de um bem aos herdeiros, mantendo o doador o direito de uso, administração e percepção dos rendimentos (<strong>usufruto:</strong> direito de utilizar o bem e receber seus frutos, como aluguéis, mesmo sem ser o proprietário formal).
+              A doação com reserva de usufruto é o instrumento jurídico pelo qual uma pessoa transfere a propriedade de um bem aos herdeiros, mantendo para si o direito de uso, administração e percepção dos rendimentos do bem (<strong>usufruto:</strong> direito de utilizar o bem e receber seus frutos, como aluguéis, mesmo sem ser o proprietário formal).
             </p>
             <p>
-              Trata-se de instrumento amplamente utilizado no planejamento sucessório para organizar a transmissão patrimonial ainda em vida, reduzindo conflitos futuros e evitando a concentração de bens em inventário judicial.
+              Esse instrumento é amplamente utilizado para organizar a sucessão patrimonial ainda em vida, permitindo que o titular mantenha o controle do patrimônio enquanto antecipa a transmissão da propriedade, reduzindo riscos de conflitos futuros e evitando a concentração de bens exclusivamente no inventário.
             </p>
             <p>
-              Esse modelo é indicado para famílias que desejam antecipar a sucessão, mantendo o controle patrimonial enquanto vivos, e exige análise cuidadosa quanto à <strong>legítima dos herdeiros necessários</strong> (parte do patrimônio que a lei reserva obrigatoriamente aos herdeiros), bem como aos impactos tributários e registrais.
+              A sua utilização exige atenção especial à <strong>legítima dos herdeiros necessários</strong> (parte do patrimônio que a lei reserva obrigatoriamente a cônjuge, descendentes e ascendentes), bem como aos impactos tributários, registrais e sucessórios envolvidos.
             </p>
-            <div className="bg-gray-50 p-6 border-l-4 border-red-800 italic text-base mt-8">
-              A utilização inadequada da doação pode gerar nulidades, litígios familiares ou questionamentos fiscais, razão pela qual sua implementação deve ser precedida de avaliação jurídica individualizada.
+            <div className="bg-red-50 p-6 border-l-4 border-red-800 italic text-base mt-8 text-red-900">
+              <strong>⚠️ Alerta:</strong> A adoção inadequada desse instrumento pode gerar nulidades, questionamentos fiscais ou litígios familiares, motivo pelo qual sua aplicação deve ser precedida de análise jurídica individualizada.
             </div>
 
             <div className="mt-12 pt-10 border-t border-gray-100 flex flex-col items-center gap-8">

@@ -21,16 +21,16 @@ const HoldingStaging: React.FC = () => {
               (Instrumento de Planejamento Patrimonial e Sucessório)
             </p>
             <p>
-              A holding familiar é uma pessoa jurídica constituída com a finalidade de centralizar, administrar e organizar o patrimônio de uma família, como imóveis, participações societárias e investimentos.
+              A holding familiar é uma pessoa jurídica constituída com a finalidade de centralizar, organizar e administrar o patrimônio de uma família, como imóveis, participações societárias e investimentos.
             </p>
             <p>
-              Por meio desse modelo, os bens deixam de pertencer diretamente às pessoas físicas e passam a integrar a estrutura da empresa, permitindo separação entre patrimônio pessoal e patrimônio organizado (<strong>blindagem patrimonial:</strong> proteção jurídica contra riscos externos, dentro dos limites legais).
+              Por meio dessa estrutura, os bens deixam de estar diretamente vinculados às pessoas físicas e passam a integrar uma organização jurídica única, permitindo maior clareza na gestão patrimonial e na definição de regras familiares (<strong>governança familiar:</strong> conjunto de normas que disciplinam a administração, o controle e a sucessão do patrimônio entre gerações).
             </p>
             <p>
-              A holding é indicada para famílias com patrimônio relevante ou atividade empresarial, pois possibilita gestão e governança familiar, planejamento sucessório estruturado, redução de conflitos familiares e organização tributária lícita.
+              A holding familiar é utilizada para estruturar a sucessão, organizar a participação dos herdeiros, reduzir conflitos familiares e permitir uma visão integrada dos reflexos patrimoniais, empresariais e tributários das decisões tomadas.
             </p>
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 text-base mt-8">
-              Sua constituição exige análise integrada jurídica, tributária e contábil, considerando riscos, custos de manutenção e compatibilidade com a realidade familiar.
+            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 text-base mt-8 italic">
+              Sua constituição exige análise jurídica, tributária e contábil integrada, considerando riscos, custos de manutenção, impactos sucessórios e compatibilidade com a realidade e os objetivos da família. Não se trata de solução padronizada ou automática.
             </div>
 
             <div className="mt-12 pt-10 border-t border-gray-100 flex flex-col items-center gap-8">

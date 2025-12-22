@@ -21,14 +21,17 @@ const AbipStaging: React.FC = () => {
               (Estrutura Patrimonial Imobiliária)
             </p>
             <p>
-              A ABIP é um modelo societário voltado especificamente à administração e exploração de imóveis próprios, como locações residenciais, comerciais ou rurais.
+              A ABIP é uma estrutura jurídica voltada à organização e à gestão da atividade imobiliária própria, reunindo imóveis destinados à locação ou exploração patrimonial sob uma única pessoa jurídica.
             </p>
             <p>
-              Seu objetivo é organizar a atividade imobiliária, permitindo separação entre patrimônio pessoal e gestão de imóveis, além de maior controle financeiro e administrativo (<strong>controle de receitas, despesas e rendimentos</strong>).
+              A adoção desse modelo não depende do volume do patrimônio, mas da análise comparativa entre a tributação da pessoa física (<strong>imposto de renda progressivo</strong>) e a tributação da pessoa jurídica (<strong>lucro presumido</strong>), avaliando base de cálculo, alíquotas e impactos financeiros ao longo do tempo.
             </p>
             <p>
-              É indicada para pessoas ou famílias que possuem carteira imobiliária relevante e desejam profissionalizar a gestão dos bens, observando os limites legais, tributários e contábeis aplicáveis.
+              A ABIP permite maior organização administrativa, controle de receitas e despesas e separação entre a pessoa física e a atividade imobiliária, desde que estruturada dentro dos limites legais, tributários e contábeis aplicáveis.
             </p>
+            <div className="bg-blue-50 p-6 border-l-4 border-blue-900 text-base mt-8 italic text-blue-900">
+              <strong>⚠️ Observação relevante:</strong> A partir de 2026, haverá incidência de imposto de renda sobre determinados rendimentos distribuídos por pessoas jurídicas à pessoa física, observados limites legais de isenção. Esse fator deve ser considerado na análise de viabilidade da estrutura.
+            </div>
 
             <div className="mt-12 pt-10 border-t border-gray-100 flex flex-col items-center gap-8">
               <Link to="/analise-preliminar" className="bg-blue-900 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-blue-800 transition-colors text-center w-full md:w-auto">

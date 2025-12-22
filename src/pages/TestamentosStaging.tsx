@@ -8,7 +8,7 @@ const TestamentosStaging: React.FC = () => {
       <section className="bg-gray-50 pt-10 pb-12 border-b border-gray-200">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-widest">
-            Testamentos
+            Testamento
           </h1>
           <div className="h-1 w-20 bg-blue-900 mx-auto"></div>
         </div>
@@ -21,16 +21,16 @@ const TestamentosStaging: React.FC = () => {
               (Instrumento de Planejamento Sucessório)
             </p>
             <p>
-              O testamento é o ato jurídico pelo qual uma pessoa dispõe sobre a destinação de seus bens para depois de sua morte, respeitados os limites impostos pela lei.
+              O testamento é o ato jurídico por meio do qual uma pessoa, em vida, define a destinação de seus bens e direitos para depois de seu falecimento, respeitados os limites legais, especialmente a proteção da <strong>legítima</strong> (parcela do patrimônio reservada por lei aos herdeiros necessários: cônjuge, descendentes e ascendentes).
             </p>
             <p>
-              É indicado para organizar a sucessão em situações como famílias recompostas, proteção de herdeiros específicos ou prevenção de conflitos familiares.
+              Esse instrumento é utilizado para organizar a sucessão de forma personalizada, atender situações familiares específicas — como famílias recompostas, herdeiros vulneráveis ou proteção de companheiros — e reduzir conflitos decorrentes da sucessão automática prevista em lei.
             </p>
             <p>
-              Sua elaboração deve observar as formalidades legais, a <strong>legítima dos herdeiros necessários</strong> (parte do patrimônio reservada por lei) e os efeitos patrimoniais e familiares futuros.
+              O testamento também permite dispor sobre a parte disponível do patrimônio, incluir cláusulas não patrimoniais e orientar a sucessão empresarial, desde que observadas as formalidades legais.
             </p>
-            <div className="bg-gray-50 p-6 border-l-4 border-red-800 italic text-base mt-8">
-              <strong>Aviso:</strong> Testamentos mal elaborados podem ser anulados ou gerar litígios, motivo pelo qual exigem orientação jurídica técnica e individualizada.
+            <div className="bg-red-50 p-6 border-l-4 border-red-800 italic text-base mt-8 text-red-900">
+              <strong>⚠️ Alerta:</strong> Testamentos mal elaborados podem ser anulados ou gerar litígios judiciais, razão pela qual sua elaboração exige orientação jurídica técnica e análise individualizada da situação patrimonial e familiar.
             </div>
 
             <div className="mt-12 pt-10 border-t border-gray-100 flex flex-col items-center gap-8">
