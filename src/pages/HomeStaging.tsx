@@ -1,33 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
+import bannerImg from '../assets/images/banner_familia.webp';
 
 const HomeStaging: React.FC = () => {
-  // Usando caminho relativo direto para evitar erro de importação de módulo no build
-  const bannerPath = "/src/assets/images/banner_familia.webp";
-
   return (
     <MainLayout>
-      {/* Banner Superior Refinado */}
-      <section className="relative h-[380px] md:h-[420px] flex items-center overflow-hidden bg-gray-900">
+      <section className="relative h-[350px] md:h-[400px] flex items-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <img 
-            src={bannerPath} 
-            alt="Planejamento Sucessório e Patrimonial" 
-            className="w-full h-full object-cover brightness-[0.85] contrast-[1.05]"
-            onError={(e) => {
-              // Fallback caso a imagem falhe no build: mantém o fundo institucional azul
-              (e.target as HTMLImageElement).style.display = 'none';
-            }}
+            src={bannerImg} 
+            alt="Banner Institucional" 
+            className="w-full h-full object-cover brightness-[0.8] contrast-[1.1]"
           />
-          {/* Overlay Azul Institucional */}
           <div className="absolute inset-0 bg-blue-900/40 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 via-transparent to-transparent"></div>
         </div>
-
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl border-l-2 border-white/30 pl-6">
-            <h2 className="text-white text-2xl md:text-4xl font-normal tracking-[0.12em] uppercase leading-tight drop-shadow-lg">
+          <div className="max-w-2xl border-l-2 border-white/40 pl-6">
+            <h2 className="text-white text-2xl md:text-3xl font-medium tracking-[0.12em] uppercase leading-tight drop-shadow-lg">
               Soluções Patrimoniais, <br />
               Sucessórias e Empresariais
             </h2>
@@ -35,8 +26,7 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* Seção de Apresentação */}
-      <section className="py-14 bg-white">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed text-justify">
             O escritório Carneiro Filho Advocacia oferece assessoria jurídica técnica e personalizada, 
@@ -46,26 +36,24 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* Navegação de Áreas */}
-      <section className="py-12 bg-gray-50 border-t border-b border-gray-100">
+      <section className="py-10 bg-gray-50 border-t border-b border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-4">Atuação Jurídica</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="flex flex-col">
+              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-3">Atuação Jurídica</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Contencioso e consultoria técnica em demandas cíveis, empresariais, fiscais e trabalhistas.
               </p>
-              <Link to="/servicos" className="text-blue-900 font-bold text-xs uppercase tracking-widest border-b border-blue-900 pb-1 hover:text-blue-700 hover:border-blue-700 transition-colors">
+              <Link to="/servicos" className="text-blue-900 font-bold text-xs uppercase tracking-widest border-b border-blue-900 self-start pb-1 hover:text-blue-700 transition-colors">
                 Áreas de Atuação →
               </Link>
             </div>
-
-            <div>
-              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-4">Planejamento Sucessório</h3>
+            <div className="flex flex-col">
+              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-3">Planejamento Sucessório</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Estruturação antecipada da transmissão patrimonial e governança de bens familiares e societários.
               </p>
-              <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold text-xs uppercase tracking-widest border-b border-blue-900 pb-1 hover:text-blue-700 hover:border-blue-700 transition-colors">
+              <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold text-xs uppercase tracking-widest border-b border-blue-900 self-start pb-1 hover:text-blue-700 transition-colors">
                 Instrumentos Jurídicos →
               </Link>
             </div>
@@ -73,34 +61,20 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* Procedimento de Atendimento */}
-      <section className="py-14 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h3 className="text-gray-900 font-bold uppercase tracking-widest text-xs mb-10 text-center">Procedimento de Atendimento</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-xs text-gray-500 uppercase tracking-widest">
-            <div className="px-4">
-              <span className="block text-blue-900 font-bold text-xl mb-3">01</span>
-              <p className="leading-relaxed">Encaminhamento de informações preliminares</p>
-            </div>
-            <div className="px-4">
-              <span className="block text-blue-900 font-bold text-xl mb-3">02</span>
-              <p className="leading-relaxed">Avaliação técnica e análise de viabilidade</p>
-            </div>
-            <div className="px-4">
-              <span className="block text-blue-900 font-bold text-xl mb-3">03</span>
-              <p className="leading-relaxed">Agendamento de atendimento especializado</p>
-            </div>
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h3 className="text-gray-900 font-bold uppercase tracking-widest text-[10px] mb-8 opacity-70">Procedimento de Atendimento</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-gray-500 uppercase tracking-widest">
+            <div><span className="block text-blue-900 font-bold text-lg mb-2">01</span><p>Encaminhamento de informações</p></div>
+            <div><span className="block text-blue-900 font-bold text-lg mb-2">02</span><p>Avaliação técnica</p></div>
+            <div><span className="block text-blue-900 font-bold text-lg mb-2">03</span><p>Agendamento especializado</p></div>
           </div>
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="py-16 bg-gray-50 border-t border-gray-200">
+      <section className="py-12 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <Link 
-            to="/analise-preliminar" 
-            className="inline-block bg-blue-900 text-white px-12 py-4 rounded-sm font-bold uppercase tracking-[0.2em] text-xs hover:bg-blue-800 transition-colors"
-          >
+          <Link to="/analise-preliminar" className="inline-block bg-blue-900 text-white px-10 py-3 rounded-sm font-bold uppercase tracking-[0.2em] text-[10px] hover:bg-blue-800 transition-colors">
             Análise Preliminar
           </Link>
         </div>
