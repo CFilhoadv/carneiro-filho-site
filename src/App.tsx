@@ -1,4 +1,7 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
+// Importação do Componente de Scroll que localizamos
+import ScrollToTop from './components/ScrollToTop';
 
 // Componentes Consolidados (Ex-Staging agora Produção)
 import HomeStaging from './pages/HomeStaging'; 
@@ -17,29 +20,34 @@ import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
 
 function App() {
   return (
-    <Routes>
-      {/* Rotas Definitivas de Produção */}
-      <Route path="/" element={<HomeStaging />} />
-      <Route path="/quem-somos" element={<QuemSomosStaging />} />
-      <Route path="/servicos" element={<ServicosStaging />} />
-      <Route path="/contato" element={<ContatoStaging />} />
-      <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} />
-      <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
-      
-      {/* Hierarquia Consolidada: Planejamento Sucessório */}
-      <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioStaging />} />
-      <Route path="/planejamento-sucessorio/holding" element={<HoldingStaging />} />
-      <Route path="/planejamento-sucessorio/doacao" element={<DoacaoStaging />} />
-      <Route path="/planejamento-sucessorio/testamentos" element={<TestamentosStaging />} />
-      <Route path="/planejamento-sucessorio/abip" element={<AbipStaging />} />
+    <Router>
+      {/* Ativação do ScrollToTop: Força o topo em todas as mudanças de página */}
+      <ScrollToTop />
 
-      {/* Redirects de Segurança (Redireciona links antigos para os novos) */}
-      <Route path="/home-staging" element={<Navigate to="/" replace />} />
-      <Route path="/quem-somos-staging" element={<Navigate to="/quem-somos" replace />} />
-      <Route path="/servicos-staging" element={<Navigate to="/servicos" replace />} />
-      <Route path="/contato-staging" element={<Navigate to="/contato" replace />} />
-      <Route path="/planejamento-sucessorio-staging" element={<Navigate to="/planejamento-sucessorio" replace />} />
-    </Routes>
+      <Routes>
+        {/* Rotas Definitivas de Produção */}
+        <Route path="/" element={<HomeStaging />} />
+        <Route path="/quem-somos" element={<QuemSomosStaging />} />
+        <Route path="/servicos" element={<ServicosStaging />} />
+        <Route path="/contato" element={<ContatoStaging />} />
+        <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} />
+        <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
+        
+        {/* Hierarquia Consolidada: Planejamento Sucessório */}
+        <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioStaging />} />
+        <Route path="/planejamento-sucessorio/holding" element={<HoldingStaging />} />
+        <Route path="/planejamento-sucessorio/doacao" element={<DoacaoStaging />} />
+        <Route path="/planejamento-sucessorio/testamentos" element={<TestamentosStaging />} />
+        <Route path="/planejamento-sucessorio/abip" element={<AbipStaging />} />
+
+        {/* Redirects de Segurança (Redireciona links antigos para os novos) */}
+        <Route path="/home-staging" element={<Navigate to="/" replace />} />
+        <Route path="/quem-somos-staging" element={<Navigate to="/quem-somos" replace />} />
+        <Route path="/servicos-staging" element={<Navigate to="/servicos" replace />} />
+        <Route path="/contato-staging" element={<Navigate to="/contato" replace />} />
+        <Route path="/planejamento-sucessorio-staging" element={<Navigate to="/planejamento-sucessorio" replace />} />
+      </Routes>
+    </Router>
   );
 }
 
