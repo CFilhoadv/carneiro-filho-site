@@ -16,7 +16,7 @@ const HomeStaging: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-white text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6 drop-shadow-xl">
-              DIREITO AO SEU ALCANCE EM SOROCABA E TODA A REGIÃO
+              DIREITO AO SEU ALCANCE
             </h2>
             <p className="text-white text-lg md:text-xl font-medium leading-relaxed drop-shadow-lg">
               Atendimento jurídico humano, claro e acessível para você, sua família e seus direitos.
@@ -39,7 +39,13 @@ const HomeStaging: React.FC = () => {
           <div className="bg-gray-50 p-8 rounded-sm border border-gray-100">
             <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6 text-center">Áreas de Atuação</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left max-w-2xl mx-auto">
-              {["Direito Civil", "Direito do Consumidor", "Direito Previdenciário", "Direito do Trabalho", "Direito de Família"].map((area) => (
+              {[
+                "Direito Civil", 
+                "Direito de Família e Sucessões", 
+                "Direito Previdenciário", 
+                "Direito do Trabalho", 
+                "Direito Empresarial"
+              ].map((area) => (
                 <li key={area}>
                   <Link to="/servicos" className="text-gray-800 hover:text-blue-900 font-semibold text-lg transition-colors">
                     • {area}
