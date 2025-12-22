@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import bannerImg from '../assets/images/banner_familia.webp';
+import bannerImg from '../../assets/images/banner_familia.webp';
 
 const HomeStaging: React.FC = () => {
   return (
@@ -21,7 +21,6 @@ const HomeStaging: React.FC = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl border-l-2 border-white/30 pl-6">
-            {/* Peso tipográfico ajustado para Regular (font-normal) */}
             <h2 className="text-white text-2xl md:text-4xl font-normal tracking-[0.12em] uppercase leading-tight drop-shadow-lg">
               Soluções Patrimoniais, <br />
               Sucessórias e Empresariais
