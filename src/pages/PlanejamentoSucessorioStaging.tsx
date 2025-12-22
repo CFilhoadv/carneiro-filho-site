@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 
 const PlanejamentoSucessorioStaging: React.FC = () => {
-  // Mantendo a hierarquia de rotas definitiva
+  // ATUALIZAÇÃO: Links ajustados para as rotas definitivas (sem sufixo staging)
   const subpaginas = [
     { title: "Doação com Usufruto", href: "/planejamento-sucessorio/doacao" },
     { title: "Testamentos", href: "/planejamento-sucessorio/testamentos" },
@@ -34,7 +34,6 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
           </div>
 
           <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
-            {/* AJUSTE TERMINOLÓGICO: Título alterado para adequação conceitual */}
             <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Instrumentos Jurídicos Relacionados</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {subpaginas.map((item, index) => (

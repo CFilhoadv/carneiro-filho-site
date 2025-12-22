@@ -55,7 +55,7 @@ const DoacaoStaging: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 italic text-base">
+            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 italic text-base text-left">
               <p>
                 <strong>Nota Técnica:</strong> A doação é um ato jurídico irrevogável (salvo hipóteses legais específicas de ingratidão ou inexecução de encargo). Portanto, sua realização exige convicção e uma análise técnica rigorosa sobre os impactos na legítima dos herdeiros necessários.
               </p>
@@ -73,7 +73,8 @@ const DoacaoStaging: React.FC = () => {
           </div>
           
           <div className="mt-6 text-center">
-            <Link to="/planejamento-sucessorio-staging" className="text-blue-900 hover:underline font-medium">
+            {/* ATUALIZAÇÃO: Rota de retorno definitiva */}
+            <Link to="/planejamento-sucessorio" className="text-blue-900 hover:underline font-medium">
               ← Voltar para Planejamento Sucessório
             </Link>
           </div>

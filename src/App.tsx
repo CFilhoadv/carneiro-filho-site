@@ -1,15 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-// Páginas Originais e Staging Consolidadas
-import HomePage from './pages/HomePage';
-import QuemSomosPage from './pages/QuemSomosPage';
-import PlanejamentoSucessorioPage from './pages/PlanejamentoSucessorioPage';
-import ServicosPage from './pages/ServicosPage';
-import ContatoPage from './pages/ContatoPage';
-import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
-import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
-
-// Componentes de Staging
+// Componentes Consolidados (Ex-Staging agora Produção)
 import HomeStaging from './pages/HomeStaging'; 
 import QuemSomosStaging from './pages/QuemSomosStaging';
 import ServicosStaging from './pages/ServicosStaging';
@@ -20,30 +11,34 @@ import TestamentosStaging from './pages/TestamentosStaging';
 import AbipStaging from './pages/AbipStaging';
 import ContatoStaging from './pages/ContatoStaging';
 
+// Outros Componentes Necessários
+import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
+import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
+
 function App() {
   return (
     <Routes>
-      {/* Rotas de Produção Atuais */}
-      <Route path="/" element={<HomePage />} />
-      <Route path="/quem-somos" element={<QuemSomosPage />} />
-      <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioPage />} />
-      <Route path="/servicos" element={<ServicosPage />} />
-      <Route path="/contato" element={<ContatoPage />} />
+      {/* Rotas Definitivas de Produção */}
+      <Route path="/" element={<HomeStaging />} />
+      <Route path="/quem-somos" element={<QuemSomosStaging />} />
+      <Route path="/servicos" element={<ServicosStaging />} />
+      <Route path="/contato" element={<ContatoStaging />} />
       <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} />
       <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
       
-      {/* Ambiente de Staging (Validação) */}
-      <Route path="/home-staging" element={<HomeStaging />} />
-      <Route path="/quem-somos-staging" element={<QuemSomosStaging />} />
-      <Route path="/servicos-staging" element={<ServicosStaging />} />
-      <Route path="/contato-staging" element={<ContatoStaging />} />
-      
-      {/* Hierarquia de Planejamento Sucessório Staging */}
-      <Route path="/planejamento-sucessorio-staging" element={<PlanejamentoSucessorioStaging />} />
+      {/* Hierarquia Consolidada: Planejamento Sucessório */}
+      <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioStaging />} />
       <Route path="/planejamento-sucessorio/holding" element={<HoldingStaging />} />
       <Route path="/planejamento-sucessorio/doacao" element={<DoacaoStaging />} />
       <Route path="/planejamento-sucessorio/testamentos" element={<TestamentosStaging />} />
       <Route path="/planejamento-sucessorio/abip" element={<AbipStaging />} />
+
+      {/* Redirects de Segurança (Redireciona links antigos para os novos) */}
+      <Route path="/home-staging" element={<Navigate to="/" replace />} />
+      <Route path="/quem-somos-staging" element={<Navigate to="/quem-somos" replace />} />
+      <Route path="/servicos-staging" element={<Navigate to="/servicos" replace />} />
+      <Route path="/contato-staging" element={<Navigate to="/contato" replace />} />
+      <Route path="/planejamento-sucessorio-staging" element={<Navigate to="/planejamento-sucessorio" replace />} />
     </Routes>
   );
 }

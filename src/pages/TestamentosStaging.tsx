@@ -55,7 +55,7 @@ const TestamentosStaging: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 italic text-base">
+            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 italic text-base text-left">
               <p>
                 <strong>Nota Técnica:</strong> Embora o testamento não dispense a realização do inventário após o falecimento, ele é essencial para conferir segurança jurídica à vontade do testador e prevenir litígios familiares decorrentes da ausência de diretrizes claras sobre a partilha.
               </p>
@@ -73,7 +73,8 @@ const TestamentosStaging: React.FC = () => {
           </div>
           
           <div className="mt-6 text-center">
-            <Link to="/planejamento-sucessorio-staging" className="text-blue-900 hover:underline font-medium">
+            {/* ATUALIZAÇÃO: Rota de retorno definitiva */}
+            <Link to="/planejamento-sucessorio" className="text-blue-900 hover:underline font-medium">
               ← Voltar para Planejamento Sucessório
             </Link>
           </div>

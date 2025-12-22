@@ -55,7 +55,7 @@ const HoldingStaging: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 italic text-base">
+            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 italic text-base text-left">
               <p>
                 <strong>Nota Técnica:</strong> A constituição de uma holding familiar não é uma solução padronizada. Sua implementação exige um estudo jurídico detalhado que considere a composição do patrimônio, a estrutura familiar e os impactos fiscais específicos de cada realidade.
               </p>
@@ -73,7 +73,8 @@ const HoldingStaging: React.FC = () => {
           </div>
           
           <div className="mt-6 text-center">
-            <Link to="/planejamento-sucessorio-staging" className="text-blue-900 hover:underline font-medium">
+            {/* ATUALIZAÇÃO: Rota de retorno definitiva */}
+            <Link to="/planejamento-sucessorio" className="text-blue-900 hover:underline font-medium">
               ← Voltar para Planejamento Sucessório
             </Link>
           </div>
