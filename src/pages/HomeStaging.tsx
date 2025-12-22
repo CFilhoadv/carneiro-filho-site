@@ -5,89 +5,89 @@ import MainLayout from '../components/layout/MainLayout';
 const HomeStaging: React.FC = () => {
   return (
     <MainLayout>
-      {/* HERO SECTION: Altura reduzida e contraste aprimorado */}
-      <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80" 
-            alt="Fundo institucional jurídico" 
-            className="w-full h-full object-cover"
-          />
-          {/* Overlay mais denso para contraste do texto */}
-          <div className="absolute inset-0 bg-gray-900/70"></div>
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+      {/* HERO INSTITUCIONAL: Sem imagens, foco tipográfico e fundo sólido */}
+      <section className="bg-gray-900 py-16 border-b border-blue-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
               CARNEIRO FILHO ADVOCACIA
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 mb-8 font-light tracking-wide uppercase">
+            <div className="h-1 w-20 bg-blue-900 mb-6"></div>
+            <p className="text-lg md:text-xl text-gray-300 font-medium tracking-wide uppercase">
               Soluções Patrimoniais, Sucessórias e Empresariais
             </p>
-            <div className="flex flex-col md:flex-row justify-center gap-4">
-              <Link 
-                to="/planejamento-sucessorio" 
-                className="bg-blue-900 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-800 transition-colors"
-              >
-                Planejamento Sucessório
-              </Link>
-              <Link 
-                to="/contato" 
-                className="bg-transparent border border-white text-white px-8 py-3 rounded-md font-medium hover:bg-white/10 transition-colors"
-              >
-                Contato
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO SOBRE: Espaçamento recompactado (py-12 em vez de py-24) */}
+      {/* 1. APRESENTAÇÃO INSTITUCIONAL */}
       <section className="py-12 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Atuação Jurídica Técnica e Personalizada</h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-sm font-bold text-blue-900 uppercase tracking-[0.3em] mb-4">Apresentação</h2>
+          <p className="text-gray-700 text-xl leading-relaxed text-justify">
             O escritório Carneiro Filho Advocacia oferece assessoria especializada com foco na preservação patrimonial e organização sucessória, pautando-se pelo rigor técnico e pela transparência em todas as etapas do atendimento.
           </p>
         </div>
       </section>
 
-      {/* SEÇÃO SERVIÇOS: Layout mais denso */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-8 border border-gray-200 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 border-l-4 border-blue-900 pl-4">Sucessões</h3>
-              <p className="text-gray-600 mb-6 text-sm">Organização da transmissão patrimonial e gestão de inventários judiciais e extrajudiciais.</p>
-              <Link to="/servicos" className="text-blue-900 font-bold text-sm hover:underline">Saiba mais →</Link>
+      {/* 2. ÁREAS DE ATUAÇÃO (Direcionamento para Serviços) */}
+      <section className="py-12 bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-sm font-bold text-blue-900 uppercase tracking-[0.3em] mb-8">Atuação Especializada</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            <div className="border-l-2 border-gray-300 pl-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Contencioso e Consultoria</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">Atuação em demandas cíveis, empresariais, fiscais e trabalhistas, com ênfase em casos de elevada complexidade fática e processual.</p>
+              <Link to="/servicos" className="text-blue-900 text-xs font-bold uppercase tracking-widest hover:underline">Ver Serviços →</Link>
             </div>
-            <div className="bg-white p-8 border border-gray-200 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 border-l-4 border-blue-900 pl-4">Patrimonial</h3>
-              <p className="text-gray-600 mb-6 text-sm">Estruturação de holdings, doações e administração de bens imóveis próprios.</p>
-              <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold text-sm hover:underline">Saiba mais →</Link>
-            </div>
-            <div className="bg-white p-8 border border-gray-200 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4 border-l-4 border-blue-900 pl-4">Empresarial</h3>
-              <p className="text-gray-600 mb-6 text-sm">Assessoria técnica em demandas contratuais, tributárias e contencioso empresarial.</p>
-              <Link to="/servicos" className="text-blue-900 font-bold text-sm hover:underline">Saiba mais →</Link>
+            <div className="border-l-2 border-gray-300 pl-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Família e Sucessões</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">Gestão de inventários judiciais e extrajudiciais, partilhas e demais demandas decorrentes do Direito das Sucessões.</p>
+              <Link to="/servicos" className="text-blue-900 text-xs font-bold uppercase tracking-widest hover:underline">Detalhes da Atuação →</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA FINAL: Recompactado */}
-      <section className="py-12 bg-blue-900 text-white">
+      {/* 3. PLANEJAMENTO SUCESSÓRIO (Diferencial Técnico) */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="bg-gray-900 p-8 md:p-12 text-white">
+            <h2 className="text-sm font-bold text-blue-500 uppercase tracking-[0.3em] mb-4">Diferencial</h2>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">Planejamento Sucessório e Patrimonial</h3>
+            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              Estruturação de soluções jurídicas preventivas, como Holdings e ABIP, visando a organização antecipada da transmissão de bens e a redução de conflitos familiares.
+            </p>
+            <Link 
+              to="/planejamento-sucessorio" 
+              className="inline-block border border-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-gray-900 transition-all"
+            >
+              Conhecer Instrumentos
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. FORMA DE ATENDIMENTO */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-sm font-bold text-blue-900 uppercase tracking-[0.3em] mb-6 text-center">Procedimento de Atendimento</h2>
+          <div className="text-center space-y-4">
+            <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+              O atendimento é realizado de forma organizada. Adotamos um fluxo de análise prévia de cada demanda para garantir a viabilidade e a qualidade técnica da assessoria.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CTA FINAL DISCRETO */}
+      <section className="py-12 bg-white border-t border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-6">Inicie uma Análise Preliminar</h2>
-          <p className="mb-8 text-blue-100 max-w-2xl mx-auto">
-            Encaminhe as informações iniciais de sua demanda para avaliação técnica.
-          </p>
           <Link 
             to="/analise-preliminar" 
-            className="inline-block bg-white text-blue-900 px-10 py-3 rounded-md font-bold hover:bg-gray-100 transition-colors"
+            className="text-blue-900 font-bold text-lg border-b-2 border-blue-900 pb-1 hover:text-blue-700 hover:border-blue-700 transition-all"
           >
-            Acessar Formulário
+            Encaminhar informações para análise preliminar
           </Link>
         </div>
       </section>
