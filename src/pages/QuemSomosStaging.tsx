@@ -1,85 +1,44 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 
 const QuemSomosStaging: React.FC = () => {
   return (
     <MainLayout>
-      {/* Cabeçalho da Página */}
-      <section className="bg-gray-50 pt-6 pb-8 border-b border-gray-200">
+      <section className="bg-gray-50 pt-10 pb-12 border-b border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">QUEM SOMOS</h1>
-          <p className="text-lg text-gray-500 font-medium tracking-wide uppercase">
-            Carneiro Filho Advocacia
-          </p>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-widest">Quem Somos</h1>
+          <div className="h-1 w-20 bg-blue-900 mx-auto"></div>
         </div>
       </section>
 
-      {/* Conteúdo Principal */}
-      <section className="py-10 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <div className="space-y-6 text-gray-700 leading-relaxed text-lg text-justify">
+          <div className="space-y-8 text-gray-700 leading-relaxed text-lg text-justify">
             <p>
-              O escritório Carneiro Filho Advocacia atua de forma técnica, ética e responsável na condução de demandas jurídicas cíveis, familiares, sucessórias e patrimoniais, com especial atenção à organização preventiva do patrimônio e à adequada gestão de conflitos jurídicos.
-            </p>
-            <p>
-              A atuação é orientada pela análise criteriosa do caso concreto, pela observância rigorosa da legislação e pela busca de soluções juridicamente seguras, compatíveis com a realidade e os objetivos de cada cliente.
+              O escritório <strong>Carneiro Filho Advocacia</strong> é liderado por <strong>Francisco de Assis Carneiro Filho</strong>, profissional com sólida trajetória jurídica e compromisso com a excelência técnica e ética.
             </p>
 
-            {/* Subseção: Formação */}
-            <div className="pt-4">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-left">
-                Atuação profissional e formação multidisciplinar
-              </h2>
-              <div className="space-y-4">
-                <p>
-                  O escritório é conduzido por profissional com trajetória multidisciplinar, reunindo experiência jurídica, tributária, administrativa e de gestão, adquirida ao longo de décadas de atuação em escritórios, empresas e instituições.
-                </p>
-                <p>
-                  Essa formação permite uma leitura ampliada das questões jurídicas, considerando não apenas o processo em si, mas também seus reflexos patrimoniais, econômicos, familiares e estratégicos.
-                </p>
-                <p>
-                  A experiência em ambientes corporativos e institucionais contribui para uma atuação mais consciente, técnica e alinhada à tomada de decisões responsáveis.
-                </p>
-              </div>
+            <p>
+              Com experiência consolidada em diversas esferas do Direito, sua trajetória profissional inclui atuação relevante na <strong>Defensoria Pública</strong>, onde desenvolveu uma visão humanizada e focada na viabilização de direitos e na resolução de conflitos complexos. Essa vivência institucional moldou a premissa fundamental do escritório: o atendimento jurídico deve ser claro, acessível e pautado na condução responsável de cada caso.
+            </p>
+
+            <p>
+              Diferente de estruturas corporativas impessoais, o escritório prioriza a proximidade com o cliente, oferecendo uma orientação técnica rigorosa que permite a tomada de decisões seguras, seja no âmbito familiar, civil ou empresarial.
+            </p>
+
+            <div className="bg-gray-50 p-8 rounded-sm border border-gray-100 mt-12">
+              <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6">Compromisso Ético e Profissional</h2>
+              <ul className="space-y-4 text-base">
+                <li>• Atendimento exclusivo e personalizado diretamente pelo titular.</li>
+                <li>• Transparência total sobre as viabilidades jurídicas de cada demanda.</li>
+                <li>• Rigorosa observância ao sigilo profissional e ao Código de Ética da OAB.</li>
+                <li>• Foco na prevenção de litígios e na segurança patrimonial e familiar.</li>
+              </ul>
             </div>
 
-            {/* Subseção: Forma de Atuação */}
-            <div className="pt-4">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-left">
-                Forma de atuação
-              </h2>
-              <p>
-                O atendimento jurídico é estruturado de modo organizado e transparente, respeitando os limites éticos da advocacia e as expectativas das partes envolvidas.
-              </p>
-              <p>
-                Cada demanda é analisada individualmente, com atenção à viabilidade jurídica, aos riscos envolvidos e às alternativas legais disponíveis, evitando soluções padronizadas ou abordagens simplistas.
-              </p>
-            </div>
-
-            {/* Subseção: Compromisso Ético */}
-            <div className="pt-4">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b pb-2 text-left">
-                Compromisso ético
-              </h2>
-              <p>
-                O escritório pauta sua atuação pelo estrito cumprimento da Lei nº 8.906/94 (Estatuto da Advocacia) e do Código de Ética e Disciplina da OAB.
-              </p>
-              <p>
-                O envio de informações ou o contato inicial não implica contratação automática de serviços advocatícios, nem gera obrigação de resposta ou resultado, sendo a análise jurídica realizada exclusivamente em atendimento apropriado.
-              </p>
-            </div>
-
-            {/* CTA FINAL - Padronizado com a Home */}
-            <div className="pt-10 pb-6 text-center">
-              <Link 
-                to="/analise-preliminar" 
-                className="inline-block bg-blue-900 text-white px-8 py-4 rounded-md font-medium hover:bg-blue-800 transition-colors"
-              >
-                Encaminhar informações para análise preliminar
-              </Link>
-            </div>
-
+            <p className="text-sm text-gray-500 italic pt-8 border-t border-gray-100">
+              Aviso Ético: O conteúdo apresentado nesta página tem caráter meramente informativo. O contato inicial, a leitura destas informações ou o envio de mensagens não implicam, por si só, na contratação de serviços profissionais ou no estabelecimento de relação cliente-advogado.
+            </p>
           </div>
         </div>
       </section>

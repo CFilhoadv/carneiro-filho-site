@@ -38,14 +38,14 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Estrutura Institucional */}
+          {/* Institucional - Ajustado conforme diretriz OAB */}
           <div>
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4">Institucional</h3>
-            <p className="text-gray-400 text-sm">
-              Carneiro Filho Advocacia<br />
-              OAB/SP nº [Número]<br />
-              Atendimento especializado em Sorocaba e Região.
-            </p>
+            <div className="text-gray-400 text-sm space-y-2">
+              <p className="font-bold text-white">Carneiro Filho Advocacia</p>
+              <p>Francisco de Assis Carneiro Filho — OAB/SP nº 189.404</p>
+              <p>Carneiro Filho Sociedade de Advogados — OAB/SP nº 47.631</p>
+            </div>
           </div>
         </div>
 
