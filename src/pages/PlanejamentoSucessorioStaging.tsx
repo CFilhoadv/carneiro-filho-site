@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 
 const PlanejamentoSucessorioStaging: React.FC = () => {
-  // Lista atualizada: Remoção de Inventários por critério conceitual (preventivo vs sucessório)
+  // ATUALIZAÇÃO DE ROTAS: Padrão hierárquico definitivo
   const subpaginas = [
-    { title: "Doação com Usufruto", href: "/doacao-staging" },
-    { title: "Testamentos", href: "/testamentos-staging" },
-    { title: "Holding Familiar", href: "/holding-staging" },
-    { title: "Administração de Bens Imóveis Próprios (ABIP)", href: "/abip-staging" }
+    { title: "Doação com Usufruto", href: "/planejamento-sucessorio/doacao" },
+    { title: "Testamentos", href: "/planejamento-sucessorio/testamentos" },
+    { title: "Holding Familiar", href: "/planejamento-sucessorio/holding" },
+    { title: "Administração de Bens Imóveis Próprios (ABIP)", href: "/planejamento-sucessorio/abip" }
   ];
 
   return (
     <MainLayout>
-      {/* Cabeçalho da Página */}
       <section className="bg-gray-50 pt-6 pb-8 border-b border-gray-200">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">PLANEJAMENTO SUCESSÓRIO</h1>
@@ -23,7 +22,6 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* Conteúdo Institucional */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="space-y-6 text-gray-700 leading-relaxed text-lg text-justify mb-12">
@@ -35,7 +33,6 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
             </p>
           </div>
 
-          {/* Menu de Subpáginas (Navegação Estruturada com Instrumentos Preventivos) */}
           <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
             <h2 className="text-2xl font-bold text-gray-800 mb-6 border-b pb-2">Instrumentos e Soluções</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -52,7 +49,6 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
             </div>
           </div>
 
-          {/* CTA Final Padronizado */}
           <div className="mt-16 pt-10 border-t border-gray-100 text-center">
             <Link 
               to="/analise-preliminar" 
