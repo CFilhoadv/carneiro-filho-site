@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 
 const TestamentosStaging: React.FC = () => {
@@ -30,6 +31,15 @@ const TestamentosStaging: React.FC = () => {
             </p>
             <div className="bg-gray-50 p-6 border-l-4 border-red-800 italic text-base mt-8">
               <strong>Aviso:</strong> Testamentos mal elaborados podem ser anulados ou gerar litígios, motivo pelo qual exigem orientação jurídica técnica e individualizada.
+            </div>
+
+            <div className="mt-12 pt-10 border-t border-gray-100 flex flex-col items-center gap-8">
+              <Link to="/analise-preliminar" className="bg-blue-900 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-blue-800 transition-colors text-center w-full md:w-auto">
+                Encaminhar informações para análise preliminar
+              </Link>
+              <Link to="/planejamento-sucessorio" className="text-gray-500 hover:text-blue-900 font-bold uppercase tracking-widest text-xs border-b border-transparent hover:border-blue-900 pb-1 transition-all">
+                ← Voltar para Planejamento Sucessório
+              </Link>
             </div>
           </div>
         </div>
