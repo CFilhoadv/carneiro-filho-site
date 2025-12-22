@@ -27,7 +27,7 @@ const Header: React.FC = () => {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         
-        {/* Logomarca Institucional - Nome já incluso no arquivo */}
+        {/* Logo Institucional - Arquivo contém símbolo e nome */}
         <Link to="/" className="flex items-center h-full py-2">
           <img 
             src={logoImg} 
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
                 <li key={link.href}>
                   <Link 
                     to={link.href} 
-                    className={`text-[11px] uppercase tracking-[0.2em] font-bold transition-colors ${
+                    className={`text-[11px] uppercase tracking-[0.15em] font-bold transition-colors ${
                       location.pathname === link.href ? 'text-blue-900' : 'text-gray-500 hover:text-blue-900'
                     }`}
                   >
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
         </button>
       </div>
 
-      {/* Menu Mobile com Redes Sociais */}
+      {/* Menu Mobile */}
       {isMobileMenuOpen && (
         <nav className="lg:hidden bg-white border-t border-gray-100 py-4 px-4 shadow-lg">
           <ul className="flex flex-col space-y-3">
