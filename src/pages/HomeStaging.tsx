@@ -1,74 +1,78 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import bannerImg from '../assets/images/banner_familia.webp';
+import bannerImg from '../../assets/images/banner_familia.webp';
 
 const HomeStaging: React.FC = () => {
   return (
     <MainLayout>
-      {/* Banner de Entrada: Ajustado para o novo layout consolidado */}
-      <section className="relative h-[400px] md:h-[450px] flex items-center justify-center overflow-hidden bg-gray-900">
+      {/* 2. BANNER PRINCIPAL (HERO) - Conteúdo Centralizado */}
+      <section className="relative h-[450px] md:h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
-          <img 
-            src={bannerImg} 
-            alt="Banner Institucional" 
-            className="w-full h-full object-cover brightness-[0.85] contrast-[1.1]"
-          />
+          <img src={bannerImg} alt="Banner" className="w-full h-full object-cover brightness-[0.7]" />
           <div className="absolute inset-0 bg-blue-900/40 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10 text-center md:text-left">
-          <div className="max-w-3xl md:border-l-2 md:border-white/40 md:pl-8">
-            <h2 className="text-white text-2xl md:text-4xl font-normal tracking-[0.12em] uppercase leading-tight drop-shadow-xl">
-              Soluções Patrimoniais, <br className="hidden md:block" />
-              Sucessórias e Empresariais
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-white text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6 drop-shadow-xl">
+              DIREITO AO SEU ALCANCE EM SOROCABA E TODA A REGIÃO
             </h2>
+            <p className="text-white text-lg md:text-xl font-medium leading-relaxed drop-shadow-lg">
+              Atendimento jurídico humano, claro e acessível para você, sua família e seus direitos.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Conteúdo Institucional mantido conforme aprovação */}
+      {/* 3. BLOCO ÁREA JURÍDICA (FOCO PRINCIPAL) */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed text-justify">
-            O escritório Carneiro Filho Advocacia oferece assessoria jurídica técnica e personalizada, 
-            voltada à solução responsável de demandas patrimoniais, familiares e empresariais, 
-            com rigor técnico e transparência em todas as etapas do atendimento.
-          </p>
-        </div>
-      </section>
+          <div className="text-center mb-10">
+            <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+              Nosso compromisso é oferecer um acolhimento dedicado, pautado na clareza e na proximidade. 
+              Atuamos com disponibilidade para ouvir sua necessidade e conduzir seu caso de forma responsável e humana, 
+              garantindo a orientação jurídica necessária para a proteção de seus interesses.
+            </p>
+          </div>
 
-      <section className="py-12 bg-gray-50 border-t border-b border-gray-100">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-4">Atuação Jurídica</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Contencioso e consultoria técnica em demandas cíveis, empresariais, fiscais e trabalhistas.
-              </p>
-              <Link to="/servicos" className="text-blue-900 font-bold text-xs uppercase tracking-widest border-b border-blue-900 pb-1 hover:text-blue-700 transition-colors">
-                Áreas de Atuação →
-              </Link>
-            </div>
-            <div>
-              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-4">Planejamento Sucessório</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Estruturação antecipada da transmissão patrimonial e governança de bens familiares e societários.
-              </p>
-              <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold text-xs uppercase tracking-widest border-b border-blue-900 pb-1 hover:text-blue-700 transition-colors">
-                Instrumentos Jurídicos →
-              </Link>
-            </div>
+          <div className="bg-gray-50 p-8 rounded-sm border border-gray-100">
+            <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6 text-center">Áreas de Atuação</h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left max-w-2xl mx-auto">
+              {["Direito Civil", "Direito do Consumidor", "Direito Previdenciário", "Direito do Trabalho", "Direito de Família"].map((area) => (
+                <li key={area}>
+                  <Link to="/servicos" className="text-gray-800 hover:text-blue-900 font-semibold text-lg transition-colors">
+                    • {area}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50 border-t border-gray-200">
+      {/* 4. BLOCO PLANEJAMENTO SUCESSÓRIO (SECUNDÁRIO) */}
+      <section className="py-14 bg-gray-50 border-t border-gray-200">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="text-center">
+            <h3 className="text-gray-900 font-bold uppercase tracking-widest text-sm mb-4">Planejamento Patrimonial e Sucessório</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Área específica destinada ao atendimento de famílias com patrimônio constituído e empresários que buscam organização sucessória. 
+              Trabalhamos com modelos voltados à preservação de bens e prevenção de conflitos.
+            </p>
+            <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold text-sm uppercase tracking-widest border-b-2 border-blue-900 pb-1 hover:text-blue-700 transition-colors">
+              Conhecer modelos resumidos →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CTA */}
+      <section className="py-16 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4 text-center">
           <Link 
             to="/analise-preliminar" 
-            className="inline-block bg-blue-900 text-white px-12 py-4 rounded-sm font-bold uppercase tracking-[0.2em] text-xs hover:bg-blue-800 transition-colors"
+            className="inline-block bg-blue-900 text-white px-12 py-4 rounded-sm font-bold uppercase tracking-[0.2em] text-xs hover:bg-blue-800 transition-colors shadow-sm"
           >
             Análise Preliminar
           </Link>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Instagram, Linkedin, Facebook, Menu, X } from 'lucide-react';
-import logoImg from '../../assets/images/logo_carneiro_filho.webp';
+import headerLogo from '../../assets/images/logo_carneiro_filho_header.png';
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,25 +16,22 @@ const Header: React.FC = () => {
   const navLinks = [
     { title: "Início", href: "/" },
     { title: "Quem Somos", href: "/quem-somos" },
-    { title: "Planejamento Sucessório", href: "/planejamento-sucessorio" },
     { title: "Serviços", href: "/servicos" },
+    { title: "Planejamento Sucessório", href: "/planejamento-sucessorio" },
     { title: "Contato", href: "/contato" }
   ];
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 h-20 md:h-24">
       <div className="container mx-auto px-4 flex items-center justify-between h-full">
-        
-        {/* Logomarca Gráfica Oficial */}
-        <Link to="/" className="h-full py-3 flex items-center">
+        <Link to="/" className="h-full py-2 flex items-center">
           <img 
-            src={logoImg} 
+            src={headerLogo} 
             alt="Carneiro Filho Advocacia" 
-            className="h-full w-auto object-contain"
+            className="h-12 md:h-16 w-auto object-contain"
           />
         </Link>
 
-        {/* Navegação Desktop */}
         <div className="hidden lg:flex items-center space-x-8">
           <nav>
             <ul className="flex space-x-6">
@@ -53,7 +50,6 @@ const Header: React.FC = () => {
             </ul>
           </nav>
 
-          {/* Redes Sociais */}
           <div className="flex items-center space-x-4 border-l border-gray-200 pl-6 h-6">
             {socialLinks.map((social) => (
               <a 
@@ -69,23 +65,17 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Toggle */}
         <button className="lg:hidden text-blue-900" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Menu Mobile */}
       {isMobileMenuOpen && (
         <nav className="lg:hidden bg-white border-t border-gray-100 py-6 px-4 absolute w-full left-0 shadow-xl">
           <ul className="flex flex-col space-y-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link 
-                  to={link.href} 
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-blue-900 font-bold uppercase tracking-widest text-xs"
-                >
+                <Link to={link.href} onClick={() => setIsMobileMenuOpen(false)} className="block text-blue-900 font-bold uppercase tracking-widest text-xs">
                   {link.title}
                 </Link>
               </li>
