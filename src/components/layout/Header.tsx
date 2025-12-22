@@ -9,14 +9,12 @@ const Header: React.FC = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Dados das redes sociais
   const socialLinks = [
     { icon: Instagram, url: "https://www.instagram.com/carneirofilhoadvocacia", label: "Instagram" },
     { icon: Linkedin, url: "https://www.linkedin.com/company/carneiro-filho-advocacia", label: "LinkedIn" },
     { icon: Facebook, url: "https://www.facebook.com/carneirofilhoadvocacia", label: "Facebook" },
   ];
 
-  // Links de navegação consolidados
   const navLinks = [
     { title: "Início", href: "/" },
     { title: "Quem Somos", href: "/quem-somos" },
@@ -27,23 +25,31 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between md:py-3">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         
-        {/* Logo e Nome */}
-        <div className="flex flex-col md:flex-row items-center md:justify-start flex-grow md:flex-grow-0">
-          <Link to="/" className="flex-shrink-0 mx-auto md:mx-0 md:mr-4">
-            <img src="https://i.ibb.co/Rp2GCqKM/logo-carneiro-filho-site.png" alt="Logomarca Carneiro Filho Advocacia" className="w-28 h-auto md:h-16" /> 
+        {/* LOGOMARCA RESTAURADA: Arquivo de imagem institucional */}
+        <div className="flex items-center">
+          <Link to="/" className="flex items-center space-x-4">
+            <img 
+              src="https://i.ibb.co/Rp2GCqKM/logo-carneiro-filho-site.png" 
+              alt="Logo Carneiro Filho Advocacia" 
+              className="h-12 md:h-16 w-auto object-contain"
+            />
+            {/* O nome agora faz parte da identidade visual integrada */}
+            <div className="flex flex-col border-l border-gray-200 pl-4">
+              <span className="font-bold text-lg md:text-xl text-gray-800 leading-none tracking-tight">CARNEIRO FILHO</span>
+              <span className="text-[10px] md:text-xs text-blue-900 font-semibold tracking-[0.2em] uppercase">Advocacia</span>
+            </div>
           </Link>
-          <span className="font-bold text-xl md:text-2xl ml-0 md:ml-4 mt-2 md:mt-0 text-gray-800 tracking-tight">Carneiro Filho Advocacia</span>
         </div>
 
-        {/* Navegação Desktop */}
-        <div className="flex items-center"> 
-          <nav className="hidden lg:block">
-            <ul className="flex justify-center space-x-10">
+        {/* NAVEGAÇÃO E REDES SOCIAIS DESKTOP */}
+        <div className="hidden lg:flex items-center space-x-8"> 
+          <nav>
+            <ul className="flex space-x-6">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-blue-900 hover:text-blue-700 font-semibold transition-colors uppercase text-sm tracking-wider">
+                  <Link to={link.href} className="text-gray-600 hover:text-blue-900 font-semibold text-xs uppercase tracking-widest transition-colors">
                     {link.title}
                   </Link>
                 </li>
@@ -51,61 +57,51 @@ const Header: React.FC = () => {
             </ul>
           </nav>
 
-          {/* Redes Sociais Desktop */}
-          <div className="hidden lg:flex space-x-4 ml-8">
+          {/* ÍCONES SOCIAIS REINTRODUZIDOS: Estilo monocromático discreto */}
+          <div className="flex items-center space-x-3 border-l border-gray-200 pl-6">
             {socialLinks.map((item) => (
               <a 
                 key={item.label} 
                 href={item.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
+                className="text-gray-400 hover:text-blue-900 transition-colors"
                 aria-label={item.label}
-                className="text-blue-900 hover:text-blue-700 transition-colors"
               >
-                <item.icon size={22} />
+                <item.icon size={18} />
               </a>
             ))}
           </div>
+        </div>
 
-          {/* Botão Menu Mobile */}
-          <div className="lg:hidden ml-4"> 
-            <button onClick={toggleMobileMenu} className="text-blue-900 hover:text-blue-700 focus:outline-none transition-transform active:scale-90">
-              {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
-            </button>
-          </div>
+        {/* BOTÃO MOBILE */}
+        <div className="lg:hidden"> 
+          <button onClick={toggleMobileMenu} className="text-blue-900 focus:outline-none">
+            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </div>
 
-      {/* Navegação Mobile */}
+      {/* MENU MOBILE */}
       {isMobileMenuOpen && (
-        <nav className="lg:hidden bg-white border-t border-gray-100 py-6 shadow-inner animate-in fade-in slide-in-from-top-4 duration-200">
+        <nav className="lg:hidden bg-white border-t border-gray-100 py-6">
           <ul className="flex flex-col items-center space-y-6">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link 
                   to={link.href} 
                   onClick={toggleMobileMenu} 
-                  className="text-blue-900 hover:text-blue-700 font-bold transition-colors text-xl uppercase tracking-widest"
+                  className="text-blue-900 font-bold uppercase tracking-widest"
                 >
                   {link.title}
                 </Link>
               </li>
             ))}
           </ul>
-
-          {/* Redes Sociais Mobile */}
-          <div className="flex justify-center mt-8 space-x-8">
+          <div className="flex justify-center mt-8 space-x-6">
             {socialLinks.map((item) => (
-              <a 
-                key={item.label} 
-                href={item.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                aria-label={item.label}
-                onClick={toggleMobileMenu}
-                className="text-blue-900 hover:text-blue-700 transition-colors"
-              >
-                <item.icon size={30} />
+              <a key={item.label} href={item.url} target="_blank" rel="noopener noreferrer" className="text-blue-900">
+                <item.icon size={24} />
               </a>
             ))}
           </div>
