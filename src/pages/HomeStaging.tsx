@@ -1,18 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import bannerImg from '../../assets/images/banner_familia.webp';
 
 const HomeStaging: React.FC = () => {
+  // Usando caminho relativo direto para evitar erro de importação de módulo no build
+  const bannerPath = "/src/assets/images/banner_familia.webp";
+
   return (
     <MainLayout>
       {/* Banner Superior Refinado */}
       <section className="relative h-[380px] md:h-[420px] flex items-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <img 
-            src={bannerImg} 
+            src={bannerPath} 
             alt="Planejamento Sucessório e Patrimonial" 
             className="w-full h-full object-cover brightness-[0.85] contrast-[1.05]"
+            onError={(e) => {
+              // Fallback caso a imagem falhe no build: mantém o fundo institucional azul
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
           />
           {/* Overlay Azul Institucional */}
           <div className="absolute inset-0 bg-blue-900/40 mix-blend-multiply"></div>
