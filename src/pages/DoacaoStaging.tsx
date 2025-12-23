@@ -5,12 +5,13 @@ import MainLayout from '../components/layout/MainLayout';
 const DoacaoStaging: React.FC = () => {
   return (
     <MainLayout>
-      <section className="bg-gray-50 pt-10 pb-12 border-b border-gray-200">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 uppercase tracking-widest">
+      {/* Cabeçalho Padronizado - Fundo Branco e Texto Azul Marinho */}
+      <section className="bg-white pt-8 pb-8 border-b border-gray-100 text-center">
+        <div className="container mx-auto px-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest">
             Doação com Reserva de Usufruto
           </h1>
-          <div className="h-1 w-20 bg-blue-900 mx-auto"></div>
+          <div className="h-1 w-16 bg-blue-900 mx-auto mt-2"></div>
         </div>
       </section>
 
