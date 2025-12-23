@@ -24,11 +24,11 @@ const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50 h-20 md:h-24">
       <div className="container mx-auto px-4 flex items-center justify-between h-full">
-        <Link to="/" className="h-full py-2 flex items-center">
+        <Link to="/" className="h-full py-1 flex items-center">
           <img 
             src={headerLogo} 
             alt="Carneiro Filho Advocacia" 
-            className="h-12 md:h-16 w-auto object-contain"
+            className="h-16 md:h-20 w-auto object-contain"
           />
         </Link>
 
