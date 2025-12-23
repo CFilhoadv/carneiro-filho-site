@@ -5,13 +5,13 @@ import MainLayout from '../components/layout/MainLayout';
 const ServicosStaging: React.FC = () => {
   return (
     <MainLayout>
-      {/* Header Compacto */}
-      <section className="bg-gray-50 pt-6 pb-6 border-b border-gray-200 text-center">
+      {/* Cabeçalho Padronizado - Fundo Branco e Texto Azul Marinho */}
+      <section className="bg-white pt-8 pb-8 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 uppercase tracking-widest">
+          <h1 className="text-2xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest">
             Serviços
           </h1>
-          <div className="h-1 w-16 bg-blue-900 mx-auto"></div>
+          <div className="h-1 w-16 bg-blue-900 mx-auto mt-2"></div>
         </div>
       </section>
 
