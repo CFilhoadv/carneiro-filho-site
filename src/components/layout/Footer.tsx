@@ -15,14 +15,44 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
-          {/* Contato */}
+          {/* Contato e Unidades */}
           <div>
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4">Contato</h3>
-            <div className="space-y-4 text-sm text-gray-400">
-              <div className="flex items-center"><Phone size={16} className="mr-3 text-blue-900" /> (11) 4210-6194</div>
-              <div className="flex items-center"><Mail size={16} className="mr-3 text-blue-900" /> contato@carneirofilho.com.br</div>
-              <div className="flex items-start"><MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
-                Av. Brigadeiro Faria Lima, 1811 - Conj. 1119<br />Jardim Paulistano, São Paulo/SP
+            <div className="space-y-6 text-sm text-gray-400">
+              
+              {/* Canal de E-mail */}
+              <div className="flex items-center">
+                <Mail size={16} className="mr-3 text-blue-900" /> 
+                contato@carneirofilho.com.br
+              </div>
+              
+              {/* Unidade Sorocaba */}
+              <div className="flex items-start border-t border-gray-800 pt-4">
+                <MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
+                <div>
+                  <span className="font-bold text-gray-300 uppercase block mb-1 text-xs tracking-wider">Unidade de Atendimento - Sorocaba</span>
+                  <p>Av. Profa. Izoraida Marques Peres, 256</p>
+                  <p>Edifício Av. Paulista, 9º andar - Campolim</p>
+                  <p>Sorocaba/SP</p>
+                  <div className="flex items-center mt-2 text-blue-900 font-bold">
+                    <Phone size={14} className="mr-2" />
+                    <span>(15) 2121-0044</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Unidade São Paulo */}
+              <div className="flex items-start">
+                <MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
+                <div>
+                  <span className="font-bold text-gray-300 uppercase block mb-1 text-xs tracking-wider">Unidade Administrativa - São Paulo</span>
+                  <p>Av. Brigadeiro Faria Lima, 1811 - Conj. 1119</p>
+                  <p>Jardim Paulistano, São Paulo/SP</p>
+                  <div className="flex items-center mt-2 text-blue-900 font-bold">
+                    <Phone size={14} className="mr-2" />
+                    <span>(11) 4210-6194</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
