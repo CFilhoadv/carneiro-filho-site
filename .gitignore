@@ -1,0 +1,5 @@
+# Ignora a pasta de dependências do Node
+/node_modules
+
+# Ignora a pasta de configurações do VS Code
+/.vscode
