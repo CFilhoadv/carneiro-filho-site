@@ -30,7 +30,10 @@ function App() {
         <Route path="/quem-somos" element={<QuemSomosStaging />} />
         <Route path="/servicos" element={<ServicosStaging />} />
         <Route path="/contato" element={<ContatoStaging />} />
-        <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} />
+        
+        {/* ROTA INATIVADA - Para futura reativação, basta remover o comentário abaixo */}
+        {/* <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} /> */}
+        
         <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
         
         {/* Hierarquia Consolidada: Planejamento Sucessório */}
