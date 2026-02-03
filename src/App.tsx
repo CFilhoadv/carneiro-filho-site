@@ -14,8 +14,8 @@ import TestamentosStaging from './pages/TestamentosStaging';
 import AbipStaging from './pages/AbipStaging';
 import ContatoStaging from './pages/ContatoStaging';
 
-// Outros Componentes Necessários
-import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
+// Ajuste Técnico: Comentado para evitar erro de build enquanto a rota estiver inativa
+// import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
 import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         <Route path="/servicos" element={<ServicosStaging />} />
         <Route path="/contato" element={<ContatoStaging />} />
         
-        {/* ROTA INATIVADA - Para futura reativação, basta remover o comentário abaixo */}
+        {/* ROTA INATIVADA - Para futura reativação, basta remover o comentário abaixo E a importação na linha 18 */}
         {/* <Route path="/analise-preliminar" element={<AnalisePreliminarPage />} /> */}
         
         <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// Ajuste Técnico: Removido 'Link' não utilizado para evitar erro de build
 import MainLayout from '../components/layout/MainLayout';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
