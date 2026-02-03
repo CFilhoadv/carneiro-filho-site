@@ -4,7 +4,8 @@ import MainLayout from '../components/layout/MainLayout';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const ContatoStaging: React.FC = () => {
-  const whatsappSorocaba = "https://wa.me/551521210044";
+  // Ajuste Técnico: Alterado para protocolo API para garantir funcionamento no WhatsApp Web/Notebook
+  const whatsappSorocaba = "https://api.whatsapp.com/send?phone=551521210044";
 
   return (
     <MainLayout>
@@ -44,7 +45,12 @@ const ContatoStaging: React.FC = () => {
                   <MessageCircle className="mt-1 mr-4 text-green-600" size={24} />
                   <div>
                     <p className="font-bold text-gray-900">WhatsApp Business</p>
-                    <a href={whatsappSorocaba} className="text-green-600 hover:text-green-700 transition-colors font-bold text-lg">
+                    <a 
+                      href={whatsappSorocaba} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-green-600 hover:text-green-700 transition-colors font-bold text-lg"
+                    >
                       Iniciar Conversa Online
                     </a>
                   </div>
@@ -64,6 +70,8 @@ const ContatoStaging: React.FC = () => {
                 <div className="pt-6">
                   <a 
                     href={whatsappSorocaba} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
                     className="flex items-center justify-center bg-blue-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-blue-800 transition-all shadow-md w-full"
                   >
                     <MessageCircle className="mr-2" size={18} />

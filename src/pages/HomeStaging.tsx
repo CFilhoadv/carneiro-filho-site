@@ -9,7 +9,8 @@ import fachadaSorocaba from '../assets/images/unidade-sorocaba.jpeg';
 import fachadaSaoPaulo from '../assets/images/unidade-sp.webp';
 
 const HomeStaging: React.FC = () => {
-  const whatsappSorocaba = "https://wa.me/551521210044";
+  // Ajuste Técnico: Alterado para protocolo API para garantir funcionamento no WhatsApp Web/Notebook
+  const whatsappSorocaba = "https://api.whatsapp.com/send?phone=551521210044";
 
   return (
     <MainLayout>
@@ -76,7 +77,7 @@ const HomeStaging: React.FC = () => {
                   <Phone size={14} className="mr-1" /> (15) 2121-0044
                 </p>
               </div>
-              <a href={whatsappSorocaba} className="mt-auto flex items-center justify-center bg-green-600 text-white py-3 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-sm">
+              <a href={whatsappSorocaba} target="_blank" rel="noopener noreferrer" className="mt-auto flex items-center justify-center bg-green-600 text-white py-3 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-sm">
                 <MessageCircle size={14} className="mr-2" /> Iniciar Atendimento
               </a>
             </div>
@@ -114,7 +115,7 @@ const HomeStaging: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-gray-900 font-bold uppercase tracking-widest text-sm mb-8">Como podemos ajudar?</h3>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <a href={whatsappSorocaba} className="inline-flex items-center justify-center bg-green-600 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-green-700 transition-all shadow-md w-full md:w-auto">
+            <a href={whatsappSorocaba} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-green-600 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-green-700 transition-all shadow-md w-full md:w-auto">
               <MessageCircle size={18} className="mr-2" /> WhatsApp Business
             </a>
             <a href="tel:1521210044" className="inline-flex items-center justify-center bg-blue-900 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-blue-800 transition-all shadow-md w-full md:w-auto">
