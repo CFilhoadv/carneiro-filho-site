@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import bannerImg from '../assets/images/banner_familia.webp';
-import { Phone, MessageCircle, MapPin, ClipboardCheck, Search, Lightbulb } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Search, Lightbulb } from 'lucide-react';
 
 // Importação das suas imagens originais
 import fachadaSorocaba from '../assets/images/unidade-sorocaba.jpeg';
