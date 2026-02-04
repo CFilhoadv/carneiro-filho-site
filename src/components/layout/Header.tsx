@@ -35,13 +35,13 @@ const Header: React.FC = () => {
 
         <div className="hidden lg:flex items-center space-x-8">
           <nav>
-            <ul className="flex space-x-6">
+            <ul className="flex space-x-8">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link 
                     to={link.href} 
-                    className={`text-[11px] uppercase tracking-[0.2em] font-bold transition-colors ${
-                      location.pathname === link.href ? 'text-blue-900' : 'text-gray-500 hover:text-blue-900'
+                    className={`text-[14px] uppercase tracking-[0.15em] font-bold transition-colors ${
+                      location.pathname === link.href ? 'text-blue-900' : 'text-gray-600 hover:text-blue-900'
                     }`}
                   >
                     {link.title}
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-blue-900 hover:text-blue-700 transition-colors"
               >
-                <social.icon size={18} />
+                <social.icon size={20} />
               </a>
             ))}
           </div>
@@ -73,10 +73,14 @@ const Header: React.FC = () => {
 
       {isMobileMenuOpen && (
         <nav className="lg:hidden bg-white border-t border-gray-100 py-6 px-4 absolute w-full left-0 shadow-xl">
-          <ul className="flex flex-col space-y-4">
+          <ul className="flex flex-col space-y-5">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link to={link.href} onClick={() => setIsMobileMenuOpen(false)} className="block text-blue-900 font-bold uppercase tracking-widest text-xs">
+                <Link 
+                  to={link.href} 
+                  onClick={() => setIsMobileMenuOpen(false)} 
+                  className="block text-blue-900 font-bold uppercase tracking-widest text-sm"
+                >
                   {link.title}
                 </Link>
               </li>
@@ -85,7 +89,7 @@ const Header: React.FC = () => {
           <div className="flex space-x-6 mt-8 pt-6 border-t border-gray-100">
             {socialLinks.map((social) => (
               <a key={social.label} href={social.url} target="_blank" rel="noopener noreferrer" className="text-blue-900">
-                <social.icon size={24} />
+                <social.icon size={26} />
               </a>
             ))}
           </div>
