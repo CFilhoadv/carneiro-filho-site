@@ -1,88 +1,101 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
+import { Shield, Award, Briefcase, Scale, MessageCircle } from 'lucide-react';
 
 const QuemSomosStaging: React.FC = () => {
+  const whatsappSorocaba = "https://api.whatsapp.com/send?phone=551521210044";
+
   return (
     <MainLayout>
-      {/* Cabeçalho Padronizado - Fundo Branco e Texto Azul Marinho */}
-      <section className="bg-white pt-8 pb-8 border-b border-gray-100 text-center">
+      {/* Botão Flutuante WhatsApp */}
+      <a 
+        href={whatsappSorocaba} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all hover:scale-110 flex items-center justify-center animate-bounce"
+        aria-label="Contato via WhatsApp"
+      >
+        <MessageCircle size={30} />
+      </a>
+
+      {/* Cabeçalho */}
+      <section className="bg-white pt-12 pb-12 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-2xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest">
+          <h1 className="text-3xl md:text-4xl font-bold text-blue-900 uppercase tracking-widest">
             Quem Somos
           </h1>
-          <div className="h-1 w-16 bg-blue-900 mx-auto mt-2"></div>
+          <div className="h-1.5 w-20 bg-blue-900 mx-auto mt-4"></div>
         </div>
       </section>
 
       <section className="py-16 bg-white text-gray-800">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="space-y-10 leading-relaxed text-justify">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
-            {/* Apresentação Institucional do Escritório */}
-            <div>
-              <h2 className="text-xl font-bold text-blue-900 uppercase tracking-wider mb-4">
-                Institucional
-              </h2>
-              <p className="text-lg">
-                O escritório <strong>Carneiro Filho Sociedade Individual de Advocacia</strong> (OAB/SP nº 47.631) 
-                consolida-se como uma estrutura jurídica pautada pela maturidade técnica e pelo rigor ético. 
-                Com sede administrativa e atuação voltada ao atendimento de famílias, empresários e famílias empresárias, 
-                a instituição prioriza a segurança jurídica e a condução estratégica de questões complexas.
-              </p>
+            {/* Coluna da Esquerda: Posicionamento */}
+            <div className="lg:col-span-8 space-y-12">
+              
+              {/* Quem Somos */}
+              <article>
+                <div className="flex items-center mb-6">
+                  <div className="p-2 bg-blue-50 rounded-lg mr-4">
+                    <Scale className="text-blue-900" size={24} />
+                  </div>
+                  <h2 className="text-2xl font-bold text-blue-900 uppercase tracking-wider">
+                    O Escritório
+                  </h2>
+                </div>
+                <p className="text-lg leading-relaxed text-gray-700 mb-6">
+                  O <strong>Carneiro Filho Sociedade Individual de Advocacia</strong> (OAB/SP nº 47.631) atua de forma estratégica e multidisciplinar, prestando assessoria jurídica a pessoas físicas e jurídicas em demandas selecionadas de natureza <strong>cível</strong>, patrimonial, familiar, empresarial, tributária, trabalhista e previdenciária.
+                </p>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  A atuação do escritório é marcada pela análise técnica rigorosa, pela experiência em contencioso judicial e pela condução de casos que exigem visão integrada dos impactos jurídicos e patrimoniais envolvidos.
+                </p>
+              </article>
+
+              {/* Atuação Profissional */}
+              <article>
+                <div className="flex items-center mb-6">
+                  <div className="p-2 bg-blue-50 rounded-lg mr-4">
+                    <Briefcase className="text-blue-900" size={24} />
+                  </div>
+                  <h2 className="text-2xl font-bold text-blue-900 uppercase tracking-wider">
+                    Atuação Profissional
+                  </h2>
+                </div>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  Com sólida vivência institucional na <strong>Defensoria Pública do Estado de São Paulo</strong> e experiência em funções executivas de gestão administrativa e financeira, o responsável técnico reúne capacidade técnica e visão prática para a resolução de conflitos complexos e a proteção de interesses patrimoniais relevantes.
+                </p>
+              </article>
+
+              {/* Compromisso Profissional */}
+              <article>
+                <div className="flex items-center mb-6">
+                  <div className="p-2 bg-blue-50 rounded-lg mr-4">
+                    <Shield className="text-blue-900" size={24} />
+                  </div>
+                  <h2 className="text-2xl font-bold text-blue-900 uppercase tracking-wider">
+                    Compromisso Profissional
+                  </h2>
+                </div>
+                <p className="text-lg leading-relaxed text-gray-700">
+                  O atendimento personalizado, o acompanhamento direto dos casos e o rigor ético orientam a atuação do escritório, em estrita observância ao Estatuto da Advocacia e ao Código de Ética da OAB.
+                </p>
+              </article>
             </div>
 
-            {/* Apresentação Nominal do Advogado Responsável */}
-            <div>
-              <h2 className="text-xl font-bold text-blue-900 uppercase tracking-wider mb-4">
-                Advogado Responsável
-              </h2>
-              <p className="text-lg">
-                A liderança e a condução técnica dos trabalhos são exercidas diretamente por 
-                <strong> Francisco de Assis Carneiro Filho</strong> (OAB/SP nº 189.404). 
-                Sua atuação é caracterizada pelo acompanhamento pessoal e pela visão integrada de cada demanda, 
-                garantindo que o cliente tenha acesso direto à análise técnica do titular.
-              </p>
-            </div>
-
-            {/* Trajetória Profissional */}
-            <div>
-              <h2 className="text-xl font-bold text-blue-900 uppercase tracking-wider mb-4">
-                Trajetória Profissional
-              </h2>
-              <p className="text-lg">
-                Com uma formação e trajetória jurídica consistentes, a experiência profissional de Francisco de Assis Carneiro Filho 
-                inclui vivência institucional relevante na <strong>Defensoria Pública</strong>, ambiente que exigiu 
-                alta capacidade de resolução técnica e gestão estratégica de direitos. Sua maturidade profissional foi consolidada 
-                através da atuação em contextos administrativos, patrimoniais, tributários e de gestão, proporcionando uma 
-                compreensão profunda dos mecanismos que regem a organização de ativos e a tomada de decisões complexas.
-              </p>
-            </div>
-
-            {/* Visão Integrada e Método */}
-            <div>
-              <h2 className="text-xl font-bold text-blue-900 uppercase tracking-wider mb-4">
-                Visão Integrada de Reflexos Jurídicos
-              </h2>
-              <p className="text-lg">
-                Nosso método de trabalho fundamenta-se em uma análise técnica que considera os impactos simultâneos 
-                nas esferas <strong>patrimonial, tributária, administrativa e familiar</strong>. Entendemos que decisões 
-                jurídicas não podem ser tomadas de forma isolada; elas exigem uma visão integrada para evitar riscos colaterais. 
-                Essa abordagem é especialmente direcionada a famílias com patrimônio constituído e empresários que buscam 
-                uma condução sóbria, corporativa e tecnicamente sólida para sua governança e sucessão.
-              </p>
-            </div>
-
-            {/* Compromisso Ético */}
-            <div className="bg-gray-50 p-8 border-l-4 border-blue-900">
-              <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-4">
-                Compromisso Ético e Legal
-              </h2>
-              <p className="text-base text-gray-700">
-                A Carneiro Filho Sociedade Individual de Advocacia atua em estrita observância ao 
-                <strong> Estatuto da Advocacia e ao Código de Ética da OAB</strong>. Nosso compromisso é com a transparência, 
-                o sigilo profissional e a lealdade técnica, prezando pela clareza absoluta quanto às viabilidades e riscos 
-                inerentes a cada procedimento jurídico, sem jamais realizar promessas de resultado.
-              </p>
+            {/* Coluna da Direita: Card de Autoridade */}
+            <div className="lg:col-span-4">
+              <div className="sticky top-32">
+                <div className="bg-blue-900 text-white p-8 rounded-sm shadow-xl border-b-8 border-blue-700 text-center">
+                  <Award className="mx-auto mb-6 text-blue-200" size={48} />
+                  <h3 className="text-xl font-bold mb-2">Responsável Técnico</h3>
+                  <p className="text-2xl font-bold mb-4">Francisco de Assis Carneiro Filho</p>
+                  <p className="text-blue-200 font-bold tracking-widest uppercase text-sm">
+                    OAB/SP nº 189.404
+                  </p>
+                </div>
+              </div>
             </div>
 
           </div>
