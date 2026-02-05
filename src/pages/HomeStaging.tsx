@@ -9,7 +9,6 @@ import fachadaSorocaba from '../assets/images/unidade-sorocaba.jpeg';
 import fachadaSaoPaulo from '../assets/images/unidade-sp.webp';
 
 const HomeStaging: React.FC = () => {
-  // Ajuste Técnico: Mantendo protocolo API para garantir funcionamento no WhatsApp
   const whatsappSorocaba = "https://api.whatsapp.com/send?phone=551521210044";
 
   return (
@@ -63,42 +62,39 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. NOVA SEÇÃO: COMO FUNCIONA O ATENDIMENTO */}
+      {/* 4. SEÇÃO: COMO FUNCIONA O ATENDIMENTO */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-12 text-center">Como funciona nosso atendimento</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             
-            {/* Passo 1 */}
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                 <MessageCircle size={32} />
               </div>
               <h4 className="text-xl font-bold mb-3">1. Primeiro Contato</h4>
-              <p className="text-gray-600 leading-relaxed">
-                Você nos envia uma mensagem contando sua necessidade de forma simples e direta via WhatsApp ou telefone.
+              <p className="text-gray-600 leading-relaxed text-base">
+                O cliente envia uma mensagem via <strong>WhatsApp (por texto ou áudio)</strong> relatando sua necessidade de forma simples, ou se preferir, realiza uma <strong>ligação telefônica direta</strong>.
               </p>
             </div>
 
-            {/* Passo 2 */}
             <div className="text-center p-6 border-y md:border-y-0 md:border-x border-gray-100">
               <div className="w-16 h-16 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                 <Search size={32} />
               </div>
               <h4 className="text-xl font-bold mb-3">2. Análise Especializada</h4>
               <p className="text-gray-600 leading-relaxed">
-                Analisamos cuidadosamente os detalhes do seu caso para identificar as melhores possibilidades jurídicas.
+                Os detalhes do caso são analisados cuidadosamente para identificar as melhores possibilidades e estratégias jurídicas para cada situação.
               </p>
             </div>
 
-            {/* Passo 3 */}
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
                 <Lightbulb size={32} />
               </div>
               <h4 className="text-xl font-bold mb-3">3. Plano de Ação</h4>
               <p className="text-gray-600 leading-relaxed">
-                Apresentamos uma solução clara, segura e transparente, traçando o melhor caminho para proteger seus direitos.
+                Em até <strong>3 dias úteis</strong>, apresentamos uma proposta de solução ou retornamos para esclarecer dúvidas, visando traçar o melhor caminho para proteger seus direitos.
               </p>
             </div>
 
@@ -106,26 +102,22 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. SEÇÃO NOSSAS UNIDADES */}
+      {/* 5. SEÇÃO NOSSAS UNIDADES - VERSÃO LIMPA */}
       <section className="py-20 bg-gray-50 border-y border-gray-200">
         <div className="container mx-auto px-4">
           <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-12 text-center">Nossas Unidades</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto items-stretch">
             
-            {/* Unidade Sorocaba (Principal) */}
+            {/* Unidade Sorocaba - Sem o botão verde interno para evitar poluição */}
             <div className="flex flex-col bg-white p-6 shadow-md rounded-sm border-t-4 border-blue-900">
               <div className="w-full aspect-video bg-gray-100 mb-6 overflow-hidden rounded-sm">
-                <img 
-                  src={fachadaSorocaba} 
-                  alt="Unidade de Atendimento – Sorocaba" 
-                  className="w-full h-full object-cover" 
-                />
+                <img src={fachadaSorocaba} alt="Unidade Sorocaba" className="w-full h-full object-cover" />
               </div>
               <h4 className="text-2xl font-bold text-blue-900 mb-3">Unidade de Atendimento – Sorocaba</h4>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
-                Sediada no <strong>Edifício Av. Paulista</strong>, nossa unidade em Sorocaba foi estruturada para oferecer um ambiente privativo e acolhedor no coração do Campolim.
+                Sediada no <strong>Edifício Av. Paulista</strong>, no coração do Campolim, oferecendo um ambiente privativo e acolhedor.
               </p>
-              <div className="text-gray-800 mb-8 space-y-3">
+              <div className="text-gray-800 space-y-3">
                 <p className="flex items-start text-base">
                   <MapPin size={20} className="mr-3 text-blue-900 flex-shrink-0 mt-1" />
                   <span>Av. Profa. Izoraida Marques Peres, 256 – 9º andar</span>
@@ -134,25 +126,21 @@ const HomeStaging: React.FC = () => {
                   <Phone size={20} className="mr-3" /> (15) 2121-0044
                 </p>
               </div>
-              <a href={whatsappSorocaba} target="_blank" rel="noopener noreferrer" className="mt-auto flex items-center justify-center bg-green-600 text-white py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-green-700 transition-all shadow-md">
-                <MessageCircle size={18} className="mr-2" /> Iniciar Atendimento via WhatsApp
-              </a>
+              <div className="mt-8 pt-6 border-t border-gray-100">
+                <p className="text-xs text-gray-400 uppercase font-bold tracking-widest">Atendimento Presencial e Online</p>
+              </div>
             </div>
 
-            {/* Unidade São Paulo (Administrativa) */}
+            {/* Unidade São Paulo */}
             <div className="flex flex-col bg-white p-6 shadow-md rounded-sm border-t-4 border-gray-400">
               <div className="w-full aspect-video bg-gray-100 mb-6 overflow-hidden rounded-sm">
-                <img 
-                  src={fachadaSaoPaulo} 
-                  alt="Unidade Administrativa – São Paulo" 
-                  className="w-full h-full object-cover grayscale opacity-80" 
-                />
+                <img src={fachadaSaoPaulo} alt="Unidade SP" className="w-full h-full object-cover grayscale opacity-80" />
               </div>
               <h4 className="text-2xl font-bold text-gray-800 mb-3">Unidade Administrativa – São Paulo</h4>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
-                Localizada na Av. Brigadeiro Faria Lima, nossa unidade administrativa concentra a gestão estratégica, o suporte jurídico e o apoio administrativo da banca.
+                Localizada na Av. Brigadeiro Faria Lima, concentra a nossa gestão estratégica e apoio administrativo.
               </p>
-              <div className="text-gray-800 mb-8 space-y-3">
+              <div className="text-gray-800 space-y-3">
                 <p className="flex items-start text-base">
                   <MapPin size={20} className="mr-3 text-gray-400 flex-shrink-0 mt-1" />
                   <span>Av. Brigadeiro Faria Lima, 1811 – Conj. 1119</span>
@@ -170,7 +158,7 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. CTA FINAL E IDENTIFICAÇÃO OAB */}
+      {/* 6. CTA FINAL - ONDE O CLIENTE DEVE CLICAR */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h3 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-4">Como podemos ajudar?</h3>
@@ -179,7 +167,7 @@ const HomeStaging: React.FC = () => {
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <a href={whatsappSorocaba} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-green-600 text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-green-700 transition-all shadow-lg w-full md:w-auto">
-              <MessageCircle size={20} className="mr-3" /> Falar com Especialista
+              <MessageCircle size={20} className="mr-3" /> Iniciar Atendimento
             </a>
             <a href="tel:1521210044" className="inline-flex items-center justify-center bg-blue-900 text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-blue-800 transition-all shadow-lg w-full md:w-auto">
               <Phone size={20} className="mr-3" /> (15) 2121-0044
