@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle, Scale, Users, Gavel, Briefcase, Landmark, ShieldCheck, FileText, ChevronRight, HeartHandshake } from 'lucide-react';
+import { Phone, MessageCircle, Scale, Users, Briefcase, Landmark, ShieldCheck, ChevronRight, HeartHandshake } from 'lucide-react';
 
 const ServicosStaging: React.FC = () => {
   // Canal único atualizado: VoIP e WhatsApp (15) 3191-1432
