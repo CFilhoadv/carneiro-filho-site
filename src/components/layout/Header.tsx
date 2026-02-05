@@ -71,6 +71,7 @@ const Header: React.FC = () => {
         </button>
       </div>
 
+      {/* Menu Mobile */}
       {isMobileMenuOpen && (
         <nav className="lg:hidden bg-white border-t border-gray-100 py-6 px-4 absolute w-full left-0 shadow-xl">
           <ul className="flex flex-col space-y-5">

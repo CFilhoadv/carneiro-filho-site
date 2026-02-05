@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const navLinks = [
     { title: "Início", href: "/" },
     { title: "Serviços", href: "/servicos" },
-    { title: "Planejamento Sucessório", href: "/planejamento-sucessorio" },
+    { title: "Quem Somos", href: "/quem-somos" },
     { title: "Contato", href: "/contato" }
   ];
 
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               
-              {/* Unidade Sorocaba - FALE VONO */}
+              {/* Unidade Sorocaba - NÚMERO VOIP ATUALIZADO */}
               <div className="flex items-start border-t border-gray-800 pt-4">
                 <MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
                 <div>
@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
                   <p>Sorocaba/SP</p>
                   <div className="flex items-center mt-2 text-blue-100 font-bold bg-blue-900/30 px-2 py-1 rounded-sm w-fit">
                     <Phone size={14} className="mr-2" />
-                    <a href="tel:1521210044" className="hover:text-white">(15) 2121-0044</a>
+                    <a href="tel:1531911432" className="hover:text-white">(15) 3191-1432</a>
                   </div>
                 </div>
               </div>
 
-              {/* Unidade São Paulo - LINHA VIRTUAL */}
+              {/* Unidade São Paulo */}
               <div className="flex items-start opacity-70">
                 <MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
                 <div>
@@ -69,13 +69,13 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Coluna 3: Institucional */}
+          {/* Coluna 3: Institucional - NOMENCLATURA REVISADA */}
           <div>
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4">Institucional</h3>
             <div className="text-gray-400 text-sm space-y-2 bg-gray-800/50 p-6 rounded-sm border border-gray-800 shadow-inner">
-              <p className="font-bold text-white uppercase text-xs">Carneiro Filho Sociedade Individual de Advocacia</p>
-              <p className="border-b border-gray-700 pb-2">OAB/SP nº 47.631</p>
-              <p className="pt-2 text-xs text-gray-500 uppercase font-bold tracking-tighter italic">Responsável Técnico:</p>
+              <p className="font-bold text-white uppercase text-xs">Carneiro Filho Advocacia</p>
+              <p className="border-b border-gray-700 pb-2 text-[11px] text-gray-500">Razão Social: Carneiro Filho Sociedade Individual de Advocacia | OAB/SP nº 47.631</p>
+              <p className="pt-2 text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Advogado Titular:</p>
               <p className="text-gray-300 font-bold">Francisco de Assis Carneiro Filho</p>
               <p>OAB/SP nº 189.404</p>
             </div>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-[10px] text-gray-600 uppercase tracking-[0.2em]">
-          © {new Date().getFullYear()} Carneiro Filho Sociedade Individual de Advocacia | Todos os direitos reservados.
+          © {new Date().getFullYear()} Carneiro Filho Advocacia | Todos os direitos reservados.
         </div>
       </div>
     </footer>
