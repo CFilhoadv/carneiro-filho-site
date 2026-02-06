@@ -6,6 +6,7 @@ import { Phone, MessageCircle, ShieldCheck, Landmark, Users, ChevronRight, Scale
 const PlanejamentoSucessorioStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
   const telSorocaba = "tel:1531911432";
+  const telSP = "tel:1142106194";
 
   const subpaginas = [
     { title: "Doação com Usufruto", href: "/planejamento-sucessorio/doacao", desc: "Antecipação de herança com garantia de posse e renda para os pais." },
@@ -16,7 +17,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* 1. BOTÃO FLUTUANTE WHATSAPP */}
+      {/* 1. BOTÃO FLUTUANTE */}
       <a 
         href={whatsappLink} 
         target="_blank" 
@@ -40,6 +41,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
       {/* 3. CONTEÚDO PRINCIPAL */}
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
+          
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-20 items-center">
             <div className="lg:col-span-7 space-y-4 md:space-y-6 text-gray-700 leading-relaxed text-base md:text-lg">
               <p className="text-justify">
@@ -49,6 +51,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
                 Garantimos que o fruto do seu trabalho seja protegido com a máxima economia tributária e absoluta segurança jurídica.
               </p>
             </div>
+            
             <div className="lg:col-span-5 bg-gray-50 p-6 md:p-8 rounded-sm border-l-4 border-blue-900 shadow-sm">
               <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6">Por que Planejar?</h3>
               <ul className="space-y-4">
@@ -86,7 +89,9 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
             </div>
           </div>
 
+          {/* 4. CARDS DE ATENDIMENTO - Rótulos Claros e Botões Fortalecidos */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10 md:pt-12 border-t border-gray-100">
+            {/* Sorocaba - Atendimento Presencial */}
             <div className="bg-blue-900 p-8 rounded-sm text-white shadow-xl flex flex-col justify-between border-t-4 border-blue-400">
               <div>
                 <h3 className="font-bold uppercase tracking-widest text-xs mb-4 text-blue-200">Sorocaba • Atendimento Presencial</h3>
@@ -96,22 +101,27 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-600 text-white py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md">
                   <MessageCircle size={18} className="mr-2" /> Iniciar Atendimento Digital
                 </a>
-                <a href={telSorocaba} className="flex items-center justify-center bg-white text-blue-900 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-gray-100 transition-all">
+                <a href={telSorocaba} className="flex items-center justify-center bg-blue-800 text-white py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-all shadow-md border border-blue-400">
                   <Phone size={18} className="mr-2" /> (15) 3191-1432
                 </a>
               </div>
             </div>
 
-            <div className="bg-gray-50 p-8 rounded-sm border border-gray-200 flex flex-col justify-between opacity-90">
+            {/* São Paulo - Administrativo (Legibilidade Total) */}
+            <div className="bg-gray-50 p-8 rounded-sm border border-gray-200 flex flex-col justify-between shadow-sm">
               <div>
-                <h3 className="font-bold text-gray-700 uppercase tracking-widest text-xs mb-4">São Paulo • Administrativo</h3>
-                <p className="text-gray-500 text-sm mb-8 italic leading-relaxed">Suporte na gestão de documentação e ativos corporativos para clientes da capital.</p>
+                <h3 className="font-bold text-blue-900 uppercase tracking-widest text-xs mb-4">São Paulo • Administrativo</h3>
+                <p className="text-gray-600 text-sm mb-8 italic leading-relaxed">Suporte na gestão de documentação e ativos corporativos para clientes da capital.</p>
               </div>
-              <div className="flex items-center justify-center border-2 border-gray-300 text-gray-500 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px]">
-                <Phone size={18} className="mr-2" /> (11) 4210-6194
+              <div className="space-y-4">
+                <a href={telSP} className="flex items-center justify-center bg-white text-blue-900 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] border-2 border-blue-900 hover:bg-gray-100 transition-all shadow-sm">
+                  <Phone size={18} className="mr-2" /> (11) 4210-6194
+                </a>
+                <p className="text-[10px] text-gray-400 uppercase text-center tracking-widest font-bold">Suporte Estratégico</p>
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </MainLayout>
