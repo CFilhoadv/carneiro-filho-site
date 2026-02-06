@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle, Users, Landmark, ShieldCheck, ChevronRight, HeartHandshake, Scale, Gavel, FileText, Briefcase } from 'lucide-react';
+import { MessageCircle, Users, Landmark, ShieldCheck, ChevronRight, Scale, FileText, Briefcase } from 'lucide-react';
 
 const ServicosStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
-  const telSorocaba = "tel:+551531911432";
 
   return (
     <MainLayout>
@@ -38,7 +37,7 @@ const ServicosStaging: React.FC = () => {
                   <h2 className="font-bold text-blue-900 uppercase text-xs">Família e Sucessões</h2>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed text-justify mb-6">
-                  Acolhimento na resolução de conflitos familiares. Atuamos em inventários, divórcios e partilhas, integrando inteligência patrimonial para uma transição rápida e económica.
+                  Acolhimento e técnica na resolução de conflitos familiares e sucessórios. Atuamos em inventários, divórcios e partilhas, integrando inteligência patrimonial para garantir que a transição de bens seja rápida e econômica.
                 </p>
               </div>
               <a href={whatsappLink} className="text-blue-900 font-bold uppercase tracking-widest text-[10px] flex items-center hover:underline">
@@ -54,7 +53,7 @@ const ServicosStaging: React.FC = () => {
                   <h2 className="font-bold text-blue-900 uppercase text-xs">Direito Cível</h2>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed text-justify mb-6">
-                  Ações de indemnização, cobranças e execuções. No Direito Imobiliário, atuamos em despejos, locações e regularização de imóveis com segurança jurídica máxima.
+                  Atuação técnica em ações de indenização (danos morais e materiais), cobranças e execuções de dívidas. No Direito Imobiliário, atuamos em despejos, locações e regularização de imóveis com segurança jurídica.
                 </p>
               </div>
               <a href={whatsappLink} className="text-blue-900 font-bold uppercase tracking-widest text-[10px] flex items-center hover:underline">
@@ -70,11 +69,11 @@ const ServicosStaging: React.FC = () => {
                   <h2 className="font-bold text-blue-900 uppercase text-xs">Direito Tributário</h2>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed text-justify mb-6">
-                  Defesa contra cobranças indevidas e regularização de débitos fiscais. Análise técnica de impostos para proteger a sua renda contra perdas desnecessárias.
+                  Defesa contra cobranças indevidas e regularização de débitos fiscais. Realizamos a análise técnica de tributos em inventários e negócios imobiliários para proteger seu patrimônio contra perdas desnecessárias.
                 </p>
               </div>
               <a href={whatsappLink} className="text-blue-900 font-bold uppercase tracking-widest text-[10px] flex items-center hover:underline">
-                Proteger meu Património <ChevronRight size={14} className="ml-1" />
+                Proteger meu Patrimônio <ChevronRight size={14} className="ml-1" />
               </a>
             </div>
 
@@ -86,7 +85,7 @@ const ServicosStaging: React.FC = () => {
                   <h2 className="font-bold text-blue-900 uppercase text-xs">Estratégia Empresarial</h2>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed text-justify mb-6">
-                  Estruturação societária, recuperação de créditos e mitigação de riscos fiscais. Transformamos o Direito em ferramenta de gestão e fôlego financeiro.
+                  Suporte para o crescimento seguro da sua empresa. Atuamos na estruturação societária, contratos, recuperação de créditos e mitigação de riscos fiscais, gerando fôlego financeiro para o seu negócio.
                 </p>
               </div>
               <a href={whatsappLink} className="text-blue-900 font-bold uppercase tracking-widest text-[10px] flex items-center hover:underline">
@@ -102,11 +101,11 @@ const ServicosStaging: React.FC = () => {
                   <h2 className="font-bold uppercase text-xs">Inteligência Patrimonial</h2>
                 </div>
                 <p className="text-sm text-blue-100 leading-relaxed text-justify mb-6">
-                  Planeamento sucessório real: testamentos, doações com usufruto e holdings adaptadas à realidade familiar para evitar inventários desgastantes.
+                  Atuação estratégica voltada à proteção do legado familiar. Instrumentos adaptados à realidade de cada família, como testamentos e holdings, para evitar inventários longos e reduzir custos tributários.
                 </p>
               </div>
               <Link to="/planejamento-sucessorio" className="text-blue-200 font-bold uppercase tracking-widest text-[10px] flex items-center hover:text-white transition-colors">
-                Ver Detalhes do Planeamento <ChevronRight size={14} className="ml-1" />
+                Ver Detalhes do Planejamento <ChevronRight size={14} className="ml-1" />
               </Link>
             </div>
 
@@ -118,7 +117,7 @@ const ServicosStaging: React.FC = () => {
                   <h2 className="font-bold text-blue-900 uppercase text-xs">Social e do Trabalho</h2>
                 </div>
                 <p className="text-sm text-gray-700 leading-relaxed text-justify mb-6">
-                  Garantia de direitos fundamentais: aposentadorias junto ao INSS e defesa técnica em demandas trabalhistas para assegurar recebimentos corretos.
+                  Garantia de direitos fundamentais. Auxiliamos no encaminhamento de aposentadorias junto ao INSS e oferecemos defesa técnica em demandas trabalhistas para assegurar o correto recebimento de verbas.
                 </p>
               </div>
               <a href={whatsappLink} className="text-blue-900 font-bold uppercase tracking-widest text-[10px] flex items-center hover:underline">
