@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle } from 'lucide-react';
+import { Phone, MessageCircle, AlertTriangle, CheckCircle2, Scale } from 'lucide-react';
 
 const InventarioPage: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
@@ -10,42 +10,66 @@ const InventarioPage: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* Cabeçalho Padronizado */}
+      {/* 1. CABEÇALHO PADRONIZADO */}
       <section className="bg-white pt-8 pb-8 md:pt-12 md:pb-12 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
-            Inventário Judicial e Extrajudicial
+            Inventário: Regularização e Sucessão
           </h1>
-          <div className="h-1 w-16 md:w-20 bg-blue-900 mx-auto mt-3 md:mt-4"></div>
+          <div className="h-1.5 w-20 bg-blue-900 mx-auto mt-4"></div>
+          <p className="text-blue-900 font-semibold text-[10px] md:text-xs uppercase tracking-[0.2em] mt-4">
+            (Solução para quando não houve planejamento sucessório prévio)
+          </p>
         </div>
       </section>
 
-      {/* Conteúdo Principal */}
+      {/* 2. CONTEÚDO PRINCIPAL */}
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="space-y-6 text-gray-700 leading-relaxed text-base md:text-lg text-justify">
-            <p className="text-blue-900 font-semibold text-xs md:text-sm uppercase tracking-widest mb-2 text-center md:text-left">
-              (Regularização de Bens e Sucessão)
+            <p>
+              O inventário é o procedimento jurídico obrigatório para formalizar a transferência do patrimônio de uma pessoa falecida para seus herdeiros. Na prática, ele costuma ser a consequência da <strong>ausência de um planejamento em vida</strong>, o que frequentemente expõe os herdeiros a custos elevados e à morosidade do sistema judiciário.
             </p>
             <p>
-              O inventário é o procedimento jurídico obrigatório para a formalização da transferência do patrimônio de uma pessoa falecida aos seus herdeiros. Ele pode ser realizado de forma <strong>extrajudicial</strong> (em cartório, quando há consenso e inexistência de menores ou incapazes) ou <strong>judicial</strong> (perante o Poder Judiciário).
+              Nossa atuação foca em reduzir os impactos dessa etapa, buscando sempre a via do <strong>inventário extrajudicial (em cartório)</strong>, que é consideravelmente mais ágil. No entanto, é fundamental esclarecer que essa modalidade só é permitida por lei quando reunidas três condições específicas:
             </p>
-            <p>
-              Nossa atuação foca na celeridade e na redução de custos tributários (ITCMD), buscando sempre a solução mais eficiente para a regularização dos bens, priorizando o consenso entre os herdeiros para evitar litígios prolongados e o desgaste do patrimônio familiar.
-            </p>
-            <p>
-              A análise preventiva de documentos e a correta avaliação do regime de bens são fundamentais para garantir que a partilha ocorra dentro da legalidade e com o menor impacto financeiro possível para a família.
-            </p>
-            
-            <div className="bg-blue-50 p-5 md:p-6 border-l-4 border-blue-900 text-sm md:text-base mt-8 italic text-blue-900 shadow-sm text-justify md:text-left">
-              <strong>Nota Importante:</strong> O prazo legal para abertura do inventário é de 60 dias após o falecimento. O descumprimento deste prazo pode gerar multas pesadas sobre o imposto de transmissão (ITCMD).
+
+            {/* LISTA DE CONDIÇÕES */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
+              <div className="bg-gray-50 p-5 border-t-2 border-blue-900 rounded-sm">
+                <CheckCircle2 className="text-blue-900 mb-3" size={20} />
+                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2">Consenso entre Herdeiros</h4>
+                <p className="text-xs text-gray-600">Todos devem estar em total acordo sobre a divisão dos bens.</p>
+              </div>
+              <div className="bg-gray-50 p-5 border-t-2 border-blue-900 rounded-sm">
+                <Users className="text-blue-900 mb-3" size={20} />
+                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2">Ausência de Incapazes</h4>
+                <p className="text-xs text-gray-600">Todos os envolvidos devem ser maiores e plenamente capazes.</p>
+              </div>
+              <div className="bg-gray-50 p-5 border-t-2 border-blue-900 rounded-sm">
+                <Scale className="text-blue-900 mb-3" size={20} />
+                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2">Inexistência de Testamento</h4>
+                <p className="text-xs text-gray-600">O falecido não pode ter deixado testamento (salvo exceções legais).</p>
+              </div>
             </div>
 
-            {/* BLOCO DE ATENDIMENTO PADRONIZADO */}
+            <p>
+              Na ausência de qualquer um desses requisitos, a lei impõe o <strong>inventário judicial</strong>. Este caminho exige uma condução estratégica ainda mais apurada para mitigar conflitos e proteger o valor dos bens. Em ambas as situações, nossa prioridade é a eficiência no cálculo do ITCMD e a regularização ágil da documentação, garantindo que o patrimônio chegue aos herdeiros com a menor perda financeira possível.
+            </p>
+            
+            {/* ALERTA DE PRAZO */}
+            <div className="bg-amber-50 p-5 md:p-6 border-l-4 border-amber-600 italic text-sm md:text-base mt-8 text-amber-900 shadow-sm flex items-start">
+              <AlertTriangle className="mr-4 shrink-0 mt-1 text-amber-600" size={24} />
+              <p>
+                <strong>Nota Importante:</strong> O prazo legal para a abertura do inventário é de 60 dias após o falecimento. A perda deste prazo acarreta multas sobre o imposto de transmissão (ITCMD), tornando a sucessão ainda mais onerosa.
+              </p>
+            </div>
+
+            {/* 3. BLOCO DE ATENDIMENTO PADRONIZADO */}
             <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                {/* CARD SOROCABA - ATENDIMENTO PRESENCIAL */}
+                {/* Sorocaba */}
                 <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
                   <div>
                     <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-blue-800 pb-2 text-blue-200">Sorocaba • Presencial</h3>
@@ -61,7 +85,7 @@ const InventarioPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* UNIDADE SÃO PAULO - ADMINISTRATIVO */}
+                {/* São Paulo */}
                 <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 flex flex-col justify-between shadow-sm">
                   <div>
                     <h3 className="font-bold text-blue-900 uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-gray-200 pb-2">São Paulo • Administrativo</h3>
