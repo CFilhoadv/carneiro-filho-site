@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import bannerImg from '../assets/images/banner_familia.webp';
-import { Phone, MessageCircle, MapPin, Search, Lightbulb } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Search, Lightbulb, Landmark } from 'lucide-react';
 
 // Importação das imagens originais
 import fachadaSorocaba from '../assets/images/unidade-sorocaba.jpeg';
@@ -151,12 +151,15 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 6. CTA FINAL - Espaçamento reduzido (py-16) */}
+      {/* 6. CTA FINAL - Padronizado para Sobriedade Institucional */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-4 text-center">Fale com um Especialista</h3>
+          <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-4 text-center">Canais de Atendimento</h3>
+          <div className="flex justify-center mb-4 text-gray-300">
+            <Landmark size={32} />
+          </div>
           <p className="text-gray-500 text-[10px] md:text-xs uppercase tracking-widest mb-8 font-bold">
-            Francisco de Assis Carneiro Filho • OAB/SP 189.404
+            Carneiro Filho Advocacia • OAB/SP 47.631
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
             <a href={whatsappSorocaba} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-lg w-full md:w-auto">
