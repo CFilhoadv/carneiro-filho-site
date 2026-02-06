@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle, AlertTriangle, CheckCircle2, Scale } from 'lucide-react';
+import { Phone, MessageCircle, AlertTriangle, CheckCircle2, Scale, Users } from 'lucide-react';
 
 const InventarioPage: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
@@ -38,18 +38,18 @@ const InventarioPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6">
               <div className="bg-gray-50 p-5 border-t-2 border-blue-900 rounded-sm">
                 <CheckCircle2 className="text-blue-900 mb-3" size={20} />
-                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2">Consenso entre Herdeiros</h4>
-                <p className="text-xs text-gray-600">Todos devem estar em total acordo sobre a divisão dos bens.</p>
+                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2 text-left">Consenso entre Herdeiros</h4>
+                <p className="text-xs text-gray-600 text-left">Todos devem estar em total acordo sobre a divisão dos bens.</p>
               </div>
               <div className="bg-gray-50 p-5 border-t-2 border-blue-900 rounded-sm">
                 <Users className="text-blue-900 mb-3" size={20} />
-                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2">Ausência de Incapazes</h4>
-                <p className="text-xs text-gray-600">Todos os envolvidos devem ser maiores e plenamente capazes.</p>
+                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2 text-left">Ausência de Incapazes</h4>
+                <p className="text-xs text-gray-600 text-left">Todos os envolvidos devem ser maiores e plenamente capazes.</p>
               </div>
               <div className="bg-gray-50 p-5 border-t-2 border-blue-900 rounded-sm">
                 <Scale className="text-blue-900 mb-3" size={20} />
-                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2">Inexistência de Testamento</h4>
-                <p className="text-xs text-gray-600">O falecido não pode ter deixado testamento (salvo exceções legais).</p>
+                <h4 className="font-bold text-blue-900 uppercase text-xs mb-2 text-left">Inexistência de Testamento</h4>
+                <p className="text-xs text-gray-600 text-left">O falecido não pode ter deixado testamento (salvo exceções legais).</p>
               </div>
             </div>
 
@@ -67,7 +67,7 @@ const InventarioPage: React.FC = () => {
 
             {/* 3. BLOCO DE ATENDIMENTO PADRONIZADO */}
             <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
                 
                 {/* Sorocaba */}
                 <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
