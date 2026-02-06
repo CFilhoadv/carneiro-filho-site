@@ -1,13 +1,13 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, Mail, MapPin, MessageCircle, Clock, Landmark } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 
 const ContatoStaging: React.FC = () => {
   const whatsappSorocaba = "https://wa.me/551531911432";
 
   return (
     <MainLayout>
-      {/* BOTÃO FLUTUANTE WHATSAPP - Mantido para acessibilidade rápida */}
+      {/* BOTÃO FLUTUANTE WHATSAPP */}
       <a 
         href={whatsappSorocaba} 
         target="_blank" 
@@ -18,7 +18,7 @@ const ContatoStaging: React.FC = () => {
         <MessageCircle size={30} />
       </a>
 
-      {/* CABEÇALHO - Título Convidativo conforme diretriz */}
+      {/* CABEÇALHO */}
       <section className="bg-white pt-10 pb-8 md:pt-16 md:pb-12 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-5xl font-bold text-blue-900 tracking-tight mb-4">
@@ -34,7 +34,7 @@ const ContatoStaging: React.FC = () => {
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           
-          {/* IDENTIFICAÇÃO INSTITUCIONAL - Compliance OAB */}
+          {/* IDENTIFICAÇÃO INSTITUCIONAL */}
           <div className="mb-16 p-6 md:p-8 bg-gray-50 border border-gray-100 rounded-sm">
             <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-2 uppercase tracking-wide">
               Carneiro Filho Advocacia
@@ -100,7 +100,7 @@ const ContatoStaging: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">E-mail Oficial</p>
-                    <a href="mailto:contato@carneirofilho.com.br" className="text-lg font-semibold text-gray-700 hover:text-blue-900 transition-colors">
+                    <a href="mailto:contato@carneirofilho.com.br" className="text-base md:text-lg font-semibold text-gray-700 hover:text-blue-900 transition-colors">
                       contato@carneirofilho.com.br
                     </a>
                   </div>
