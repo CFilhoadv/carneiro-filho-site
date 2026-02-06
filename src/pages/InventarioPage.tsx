@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import { Phone, MessageCircle } from 'lucide-react';
 
-const InventarioStaging: React.FC = () => {
+const InventarioPage: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
   const telSorocaba = "tel:1531911432";
   const telSP = "tel:1142106194";
@@ -61,7 +61,7 @@ const InventarioStaging: React.FC = () => {
                   </div>
                 </div>
 
-                {/* UNIDADE SÃO PAULO - ADMINISTRATIVO (Legibilidade Total) */}
+                {/* UNIDADE SÃO PAULO - ADMINISTRATIVO */}
                 <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 flex flex-col justify-between shadow-sm">
                   <div>
                     <h3 className="font-bold text-blue-900 uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-gray-200 pb-2">São Paulo • Administrativo</h3>
@@ -89,4 +89,4 @@ const InventarioStaging: React.FC = () => {
   );
 };
 
-export default InventarioStaging;
+export default InventarioPage;
