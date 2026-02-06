@@ -12,6 +12,7 @@ import HoldingStaging from './pages/HoldingStaging';
 import DoacaoStaging from './pages/DoacaoStaging';
 import TestamentosStaging from './pages/TestamentosStaging';
 import AbipStaging from './pages/AbipStaging';
+import InventarioPage from './pages/InventarioPage'; // ADICIONADO: Importação da página de Inventário
 import ContatoStaging from './pages/ContatoStaging';
 
 // Ajuste Técnico: Comentado para evitar erro de build enquanto a rota estiver inativa
@@ -42,6 +43,7 @@ function App() {
         <Route path="/planejamento-sucessorio/doacao" element={<DoacaoStaging />} />
         <Route path="/planejamento-sucessorio/testamentos" element={<TestamentosStaging />} />
         <Route path="/planejamento-sucessorio/abip" element={<AbipStaging />} />
+        <Route path="/planejamento-sucessorio/inventario" element={<InventarioPage />} /> {/* ADICIONADO: Rota para Inventário */}
 
         {/* Redirects de Segurança */}
         <Route path="/home-staging" element={<Navigate to="/" replace />} />
