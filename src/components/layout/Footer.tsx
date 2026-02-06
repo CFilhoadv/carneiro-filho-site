@@ -15,9 +15,9 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           
-          {/* Coluna 1: Contato e Unidades */}
+          {/* Coluna 1: Canais de Atendimento */}
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4 text-white">Canais</h3>
+            <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4 text-white">Atendimento</h3>
             <div className="space-y-6 text-sm text-gray-400">
               
               {/* Canal de E-mail */}
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                 </a>
               </div>
               
-              {/* Unidade Sorocaba - NÚMERO VOIP ATUALIZADO */}
+              {/* Unidade Sorocaba */}
               <div className="flex items-start border-t border-gray-800 pt-4">
                 <MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
                 <div>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Coluna 2: Links Rápidos */}
+          {/* Coluna 2: Navegação */}
           <div>
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4">Navegação</h3>
             <ul className="space-y-3 text-sm">
@@ -69,15 +69,23 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Coluna 3: Institucional - NOMENCLATURA REVISADA */}
+          {/* Coluna 3: Institucional - Transparência com as duas OABs */}
           <div>
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4">Institucional</h3>
-            <div className="text-gray-400 text-sm space-y-2 bg-gray-800/50 p-6 rounded-sm border border-gray-800 shadow-inner">
-              <p className="font-bold text-white uppercase text-xs">Carneiro Filho Advocacia</p>
-              <p className="border-b border-gray-700 pb-2 text-[11px] text-gray-500">Razão Social: Carneiro Filho Sociedade Individual de Advocacia | OAB/SP nº 47.631</p>
-              <p className="pt-2 text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Advogado Titular:</p>
-              <p className="text-gray-300 font-bold">Francisco de Assis Carneiro Filho</p>
-              <p>OAB/SP nº 189.404</p>
+            <div className="text-gray-400 text-sm space-y-3 bg-gray-800/50 p-6 rounded-sm border border-gray-800 shadow-inner">
+              <div>
+                <p className="font-bold text-white uppercase text-xs mb-1">Carneiro Filho Advocacia</p>
+                <p className="text-[11px] text-gray-500 leading-relaxed">
+                  Carneiro Filho Sociedade Individual de Advocacia<br/>
+                  <span className="text-blue-200/70 font-semibold">OAB/SP nº 47.631</span>
+                </p>
+              </div>
+              
+              <div className="pt-3 border-t border-gray-700/50">
+                <p className="text-[10px] text-gray-500 uppercase font-bold tracking-tighter mb-1">Advogado Titular:</p>
+                <p className="text-gray-300 font-bold text-sm">Francisco de Assis Carneiro Filho</p>
+                <p className="text-blue-200/70 font-semibold text-xs mt-0.5">OAB/SP nº 189.404</p>
+              </div>
             </div>
           </div>
         </div>

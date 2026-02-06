@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, Mail, MapPin, MessageCircle, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Clock, Landmark } from 'lucide-react';
 
 const ContatoStaging: React.FC = () => {
   // Canal único centralizado atualizado
@@ -41,8 +41,21 @@ const ContatoStaging: React.FC = () => {
                   Informações de Contato
                 </h2>
                 <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
-                  Escolha o meio de sua preferência para agendamentos e suporte. Atendimento realizado com foco na clareza e segurança jurídica.
+                  Escolha o meio de sua preferência para agendamentos e suporte técnico. Atendimento realizado com foco na clareza e segurança jurídica.
                 </p>
+
+                {/* BLOCO INSTITUCIONAL: EXIBIÇÃO DAS OABs */}
+                <div className="bg-gray-50 border border-gray-100 p-4 rounded-sm space-y-2 mb-8">
+                  <div className="flex items-center text-blue-900 font-bold text-[10px] uppercase tracking-wider">
+                    <Landmark size={14} className="mr-2" /> Carneiro Filho Advocacia
+                  </div>
+                  <p className="text-[11px] text-gray-500 leading-tight">
+                    Registro de Sociedade: <span className="font-semibold text-gray-700">OAB/SP nº 47.631</span>
+                  </p>
+                  <p className="text-[11px] text-gray-500 leading-tight">
+                    Responsável Técnico: Francisco Carneiro Filho • <span className="font-semibold text-gray-700">OAB/SP nº 189.404</span>
+                  </p>
+                </div>
               </div>
               
               <div className="space-y-6 md:space-y-8">
@@ -82,7 +95,7 @@ const ContatoStaging: React.FC = () => {
                   className="inline-flex items-center justify-center bg-blue-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-blue-800 transition-all shadow-md w-full md:w-auto"
                 >
                   <MessageCircle className="mr-3" size={18} />
-                  Agendar por WhatsApp
+                  Canais de Atendimento
                 </a>
               </div>
             </div>
