@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle, Scale, Users, Briefcase, Landmark, ShieldCheck, ChevronRight, HeartHandshake, FileText } from 'lucide-react';
+import { Phone, MessageCircle, Users, Landmark, ShieldCheck, ChevronRight, HeartHandshake } from 'lucide-react';
 
 const ServicosStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
@@ -43,7 +43,7 @@ const ServicosStaging: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-20">
             
-            {/* Direito Tributário - NOVO CARD */}
+            {/* Direito Tributário */}
             <div className="group p-5 md:p-6 bg-blue-50 rounded-sm border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-all">
               <div className="flex items-center mb-3 md:mb-4">
                 <Landmark className="text-blue-900 mr-3" size={24} />
