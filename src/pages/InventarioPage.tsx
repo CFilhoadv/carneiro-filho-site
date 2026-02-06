@@ -1,115 +1,91 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import inventarioBanner from '../assets/images/inventario_banner.webp';
-import { Phone, MessageCircle, FileText, Gavel, AlertCircle } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 
-const InventarioPage: React.FC = () => {
+const InventarioStaging: React.FC = () => {
   // ATUALIZADO: Canal único VoIP e WhatsApp (15) 3191-1432
   const whatsappSorocaba = "https://api.whatsapp.com/send?phone=551531911432";
 
   return (
     <MainLayout>
-      {/* Banner/Cabeçalho da Página */}
-      <div className="relative w-full h-64 md:h-80 flex items-center justify-center overflow-hidden">
-        <img
-          src={inventarioBanner}
-          alt="Representação visual de documentos e procedimentos legais"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-blue-900/40"></div>
-        <div className="absolute z-10 text-center">
-           <h1 className="text-4xl md:text-5xl font-bold text-white uppercase tracking-widest drop-shadow-lg">
-            Inventários
+      {/* Cabeçalho Padronizado - Ajustado para py-8 no mobile */}
+      <section className="bg-white pt-8 pb-8 md:pt-12 md:pb-12 border-b border-gray-100 text-center">
+        <div className="container mx-auto px-4">
+          <h1 className="text-xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
+            Inventário Judicial e Extrajudicial
           </h1>
-          <div className="h-1.5 w-20 bg-white mx-auto mt-4"></div>
+          <div className="h-1 w-16 md:w-20 bg-blue-900 mx-auto mt-3 md:mt-4"></div>
         </div>
-      </div>
+      </section>
 
-      {/* Conteúdo Principal da Página */}
-      <div className="container mx-auto px-4 py-16 max-w-5xl">
-        <section className="mb-12">
-          <div className="flex items-start gap-6 text-gray-700 text-lg leading-relaxed text-justify">
-            <div className="hidden md:block p-4 bg-blue-50 rounded-full">
-              <FileText className="text-blue-900" size={32} />
+      {/* Conteúdo Principal - py-10 no mobile */}
+      <section className="py-10 md:py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="space-y-6 text-gray-700 leading-relaxed text-base md:text-lg text-justify">
+            <p className="text-blue-900 font-semibold text-xs md:text-sm uppercase tracking-widest mb-2 text-center md:text-left">
+              (Regularização de Bens e Sucessão)
+            </p>
+            <p>
+              O inventário é o procedimento jurídico obrigatório para a formalização da transferência do patrimônio de uma pessoa falecida aos seus herdeiros. Ele pode ser realizado de forma <strong>extrajudicial</strong> (em cartório, quando há consenso e inexistência de menores ou incapazes) ou <strong>judicial</strong> (perante o Poder Judiciário).
+            </p>
+            <p>
+              Nossa atuação foca na celeridade e na redução de custos tributários (ITCMD), buscando sempre a solução mais eficiente para a regularização dos bens, priorizando o consenso entre os herdeiros para evitar litígios prolongados e o desgaste do patrimônio familiar.
+            </p>
+            <p>
+              A análise preventiva de documentos e a correta avaliação do regime de bens são fundamentais para garantir que a partilha ocorra dentro da legalidade e com o menor impacto financeiro possível para a família.
+            </p>
+            
+            <div className="bg-blue-50 p-5 md:p-6 border-l-4 border-blue-900 text-sm md:text-base mt-8 italic text-blue-900 shadow-sm">
+              <strong>Nota Importante:</strong> O prazo legal para abertura do inventário é de 60 dias após o falecimento. O descumprimento deste prazo pode gerar multas pesadas sobre o imposto de transmissão (ITCMD).
             </div>
-            <div className="space-y-6">
-              <p>
-                O inventário é o procedimento destinado à identificação e partilha dos bens deixados por uma pessoa falecida. É o caminho legal para que os herdeiros assumam a propriedade oficial do patrimônio, garantindo a regularidade jurídica de imóveis, veículos e contas bancárias.
-              </p>
-              <p>
-                No escritório <strong>Carneiro Filho Advocacia</strong>, priorizamos a agilidade e a clareza, orientando a família sobre a modalidade mais rápida e menos custosa para cada situação.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        {/* Informações Técnicas */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-bold text-blue-900 mb-8 border-b pb-2 uppercase tracking-wide">Como o processo pode ser feito?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-8 bg-gray-50 rounded-sm border-t-4 border-blue-900 shadow-sm">
-              <div className="flex items-center mb-4">
-                <Gavel className="text-blue-900 mr-3" size={24} />
-                <h3 className="text-xl font-bold text-blue-900">Inventário Judicial</h3>
+            {/* BLOCO DE ATENDIMENTO - Espaçamento enxuto mt-12 no mobile */}
+            <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                {/* CARD SOROCABA - PRINCIPAL */}
+                <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
+                  <div>
+                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-blue-800 pb-2 text-blue-200">Unidade Sorocaba</h3>
+                    <p className="text-blue-100 text-xs leading-relaxed mb-6 italic">Canal prioritário para suporte em Inventários e Arrolamentos.</p>
+                  </div>
+                  <div className="space-y-3">
+                    <a href={whatsappSorocaba} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all">
+                      <MessageCircle size={16} className="mr-2" /> Canais de Atendimento
+                    </a>
+                    <a href="tel:1531911432" className="flex items-center justify-center bg-white text-blue-900 py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-gray-100 transition-all border border-white">
+                      <Phone size={16} className="mr-2" /> (15) 3191-1432
+                    </a>
+                  </div>
+                </div>
+
+                {/* UNIDADE SÃO PAULO - APOIO */}
+                <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 flex flex-col justify-between opacity-80">
+                  <div>
+                    <h3 className="font-bold text-blue-900 uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-gray-200 pb-2">Unidade São Paulo</h3>
+                    <p className="text-gray-500 text-[10px] md:text-xs leading-relaxed mb-6">Suporte estratégico para casos complexos e documentação.</p>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-center border-2 border-gray-300 text-gray-400 py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px]">
+                      <Phone size={16} className="mr-2" /> (11) 4210-6194
+                    </div>
+                    <p className="text-[9px] text-gray-400 uppercase text-center tracking-tighter">Atendimento Administrativo</p>
+                  </div>
+                </div>
               </div>
-              <p className="text-gray-700 text-base leading-relaxed text-justify">
-                Necessário quando há herdeiros menores, incapazes, testamento ou quando não há acordo entre os parentes. Tramita perante o juiz e exige um acompanhamento processual detalhado.
-              </p>
-            </div>
-            <div className="p-8 bg-gray-50 rounded-sm border-t-4 border-green-600 shadow-sm">
-              <div className="flex items-center mb-4">
-                <FileText className="text-green-600 mr-3" size={24} />
-                <h3 className="text-xl font-bold text-gray-800">Inventário em Cartório</h3>
+
+              <div className="mt-8 md:mt-10 text-center">
+                <Link to="/servicos" className="text-gray-500 hover:text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs border-b border-transparent hover:border-blue-900 pb-1 transition-all">
+                  ← Voltar para Todos os Serviços
+                </Link>
               </div>
-              <p className="text-gray-700 text-base leading-relaxed text-justify">
-                A via mais rápida (Extrajudicial). Possível quando todos os herdeiros são maiores, capazes e estão de acordo. Realizado por escritura pública, reduzindo drasticamente o tempo de espera.
-              </p>
             </div>
           </div>
-        </section>
-
-        {/* Nota Técnica sobre Prazos */}
-        <section className="mb-16 text-gray-700 text-base bg-amber-50 p-8 rounded-sm border-l-4 border-amber-500 shadow-sm">
-          <div className="flex items-start">
-            <AlertCircle className="text-amber-600 mr-4 shrink-0" size={24} />
-            <p className="text-justify leading-relaxed italic">
-              <strong>Atenção aos Prazos:</strong> A lei estabelece prazos para a abertura do inventário. O atraso pode gerar multas pesadas sobre o imposto ITCMD (Imposto de Transmissão). A análise imediata da documentação é o primeiro passo para evitar gastos desnecessários com tributos estaduais.
-            </p>
-          </div>
-        </section>
-
-        {/* Bloco de Contato Direto e Ação Ética */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-blue-900 p-8 md:p-12 rounded-sm shadow-xl text-white">
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Precisa de orientação imediata?</h3>
-            <p className="text-blue-100 mb-8">
-              Fale diretamente com o Dr. Francisco para entender o rito adequado ao seu caso e evitar multas por atraso.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href={whatsappSorocaba} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-600 px-6 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-green-700 transition-all">
-                <MessageCircle size={18} className="mr-2" /> WhatsApp
-              </a>
-              <a href="tel:1531911432" className="flex items-center justify-center bg-white text-blue-900 px-6 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-gray-100 transition-all">
-                <Phone size={18} className="mr-2" /> (15) 3191-1432
-              </a>
-            </div>
-          </div>
-          <div className="text-center md:border-l md:border-blue-800 md:pl-8">
-            <p className="text-sm text-blue-200 mb-6 italic">
-              Para uma análise documental estruturada, utilize nosso canal de envio de informações:
-            </p>
-            <Link
-              to="/analise-preliminar"
-              className="inline-block bg-blue-700 text-white px-8 py-4 rounded-sm hover:bg-blue-600 transition-colors font-bold uppercase tracking-widest text-xs border border-blue-500 w-full"
-            >
-              Formulário de Análise Preliminar
-            </Link>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </MainLayout>
   );
 };
 
-export default InventarioPage;
+export default InventarioStaging;
