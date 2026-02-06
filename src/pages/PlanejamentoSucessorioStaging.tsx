@@ -5,8 +5,8 @@ import { Phone, MessageCircle, ShieldCheck, Landmark, Users, ChevronRight, Scale
 
 const PlanejamentoSucessorioStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
-  const telSorocaba = "tel:1531911432";
-  const telSP = "tel:1142106194";
+  const telSorocaba = "tel:+551531911432";
+  const telSP = "tel:+551142106194";
 
   // ATUALIZADO: Incluído Inventário como subpágina técnica
   const subpaginas = [

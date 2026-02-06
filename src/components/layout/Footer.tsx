@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                   <p>Sorocaba/SP</p>
                   <div className="flex items-center mt-2 text-blue-100 font-bold bg-blue-900/30 px-2 py-1 rounded-sm w-fit">
                     <Phone size={14} className="mr-2" />
-                    <a href="tel:1531911432" className="hover:text-white">(15) 3191-1432</a>
+                    <a href="tel:+551531911432" className="hover:text-white">(15) 3191-1432</a>
                   </div>
                 </div>
               </div>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                   <p>Av. Brigadeiro Faria Lima, 1811</p>
                   <div className="flex items-center mt-2 text-gray-400 font-medium">
                     <Phone size={12} className="mr-2" />
-                    <span>(11) 4210-6194</span>
+                    <a href="tel:+551142106194" className="hover:text-white">(11) 4210-6194</a>
                   </div>
                 </div>
               </div>

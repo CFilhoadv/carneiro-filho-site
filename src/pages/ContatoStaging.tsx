@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import { Phone, Mail, MapPin, MessageCircle, Landmark } from 'lucide-react';
 
 const ContatoStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
-  const telefoneLink = "tel:1531911432";
+  const telefoneLink = "tel:+551531911432";
   const emailLink = "mailto:contato@carneirofilho.com.br";
 
   return (

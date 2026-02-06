@@ -51,7 +51,6 @@ const QuemSomosStaging: React.FC = () => {
                 <div className="flex-1 text-center md:text-left">
                   <div className="flex items-center justify-center md:justify-start mb-4 md:mb-6">
                     <div className="p-2 bg-blue-50 rounded-lg mr-3 md:mr-4">
-                      {/* CORREÇÃO: Removido md:size */}
                       <Scale className="text-blue-900" size={24} />
                     </div>
                     <h2 className="text-xl md:text-2xl font-bold text-blue-900 uppercase tracking-wider">
@@ -68,7 +67,6 @@ const QuemSomosStaging: React.FC = () => {
               <article>
                 <div className="flex items-center mb-4 md:mb-6">
                   <div className="p-2 bg-blue-50 rounded-lg mr-3 md:mr-4">
-                    {/* CORREÇÃO: Removido md:size */}
                     <Briefcase className="text-blue-900" size={24} />
                   </div>
                   <h2 className="text-xl md:text-2xl font-bold text-blue-900 uppercase tracking-wider">
@@ -84,7 +82,6 @@ const QuemSomosStaging: React.FC = () => {
               <article>
                 <div className="flex items-center mb-4 md:mb-6">
                   <div className="p-2 bg-blue-50 rounded-lg mr-3 md:mr-4">
-                    {/* CORREÇÃO: Removido md:size */}
                     <Shield className="text-blue-900" size={24} />
                   </div>
                   <h2 className="text-xl md:text-2xl font-bold text-blue-900 uppercase tracking-wider">
@@ -101,7 +98,6 @@ const QuemSomosStaging: React.FC = () => {
             <div className="lg:col-span-4">
               <div className="lg:sticky lg:top-32">
                 <div className="bg-blue-900 text-white p-6 md:p-8 rounded-sm shadow-xl border-b-8 border-blue-700 text-center">
-                  {/* CORREÇÃO: Removido md:size */}
                   <Award className="mx-auto mb-4 md:mb-6 text-blue-200" size={48} />
                   <h3 className="text-lg md:text-xl font-bold mb-2">Advogado Titular</h3>
                   <p className="text-xl md:text-2xl font-bold mb-4">Francisco de Assis Carneiro Filho</p>

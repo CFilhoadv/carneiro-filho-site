@@ -10,8 +10,8 @@ import fachadaSaoPaulo from '../assets/images/unidade-sp.webp';
 
 const HomeStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
-  const telefoneSorocaba = "tel:1531911432";
-  const telefoneSP = "tel:1142106194";
+  const telefoneSorocaba = "tel:+551531911432";
+  const telefoneSP = "tel:+551142106194";
 
   return (
     <MainLayout>
@@ -124,7 +124,7 @@ const HomeStaging: React.FC = () => {
                   <MapPin size={18} className="mr-2 text-blue-900 flex-shrink-0 mt-0.5" />
                   <span>Av. Profa. Izoraida Marques Peres, 256 – 9º andar – Campolim</span>
                 </p>
-                <a href={whatsappLink} className="flex items-center text-lg font-bold text-blue-900 hover:text-green-600 transition-colors">
+                <a href={telefoneSorocaba} className="flex items-center text-lg font-bold text-blue-900 hover:text-green-600 transition-colors">
                   <Phone size={18} className="mr-2" /> (15) 3191-1432
                 </a>
               </div>
