@@ -19,6 +19,9 @@ import ContatoStaging from './pages/ContatoStaging';
 // import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
 import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
 
+// NOVA ROTA: Camada II - Parceria Estratégica com Contabilidades
+import ParceriaContabil from './pages/ParceriaContabil';
+
 function App() {
   return (
     <>
@@ -37,6 +40,9 @@ function App() {
         
         <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
         
+        {/* Nova Rota de Segundo Nível para Parcerias */}
+        <Route path="/parceria-contabil" element={<ParceriaContabil />} />
+
         {/* Hierarquia Consolidada: Planejamento Sucessório */}
         <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioStaging />} />
         <Route path="/planejamento-sucessorio/holding" element={<HoldingStaging />} />
