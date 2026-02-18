@@ -7,25 +7,24 @@ const ParceriaContabil: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* Cabeçalho Padronizado */}
+      {/* Cabeçalho Ajustado para Posicionamento Sênior */}
       <section className="bg-white pt-8 pb-8 md:pt-12 md:pb-12 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
-            Cooperação Técnica Estruturada
+            Suporte Jurídico Estratégico
           </h1>
           <div className="h-1 w-16 md:w-20 bg-blue-900 mx-auto mt-3 md:mt-4"></div>
         </div>
       </section>
 
-      {/* Conteúdo Principal */}
+      {/* Conteúdo Principal com Foco em Risco e Respaldo */}
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="space-y-8 text-gray-700 leading-relaxed text-base md:text-lg text-justify">
             
-            {/* PRIMEIRA DOBRA OTIMIZADA */}
             <div className="text-center md:text-left">
               <p className="text-blue-900 font-semibold text-xs md:text-sm uppercase tracking-widest mb-4">
-                (Infraestrutura jurídica de segundo nível para escritórios de contabilidade)
+                (Respaldo jurídico de segundo nível para escritórios de contabilidade)
               </p>
               
               <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-6">
@@ -33,72 +32,72 @@ const ParceriaContabil: React.FC = () => {
               </h2>
 
               <p className="mb-6">
-                No cenário tributário atual, a fiscalização não questiona apenas a exatidão dos cálculos — questiona a fundamentação jurídica das decisões estruturais.
+                No cenário tributário atual, a fiscalização não questiona apenas a exatidão dos cálculos — questiona a fundamentação jurídica das decisões estruturais adotadas.
               </p>
 
               <div className="bg-gray-50 p-6 border-l-4 border-red-700 mb-8">
                 <p className="font-bold text-gray-900 mb-3 text-sm md:text-base">
-                  Planejamentos e recuperações de crédito sem arquitetura jurídica formal podem gerar:
+                  Decisões fiscais sem sustentação jurídica formal podem gerar:
                 </p>
                 <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-800">
-                  <li>Responsabilização técnica e solidária do assessor;</li>
-                  <li>Autuações estruturais e questionamentos de simulação;</li>
-                  <li>Risco reputacional crítico perante a carteira de clientes.</li>
+                  <li>Responsabilização técnica e solidária do assessor contábil;</li>
+                  <li>Autuações estruturais baseadas em "abuso de forma";</li>
+                  <li>Risco reputacional perante a carteira de clientes.</li>
                 </ul>
               </div>
 
               <p>
-                Nossa estrutura de segundo nível atua exatamente nessa lacuna. Oferecemos o <strong>lastro jurídico formal</strong> necessário para que decisões tributárias relevantes estejam tecnicamente blindadas perante o Fisco e o Judiciário.
+                Minha atuação foca exatamente nesta lacuna: oferecer o <strong>lastro jurídico formal</strong> necessário para que estratégias tributárias relevantes estejam tecnicamente blindadas perante o Fisco e o Judiciário.
               </p>
             </div>
 
             <hr className="my-12 border-gray-100" />
 
-            {/* Grid de Serviços Técnicos */}
+            {/* Frentes de Atuação Técnica */}
             <section>
               <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-8 text-center md:text-left">
-                Os 6 Pilares da Cooperação Técnica
+                Frentes de Atuação e Validação
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">1. Contencioso e Gestão de Passivos</h3>
-                  <p className="text-sm">Atuação estratégica focada na preservação do caixa, integrando a visão jurídica aos impactos no balanço patrimonial.</p>
+                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
+                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">1. Gestão de Passivos Estratégicos</h3>
+                  <p className="text-sm">Preservação do caixa através de defesas que integram a visão jurídica aos reflexos no balanço patrimonial.</p>
                 </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">2. Arquitetura Societária e Fiscal</h3>
-                  <p className="text-sm">Desenvolvimento de estruturas resistentes a questionamentos de abuso de forma, garantindo segurança nas reorganizações.</p>
+                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
+                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">2. Validação Societária e Fiscal</h3>
+                  <p className="text-sm">Análise de estruturas para garantir que reorganizações resistam a questionamentos de simulação.</p>
                 </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">3. Planejamento de Segundo Nível</h3>
-                  <p className="text-sm">Emissão de pareceres que fundamentam tecnicamente as estratégias propostas pelo escritório, assumindo a responsabilidade jurídica.</p>
+                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
+                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">3. Parecer Jurídico Estruturado</h3>
+                  <p className="text-sm">Emissão de fundamentação técnica que delimita a responsabilidade e sustenta a tese adotada pelo escritório.</p>
                 </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">4. Regimes e Benefícios Fiscais</h3>
-                  <p className="text-sm">Protocolo de Regimes Especiais viabilizados por 35 anos de experiência executiva em grandes indústrias e sistemas ERP.</p>
+                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
+                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">4. Regimes e Benefícios Especiais</h3>
+                  <p className="text-sm">Protocolo de Regimes Especiais viabilizados por 35 anos de experiência executiva e visão de controladoria.</p>
                 </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">5. Recuperação de Créditos e ERP</h3>
-                  <p className="text-sm">Revisão técnica em sistemas SAP e Protheus para garantir que a monetização de créditos seja segura e rastreável.</p>
+                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
+                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">5. Auditoria de Créditos e ERP</h3>
+                  <p className="text-sm">Revisão técnica em sistemas SAP e Protheus para garantir que a monetização de créditos seja segura.</p>
                 </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
                   <h3 className="font-bold text-blue-900 uppercase text-sm mb-2">6. Blindagem Documental</h3>
-                  <p className="text-sm">Redação de contratos e acordos sob rigor de compliance (ISO 9001), garantindo prova documental defensável.</p>
+                  <p className="text-sm">Elaboração de contratos e instrumentos com rigor de compliance e foco em prova documental defensável.</p>
                 </div>
               </div>
             </section>
 
             <div className="bg-blue-50 p-5 md:p-8 rounded-sm mt-12 border border-blue-100">
-              <h3 className="font-bold text-blue-900 uppercase tracking-widest text-sm mb-4">Diferencial Operacional</h3>
+              <h3 className="font-bold text-blue-900 uppercase tracking-widest text-sm mb-4">Diferencial Executivo</h3>
               <p className="text-sm md:text-base italic text-gray-700">
-                Dominamos a linguagem da controladoria. Nossa atuação foca na <strong>assunção formal da responsabilidade jurídica</strong> no escopo de cada parecer emitido, elevando a segurança institucional da sua assessoria.
+                Falo a língua da contabilidade e da controladoria. Minha proposta não é substituir o contador, mas elevar seu trabalho através da <strong>assunção formal da responsabilidade jurídica</strong> no escopo de cada parecer emitido.
               </p>
             </div>
 
-            {/* BLOCO DE CHAMADA PARA AÇÃO (CTA) AJUSTADO */}
+            {/* CTA Final Ajustado */}
             <div className="mt-16 py-10 border-t border-gray-100 text-center">
               <h3 className="text-xl font-bold text-blue-900 uppercase tracking-widest mb-6">Próximo Passo Estratégico</h3>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-sm md:text-base">
-                Agende uma reunião técnica para verificar como nossa infraestrutura jurídica pode se integrar à sua rotina operacional.
+                Agende uma reunião técnica para avaliar como este suporte jurídico pode ser integrado à segurança das suas decisões fiscais.
               </p>
               <a 
                 href={calendlyLink} 
