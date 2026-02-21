@@ -25,7 +25,7 @@ const ContatoStaging: React.FC = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            {/* COLUNA 1: ATENDIMENTO DIRETO */}
+            {/* COLUNA 1: ATENDIMENTO DIRETO - FOCO NO FUNIL SOROCABA */}
             <div className="space-y-6">
               <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6">Atendimento Imediato</h3>
               
@@ -39,14 +39,20 @@ const ContatoStaging: React.FC = () => {
               </a>
 
               <div className="p-6 bg-gray-50 border border-gray-100 rounded-sm">
-                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Telefones</p>
+                <p className="text-[10px] font-bold text-blue-900 uppercase tracking-widest mb-4">Central de Atendimento (Funil)</p>
                 <div className="space-y-4">
-                  <a href={telSorocaba} className="flex items-center text-blue-900 font-bold text-lg hover:underline">
-                    <Phone size={18} className="mr-3" /> (15) 3191-1432
+                  {/* DESTAQUE PRINCIPAL: SOROCABA */}
+                  <a href={telSorocaba} className="flex items-center text-blue-900 font-extrabold text-xl hover:text-blue-700 transition-colors">
+                    <Phone size={20} className="mr-3 text-blue-900" /> (15) 3191-1432
                   </a>
-                  <a href={telSP} className="flex items-center text-blue-900 font-bold text-lg hover:underline">
-                    <Phone size={18} className="mr-3" /> (11) 4210-6194
-                  </a>
+                  
+                  {/* APOIO: SÃO PAULO - VISUALMENTE MENOR PARA NÃO CONCORRER */}
+                  <div className="pt-2 border-t border-gray-200">
+                    <p className="text-[9px] text-gray-400 uppercase font-bold mb-1">Unidade Administrativa</p>
+                    <a href={telSP} className="flex items-center text-gray-500 font-medium text-sm hover:text-blue-900 transition-colors">
+                      <Phone size={14} className="mr-2" /> (11) 4210-6194
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
