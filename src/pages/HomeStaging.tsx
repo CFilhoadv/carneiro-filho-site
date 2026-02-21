@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import bannerImg from '../assets/images/banner_familia.webp';
-import { Phone, MapPin, ShieldCheck, Building2, Landmark, Users } from 'lucide-react';
+import { ShieldCheck, Building2, Landmark, Users } from 'lucide-react';
 
 import fachadaSorocaba from '../assets/images/unidade-sorocaba.jpeg';
 import fachadaSaoPaulo from '../assets/images/unidade-sp.webp';
@@ -13,7 +13,7 @@ const HomeStaging: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* 1. BANNER COMPACTO (Foco no Público-Alvo) */}
+      {/* 1. BANNER COMPACTO */}
       <section className="relative h-[320px] md:h-[380px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <img src={bannerImg} alt="Banner Carneiro Filho" className="w-full h-full object-cover brightness-[0.5]" />
@@ -89,11 +89,10 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. UNIDADES (Fotos Íntegras e Endereços) */}
+      {/* 5. UNIDADES */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Sorocaba */}
             <div className="flex flex-col">
               <img src={fachadaSorocaba} alt="Unidade Sorocaba" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-blue-900" />
               <div className="px-2">
@@ -105,7 +104,6 @@ const HomeStaging: React.FC = () => {
                 </a>
               </div>
             </div>
-            {/* São Paulo */}
             <div className="flex flex-col">
               <img src={fachadaSaoPaulo} alt="Unidade São Paulo" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-gray-300" />
               <div className="px-2">
