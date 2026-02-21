@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Shield, Award, Briefcase, Scale, MessageCircle, HeartHandshake, Landmark } from 'lucide-react';
+import { Shield, Award, Briefcase, Scale, MessageCircle, HeartHandshake, Landmark, Handshake } from 'lucide-react';
 
 // Importação da sua foto
 import fotoPerfil from '../assets/images/advogado-principal-nova.jpg';
@@ -69,6 +69,17 @@ const QuemSomosStaging: React.FC = () => {
                 </div>
                 <p className="text-base leading-relaxed text-gray-700 text-justify">
                   Paralelamente, a atuação profissional em ambientes corporativos e a formação em <strong>Direito e Contabilidade</strong> trouxeram um olhar técnico aprofundado sobre tributação e património. Esse conhecimento hoje é aplicado para proteger direitos e evitar prejuízos, seja para o cidadão comum, seja para o empresário local. Aqui, a técnica trabalha em silêncio a favor do cliente.
+                </p>
+              </article>
+
+              {/* BLOCO ESTRATÉGICO DE COOPERAÇÃO TÉCNICA */}
+              <article className="space-y-4 bg-blue-50/50 p-6 border-l-4 border-blue-400">
+                <div className="flex items-center mb-2">
+                  <Handshake className="text-blue-900 mr-3" size={24} />
+                  <h2 className="text-xl font-bold text-blue-900 uppercase tracking-tight">Atuação Cooperativa e Institucional</h2>
+                </div>
+                <p className="text-base leading-relaxed text-gray-800 text-justify italic">
+                  A atuação do escritório também se desenvolve em cooperação direta com profissionais de outras áreas, oferecendo suporte técnico em demandas sucessórias, societárias e patrimoniais que exigem especialização jurídica estruturada e absoluto alinhamento institucional para garantir a segurança dos parceiros e seus clientes.
                 </p>
               </article>
 

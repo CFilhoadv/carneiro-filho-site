@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle, ShieldCheck, Landmark, Users, ChevronRight, Scale } from 'lucide-react';
+import { Phone, MessageCircle, ShieldCheck, Landmark, Users, ChevronRight, Scale, Handshake } from 'lucide-react';
 
 const PlanejamentoSucessorioStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
   const telSorocaba = "tel:+551531911432";
   const telSP = "tel:+551142106194";
 
-  // ATUALIZADO: Incluído Inventário como subpágina técnica
   const subpaginas = [
     { title: "Doação com Usufruto", href: "/planejamento-sucessorio/doacao", desc: "Antecipação de herança com garantia de posse e renda para os pais." },
     { title: "Testamentos", href: "/planejamento-sucessorio/testamentos", desc: "Organização da vontade com segurança jurídica e proteção de herdeiros." },
@@ -44,7 +43,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 mb-12 md:mb-16 items-center">
             <div className="lg:col-span-7 space-y-4 md:space-y-6 text-gray-700 leading-relaxed text-base md:text-lg">
               <p className="text-justify">
                 O planejamento sucessório é sobre <strong>preservar a harmonia da sua família</strong>. Organizamos a transmissão do patrimônio antecipadamente, evitando processos de inventário lentos e desgastantes.
@@ -73,7 +72,22 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
             </div>
           </div>
 
-          {/* 4. INSTRUMENTOS JURÍDICOS - AGORA COM INVENTÁRIO */}
+          {/* NOVO BLOCO: VALIDAÇÃO MULTIDISCIPLINAR (O DIFERENCIAL PARA O PARCEIRO) */}
+          <div className="mb-16 md:mb-20 p-6 md:p-8 bg-blue-50 border border-blue-100 rounded-sm">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="bg-blue-900 p-4 rounded-full shrink-0">
+                <Handshake className="text-white" size={32} />
+              </div>
+              <div className="text-center md:text-left">
+                <h3 className="text-blue-900 font-bold uppercase text-sm mb-2 tracking-widest">Atuação Multidisciplinar</h3>
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed italic">
+                  "O planejamento sucessório é desenvolvido em conjunto com contadores, consultores e administradores patrimoniais, assegurando o alinhamento técnico e jurídico necessário para a proteção integral do legado."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 4. INSTRUMENTOS JURÍDICOS */}
           <div className="mb-16 md:mb-24">
             <h2 className="text-xl md:text-2xl font-bold text-blue-900 uppercase tracking-wide mb-8 text-center md:text-left">Soluções de Planejamento e Regularização</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">

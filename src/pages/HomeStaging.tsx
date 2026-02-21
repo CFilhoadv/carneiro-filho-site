@@ -75,13 +75,13 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. HUB DE PARCERIAS (Destaque Azul - Máxima Conversão) */}
+      {/* 4. HUB DE PARCERIAS (Ajustado com Atuação Integrada) */}
       <section className="py-14 bg-[#2B438B] text-white">
         <div className="container mx-auto px-4 text-center max-w-4xl">
-          <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-4 opacity-80">Modelo de Retaguarda</h4>
+          <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-4 text-blue-200">Atuação Integrada</h4>
           <h2 className="text-2xl md:text-3xl font-bold uppercase mb-6 tracking-tight">Contadores, Imobiliárias e Instituições</h2>
-          <p className="text-blue-100 text-base md:text-lg mb-8 leading-relaxed font-light">
-            Integre senioridade jurídica às suas soluções. Oferecemos suporte técnico para potencializar seus negócios e proteger sua carteira de clientes.
+          <p className="text-blue-50 text-base md:text-lg mb-8 leading-relaxed font-light italic">
+            "O escritório presta suporte jurídico técnico a profissionais e empresas que necessitam de retaguarda estruturada em operações patrimoniais, societárias e sucessórias."
           </p>
           <Link to="/parcerias" className="inline-block bg-white text-[#2B438B] px-12 py-3 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-gray-100 transition-all shadow-lg">
             Conhecer Hub de Parcerias
