@@ -34,24 +34,28 @@ const ParceriasPage: React.FC = () => {
       <section className="pb-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl space-y-16">
           
-          {/* Bloco 01 - Contadores */}
+          {/* Bloco 01 - Contadores (ATUALIZADO COM ENGENHARIA SOCIETÁRIA) */}
           <div className="border-t pt-10">
             <div className="flex items-center gap-3 mb-6">
               <Users className="text-blue-900" size={24} />
               <h3 className="text-lg md:text-xl font-bold text-blue-900 uppercase tracking-tight">Escritórios de Contabilidade</h3>
             </div>
             <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-              <p className="italic text-gray-500 text-sm md:text-base">Sustentação jurídica e alavancagem de portfólio através de inteligência tributária e societária.</p>
+              <p className="italic text-gray-500 text-sm md:text-base">Retaguarda técnica para demandas societárias e tributárias de alta complexidade.</p>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Consultoria e Pareceres de Alta Senioridade</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Eficiência em Reorganizações Societárias</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Planejamento Sucessório Empresarial Integrado</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Due Diligence Jurídica e Fiscal:</strong> Auditagem técnica para identificação de ativos e passivos ocultos.</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Engenharia Societária:</strong> Viabilização de operações como a Incorporação Reversa e mitigação de IRPJ/CSLL.</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Recomposição de Ativos:</strong> Análise da balança tributária para recuperação de créditos e saneamento de passivos.</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Planejamento Sucessório:</strong> Estruturação de Holdings com foco em eficiência e segurança para o assessor contábil.</div>
               </div>
+
               <div className="bg-gray-50 p-5 border-l-4 border-blue-900 text-sm italic">
-                <strong>Diferencial:</strong> Identificação de ativos fiscais e apoio em fusões, garantindo a blindagem técnica do assessor contábil.
+                <strong>Diferencial:</strong> Atuação baseada na visão unificada de Direito, Contabilidade e Controladoria, garantindo que a engenharia jurídica resulte em ganho real de caixa e blindagem técnica absoluta.
               </div>
+              
               <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
-                <Calendar size={14} className="mr-2" /> Agendar Reunião Técnica
+                <Calendar size={14} className="mr-2" /> Agendar Alinhamento Técnico
               </a>
             </div>
           </div>
@@ -63,11 +67,12 @@ const ParceriasPage: React.FC = () => {
               <h3 className="text-lg md:text-xl font-bold text-blue-900 uppercase tracking-tight">Imobiliárias e Corretores</h3>
             </div>
             <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-              <p className="italic text-gray-500 text-sm md:text-base">Regularização técnica e segurança jurídica para o destravamento de transações.</p>
+              <p className="italic text-gray-500 text-sm md:text-base">Regularização técnica e segurança jurídica para o destravamento de transações imobiliárias.</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Regularização Imobiliária e Sucessões</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Due Diligence e Gestão de Riscos Contratuais</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Gestão Estratégica de Contencioso Imobiliário</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Regularização de Imóveis e Gestão de Sucessões</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Due Diligence Especializada para Ativos de Alto Valor</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Estruturação de Contratos Complexos e Garantias Reais</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Destravamento de Matrículas e Regularização Fundiária</div>
               </div>
               <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
                 <Calendar size={14} className="mr-2" /> Iniciar Alinhamento Técnico
@@ -86,6 +91,7 @@ const ParceriasPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
                 <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Defesa Institucional e Educacional Especializada</div>
                 <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Recomposição de Ativos (Cobrança Executiva)</div>
+                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Gestão de Passivos para Preservação de Caixa</div>
                 <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Consultoria de Retaguarda Executiva</div>
               </div>
               <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
