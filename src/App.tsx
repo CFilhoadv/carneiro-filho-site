@@ -15,6 +15,9 @@ import AbipStaging from './pages/AbipStaging';
 import InventarioPage from './pages/InventarioPage'; // ADICIONADO: Importação da página de Inventário
 import ContatoStaging from './pages/ContatoStaging';
 
+// NOVA ROTA: Hub de Parcerias Estratégicas (Arquitetura 2026)
+import ParceriasPage from './pages/ParceriasPage';
+
 // Ajuste Técnico: Comentado para evitar erro de build enquanto a rota estiver inativa
 // import AnalisePreliminarPage from './pages/AnalisePreliminarPage';
 import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
@@ -40,7 +43,10 @@ function App() {
         
         <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
         
-        {/* Nova Rota de Segundo Nível para Parcerias */}
+        {/* HUB DE PARCERIAS - Arquitetura Consolidada */}
+        <Route path="/parcerias" element={<ParceriasPage />} />
+        
+        {/* Rota legada para Contabilidades (mantida para compatibilidade) */}
         <Route path="/parceria-contabil" element={<ParceriaContabil />} />
 
         {/* Hierarquia Consolidada: Planejamento Sucessório */}

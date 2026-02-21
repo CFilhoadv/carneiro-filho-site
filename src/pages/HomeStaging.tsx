@@ -2,164 +2,118 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import bannerImg from '../assets/images/banner_familia.webp';
-import { Phone, MessageCircle, MapPin, Search, Lightbulb } from 'lucide-react';
+import { Phone, MapPin, ShieldCheck, Building2, Landmark, Users } from 'lucide-react';
 
-// Importação das imagens originais
 import fachadaSorocaba from '../assets/images/unidade-sorocaba.jpeg';
 import fachadaSaoPaulo from '../assets/images/unidade-sp.webp';
 
 const HomeStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
-  const telefoneSorocaba = "tel:+551531911432";
-  const telefoneSP = "tel:+551142106194";
+  const telSorocaba = "tel:+551531911432";
 
   return (
     <MainLayout>
-      {/* 1. BOTÃO FLUTUANTE WHATSAPP - Texto discreto apenas no desktop */}
-      <a 
-        href={whatsappLink} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white px-5 py-3 rounded-full shadow-2xl hover:bg-[#128C7E] transition-all hover:scale-110 flex items-center justify-center animate-bounce"
-        aria-label="Fale no WhatsApp"
-      >
-        <MessageCircle size={24} className="md:mr-2" />
-        <span className="font-bold text-sm hidden md:block">FALE NO WHATSAPP</span>
-      </a>
-
-      {/* 2. BANNER PRINCIPAL (HERO) - Com CTA estratégico */}
-      <section className="relative h-[400px] md:h-[500px] flex items-center justify-center overflow-hidden bg-gray-900">
+      {/* 1. BANNER COMPACTO (Foco no Público-Alvo) */}
+      <section className="relative h-[320px] md:h-[380px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
-          <img src={bannerImg} alt="Banner Carneiro Filho Advocacia" className="w-full h-full object-cover brightness-[0.7]" />
-          <div className="absolute inset-0 bg-blue-900/30 mix-blend-multiply"></div>
+          <img src={bannerImg} alt="Banner Carneiro Filho" className="w-full h-full object-cover brightness-[0.5]" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-white text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-4 uppercase drop-shadow-xl">
-              Soluções Jurídicas Objetivas
-            </h2>
-            <p className="text-white text-base md:text-xl font-medium leading-relaxed drop-shadow-lg mb-8">
-              Atendimento humano e simplificado para resolver os problemas do seu dia a dia.
-            </p>
-            <a href={whatsappLink} target="_blank" rel="noopener" className="inline-block bg-[#25D366] text-white px-8 py-4 rounded-md font-bold uppercase tracking-widest text-sm shadow-lg hover:bg-[#128C7E] transition-all">
-              Iniciar Atendimento Digital
-            </a>
-          </div>
+        <div className="container mx-auto px-4 relative z-10 text-center text-white">
+          <h2 className="text-xl md:text-3xl font-bold uppercase tracking-widest mb-8 drop-shadow-2xl">
+            Estratégia Jurídica para Proteger e Estruturar o seu Patrimônio
+          </h2>
+          <a href={whatsappLink} target="_blank" rel="noopener" className="bg-[#25D366] px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-green-700 transition-all shadow-xl">
+            Iniciar Atendimento Digital
+          </a>
         </div>
       </section>
 
-      {/* 3. BLOCO ÁREA JURÍDICA */}
-      <section className="py-12 md:py-16 bg-white border-b border-gray-50">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-10">
-            Atuamos como facilitadores, traduzindo o Direito de forma simples e sem burocracia para proteger você, sua família e seu patrimônio.
-          </p>
-          <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-100 shadow-sm">
-            <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6 text-center">Como podemos ajudar</h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center md:text-left max-w-2xl mx-auto">
-              {[
-                "Direito de Família e Sucessões", 
-                "Consumidor e Indenizações", 
-                "Demandas Cíveis e Patrimoniais", 
-                "Direito Previdenciário e Trabalhista"
-              ].map((area) => (
-                <li key={area}>
-                  <Link to="/servicos" className="text-gray-800 font-semibold text-base md:text-lg hover:text-blue-900 transition-colors">• {area}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. SEÇÃO: NOSSO MÉTODO - Link no texto do WhatsApp aplicado */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-8 md:mb-12 text-center">Nosso Método</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-4">
-              <div className="w-14 h-14 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <MessageCircle size={28} />
-              </div>
-              <h4 className="text-lg font-bold mb-2">1. Primeiro Contato</h4>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Envie sua dúvida <a href={whatsappLink} target="_blank" rel="noopener" className="text-blue-900 font-bold underline hover:text-green-600 transition-colors">via WhatsApp</a>. Atendimento sem "juridiquês" desde o início.
-              </p>
-            </div>
-            <div className="text-center p-4 border-y md:border-y-0 md:border-x border-gray-100">
-              <div className="w-14 h-14 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <Search size={28} />
-              </div>
-              <h4 className="text-lg font-bold mb-2">2. Análise Direta</h4>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Avaliamos seu caso com foco na realidade dos fatos e nas melhores possibilidades de solução.
-              </p>
-            </div>
-            <div className="text-center p-4">
-              <div className="w-14 h-14 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <Lightbulb size={28} />
-              </div>
-              <h4 className="text-lg font-bold mb-2">3. Retorno Ágil</h4>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Em até 3 dias úteis, apresentamos um plano de ação claro para o seu caso.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. SEÇÃO NOSSAS UNIDADES - Com rótulos claros */}
-      <section className="py-12 md:py-20 bg-gray-50 border-y border-gray-200">
-        <div className="container mx-auto px-4">
-          <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-8 md:mb-12 text-center">Onde Atendemos</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 shadow-md rounded-sm border-t-4 border-blue-900">
-              <div className="w-full aspect-video mb-4 overflow-hidden rounded-sm">
-                <img src={fachadaSorocaba} alt="Unidade Sorocaba - Atendimento Presencial" className="w-full h-full object-cover" />
-              </div>
-              <h4 className="text-xl font-bold text-blue-900 mb-1 uppercase">Sorocaba</h4>
-              <p className="text-gray-400 text-[10px] font-bold uppercase mb-4 italic">Atendimento Presencial</p>
-              <div className="space-y-2 text-sm text-gray-700">
-                <p className="flex items-start leading-tight">
-                  <MapPin size={18} className="mr-2 text-blue-900 flex-shrink-0 mt-0.5" />
-                  <span>Av. Profa. Izoraida Marques Peres, 256 – 9º andar – Campolim</span>
-                </p>
-                <a href={telefoneSorocaba} className="flex items-center text-lg font-bold text-blue-900 hover:text-green-600 transition-colors">
-                  <Phone size={18} className="mr-2" /> (15) 3191-1432
-                </a>
-              </div>
-            </div>
-            <div className="bg-white p-6 shadow-md rounded-sm border-t-4 border-gray-400 opacity-90">
-              <div className="w-full aspect-video mb-4 overflow-hidden rounded-sm grayscale opacity-80">
-                <img src={fachadaSaoPaulo} alt="Unidade SP - Escritório Administrativo" className="w-full h-full object-cover" />
-              </div>
-              <h4 className="text-xl font-bold text-gray-800 mb-1 uppercase">São Paulo</h4>
-              <p className="text-gray-400 text-[10px] font-bold uppercase mb-4 italic">Escritório Administrativo</p>
-              <div className="space-y-2 text-sm text-gray-500">
-                <p className="flex items-start leading-tight">
-                  <MapPin size={18} className="mr-2 flex-shrink-0 mt-0.5" />
-                  <span>Av. Brigadeiro Faria Lima, 1811 – Conj. 1119</span>
-                </p>
-                <a href={telefoneSP} className="flex items-center text-lg font-bold text-gray-500 hover:text-blue-900 transition-colors">
-                  <Phone size={18} className="mr-2" /> (11) 4210-6194
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. CTA FINAL - Sem redundâncias */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* 2. MOTE DE ATUAÇÃO (Frase de Posicionamento sob o Banner) */}
+      <section className="py-6 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-10 text-center">Canais de Atendimento</h3>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center bg-green-600 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-lg w-full md:w-auto">
-              <MessageCircle size={18} className="mr-2" /> WhatsApp
-            </a>
-            <a href={telefoneSorocaba} className="inline-flex items-center justify-center bg-blue-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-800 transition-all shadow-lg w-full md:w-auto">
-              <Phone size={18} className="mr-2" /> (15) 3191-1432
-            </a>
+          <p className="text-[#2B438B] text-base md:text-lg font-medium leading-relaxed">
+            Atuação técnica para famílias e empresas. Retaguarda estratégica para parceiros.
+          </p>
+        </div>
+      </section>
+
+      {/* 3. COMO PODEMOS AJUDAR (Agrupamento Estratégico em 4 Blocos) */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-blue-900 font-bold text-xl md:text-2xl uppercase tracking-widest mb-2">Como podemos ajudar?</h3>
+          <div className="h-1.5 w-16 bg-blue-900 mx-auto mb-10"></div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+            {/* Bloco 1: Família e Sucessões */}
+            <div className="p-6 border border-gray-100 bg-gray-50 text-left hover:shadow-md transition-shadow">
+              <ShieldCheck className="text-blue-900 mb-3" size={24} />
+              <h4 className="font-bold text-gray-800 text-sm md:text-base uppercase mb-2 tracking-tight">Família, Sucessões e Planejamento Patrimonial</h4>
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Inventários, Divórcios, Doações e Holding Familiar. Organização sucessória para proteger o legado familiar.</p>
+            </div>
+
+            {/* Bloco 2: Imobiliário */}
+            <div className="p-6 border border-gray-100 bg-gray-50 text-left hover:shadow-md transition-shadow">
+              <Building2 className="text-blue-900 mb-3" size={24} />
+              <h4 className="font-bold text-gray-800 text-sm md:text-base uppercase mb-2 tracking-tight">Gestão Jurídica Imobiliária e Regularização</h4>
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Regularização de imóveis, Due Diligence, Contratos, Usucapião e suporte especializado a Imobiliárias.</p>
+            </div>
+
+            {/* Bloco 3: Empresarial e Tributário */}
+            <div className="p-6 border border-gray-100 bg-gray-50 text-left hover:shadow-md transition-shadow">
+              <Landmark className="text-blue-900 mb-3" size={24} />
+              <h4 className="font-bold text-gray-800 text-sm md:text-base uppercase mb-2 tracking-tight">Direito Empresarial e Estratégia Tributária</h4>
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Reorganização societária, Planejamento fiscal e suporte jurídico de alta senioridade para empresas e contabilidades.</p>
+            </div>
+
+            {/* Bloco 4: Trabalho e Previdenciário */}
+            <div className="p-6 border border-gray-100 bg-gray-50 text-left hover:shadow-md transition-shadow">
+              <Users className="text-blue-900 mb-3" size={24} />
+              <h4 className="font-bold text-gray-800 text-sm md:text-base uppercase mb-2 tracking-tight">Direito do Trabalho e Previdenciário</h4>
+              <p className="text-gray-600 text-xs md:text-sm leading-relaxed">Defesa empresarial, Reclamações trabalhistas e concessão de benefícios previdenciários.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. HUB DE PARCERIAS (Destaque Azul - Máxima Conversão) */}
+      <section className="py-14 bg-[#2B438B] text-white">
+        <div className="container mx-auto px-4 text-center max-w-4xl">
+          <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-4 opacity-80">Modelo de Retaguarda</h4>
+          <h2 className="text-2xl md:text-3xl font-bold uppercase mb-6 tracking-tight">Contadores, Imobiliárias e Instituições</h2>
+          <p className="text-blue-100 text-base md:text-lg mb-8 leading-relaxed font-light">
+            Integre senioridade jurídica às suas soluções. Oferecemos suporte técnico para potencializar seus negócios e proteger sua carteira de clientes.
+          </p>
+          <Link to="/parcerias" className="inline-block bg-white text-[#2B438B] px-12 py-3 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-gray-100 transition-all shadow-lg">
+            Conhecer Hub de Parcerias
+          </Link>
+        </div>
+      </section>
+
+      {/* 5. UNIDADES (Fotos Íntegras e Endereços) */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Sorocaba */}
+            <div className="flex flex-col">
+              <img src={fachadaSorocaba} alt="Unidade Sorocaba" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-blue-900" />
+              <div className="px-2">
+                <h4 className="font-bold text-blue-900 text-lg uppercase tracking-widest mb-1">Sorocaba</h4>
+                <p className="text-gray-500 text-xs mb-4 uppercase tracking-tighter italic">Atendimento Presencial e Consultoria</p>
+                <p className="text-gray-600 text-sm mb-4">Av. Profa. Izoraida Marques Peres, 256 — Campolim</p>
+                <a href={telSorocaba} className="text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors italic">
+                  (15) 3191-1432
+                </a>
+              </div>
+            </div>
+            {/* São Paulo */}
+            <div className="flex flex-col">
+              <img src={fachadaSaoPaulo} alt="Unidade São Paulo" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-gray-300" />
+              <div className="px-2">
+                <h4 className="font-bold text-gray-800 text-lg uppercase tracking-widest mb-1">São Paulo</h4>
+                <p className="text-gray-500 text-xs mb-4 uppercase tracking-tighter italic">Escritório Administrativo</p>
+                <p className="text-gray-600 text-sm mb-4">Av. Brigadeiro Faria Lima, 1811 — Conj. 1119</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
