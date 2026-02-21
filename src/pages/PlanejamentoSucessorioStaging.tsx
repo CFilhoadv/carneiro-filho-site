@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle, ShieldCheck, Landmark, Users, ChevronRight, Scale, Handshake } from 'lucide-react';
+import { Phone, MessageCircle, ShieldCheck, Landmark, Users, ChevronRight, Scale } from 'lucide-react';
 
 const PlanejamentoSucessorioStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
@@ -69,21 +69,6 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
                   <ShieldCheck className="text-blue-900 mr-3 shrink-0" size={18} /> Proteção Contra Dívidas
                 </li>
               </ul>
-            </div>
-          </div>
-
-          {/* NOVO BLOCO: VALIDAÇÃO MULTIDISCIPLINAR (O DIFERENCIAL PARA O PARCEIRO) */}
-          <div className="mb-16 md:mb-20 p-6 md:p-8 bg-blue-50 border border-blue-100 rounded-sm">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="bg-blue-900 p-4 rounded-full shrink-0">
-                <Handshake className="text-white" size={32} />
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-blue-900 font-bold uppercase text-sm mb-2 tracking-widest">Atuação Multidisciplinar</h3>
-                <p className="text-gray-700 text-sm md:text-base leading-relaxed italic">
-                  "O planejamento sucessório é desenvolvido em conjunto com contadores, consultores e administradores patrimoniais, assegurando o alinhamento técnico e jurídico necessário para a proteção integral do legado."
-                </p>
-              </div>
             </div>
           </div>
 
