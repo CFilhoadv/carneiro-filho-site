@@ -1,101 +1,95 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Users, Building2, GraduationCap, ChevronRight, Calendar } from 'lucide-react';
+import { Users, Building2, GraduationCap, CheckCircle2, Calendar } from 'lucide-react';
 
 const ParceriasPage: React.FC = () => {
-  // LINK OFICIAL E ÚNICO
   const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
 
   return (
     <MainLayout>
-      {/* Cabeçalho Padronizado */}
       <section className="bg-white pt-10 pb-10 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
             Hub de Parcerias Estratégicas
           </h1>
           <p className="text-blue-900 font-semibold text-xs md:text-sm uppercase tracking-widest mt-3 opacity-80">
-            (Retaguarda Jurídica e Gestão de Ativos)
+            Retaguarda Jurídica e Gestão de Ativos
           </p>
           <div className="h-1 w-16 md:w-20 bg-blue-900 mx-auto mt-4"></div>
         </div>
       </section>
 
-      {/* Introdução */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <p className="text-gray-700 leading-relaxed text-base md:text-lg text-justify md:text-center">
-            Oferecemos suporte jurídico de alta senioridade para profissionais que buscam segurança técnica em suas operações. Nossa atuação é estritamente complementar, preservando a relação de confiança entre o parceiro e seu cliente.
-          </p>
-        </div>
-      </section>
-
-      {/* Blocos de Parceria */}
-      <section className="pb-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl space-y-16">
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl space-y-20">
           
-          {/* Bloco 01 - Contadores (ATUALIZADO COM ENGENHARIA SOCIETÁRIA) */}
-          <div className="border-t pt-10">
-            <div className="flex items-center gap-3 mb-6">
-              <Users className="text-blue-900" size={24} />
-              <h3 className="text-lg md:text-xl font-bold text-blue-900 uppercase tracking-tight">Escritórios de Contabilidade</h3>
+          {/* Bloco 01 - Contadores */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+            <div className="md:col-span-1">
+              <Users className="text-blue-900" size={32} />
             </div>
-            <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-              <p className="italic text-gray-500 text-sm md:text-base">Retaguarda técnica para demandas societárias e tributárias de alta complexidade.</p>
+            <div className="md:col-span-11 space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-blue-900 uppercase tracking-tight mb-2">Escritórios de Contabilidade</h3>
+                <p className="text-gray-500 italic text-sm">Retaguarda técnica para demandas societárias e tributárias de alta complexidade.</p>
+              </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Due Diligence Jurídica e Fiscal:</strong> Auditagem técnica para identificação de ativos e passivos ocultos.</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Engenharia Societária:</strong> Viabilização de operações como a Incorporação Reversa e mitigação de IRPJ/CSLL.</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Recomposição de Ativos:</strong> Análise da balança tributária para recuperação de créditos e saneamento de passivos.</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> <strong>Planejamento Sucessório:</strong> Estruturação de Holdings com foco em eficiência e segurança para o assessor contábil.</div>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
+                  <span><strong>Due Diligence Jurídica e Fiscal:</strong> Auditagem técnica para identificação de ativos e passivos ocultos.</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
+                  <span><strong>Engenharia Societária:</strong> Viabilização de operações como a Incorporação Reversa.</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
+                  <span><strong>Recomposição de Ativos:</strong> Análise da balança tributária e recuperação de créditos.</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
+                  <span><strong>Planejamento Sucessório:</strong> Holdings com foco em eficiência e segurança para o assessor.</span>
+                </li>
+              </ul>
+
+              <div className="bg-blue-50 p-4 border-l-4 border-blue-900 text-sm text-gray-700">
+                <strong>Diferencial:</strong> Visão unificada de Direito, Contabilidade e Controladoria para garantir ganho real de caixa e blindagem técnica.
               </div>
 
-              <div className="bg-gray-50 p-5 border-l-4 border-blue-900 text-sm italic">
-                <strong>Diferencial:</strong> Atuação baseada na visão unificada de Direito, Contabilidade e Controladoria, garantindo que a engenharia jurídica resulte em ganho real de caixa e blindagem técnica absoluta.
-              </div>
-              
-              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-8 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-all">
                 <Calendar size={14} className="mr-2" /> Agendar Alinhamento Técnico
               </a>
             </div>
           </div>
 
           {/* Bloco 02 - Imobiliárias */}
-          <div className="border-t pt-10">
-            <div className="flex items-center gap-3 mb-6">
-              <Building2 className="text-blue-900" size={24} />
-              <h3 className="text-lg md:text-xl font-bold text-blue-900 uppercase tracking-tight">Imobiliárias e Corretores</h3>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start border-t pt-16">
+            <div className="md:col-span-1">
+              <Building2 className="text-blue-900" size={32} />
             </div>
-            <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-              <p className="italic text-gray-500 text-sm md:text-base">Regularização técnica e segurança jurídica para o destravamento de transações imobiliárias.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Regularização de Imóveis e Gestão de Sucessões</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Due Diligence Especializada para Ativos de Alto Valor</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Estruturação de Contratos Complexos e Garantias Reais</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Destravamento de Matrículas e Regularização Fundiária</div>
+            <div className="md:col-span-11 space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-blue-900 uppercase tracking-tight mb-2">Imobiliárias e Corretores</h3>
+                <p className="text-gray-500 italic text-sm">Segurança jurídica para o destravamento de transações imobiliárias.</p>
               </div>
-              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
-                <Calendar size={14} className="mr-2" /> Iniciar Alinhamento Técnico
-              </a>
-            </div>
-          </div>
+              
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
+                  <span>Regularização de Imóveis e Gestão de Sucessões (Inventários e Alvarás).</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
+                  <span>Due Diligence Especializada para Ativos de Alto Valor.</span>
+                </li>
+                <li className="flex items-start gap-3 text-gray-700">
+                  <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
+                  <span>Destravamento de Matrículas e Regularização Fundiária.</span>
+                </li>
+              </ul>
 
-          {/* Bloco 03 - Ensino e Empresas */}
-          <div className="border-t pt-10">
-            <div className="flex items-center gap-3 mb-6">
-              <GraduationCap className="text-blue-900" size={24} />
-              <h3 className="text-lg md:text-xl font-bold text-blue-900 uppercase tracking-tight">Instituições de Ensino e Empresas</h3>
-            </div>
-            <div className="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed text-justify">
-              <p className="italic text-gray-500 text-sm md:text-base">Gestão estratégica de passivos e recomposição organizada de ativos financeiros.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm md:text-base">
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Defesa Institucional e Educacional Especializada</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Recomposição de Ativos (Cobrança Executiva)</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Gestão de Passivos para Preservação de Caixa</div>
-                <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Consultoria de Retaguarda Executiva</div>
-              </div>
-              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
-                <Calendar size={14} className="mr-2" /> Solicitar Reunião Estratégica
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-8 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-all">
+                <Calendar size={14} className="mr-2" /> Iniciar Alinhamento Técnico
               </a>
             </div>
           </div>
