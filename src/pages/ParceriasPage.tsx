@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Users, Building2, GraduationCap, CheckCircle2, Calendar } from 'lucide-react';
+import { Users, Building2, CheckCircle2, Calendar } from 'lucide-react';
 
 const ParceriasPage: React.FC = () => {
   const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
@@ -40,7 +40,7 @@ const ParceriasPage: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-3 text-gray-700">
                   <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
-                  <span><strong>Engenharia Societária:</strong> Viabilização de operações como a Incorporação Reversa.</span>
+                  <span><strong>Engenharia Societária:</strong> Viabilização de operações estratégicas como a Incorporação Reversa.</span>
                 </li>
                 <li className="flex items-start gap-3 text-gray-700">
                   <CheckCircle2 size={18} className="text-blue-900 mt-1 shrink-0" />
@@ -56,7 +56,7 @@ const ParceriasPage: React.FC = () => {
                 <strong>Diferencial:</strong> Visão unificada de Direito, Contabilidade e Controladoria para garantir ganho real de caixa e blindagem técnica.
               </div>
 
-              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-8 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-all">
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-8 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-all shadow-md">
                 <Calendar size={14} className="mr-2" /> Agendar Alinhamento Técnico
               </a>
             </div>
@@ -88,7 +88,7 @@ const ParceriasPage: React.FC = () => {
                 </li>
               </ul>
 
-              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-8 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-all">
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-8 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-all shadow-md">
                 <Calendar size={14} className="mr-2" /> Iniciar Alinhamento Técnico
               </a>
             </div>
