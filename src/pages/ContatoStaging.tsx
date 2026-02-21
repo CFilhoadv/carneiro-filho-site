@@ -1,11 +1,12 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, Mail, MapPin, MessageCircle, Landmark } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Landmark, Users, Calendar } from 'lucide-react';
 
 const ContatoStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
   const telefoneLink = "tel:+551531911432";
   const emailLink = "mailto:contato@carneirofilho.com.br";
+  const calendlyParcerias = "https://calendly.com/contato-carneirofilho/reuniao-tecnica-contadores";
 
   return (
     <MainLayout>
@@ -33,8 +34,8 @@ const ContatoStaging: React.FC = () => {
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           
-          {/* CANAIS DE ATENDIMENTO DIGITAL */}
-          <div className="space-y-6 md:space-y-8 mb-16">
+          {/* CANAIS DE ATENDIMENTO DIGITAL (PÚBLICO GERAL) */}
+          <div className="space-y-6 md:space-y-8 mb-12">
             
             {/* WhatsApp */}
             <div className="p-6 md:p-8 bg-[#f8fff9] border-l-4 border-[#25D366] rounded-sm shadow-sm">
@@ -47,13 +48,13 @@ const ContatoStaging: React.FC = () => {
                 href={whatsappLink} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[#25D366] text-white px-10 py-4 rounded-sm font-bold text-lg hover:bg-[#128C7E] transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
+                className="inline-flex items-center justify-center bg-[#25D366] text-white px-10 py-4 rounded-sm font-bold hover:bg-[#128C7E] transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
               >
                 (15) 3191-1432
               </a>
             </div>
 
-            {/* Telefone - AGORA COM DESTAQUE AZUL */}
+            {/* Telefone */}
             <div className="p-6 md:p-8 bg-gray-50 border-l-4 border-blue-900 rounded-sm shadow-sm">
               <div className="flex items-center mb-4">
                 <Phone className="text-blue-900 mr-3" size={28} />
@@ -62,29 +63,50 @@ const ContatoStaging: React.FC = () => {
               <p className="text-gray-600 text-sm mb-6 font-medium">Segunda a sexta, das 9h às 18h</p>
               <a 
                 href={telefoneLink} 
-                className="inline-flex items-center justify-center bg-blue-900 text-white px-10 py-4 rounded-sm font-bold text-lg hover:bg-blue-800 transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
+                className="inline-flex items-center justify-center bg-blue-900 text-white px-10 py-4 rounded-sm font-bold hover:bg-blue-800 transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
               >
                 (15) 3191-1432
               </a>
             </div>
+          </div>
 
-            {/* E-mail */}
-            <div className="p-6 md:p-8 bg-gray-50 border-l-4 border-gray-400 rounded-sm shadow-sm">
+          {/* NOVO BLOCO: CANAL DE PARCERIAS (O CTA QUE FALTA) */}
+          <div className="mb-16 p-8 bg-[#2B438B] text-white rounded-sm shadow-xl relative overflow-hidden">
+            <div className="relative z-10">
               <div className="flex items-center mb-4">
-                <Mail className="text-gray-600 mr-3" size={28} />
-                <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase tracking-tight">E-mail</h2>
+                <Users className="text-blue-200 mr-3" size={32} />
+                <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight">Canal de Parcerias</h2>
               </div>
-              <p className="text-gray-600 text-sm mb-4 font-medium">Assuntos formais e envio de documentos</p>
+              <p className="text-blue-100 text-base mb-8 leading-relaxed">
+                Exclusivo para <strong>Contadores, Imobiliárias e Instituições</strong> que buscam suporte técnico especializado e retaguarda jurídica para seus ativos e clientes.
+              </p>
               <a 
-                href={emailLink} 
-                className="text-lg md:text-xl font-bold text-blue-900 hover:underline break-all"
+                href={calendlyParcerias} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-white text-[#2B438B] px-10 py-4 rounded-sm font-bold hover:bg-gray-100 transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
               >
-                contato@carneirofilho.com.br
+                <Calendar size={18} className="mr-2" /> Agendar Reunião Técnica
               </a>
             </div>
           </div>
 
-          {/* ATENDIMENTO PRESENCIAL - LEGIBILIDADE TOTAL */}
+          {/* E-mail */}
+          <div className="mb-16 p-6 md:p-8 bg-gray-50 border-l-4 border-gray-400 rounded-sm shadow-sm">
+            <div className="flex items-center mb-4">
+              <Mail className="text-gray-600 mr-3" size={28} />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase tracking-tight">E-mail</h2>
+            </div>
+            <p className="text-gray-600 text-sm mb-4 font-medium">Assuntos formais e envio de documentos</p>
+            <a 
+              href={emailLink} 
+              className="text-lg md:text-xl font-bold text-blue-900 hover:underline break-all"
+            >
+              contato@carneirofilho.com.br
+            </a>
+          </div>
+
+          {/* ATENDIMENTO PRESENCIAL */}
           <div className="pt-12 border-t border-gray-100">
             <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-10 text-center uppercase tracking-widest">
               Unidades de Atendimento
@@ -103,7 +125,7 @@ const ContatoStaging: React.FC = () => {
                 </p>
               </div>
 
-              {/* São Paulo - AGORA 100% LEGÍVEL */}
+              {/* São Paulo */}
               <div className="p-6 bg-white border border-gray-200 rounded-sm shadow-sm border-t-4 border-gray-400">
                 <h3 className="font-bold text-gray-800 text-lg mb-3 flex items-center uppercase tracking-tight">
                   <MapPin className="text-gray-400 mr-2" size={20} /> São Paulo
