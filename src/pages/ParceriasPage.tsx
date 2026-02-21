@@ -3,9 +3,12 @@ import MainLayout from '../components/layout/MainLayout';
 import { Users, Building2, GraduationCap, ChevronRight, Calendar } from 'lucide-react';
 
 const ParceriasPage: React.FC = () => {
+  // LINK OFICIAL E ÚNICO
+  const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
+
   return (
     <MainLayout>
-      {/* Cabeçalho Padronizado - Baseado em DoacaoStaging */}
+      {/* Cabeçalho Padronizado */}
       <section className="bg-white pt-10 pb-10 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
@@ -18,7 +21,7 @@ const ParceriasPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Introdução - Padrão Quem Somos */}
+      {/* Introdução */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <p className="text-gray-700 leading-relaxed text-base md:text-lg text-justify md:text-center">
@@ -47,8 +50,8 @@ const ParceriasPage: React.FC = () => {
               <div className="bg-gray-50 p-5 border-l-4 border-blue-900 text-sm italic">
                 <strong>Diferencial:</strong> Identificação de ativos fiscais e apoio em fusões, garantindo a blindagem técnica do assessor contábil.
               </div>
-              <a href="https://calendly.com/contato-carneirofilho/reuniao-tecnica-contadores" target="_blank" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800">
-                <Calendar size={14} className="mr-2" /> Reservar Horário no Calendly
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
+                <Calendar size={14} className="mr-2" /> Agendar Reunião Técnica
               </a>
             </div>
           </div>
@@ -66,8 +69,8 @@ const ParceriasPage: React.FC = () => {
                 <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Due Diligence e Gestão de Riscos Contratuais</div>
                 <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Gestão Estratégica de Contencioso Imobiliário</div>
               </div>
-              <a href="https://calendly.com/contato-carneirofilho/alinhamento-imobiliario" target="_blank" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800">
-                <Calendar size={14} className="mr-2" /> Reservar Horário no Calendly
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
+                <Calendar size={14} className="mr-2" /> Iniciar Alinhamento Técnico
               </a>
             </div>
           </div>
@@ -85,8 +88,8 @@ const ParceriasPage: React.FC = () => {
                 <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Recomposição de Ativos (Cobrança Executiva)</div>
                 <div className="flex items-start gap-2"><ChevronRight size={18} className="text-blue-900 mt-1 shrink-0" /> Consultoria de Retaguarda Executiva</div>
               </div>
-              <a href="https://calendly.com/contato-carneirofilho/outros_servicos_juridicos" target="_blank" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800">
-                <Calendar size={14} className="mr-2" /> Reservar Horário no Calendly
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-blue-900 text-white px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-colors shadow-md">
+                <Calendar size={14} className="mr-2" /> Solicitar Reunião Estratégica
               </a>
             </div>
           </div>
