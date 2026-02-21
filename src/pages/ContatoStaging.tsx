@@ -1,155 +1,118 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, Mail, MapPin, MessageCircle, Landmark, Users, Calendar } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Calendar, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ContatoStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
-  const telefoneLink = "tel:+551531911432";
-  const emailLink = "mailto:contato@carneirofilho.com.br";
-  const calendlyParcerias = "https://calendly.com/contato-carneirofilho/reuniao-tecnica-contadores";
+  // LINK ATUALIZADO CONFORME SOLICITADO
+  const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
+  const telSorocaba = "tel:+551531911432";
+  const telSP = "tel:+551142106194";
 
   return (
     <MainLayout>
-      {/* BOTÃO FLUTUANTE WHATSAPP */}
-      <a 
-        href={whatsappLink} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className="fixed bottom-6 right-6 z-50 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:bg-green-700 transition-all hover:scale-110 flex items-center justify-center animate-bounce"
-        aria-label="WhatsApp"
-      >
-        <MessageCircle size={30} />
-      </a>
-
-      {/* CABEÇALHO */}
-      <section className="bg-white pt-10 pb-8 md:pt-16 md:pb-12 border-b border-gray-100 text-center">
+      <section className="bg-white pt-8 pb-8 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl md:text-5xl font-bold text-blue-900 tracking-tight leading-tight uppercase">
-            Carneiro Filho<br />Advocacia
+          <h1 className="text-2xl md:text-4xl font-bold text-blue-900 uppercase tracking-widest">
+            Canais de Atendimento
           </h1>
-          <div className="h-1.5 w-20 bg-blue-900 mx-auto mt-6"></div>
+          <div className="h-1.5 w-20 bg-blue-900 mx-auto mt-4"></div>
         </div>
       </section>
 
-      <section className="py-10 md:py-16 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          
-          {/* CANAIS DE ATENDIMENTO DIGITAL (PÚBLICO GERAL) */}
-          <div className="space-y-6 md:space-y-8 mb-12">
+      <section className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
-            {/* WhatsApp */}
-            <div className="p-6 md:p-8 bg-[#f8fff9] border-l-4 border-[#25D366] rounded-sm shadow-sm">
-              <div className="flex items-center mb-4">
-                <MessageCircle className="text-[#25D366] mr-3" size={28} />
-                <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase tracking-tight">WhatsApp</h2>
-              </div>
-              <p className="text-gray-600 text-sm mb-6 font-medium">Resposta imediata - Clique para iniciar atendimento digital</p>
-              <a 
-                href={whatsappLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-[#25D366] text-white px-10 py-4 rounded-sm font-bold hover:bg-[#128C7E] transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
-              >
-                (15) 3191-1432
+            {/* COLUNA 1: ATENDIMENTO DIRETO */}
+            <div className="space-y-6">
+              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6">Atendimento Imediato</h3>
+              
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" 
+                 className="flex items-center p-6 bg-green-50 border border-green-100 rounded-sm hover:shadow-md transition-all group">
+                <MessageCircle className="text-green-600 mr-4 group-hover:scale-110 transition-transform" size={32} />
+                <div>
+                  <p className="text-[10px] font-bold text-green-700 uppercase tracking-widest">WhatsApp</p>
+                  <p className="text-lg font-bold text-gray-800">Atendimento Digital</p>
+                </div>
               </a>
-            </div>
 
-            {/* Telefone */}
-            <div className="p-6 md:p-8 bg-gray-50 border-l-4 border-blue-900 rounded-sm shadow-sm">
-              <div className="flex items-center mb-4">
-                <Phone className="text-blue-900 mr-3" size={28} />
-                <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase tracking-tight">Telefone VoIP</h2>
+              <div className="p-6 bg-gray-50 border border-gray-100 rounded-sm">
+                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">Telefones</p>
+                <div className="space-y-4">
+                  <a href={telSorocaba} className="flex items-center text-blue-900 font-bold text-lg hover:underline">
+                    <Phone size={18} className="mr-3" /> (15) 3191-1432
+                  </a>
+                  <a href={telSP} className="flex items-center text-blue-900 font-bold text-lg hover:underline">
+                    <Phone size={18} className="mr-3" /> (11) 4210-6194
+                  </a>
+                </div>
               </div>
-              <p className="text-gray-600 text-sm mb-6 font-medium">Segunda a sexta, das 9h às 18h</p>
-              <a 
-                href={telefoneLink} 
-                className="inline-flex items-center justify-center bg-blue-900 text-white px-10 py-4 rounded-sm font-bold hover:bg-blue-800 transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
-              >
-                (15) 3191-1432
+            </div>
+
+            {/* COLUNA 2: AGENDAMENTO E PARCERIAS */}
+            <div className="space-y-6">
+              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6">Gestão e Parcerias</h3>
+              
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" 
+                 className="flex items-center p-6 bg-blue-900 text-white rounded-sm hover:bg-blue-800 transition-all shadow-lg group">
+                <Calendar className="text-blue-200 mr-4 group-hover:rotate-12 transition-transform" size={32} />
+                <div>
+                  <p className="text-[10px] font-bold text-blue-200 uppercase tracking-widest">Agendamento</p>
+                  <p className="text-lg font-bold">Reunião Técnica</p>
+                </div>
               </a>
-            </div>
-          </div>
 
-          {/* NOVO BLOCO: CANAL DE PARCERIAS (O CTA QUE FALTA) */}
-          <div className="mb-16 p-8 bg-[#2B438B] text-white rounded-sm shadow-xl relative overflow-hidden">
-            <div className="relative z-10">
-              <div className="flex items-center mb-4">
-                <Users className="text-blue-200 mr-3" size={32} />
-                <h2 className="text-xl md:text-2xl font-bold uppercase tracking-tight">Canal de Parcerias</h2>
-              </div>
-              <p className="text-blue-100 text-base mb-8 leading-relaxed">
-                Exclusivo para <strong>Contadores, Imobiliárias e Instituições</strong> que buscam suporte técnico especializado e retaguarda jurídica para seus ativos e clientes.
-              </p>
-              <a 
-                href={calendlyParcerias} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white text-[#2B438B] px-10 py-4 rounded-sm font-bold hover:bg-gray-100 transition-all shadow-md w-full md:w-auto uppercase tracking-widest text-xs"
-              >
-                <Calendar size={18} className="mr-2" /> Agendar Reunião Técnica
-              </a>
-            </div>
-          </div>
-
-          {/* E-mail */}
-          <div className="mb-16 p-6 md:p-8 bg-gray-50 border-l-4 border-gray-400 rounded-sm shadow-sm">
-            <div className="flex items-center mb-4">
-              <Mail className="text-gray-600 mr-3" size={28} />
-              <h2 className="text-xl md:text-2xl font-bold text-gray-800 uppercase tracking-tight">E-mail</h2>
-            </div>
-            <p className="text-gray-600 text-sm mb-4 font-medium">Assuntos formais e envio de documentos</p>
-            <a 
-              href={emailLink} 
-              className="text-lg md:text-xl font-bold text-blue-900 hover:underline break-all"
-            >
-              contato@carneirofilho.com.br
-            </a>
-          </div>
-
-          {/* ATENDIMENTO PRESENCIAL */}
-          <div className="pt-12 border-t border-gray-100">
-            <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-10 text-center uppercase tracking-widest">
-              Unidades de Atendimento
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Sorocaba */}
-              <div className="p-6 bg-white border border-gray-100 rounded-sm shadow-sm border-t-4 border-blue-900">
-                <h3 className="font-bold text-blue-900 text-lg mb-3 flex items-center uppercase tracking-tight">
-                  <MapPin className="mr-2" size={20} /> Sorocaba
-                </h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Av. Profa. Izoraida Marques Peres, 256<br />
-                  Edifício Av. Paulista, 9º andar<br />
-                  Campolim, Sorocaba/SP
+              <div className="p-8 bg-[#2B438B] text-white rounded-sm shadow-xl border-t-4 border-blue-400">
+                <Users className="mb-4 text-blue-200" size={32} />
+                <h4 className="font-bold uppercase tracking-widest text-sm mb-2">Canal de Parcerias</h4>
+                <p className="text-blue-100 text-xs leading-relaxed mb-6 italic">
+                  Suporte jurídico especializado para Contadores, Imobiliárias e Consultores Patrimoniais.
                 </p>
-              </div>
-
-              {/* São Paulo */}
-              <div className="p-6 bg-white border border-gray-200 rounded-sm shadow-sm border-t-4 border-gray-400">
-                <h3 className="font-bold text-gray-800 text-lg mb-3 flex items-center uppercase tracking-tight">
-                  <MapPin className="text-gray-400 mr-2" size={20} /> São Paulo
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Av. Brigadeiro Faria Lima, 1811<br />
-                  Conj. 1119 - Jardim Paulistano<br />
-                  São Paulo/SP
-                </p>
+                <Link to="/parcerias" className="block text-center bg-white text-[#2B438B] py-2 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-gray-100 transition-colors">
+                  Acessar Hub
+                </Link>
               </div>
             </div>
-          </div>
 
-          {/* COMPLIANCE OAB */}
-          <div className="mt-20 pt-8 border-t border-gray-100 text-center">
-            <div className="flex justify-center mb-4 text-gray-300">
-              <Landmark size={32} />
+            {/* COLUNA 3: UNIDADES */}
+            <div className="space-y-6">
+              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6">Localização</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <MapPin className="text-blue-900 mr-4 mt-1 shrink-0" size={24} />
+                  <div>
+                    <p className="font-bold text-gray-800 uppercase text-xs tracking-widest mb-1">Sorocaba/SP</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Av. Profa. Izoraida Marques Peres, 256<br />
+                      Ed. Torre Sul - Campolim
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <MapPin className="text-gray-400 mr-4 mt-1 shrink-0" size={24} />
+                  <div>
+                    <p className="font-bold text-gray-800 uppercase text-xs tracking-widest mb-1">São Paulo/SP</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Av. Brigadeiro Faria Lima, 1811<br />
+                      Conj. 1119 - Jd. Paulistano
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-gray-100">
+                  <div className="flex items-center text-gray-600">
+                    <Mail size={18} className="mr-3" />
+                    <p className="text-sm font-medium">contato@carneirofilho.adv.br</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-[0.2em] leading-loose font-medium">
-              Carneiro Filho Sociedade Individual de Advocacia • OAB/SP 47.631<br />
-              Francisco Carneiro Filho • OAB/SP 189.404
-            </p>
-          </div>
 
+          </div>
         </div>
       </section>
     </MainLayout>
