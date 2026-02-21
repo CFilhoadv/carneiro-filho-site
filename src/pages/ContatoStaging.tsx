@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 
 const ContatoStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
-  // LINK ATUALIZADO CONFORME SOLICITADO
   const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
   const telSorocaba = "tel:+551531911432";
   const telSP = "tel:+551142106194";
+  const emailOficial = "contato@carneirofilho.com.br";
 
   return (
     <MainLayout>
@@ -106,8 +106,13 @@ const ContatoStaging: React.FC = () => {
                 <div className="pt-4 border-t border-gray-100">
                   <div className="flex items-center text-gray-600">
                     <Mail size={18} className="mr-3" />
-                    <p className="text-sm font-medium">contato@carneirofilho.adv.br</p>
+                    <a href={`mailto:${emailOficial}`} className="text-sm font-medium hover:text-blue-900 transition-colors">
+                      {emailOficial}
+                    </a>
                   </div>
+                  <p className="text-[10px] text-gray-400 mt-2 italic">
+                    *Para demandas de extrema urgência, utilize o e-mail oficial.
+                  </p>
                 </div>
               </div>
             </div>
