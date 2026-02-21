@@ -84,10 +84,11 @@ const ContatoStaging: React.FC = () => {
                 <div className="flex items-start">
                   <MapPin className="text-blue-900 mr-4 mt-1 shrink-0" size={24} />
                   <div>
-                    <p className="font-bold text-gray-800 uppercase text-xs tracking-widest mb-1">Sorocaba/SP</p>
+                    <p className="font-bold text-gray-800 uppercase text-[10px] tracking-widest mb-1">Unidade de Atendimento</p>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Av. Profa. Izoraida Marques Peres, 256<br />
-                      Ed. Torre Sul - Campolim
+                      Av. Profa. Izoraida Marques Peres, 256, 9º andar<br />
+                      Ed. Avenida Paulista - Campolim<br />
+                      Sorocaba/SP - CEP 18048-110
                     </p>
                   </div>
                 </div>
@@ -95,10 +96,11 @@ const ContatoStaging: React.FC = () => {
                 <div className="flex items-start">
                   <MapPin className="text-gray-400 mr-4 mt-1 shrink-0" size={24} />
                   <div>
-                    <p className="font-bold text-gray-800 uppercase text-xs tracking-widest mb-1">São Paulo/SP</p>
+                    <p className="font-bold text-gray-800 uppercase text-[10px] tracking-widest mb-1">Unidade Administrativa</p>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Av. Brigadeiro Faria Lima, 1811<br />
-                      Conj. 1119 - Jd. Paulistano
+                      Av. Brig. Faria Lima, 1811 - Anexo Esc 1119<br />
+                      Jardim Paulistano<br />
+                      São Paulo/SP - CEP 01452-001
                     </p>
                   </div>
                 </div>
@@ -110,9 +112,6 @@ const ContatoStaging: React.FC = () => {
                       {emailOficial}
                     </a>
                   </div>
-                  <p className="text-[10px] text-gray-400 mt-2 italic">
-                    *Para demandas de extrema urgência, utilize o e-mail oficial.
-                  </p>
                 </div>
               </div>
             </div>
