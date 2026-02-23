@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Shield, Users, Briefcase, ChevronRight, Scale, Gavel, FileText, Heart } from 'lucide-react';
+import { Shield, Users, ChevronRight, Scale, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HomeStaging: React.FC = () => {
@@ -44,7 +44,7 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* SEÇÃO: COMO PODEMOS AJUDAR (AGORA COM DIREITO CIVIL) */}
+      {/* SEÇÃO: COMO PODEMOS AJUDAR (DIREITO CIVIL INCLUÍDO) */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -54,7 +54,7 @@ const HomeStaging: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* NOVO: DIREITO CIVIL - FOCO NO PÚBLICO SOROCABA */}
+            {/* DIREITO CIVIL - FOCO NO PÚBLICO SOROCABA */}
             <div className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-shadow group">
               <Scale className="text-blue-900 mb-6 group-hover:scale-110 transition-transform" size={40} />
               <h4 className="text-xl font-bold text-gray-800 mb-4">Direito Civil</h4>
