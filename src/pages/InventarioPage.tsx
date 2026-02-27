@@ -54,7 +54,7 @@ const InventarioPage: React.FC = () => {
             </div>
 
             <p>
-              Na ausência de qualquer um desses requisitos, a lei impõe o <strong>inventário judicial</strong>. Este caminho exige uma condução estratégica ainda mais apurada para mitigar conflitos e proteger o valor dos bens. Em ambas as situações, nossa prioridade é a eficiência no cálculo do ITCMD e a regularização ágil da documentação, garantindo que o patrimônio chegue aos herdeiros com a menor perda financeira possível.
+              Na ausência de qualquer um desses requisitos, a lei impõe o <strong>inventário judicial</strong>. Este caminho exige uma condução estratégica ainda mais apurada para mitigar conflitos e proteger o valor dos bens. Em ambas as situações, nossa prioridade é a eficiência no cálculo do ITCMD e a regularização ágil da documentação, <strong>buscando reduzir riscos e perdas, quando aplicável, dentro das alternativas legais.</strong>
             </p>
             
             {/* ALERTA DE PRAZO */}
@@ -65,28 +65,52 @@ const InventarioPage: React.FC = () => {
               </p>
             </div>
 
-            {/* 3. BLOCO DE ATENDIMENTO PADRONIZADO */}
-            <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
+            {/* 3. Seção Como funciona (Padronizada) */}
+            <div className="mt-12 md:mt-16 bg-gray-50 p-8 border border-gray-100 rounded-sm text-left">
+              <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6">Como funciona</h2>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">1</span>
+                  <p className="text-sm text-gray-700">Você inicia o contato pelo WhatsApp.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">2</span>
+                  <p className="text-sm text-gray-700">Fazemos uma triagem e uma análise do cenário familiar/patrimonial.</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">3</span>
+                  <p className="text-sm text-gray-700">Indicamos o caminho jurídico adequado e os próximos passos.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* 4. BLOCO DE ATENDIMENTO PADRONIZADO */}
+            <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100 text-left">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
-                {/* Sorocaba */}
+                {/* CARD SOROCABA E REGIÃO */}
                 <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
                   <div>
-                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-blue-800 pb-2 text-blue-200">Sorocaba • Presencial</h3>
-                    <p className="text-blue-100 text-xs leading-relaxed mb-6 italic">Canal prioritário para suporte especializado em Inventários e Arrolamentos.</p>
+                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200">Sorocaba e região • Atendimento digital e presencial</h3>
+                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80">Orientação técnica e análise individualizada conforme o caso.</p>
                   </div>
                   <div className="space-y-3">
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md">
-                      <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
+                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md group">
+                      <div className="flex items-center">
+                        <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
+                      </div>
                     </a>
+                    <p className="text-[9px] text-blue-200 text-center leading-tight">
+                      Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
+                    </p>
                     <a href={telSorocaba} className="flex items-center justify-center bg-blue-800 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-all shadow-md border border-blue-400">
                       <Phone size={16} className="mr-2" /> (15) 3191-1432
                     </a>
                   </div>
                 </div>
 
-                {/* São Paulo */}
-                <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 flex flex-col justify-between shadow-sm">
+                {/* UNIDADE SÃO PAULO */}
+                <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 flex flex-col justify-between shadow-sm text-left">
                   <div>
                     <h3 className="font-bold text-blue-900 uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-gray-200 pb-2">São Paulo • Administrativo</h3>
                     <p className="text-gray-600 text-[10px] md:text-xs leading-relaxed mb-6 italic">Suporte estratégico para casos complexos e gestão documental.</p>
@@ -100,9 +124,13 @@ const InventarioPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-8 md:mt-10 text-center">
-                <Link to="/servicos" className="text-gray-500 hover:text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs border-b border-transparent hover:border-blue-900 pb-1 transition-all">
-                  ← Voltar para Todos os Serviços
+              {/* 5. NAVEGAÇÃO INTERNA */}
+              <div className="mt-12 flex flex-col items-center space-y-4">
+                <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:underline flex items-center">
+                  ← Voltar para Planejamento Sucessório
+                </Link>
+                <Link to="/servicos" className="text-gray-400 hover:text-gray-600 font-bold uppercase tracking-widest text-[9px] md:text-[10px] transition-all">
+                  Ver todos os serviços
                 </Link>
               </div>
             </div>
