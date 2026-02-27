@@ -9,10 +9,10 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
   const telSorocaba = "tel:+551531911432";
 
   const subpaginas = [
-    { title: "Doação com Usufruto", href: "/planejamento-sucessorio/doacao", desc: "Antecipação de herança com garantia de posse e renda para os pais." },
-    { title: "Testamentos", href: "/planejamento-sucessorio/testamentos", desc: "Organização da vontade com segurança jurídica e proteção de herdeiros." },
-    { title: "Holding Familiar", href: "/planejamento-sucessorio/holding", desc: "Proteção de bens e economia de impostos através de estrutura empresarial." },
-    { title: "Gestão Patrimonial (ABIP)", href: "/planejamento-sucessorio/abip", desc: "Administração profissional e segura de ativos próprios." },
+    { title: "Doação com Usufruto", href: "/planejamento-sucessorio/doacao", desc: "Antecipação de herança com orientação técnica sobre posse e renda para os pais." },
+    { title: "Testamentos", href: "/planejamento-sucessorio/testamentos", desc: "Organização da vontade com segurança jurídica e análise de sucessão." },
+    { title: "Holding Familiar", href: "/planejamento-sucessorio/holding", desc: "Estruturação para organização de bens e busca por eficiência tributária." },
+    { title: "Gestão Patrimonial (ABIP)", href: "/planejamento-sucessorio/abip", desc: "Administração técnica de ativos próprios conforme normas vigentes." },
     { title: "Inventário e Partilha", href: "/planejamento-sucessorio/inventario", desc: "Regularização de bens quando não houve planejamento sucessório prévio." }
   ];
 
@@ -22,6 +22,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
         <MessageCircle size={30} />
       </a>
 
+      {/* CABEÇALHO */}
       <section className="bg-white pt-12 pb-8 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl md:text-4xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
@@ -31,6 +32,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
         </div>
       </section>
 
+      {/* FILTRO SIM/NÃO (ITEM 3.4) */}
       <section className="bg-gray-50 py-8 border-y border-gray-100">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <p className="text-gray-700 font-medium mb-6">
@@ -47,17 +49,19 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
         </div>
       </section>
 
+      {/* CONTEÚDO PRINCIPAL COM LINGUAGEM PRUDENTE (ITEM 3.4) */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
+          
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-start">
             <div className="lg:col-span-7 space-y-6 text-gray-700 leading-relaxed text-base md:text-lg">
               <p className="text-justify">
-                O planejamento sucessório em Sorocaba e região é focado em preservar o legado e a harmonia familiar com segurança jurídica e atendimento digital.
+                O planejamento sucessório em <strong>Sorocaba e região</strong> é focado em preservar o legado e a harmonia familiar. Atuamos para proteger o patrimônio com segurança jurídica, avaliando alternativas lícitas de organização patrimonial e eficiência tributária, conforme o caso.
               </p>
               <div className="space-y-3 pt-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="text-blue-900 shrink-0" size={20} />
-                  <p className="text-sm font-semibold text-gray-800">Experiência em estruturação societária e blindagem de ativos.</p>
+                  <p className="text-sm font-semibold text-gray-800">Análise técnica para estruturação societária e proteção de ativos.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="text-blue-900 shrink-0" size={20} />
@@ -67,26 +71,31 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
             </div>
             
             <div className="lg:col-span-5 bg-gray-50 p-8 rounded-sm border-l-4 border-blue-900 shadow-sm">
-              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6">Etapas</h3>
+              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs mb-6">Etapas Sugeridas</h3>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">1</span>
-                  <p className="text-xs text-gray-700">Diagnóstico inicial via WhatsApp.</p>
+                  <p className="text-xs text-gray-700">Diagnóstico inicial via WhatsApp para entender o contexto familiar.</p>
                 </div>
-                <a href={calendlyLink} target="_blank" rel="noopener" className="flex items-center justify-center bg-blue-900 text-white py-4 mt-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-800 transition-all">
+                <a href={calendlyLink} target="_blank" rel="noopener" className="flex items-center justify-center bg-blue-900 text-white py-4 mt-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-800 transition-all shadow-md">
                   <Calendar size={14} className="mr-2" /> Agendar reunião técnica
                 </a>
               </div>
             </div>
           </div>
 
+          {/* DIFERENCIAL */}
           <div className="bg-blue-900 p-10 rounded-sm text-white mb-16 text-center border-b-4 border-blue-400">
             <h3 className="font-bold uppercase tracking-widest text-sm mb-4">Diferencial para alta renda e empresários</h3>
+            <p className="text-blue-100 text-sm md:text-base mb-8 max-w-2xl mx-auto leading-relaxed">
+              Foco em organização patrimonial e segurança sucessória, com abordagem integrada de gestão, buscando alternativas legais para a preservação de ativos.
+            </p>
             <a href={whatsappLink} target="_blank" rel="noopener" className="inline-block bg-green-600 hover:bg-green-700 text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest text-xs transition-all shadow-lg">
-              Iniciar planejamento
+              Iniciar atendimento inicial
             </a>
           </div>
 
+          {/* SOLUÇÕES TÉCNICAS */}
           <div className="mb-20">
             <h2 className="text-xl md:text-2xl font-bold text-blue-900 uppercase tracking-wide mb-8">Soluções Técnicas</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -102,13 +111,21 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
             </div>
           </div>
 
+          {/* ATENDIMENTO GLOBAL (ITEM 2.B) */}
           <div className="pt-12 border-t border-gray-100">
             <div className="max-w-md mx-auto bg-gray-50 p-8 rounded-sm border border-gray-200 text-center">
-              <h3 className="font-bold text-blue-900 uppercase tracking-widest text-xs mb-4">Unidade Sorocaba</h3>
+              <h3 className="font-bold text-blue-900 uppercase tracking-widest text-xs mb-2">Sorocaba e região</h3>
+              <p className="text-gray-500 text-[10px] uppercase font-bold tracking-tighter mb-4">Atendimento digital e presencial</p>
               <div className="space-y-4">
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center bg-green-600 text-white py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md">
-                  <MessageCircle size={18} className="mr-2" /> Iniciar Atendimento Digital
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center bg-green-600 text-white py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md">
+                  <div className="flex items-center mb-1">
+                    <MessageCircle size={18} className="mr-2" /> Iniciar Atendimento Digital
+                  </div>
                 </a>
+                {/* MICROCOPY TRIAGEM (ITEM 2.C) */}
+                <p className="text-[10px] text-gray-400 font-medium px-4">
+                  Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
+                </p>
                 <a href={telSorocaba} className="flex items-center justify-center border-2 border-blue-900 text-blue-900 py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-50 transition-all">
                   <Phone size={18} className="mr-2" /> (15) 3191-1432
                 </a>

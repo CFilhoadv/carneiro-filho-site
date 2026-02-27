@@ -10,6 +10,7 @@ const DoacaoStaging: React.FC = () => {
 
   return (
     <MainLayout>
+      {/* Cabeçalho Padronizado */}
       <section className="bg-white pt-8 pb-8 md:pt-12 md:pb-12 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
@@ -19,6 +20,7 @@ const DoacaoStaging: React.FC = () => {
         </div>
       </section>
 
+      {/* Conteúdo Principal */}
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="space-y-6 text-gray-700 leading-relaxed text-base md:text-lg text-justify">
@@ -30,9 +32,10 @@ const DoacaoStaging: React.FC = () => {
             </p>
             
             <div className="bg-red-50 p-5 md:p-6 border-l-4 border-red-800 italic text-sm md:text-base mt-8 text-red-900 shadow-sm text-justify md:text-left">
-              <strong>⚠️ Alerta:</strong> A adoção inadequada desse instrumento deve ser precedida de análise jurídica individualizada.
+              <strong>⚠️ Alerta:</strong> A adoção inadequada desse instrumento deve ser precedida de análise jurídica individualizada, conforme o caso.
             </div>
 
+            {/* Seção Como Funciona (Padronizada Item 3.5) */}
             <div className="mt-12 md:mt-16 bg-gray-50 p-8 border border-gray-100 rounded-sm">
               <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6 text-center md:text-left">Como funciona</h2>
               <div className="space-y-6">
@@ -51,21 +54,23 @@ const DoacaoStaging: React.FC = () => {
               </div>
             </div>
 
+            {/* Bloco de Atendimento Padronizado (Itens 2.b e 2.c) */}
             <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
                   <div>
-                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200">Sorocaba e região • Atendimento digital e presencial</h3>
-                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80">Orientação técnica e análise individualizada conforme o caso.</p>
+                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200 text-left">Sorocaba e região • Atendimento digital e presencial</h3>
+                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80 text-left">Orientação técnica e análise individualizada conforme o caso.</p>
                   </div>
                   <div className="space-y-3">
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md group">
-                      <div className="flex items-center mb-1">
+                      <div className="flex items-center">
                         <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
                       </div>
                     </a>
+                    {/* Microcopy de Triagem Padronizado */}
                     <p className="text-[9px] text-blue-200 text-center leading-tight">
-                      Para agilizar, informe sua cidade e descreva brevemente seu objetivo.
+                      Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
                     </p>
                     <a href={telSorocaba} className="flex items-center justify-center bg-blue-800 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-all shadow-md border border-blue-400">
                       <Phone size={16} className="mr-2" /> (15) 3191-1432
@@ -86,6 +91,7 @@ const DoacaoStaging: React.FC = () => {
                 </div>
               </div>
 
+              {/* Navegação Interna (Item 2.d) */}
               <div className="mt-12 flex flex-col items-center space-y-4">
                 <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:underline flex items-center">
                   ← Voltar para Planejamento Sucessório

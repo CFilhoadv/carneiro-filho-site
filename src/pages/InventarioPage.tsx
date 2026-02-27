@@ -17,7 +17,7 @@ const InventarioPage: React.FC = () => {
             Inventário: Regularização e Sucessão
           </h1>
           <div className="h-1.5 w-20 bg-blue-900 mx-auto mt-4"></div>
-          <p className="text-blue-900 font-semibold text-[10px] md:text-xs uppercase tracking-[0.2em] mt-4">
+          <p className="text-blue-900 font-semibold text-[10px] md:text-xs uppercase tracking-[0.2em] mt-4 text-center">
             (Solução para quando não houve planejamento sucessório prévio)
           </p>
         </div>
@@ -31,7 +31,7 @@ const InventarioPage: React.FC = () => {
               O inventário é o procedimento jurídico obrigatório para formalizar a transferência do patrimônio de uma pessoa falecida para seus herdeiros. Na prática, ele costuma ser a consequência da <strong>ausência de um planejamento em vida</strong>, o que frequentemente expõe os herdeiros a custos elevados e à morosidade do sistema judiciário.
             </p>
             <p>
-              Nossa atuação foca em reduzir os impactos dessa etapa, buscando sempre a via do <strong>inventário extrajudicial (em cartório)</strong>, que é consideravelmente mais ágil. No entanto, é fundamental esclarecer que essa modalidade só é permitida por lei quando reunidas três condições específicas:
+              Nossa atuação foca em reduzir os impactos dessa etapa, buscando sempre a via do <strong>inventário extrajudicial (em cartório)</strong>, que é consideravelmente mais ágil, avaliando alternativas legais para a celeridade do processo.
             </p>
 
             {/* LISTA DE CONDIÇÕES */}
@@ -53,19 +53,20 @@ const InventarioPage: React.FC = () => {
               </div>
             </div>
 
+            {/* AJUSTE 3.5: Suavização da linguagem de garantia */}
             <p>
-              Na ausência de qualquer um desses requisitos, a lei impõe o <strong>inventário judicial</strong>. Este caminho exige uma condução estratégica ainda mais apurada para mitigar conflitos e proteger o valor dos bens. Em ambas as situações, nossa prioridade é a eficiência no cálculo do ITCMD e a regularização ágil da documentação, <strong>buscando reduzir riscos e perdas, quando aplicável, dentro das alternativas legais.</strong>
+              Na ausência de qualquer um desses requisitos, a lei impõe o <strong>inventário judicial</strong>. Este caminho exige uma condução estratégica apurada para mitigar conflitos e proteger o valor dos bens. Em ambas as situações, nossa prioridade é a eficiência técnica, <strong>buscando reduzir riscos e perdas, quando aplicável, dentro das alternativas legais.</strong>
             </p>
             
             {/* ALERTA DE PRAZO */}
             <div className="bg-amber-50 p-5 md:p-6 border-l-4 border-amber-600 italic text-sm md:text-base mt-8 text-amber-900 shadow-sm flex items-start">
               <AlertTriangle className="mr-4 shrink-0 mt-1 text-amber-600" size={24} />
-              <p>
+              <p className="text-justify md:text-left">
                 <strong>Nota Importante:</strong> O prazo legal para a abertura do inventário é de 60 dias após o falecimento. A perda deste prazo acarreta multas sobre o imposto de transmissão (ITCMD), tornando a sucessão ainda mais onerosa.
               </p>
             </div>
 
-            {/* 3. Seção Como funciona (Padronizada) */}
+            {/* 3. Seção Como funciona (Padronizada Item 3.5) */}
             <div className="mt-12 md:mt-16 bg-gray-50 p-8 border border-gray-100 rounded-sm text-left">
               <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6">Como funciona</h2>
               <div className="space-y-6">
@@ -84,7 +85,7 @@ const InventarioPage: React.FC = () => {
               </div>
             </div>
 
-            {/* 4. BLOCO DE ATENDIMENTO PADRONIZADO */}
+            {/* 4. BLOCO DE ATENDIMENTO PADRONIZADO (Itens 2.b e 2.c) */}
             <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100 text-left">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
@@ -100,6 +101,7 @@ const InventarioPage: React.FC = () => {
                         <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
                       </div>
                     </a>
+                    {/* Microcopy de triagem padronizado */}
                     <p className="text-[9px] text-blue-200 text-center leading-tight">
                       Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
                     </p>
@@ -112,7 +114,7 @@ const InventarioPage: React.FC = () => {
                 {/* UNIDADE SÃO PAULO */}
                 <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 flex flex-col justify-between shadow-sm text-left">
                   <div>
-                    <h3 className="font-bold text-blue-900 uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-gray-200 pb-2">São Paulo • Administrativo</h3>
+                    <h3 className="font-bold text-blue-900 uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-gray-200 pb-2 text-left">São Paulo • Administrativo</h3>
                     <p className="text-gray-600 text-[10px] md:text-xs leading-relaxed mb-6 italic">Suporte estratégico para casos complexos e gestão documental.</p>
                   </div>
                   <div className="space-y-3">
@@ -124,8 +126,8 @@ const InventarioPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* 5. NAVEGAÇÃO INTERNA */}
-              <div className="mt-12 flex flex-col items-center space-y-4">
+              {/* 5. NAVEGAÇÃO INTERNA (Item 2.d) */}
+              <div className="mt-12 flex flex-col items-center space-y-4 text-center">
                 <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:underline flex items-center">
                   ← Voltar para Planejamento Sucessório
                 </Link>

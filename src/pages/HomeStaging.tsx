@@ -13,7 +13,7 @@ const HomeStaging: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* 1. BANNER */}
+      {/* 1. BANNER - AJUSTE CONFORME ITEM 3.1 */}
       <section className="relative h-[380px] md:h-[450px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <img src={bannerImg} alt="Banner Carneiro Filho" className="w-full h-full object-cover brightness-[0.45]" />
@@ -23,7 +23,7 @@ const HomeStaging: React.FC = () => {
             Proteção jurídica dos seus direitos e do seu patrimônio
           </h1>
           <div className="max-w-3xl mx-auto space-y-3">
-            {/* AJUSTE A1: Subtítulo da dobra */}
+            {/* AJUSTE A1: Subtítulo da dobra atualizado conforme relatório */}
             <p className="text-blue-100 text-sm md:text-lg font-medium tracking-wide opacity-90">
               Atendimento digital por WhatsApp em Sorocaba e região, com orientação clara e condução técnica.
             </p>
@@ -82,12 +82,12 @@ const HomeStaging: React.FC = () => {
             ))}
           </div>
 
-          {/* BOTÃO PRINCIPAL COM MICROTEXTO */}
+          {/* BOTÃO PRINCIPAL COM MICROTEXTO - AJUSTE CONFORME ITEM 3.1 */}
           <div className="mt-12 text-center">
             <a href={whatsappLink} target="_blank" rel="noopener" className="inline-flex items-center bg-[#25D366] text-white px-12 py-5 rounded-sm font-bold uppercase tracking-[0.15em] text-xs md:text-sm hover:bg-green-700 transition-all shadow-xl group">
               Iniciar Atendimento Digital <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
-            {/* AJUSTE A2: Microtexto abaixo do botão */}
+            {/* AJUSTE A2: Microtexto atualizado conforme relatório */}
             <p className="mt-4 text-gray-500 text-xs md:text-sm font-medium">
               Atendimento inicial por WhatsApp para entender o caso e orientar os próximos passos.
             </p>
@@ -101,7 +101,7 @@ const HomeStaging: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="flex flex-col">
               <img src={fachadaSorocaba} alt="Unidade Sorocaba" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-blue-900" />
-              <div className="px-2">
+              <div className="px-2 text-left">
                 <h4 className="font-bold text-blue-900 text-lg uppercase tracking-widest mb-1">Sorocaba</h4>
                 <p className="text-gray-500 text-xs mb-4 uppercase tracking-tighter italic">Atendimento Presencial e Consultoria</p>
                 <p className="text-gray-600 text-sm mb-4">Av. Profa. Izoraida Marques Peres, 256 — Campolim</p>
@@ -112,7 +112,7 @@ const HomeStaging: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <img src={fachadaSaoPaulo} alt="Unidade São Paulo" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-gray-300" />
-              <div className="px-2">
+              <div className="px-2 text-left">
                 <h4 className="font-bold text-gray-800 text-lg uppercase tracking-widest mb-1">São Paulo</h4>
                 <p className="text-gray-500 text-xs mb-4 uppercase tracking-tighter italic">Escritório Administrativo</p>
                 <p className="text-gray-600 text-sm mb-4">Av. Brigadeiro Faria Lima, 1811 — Conj. 1119</p>

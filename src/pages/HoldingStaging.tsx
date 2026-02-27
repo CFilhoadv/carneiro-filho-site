@@ -28,19 +28,19 @@ const HoldingStaging: React.FC = () => {
               (Instrumento de Planejamento Patrimonial e Sucessório)
             </p>
             <p>
-              A holding familiar é uma pessoa jurídica constituída com a finalidade de centralizar, organizar e administrar o patrimônio de uma família, como imóveis, participações societárias e investimentos.
+              A holding familiar é uma pessoa jurídica constituída com a finalidade de organizar e administrar o patrimônio de uma família, como imóveis, participações societárias e investimentos.
             </p>
             <p>
-              Por meio dessa estrutura, os bens deixam de estar diretamente vinculados às pessoas físicas e passam a integrar uma organização jurídica única, permitindo maior clareza na gestão patrimonial e na definição de regras familiares (<strong>governança familiar:</strong> conjunto de normas que disciplinam a administração, o controle e a sucessão do patrimônio entre gerações).
+              Por meio dessa estrutura, busca-se maior clareza na gestão patrimonial e na definição de regras de <strong>governança familiar</strong>, disciplinando a administração e a sucessão do patrimônio entre gerações de forma estruturada.
             </p>
             <p>
-              A holding familiar é utilizada para estruturar a sucessão, organizar a participação dos herdeiros, reduzir conflitos familiares e permitir uma visão integrada dos reflexos patrimoniais, empresariais e tributários das decisões tomadas.
+              Esse instrumento é utilizado avaliando alternativas para organizar a participação dos herdeiros e permitir uma visão integrada dos reflexos patrimoniais e tributários, sempre respeitando os limites legais vigentes.
             </p>
-            <div className="bg-gray-50 p-5 md:p-6 border-l-4 border-blue-900 text-sm md:text-base mt-8 italic shadow-sm text-justify md:text-left">
-              Sua constituição exige análise jurídica, tributária e contábil integrada, considerando riscos, custos de manutenção, impactos sucessórios e compatibilidade com a realidade e os objetivos da família. Não se trata de solução padronizada ou automática.
+            <div className="bg-gray-50 p-5 md:p-6 border-l-4 border-blue-900 text-sm md:text-base mt-8 italic shadow-sm text-justify md:text-left text-blue-900">
+              Sua constituição exige análise jurídica, tributária e contábil integrada, considerando riscos e a realidade de cada família. Não se trata de uma solução padronizada ou automática.
             </div>
 
-            {/* 3. Seção Como funciona (Padronizada) */}
+            {/* 3. Seção Como funciona (Padronizada Item 3.5) */}
             <div className="mt-12 md:mt-16 bg-gray-50 p-8 border border-gray-100 rounded-sm text-left">
               <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6">Como funciona</h2>
               <div className="space-y-6">
@@ -75,7 +75,8 @@ const HoldingStaging: React.FC = () => {
                         <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
                       </div>
                     </a>
-                    <p className="text-[9px] text-blue-200 text-center leading-tight">
+                    {/* Microcopy de triagem item 2.c */}
+                    <p className="text-[9px] text-blue-200 text-center leading-tight px-2">
                       Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
                     </p>
                     <a href={telSorocaba} className="flex items-center justify-center bg-blue-800 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-all shadow-md border border-blue-400">
@@ -100,7 +101,7 @@ const HoldingStaging: React.FC = () => {
               </div>
 
               {/* 5. Navegação Interna */}
-              <div className="mt-12 flex flex-col items-center space-y-4">
+              <div className="mt-12 flex flex-col items-center space-y-4 text-center">
                 <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:underline flex items-center">
                   ← Voltar para Planejamento Sucessório
                 </Link>

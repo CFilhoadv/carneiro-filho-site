@@ -34,7 +34,7 @@ const QuemSomosStaging: React.FC = () => {
 
       <section className="py-10 md:py-16 bg-white text-gray-800">
         <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 text-left">
             
             <div className="lg:col-span-8 space-y-10">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
@@ -47,7 +47,7 @@ const QuemSomosStaging: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <p className="text-base md:text-lg leading-relaxed text-gray-700 text-justify">
-                    A Carneiro Filho Advocacia nasce da convicção de que o Direito só cumpre o seu papel quando alia conhecimento técnico sólido a escuta atenta e compromisso humano. Nossa atuação foi construída ao longo de décadas em diferentes frentes: no atendimento direto à população e na vivência prática em estruturas empresariais complexas.
+                    A Carneiro Filho Advocacia nasce da convicção de que o Direito cumpre o seu papel quando alia conhecimento técnico a uma escuta atenta. Nossa trajetória foi construída ao longo de décadas, unindo o atendimento direto à população à vivência prática em estruturas empresariais e de gestão.
                   </p>
                 </div>
               </div>
@@ -55,20 +55,20 @@ const QuemSomosStaging: React.FC = () => {
               <article className="space-y-4">
                 <div className="flex items-center mb-2">
                   <HeartHandshake className="text-blue-900 mr-3" size={24} />
-                  <h2 className="text-xl font-bold text-blue-900 uppercase tracking-tight">Experiência que aproxima</h2>
+                  <h2 className="text-xl font-bold text-blue-900 uppercase tracking-tight text-left">Experiência que aproxima</h2>
                 </div>
                 <p className="text-base leading-relaxed text-gray-700 text-justify">
-                  Uma parte essencial dessa formação ocorreu na <strong>Defensoria Pública</strong>, onde o contacto diário com cidadãos revelou que por trás de cada processo existe uma história e uma urgência. Essa vivência moldou a nossa atuação — com linguagem clara, orientação objetiva e atenção ao contexto de cada cliente, sem juridiquês desnecessário.
+                  Uma parte essencial dessa formação ocorreu na <strong>Defensoria Pública</strong>, onde o contato diário com cidadãos revelou a importância de uma advocacia humana. Essa vivência orienta nossa atuação — com linguagem clara e atenção ao contexto de cada cliente, buscando soluções objetivas.
                 </p>
               </article>
 
               <article className="space-y-4">
                 <div className="flex items-center mb-2">
                   <Landmark className="text-blue-900 mr-3" size={24} />
-                  <h2 className="text-xl font-bold text-blue-900 uppercase tracking-tight">Rigor técnico a serviço das pessoas</h2>
+                  <h2 className="text-xl font-bold text-blue-900 uppercase tracking-tight text-left">Rigor técnico e visão integrada</h2>
                 </div>
                 <p className="text-base leading-relaxed text-gray-700 text-justify">
-                  Paralelamente, a atuação profissional em ambientes corporativos e a formação em <strong>Direito e Contabilidade</strong> trouxeram um olhar técnico aprofundado sobre tributação e património. Esse conhecimento hoje é aplicado para proteger direitos e evitar prejuízos, seja para o cidadão comum, seja para o empresário local. Aqui, a técnica trabalha em silêncio a favor do cliente.
+                  A experiência profissional em ambientes corporativos e a formação em <strong>Direito e Contabilidade</strong> permitem um olhar técnico aprofundado sobre tributação e patrimônio. Esse conhecimento é aplicado buscando mitigar riscos e preservar direitos, seja para o cidadão comum em Sorocaba e região, seja para o empresário local.
                 </p>
               </article>
 
@@ -76,20 +76,20 @@ const QuemSomosStaging: React.FC = () => {
               <article className="space-y-4 bg-blue-50/50 p-6 border-l-4 border-blue-400">
                 <div className="flex items-center mb-2">
                   <Handshake className="text-blue-900 mr-3" size={24} />
-                  <h2 className="text-xl font-bold text-blue-900 uppercase tracking-tight">Atuação Cooperativa e Institucional</h2>
+                  <h2 className="text-xl font-bold text-blue-900 uppercase tracking-tight text-left">Atuação Cooperativa e Institucional</h2>
                 </div>
                 <p className="text-base leading-relaxed text-gray-800 text-justify italic">
-                  A atuação do escritório também se desenvolve em cooperação direta com profissionais de outras áreas, oferecendo suporte técnico em demandas sucessórias, societárias e patrimoniais que exigem especialização jurídica estruturada e absoluto alinhamento institucional para garantir a segurança dos parceiros e seus clientes.
+                  Atuamos em cooperação com profissionais de outras áreas, oferecendo retaguarda técnica em demandas sucessórias e patrimoniais que exigem especialização estruturada e alinhamento institucional, visando a segurança dos parceiros e de seus clientes.
                 </p>
               </article>
 
               <div className="bg-gray-50 p-6 border-l-4 border-blue-900 rounded-sm">
-                <h3 className="font-bold text-blue-900 uppercase text-xs mb-4 tracking-widest">Nossos Compromissos:</h3>
+                <h3 className="font-bold text-blue-900 uppercase text-xs mb-4 tracking-widest text-left">Nossos Compromissos:</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-medium">
                   <li className="flex items-center"><Shield size={16} className="mr-2 text-blue-900" /> Advocacia Clara e Responsável</li>
-                  <li className="flex items-center"><Briefcase size={16} className="mr-2 text-blue-900" /> Soluções Estratégicas e Eficientes</li>
+                  <li className="flex items-center"><Briefcase size={16} className="mr-2 text-blue-900" /> Soluções Estratégicas e Técnicas</li>
                   <li className="flex items-center"><Scale size={16} className="mr-2 text-blue-900" /> Prevenção de Conflitos e Riscos</li>
-                  <li className="flex items-center"><HeartHandshake size={16} className="mr-2 text-blue-900" /> Atendimento Humano e Individual</li>
+                  <li className="flex items-center"><HeartHandshake size={16} className="mr-2 text-blue-900" /> Atendimento Individualizado</li>
                 </ul>
               </div>
             </div>
@@ -102,7 +102,7 @@ const QuemSomosStaging: React.FC = () => {
                   <p className="text-xl font-extrabold mb-4 uppercase tracking-tighter">Francisco de Assis Carneiro Filho</p>
                   <div className="space-y-2 text-blue-200 font-bold tracking-widest uppercase text-[10px] mb-6">
                     <p>Bacharel em Direito e Contabilista</p>
-                    <p>MBA Executivo - FGV</p>
+                    <p>MBA Executivo em Gestão - FGV</p>
                     <p>Especialista em Direito Tributário</p>
                   </div>
                   <p className="text-white font-bold tracking-widest uppercase text-xs border-t border-blue-800 pt-4">

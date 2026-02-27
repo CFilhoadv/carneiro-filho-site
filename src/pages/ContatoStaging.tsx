@@ -13,7 +13,7 @@ const ContatoStaging: React.FC = () => {
   return (
     <MainLayout>
       {/* CABEÇALHO */}
-      <section className="bg-white pt-8 pb-8 border-b border-gray-100 text-center">
+      <section className="bg-white pt-12 pb-8 border-b border-gray-100 text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-2xl md:text-4xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
             Escolha seu caminho
@@ -22,14 +22,14 @@ const ContatoStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 1. TRILHAS DE DIRECIONAMENTO (70/20/10) */}
+      {/* 1. TRILHAS DE DIRECIONAMENTO (70/20/10) - ITEM 3.6 */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* CARD 1 — ATENDIMENTO (CLIENTES 70%) */}
-            <div className="flex flex-col p-8 bg-green-50 border-2 border-green-200 rounded-sm shadow-sm">
-              <MessageCircle className="text-green-600 mb-4" size={40} />
+            <div className="flex flex-col p-8 bg-green-50 border-2 border-green-200 rounded-sm shadow-sm text-center md:text-left">
+              <MessageCircle className="text-green-600 mb-4 mx-auto md:mx-0" size={40} />
               <h3 className="text-lg font-bold text-gray-900 uppercase mb-3">Preciso de atendimento</h3>
               <p className="text-sm text-gray-600 mb-6 flex-grow">Atendimento inicial por WhatsApp para triagem e orientação sobre próximos passos.</p>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" 
@@ -37,13 +37,13 @@ const ContatoStaging: React.FC = () => {
                 Falar no WhatsApp
               </a>
               <p className="text-[10px] text-green-700 font-bold text-center italic">
-                Para agilizar, informe sua cidade e descreva brevemente o objetivo.
+                Para agilizar, informe sua cidade e descreva brevemente seu objetivo.
               </p>
             </div>
 
             {/* CARD 2 — ALTA RENDA (20%) */}
-            <div className="flex flex-col p-8 bg-blue-50 border-2 border-blue-900 rounded-sm shadow-sm">
-              <ShieldCheck className="text-blue-900 mb-4" size={40} />
+            <div className="flex flex-col p-8 bg-blue-50 border-2 border-blue-900 rounded-sm shadow-sm text-center md:text-left">
+              <ShieldCheck className="text-blue-900 mb-4 mx-auto md:mx-0" size={40} />
               <h3 className="text-lg font-bold text-gray-900 uppercase mb-3 leading-tight">Planejamento Sucessório / Patrimonial</h3>
               <p className="text-sm text-gray-600 mb-6 flex-grow">Indicado para famílias com múltiplos imóveis ou sucessão empresarial.</p>
               <Link to="/planejamento-sucessorio" 
@@ -56,16 +56,18 @@ const ContatoStaging: React.FC = () => {
             </div>
 
             {/* CARD 3 — PARCERIAS (10%) */}
-            <div className="flex flex-col p-8 bg-gray-50 border-2 border-gray-300 rounded-sm shadow-sm">
-              <Users className="text-gray-600 mb-4" size={40} />
+            <div className="flex flex-col p-8 bg-gray-50 border-2 border-gray-300 rounded-sm shadow-sm text-center md:text-left">
+              <Users className="text-gray-600 mb-4 mx-auto md:mx-0" size={40} />
               <h3 className="text-lg font-bold text-gray-900 uppercase mb-3">Sou parceiro</h3>
               <p className="text-sm text-gray-600 mb-6 flex-grow">Alinhamento técnico e fluxo de indicação seguro para contadores e imobiliárias.</p>
               <Link to="/parcerias" 
                     className="block text-center bg-gray-900 text-white py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-gray-800 transition-all shadow-md mb-4">
                 Acessar Hub de Parcerias
               </Link>
-              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-gray-600 font-bold uppercase text-[10px] tracking-widest hover:text-blue-900 transition-colors">
-                <Calendar size={14} className="mr-2" /> Agendar reunião técnica (Calendly)
+              {/* Blindagem do Calendly item 3.6 */}
+              <p className="text-[9px] text-gray-400 font-bold uppercase text-center mb-2 tracking-tighter">Agendamento destinado a parceiros institucionais</p>
+              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-gray-600 font-bold uppercase text-[10px] tracking-widest hover:text-blue-900 transition-colors border border-gray-300 py-2 rounded-sm">
+                <Calendar size={14} className="mr-2" /> Reunião técnica (Calendly)
               </a>
             </div>
 
@@ -73,15 +75,15 @@ const ContatoStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. HORÁRIO DE ATENDIMENTO */}
-      <section className="py-8 bg-gray-50 border-y border-gray-100">
+      {/* 4. HORÁRIO DE ATENDIMENTO - ITEM 3.6 */}
+      <section className="py-8 bg-gray-50 border-y border-gray-100 text-left">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <div className="inline-flex items-center justify-center gap-3 text-blue-900 mb-2">
             <Clock size={20} />
             <h4 className="font-bold uppercase tracking-widest text-sm">Horário de Atendimento</h4>
           </div>
           <p className="text-gray-600 text-sm italic">
-            Atendimento de Segunda a Sexta, das 09h às 18h. <br className="md:hidden" />
+            Segunda a Sexta, das 09h às 18h. <br className="md:hidden" />
             Mensagens recebidas fora do horário são respondidas no próximo período útil.
           </p>
         </div>
@@ -92,9 +94,9 @@ const ContatoStaging: React.FC = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
-            {/* ENDEREÇOS E MAPA (PROVA LOCAL) */}
-            <div className="space-y-8">
-              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs">Unidades</h3>
+            {/* ENDEREÇOS (PROVA LOCAL) */}
+            <div className="space-y-8 text-left">
+              <h3 className="text-blue-900 font-bold uppercase tracking-widest text-xs border-b border-blue-900 pb-2 inline-block">Unidades</h3>
               <p className="text-gray-500 text-xs italic mb-4">
                 Atendimento digital por WhatsApp e atendimento presencial em Sorocaba quando necessário.
               </p>
@@ -103,8 +105,8 @@ const ContatoStaging: React.FC = () => {
                 <div className="flex items-start">
                   <MapPin className="text-blue-900 mr-4 mt-1 shrink-0" size={24} />
                   <div>
-                    <p className="font-bold text-gray-800 uppercase text-[10px] tracking-widest mb-1 text-left">Unidade Sorocaba</p>
-                    <p className="text-gray-600 text-sm leading-relaxed text-left">
+                    <p className="font-bold text-gray-800 uppercase text-[10px] tracking-widest mb-1">Unidade Sorocaba</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       Av. Profa. Izoraida Marques Peres, 256, 9º andar<br />
                       Ed. Avenida Paulista - Campolim<br />
                       Sorocaba/SP
@@ -114,8 +116,8 @@ const ContatoStaging: React.FC = () => {
                 <div className="flex items-start">
                   <MapPin className="text-gray-400 mr-4 mt-1 shrink-0" size={24} />
                   <div>
-                    <p className="font-bold text-gray-800 uppercase text-[10px] tracking-widest mb-1 text-left">Unidade São Paulo (Administrativo)</p>
-                    <p className="text-gray-600 text-sm leading-relaxed text-left">
+                    <p className="font-bold text-gray-800 uppercase text-[10px] tracking-widest mb-1">Unidade São Paulo (Administrativo)</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
                       Av. Brig. Faria Lima, 1811 - Jardim Paulistano<br />
                       São Paulo/SP
                     </p>
@@ -124,8 +126,8 @@ const ContatoStaging: React.FC = () => {
               </div>
             </div>
 
-            {/* OUTROS CANAIS (REBAIXADOS) */}
-            <div className="p-8 bg-gray-50 border border-gray-100 rounded-sm">
+            {/* OUTROS CANAIS (REBAIXADOS) - ITEM 3.6 */}
+            <div className="p-8 bg-gray-50 border border-gray-100 rounded-sm text-left">
               <h3 className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-8">Outros canais (se necessário)</h3>
               <div className="space-y-6">
                 <div className="flex flex-col gap-1">

@@ -28,17 +28,14 @@ const TestamentosStaging: React.FC = () => {
               (Instrumento de Planejamento Sucessório)
             </p>
             <p>
-              O testamento é o ato jurídico por meio do qual uma pessoa, em vida, define a destinação de seus bens e direitos para depois de seu falecimento, respeitados os limites legais, especialmente a proteção da <strong>legítima</strong> (parcela do patrimônio reservada por lei aos herdeiros necessários: cônjuge, descendentes e ascendentes).
+              O testamento é o ato jurídico por meio do qual uma pessoa, em vida, define a destinação de seus bens e direitos para depois de seu falecimento, respeitados os limites legais, especialmente a proteção da <strong>legítima</strong> (parcela do patrimônio reservada por lei aos herdeiros necessários).
             </p>
             <p>
-              Esse instrumento é utilizado para organizar a sucessão de forma personalizada, atender situações familiares específicas — como famílias recompostas, herdeiros vulneráveis ou proteção de companheiros — e reduzir conflitos decorrentes da sucessão automática prevista em lei.
-            </p>
-            <p>
-              O testamento também permite dispor sobre a parte disponível do patrimônio, incluir cláusulas não patrimoniais e orientar a sucessão empresarial, desde que observadas as formalidades legais.
+              Esse instrumento é utilizado para organizar a sucessão de forma personalizada, atender situações familiares específicas e reduzir conflitos decorrentes da sucessão automática prevista em lei, sempre buscando a preservação da vontade do testador dentro dos limites jurídicos.
             </p>
             
             <div className="bg-red-50 p-5 md:p-6 border-l-4 border-red-800 italic text-sm md:text-base mt-8 text-red-900 shadow-sm text-justify md:text-left">
-              <strong>⚠️ Alerta:</strong> Testamentos mal elaborados podem ser anulados ou gerar litígios judiciais, razão pela qual sua elaboração exige orientação jurídica técnica e análise individualizada da situação patrimonial e familiar.
+              <strong>⚠️ Alerta:</strong> A elaboração de um testamento exige orientação jurídica técnica e análise individualizada da situação patrimonial e familiar para evitar nulidades ou futuros litígios.
             </div>
 
             {/* 3. Seção Como Funciona (Padronizada) */}
@@ -76,6 +73,7 @@ const TestamentosStaging: React.FC = () => {
                         <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
                       </div>
                     </a>
+                    {/* Microcopy de triagem item 2.c */}
                     <p className="text-[9px] text-blue-200 text-center leading-tight">
                       Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
                     </p>
