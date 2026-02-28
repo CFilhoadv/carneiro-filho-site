@@ -4,7 +4,7 @@ import MainLayout from '../components/layout/MainLayout';
 import { Phone, MessageCircle } from 'lucide-react';
 
 const TestamentosStaging: React.FC = () => {
-  const whatsappLink = "https://wa.me/551531911432";
+  // Ajuste: whatsappLink removido em favor do link de diagnóstico direto
   const telSorocaba = "tel:+551531911432";
   const telSP = "tel:+551142106194";
 
@@ -38,21 +38,22 @@ const TestamentosStaging: React.FC = () => {
               <strong>⚠️ Alerta:</strong> A elaboração de um testamento exige orientação jurídica técnica e análise individualizada da situação patrimonial e familiar para evitar nulidades ou futuros litígios.
             </div>
 
-            {/* 3. Seção Como Funciona (Padronizada) */}
+            {/* 3. Seção Como Funciona */}
             <div className="mt-12 md:mt-16 bg-gray-50 p-8 border border-gray-100 rounded-sm">
               <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6 text-center md:text-left">Como funciona</h2>
               <div className="space-y-6 text-left">
                 <div className="flex gap-4">
                   <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">1</span>
-                  <p className="text-sm text-gray-700">Você inicia o contato pelo WhatsApp.</p>
+                  {/* Ajuste: Foco no diagnóstico online */}
+                  <p className="text-sm text-gray-700">Você inicia o processo preenchendo o diagnóstico online abaixo.</p>
                 </div>
                 <div className="flex gap-4">
                   <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">2</span>
-                  <p className="text-sm text-gray-700">Fazemos uma triagem e uma análise do cenário familiar/patrimonial.</p>
+                  <p className="text-sm text-gray-700">Fazemos uma triagem e uma análise do cenário familiar/patrimonial com base nos dados enviados.</p>
                 </div>
                 <div className="flex gap-4">
                   <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">3</span>
-                  <p className="text-sm text-gray-700">Indicamos o caminho jurídico adequado e os próximos passos.</p>
+                  <p className="text-sm text-gray-700">Agendamos a reunião para indicar o caminho jurídico adequado e os próximos passos.</p>
                 </div>
               </div>
             </div>
@@ -64,18 +65,20 @@ const TestamentosStaging: React.FC = () => {
                 {/* CARD SOROCABA E REGIÃO */}
                 <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
                   <div>
-                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200 text-left">Sorocaba e região • Atendimento digital e presencial</h3>
-                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80 text-left">Orientação técnica e análise individualizada conforme o caso.</p>
+                    {/* Ajuste: Texto revisado para diagnóstico */}
+                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200 text-left">Sorocaba e região • Diagnóstico Digital</h3>
+                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80 text-left">Preencha o diagnóstico para iniciarmos sua análise individualizada.</p>
                   </div>
                   <div className="space-y-3">
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md group">
+                    {/* Ajuste: Link para Diagnóstico em vez de WhatsApp */}
+                    <Link to="/diagnostico-planejamento-sucessorio" className="flex flex-col items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md group">
                       <div className="flex items-center">
-                        <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
+                        <MessageCircle size={16} className="mr-2" /> Iniciar Diagnóstico Online
                       </div>
-                    </a>
-                    {/* Microcopy de triagem item 2.c */}
+                    </Link>
+                    {/* Ajuste: Microcopy de triagem revisado */}
                     <p className="text-[9px] text-blue-200 text-center leading-tight">
-                      Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
+                      Preencha o diagnóstico para termos os dados iniciais. Após o envio, você agendará a reunião de devolutiva.
                     </p>
                     <a href={telSorocaba} className="flex items-center justify-center bg-blue-800 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-all shadow-md border border-blue-400">
                       <Phone size={16} className="mr-2" /> (15) 3191-1432
@@ -93,7 +96,6 @@ const TestamentosStaging: React.FC = () => {
                     <a href={telSP} className="flex items-center justify-center bg-white text-blue-900 py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] border-2 border-blue-900 hover:bg-gray-100 transition-all shadow-sm">
                       <Phone size={16} className="mr-2" /> (11) 4210-6194
                     </a>
-                    <p className="text-[9px] text-gray-400 uppercase text-center tracking-widest font-bold">Atendimento Administrativo</p>
                   </div>
                 </div>
               </div>
