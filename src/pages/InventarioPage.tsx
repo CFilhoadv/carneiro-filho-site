@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, MessageCircle, AlertTriangle, CheckCircle2, Scale, Users } from 'lucide-react';
+import { Phone, AlertTriangle, CheckCircle2, Scale, Users, ClipboardCheck } from 'lucide-react';
 
 const InventarioPage: React.FC = () => {
-  const whatsappLink = "https://wa.me/551531911432";
   const telSorocaba = "tel:+551531911432";
   const telSP = "tel:+551142106194";
 
@@ -28,7 +27,8 @@ const InventarioPage: React.FC = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="space-y-6 text-gray-700 leading-relaxed text-base md:text-lg text-justify">
             <p>
-              O inventário é o procedimento jurídico obrigatório para formalizar a transferência do patrimônio de uma pessoa falecida para seus herdeiros. Na prática, ele costuma ser a consequência da <strong>ausência de um planejamento em vida</strong>, o que frequentemente expõe os herdeiros a custos elevados e à morosidade do sistema judiciário.
+              O inventário é o procedimento jurídico obrigatório para formalizar a transferência do patrimônio de uma pessoa falecida para seus herdeiros.
+              <strong> Enquanto o planejamento sucessório evita essa etapa, o inventário é essencial para regularizar situações já existentes.</strong> Na prática, ele costuma ser a consequência da <strong>ausência de um planejamento em vida</strong>, o que frequentemente expõe os herdeiros a custos elevados e à morosidade do sistema judiciário.
             </p>
             <p>
               Nossa atuação foca em reduzir os impactos dessa etapa, buscando sempre a via do <strong>inventário extrajudicial (em cartório)</strong>, que é consideravelmente mais ágil, avaliando alternativas legais para a celeridade do processo.
@@ -53,7 +53,6 @@ const InventarioPage: React.FC = () => {
               </div>
             </div>
 
-            {/* AJUSTE 3.5: Suavização da linguagem de garantia */}
             <p>
               Na ausência de qualquer um desses requisitos, a lei impõe o <strong>inventário judicial</strong>. Este caminho exige uma condução estratégica apurada para mitigar conflitos e proteger o valor dos bens. Em ambas as situações, nossa prioridade é a eficiência técnica, <strong>buscando reduzir riscos e perdas, quando aplicável, dentro das alternativas legais.</strong>
             </p>
@@ -66,42 +65,41 @@ const InventarioPage: React.FC = () => {
               </p>
             </div>
 
-            {/* 3. Seção Como funciona (Padronizada Item 3.5) */}
+            {/* 3. Seção Como funciona */}
             <div className="mt-12 md:mt-16 bg-gray-50 p-8 border border-gray-100 rounded-sm text-left">
               <h2 className="text-blue-900 font-bold uppercase tracking-widest text-sm mb-6">Como funciona</h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
                   <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">1</span>
-                  <p className="text-sm text-gray-700">Você inicia o contato pelo WhatsApp.</p>
+                  <p className="text-sm text-gray-700">Você inicia o diagnóstico online para avaliar o caso.</p>
                 </div>
                 <div className="flex gap-4">
                   <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">2</span>
-                  <p className="text-sm text-gray-700">Fazemos uma triagem e uma análise do cenário familiar/patrimonial.</p>
+                  <p className="text-sm text-gray-700">Fazemos uma triagem e uma análise do cenário familiar/patrimonial com base nos dados enviados.</p>
                 </div>
                 <div className="flex gap-4">
                   <span className="bg-blue-900 text-white w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0">3</span>
-                  <p className="text-sm text-gray-700">Indicamos o caminho jurídico adequado e os próximos passos.</p>
+                  <p className="text-sm text-gray-700">Indicamos o caminho jurídico adequado e os próximos passos, incluindo agendamento de reunião.</p>
                 </div>
               </div>
             </div>
 
-            {/* 4. BLOCO DE ATENDIMENTO PADRONIZADO (Itens 2.b e 2.c) */}
+            {/* 4. BLOCO DE ATENDIMENTO PADRONIZADO */}
             <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100 text-left">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 {/* CARD SOROCABA E REGIÃO */}
                 <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
                   <div>
-                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200">Sorocaba e região • Atendimento digital e presencial</h3>
-                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80">Orientação técnica e análise individualizada conforme o caso.</p>
+                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200">Sorocaba e região • Diagnóstico Digital</h3>
+                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80">Preencha o diagnóstico para iniciarmos sua análise individualizada.</p>
                   </div>
                   <div className="space-y-3">
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md group">
+                    <Link to="/diagnostico-planejamento-sucessorio" className="flex flex-col items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md group">
                       <div className="flex items-center">
-                        <MessageCircle size={16} className="mr-2" /> Iniciar Atendimento Digital
+                        <ClipboardCheck size={16} className="mr-2" /> Iniciar diagnóstico do caso
                       </div>
-                    </a>
-                    {/* Microcopy de triagem padronizado */}
+                    </Link>
                     <p className="text-[9px] text-blue-200 text-center leading-tight">
                       Para agilizar, informe sua cidade e descreva brevemente seu objetivo. Se houver, envie foto do documento/intimação.
                     </p>
@@ -121,12 +119,11 @@ const InventarioPage: React.FC = () => {
                     <a href={telSP} className="flex items-center justify-center bg-white text-blue-900 py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] border-2 border-blue-900 hover:bg-gray-100 transition-all shadow-sm">
                       <Phone size={16} className="mr-2" /> (11) 4210-6194
                     </a>
-                    <p className="text-[9px] text-gray-400 uppercase text-center tracking-widest font-bold">Atendimento Administrativo</p>
                   </div>
                 </div>
               </div>
 
-              {/* 5. NAVEGAÇÃO INTERNA (Item 2.d) */}
+              {/* 5. NAVEGAÇÃO INTERNA */}
               <div className="mt-12 flex flex-col items-center space-y-4 text-center">
                 <Link to="/planejamento-sucessorio" className="text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:underline flex items-center">
                   ← Voltar para Planejamento Sucessório

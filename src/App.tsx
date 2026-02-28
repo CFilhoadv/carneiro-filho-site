@@ -25,6 +25,9 @@ import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
 // NOVA ROTA: Camada II - Parceria Estratégica com Contabilidades
 import ParceriaContabil from './pages/ParceriaContabil';
 
+// NOVO FUNIL B2C 2026: Diagnóstico Inicial de Planejamento Sucessório
+import DiagnosticoSucessorioPage from './pages/DiagnosticoSucessorioPage';
+
 function App() {
   return (
     <>
@@ -48,6 +51,9 @@ function App() {
         
         {/* Rota legada para Contabilidades (mantida para compatibilidade) */}
         <Route path="/parceria-contabil" element={<ParceriaContabil />} />
+
+        {/* FUNIL DE CAPTAÇÃO SOROCABA (Briefing Fev/2026) */}
+        <Route path="/diagnostico-planejamento-sucessorio" element={<DiagnosticoSucessorioPage />} />
 
         {/* Hierarquia Consolidada: Planejamento Sucessório */}
         <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioStaging />} />
