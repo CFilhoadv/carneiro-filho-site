@@ -1,99 +1,76 @@
-import React from "react";
+import { Routes, Route, Navigate } from 'react-router-dom';
 
-import fotoFrancisco from "../assets/images/advogado-principal-nova.jpg";
-import logoCarneiroFilho from "../assets/images/Logo_horizontal.png";
+// Importação do Componente de Scroll
+import ScrollToTop from './components/ScrollToTop';
 
-const CartaoDigital: React.FC = () => {
-  const whatsappPhone = "551531911432";
+// Componentes Consolidados (Produção)
+import HomeStaging from './pages/HomeStaging'; 
+import QuemSomosStaging from './pages/QuemSomosStaging';
+import ServicosStaging from './pages/ServicosStaging';
+import PlanejamentoSucessorioStaging from './pages/PlanejamentoSucessorioStaging';
+import HoldingStaging from './pages/HoldingStaging';
+import DoacaoStaging from './pages/DoacaoStaging';
+import TestamentosStaging from './pages/TestamentosStaging';
+import AbipStaging from './pages/AbipStaging';
+import InventarioPage from './pages/InventarioPage';
+import ContatoStaging from './pages/ContatoStaging';
 
-  const whatsappText = encodeURIComponent(
-    "Olá! Vi seu cartão digital e gostaria de uma orientação inicial. Meu nome é:"
-  );
+// NOVA ROTA: Hub de Parcerias Estratégicas (Arquitetura 2026)
+import ParceriasPage from './pages/ParceriasPage';
 
-  const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappText}`;
+// ROTA: Domine a Reforma Tributária
+import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
 
+// NOVA ROTA: Camada II - Parceria Estratégica com Contabilidades
+import ParceriaContabil from './pages/ParceriaContabil';
+
+// NOVO FUNIL B2C 2026: Diagnóstico Inicial de Planejamento Sucessório
+import DiagnosticoSucessorioPage from './pages/DiagnosticoSucessorioPage';
+
+// NOVO RECURSO: Cartão Digital de Visitas (Fev/2026)
+import CartaoDigital from './pages/CartaoDigital';
+
+function App() {
   return (
-    <main className="min-h-screen bg-white px-4 py-10">
-      <section className="mx-auto w-full max-w-md">
-        <div className="rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <header className="px-6 pt-8 text-center">
-            <img
-              src={logoCarneiroFilho}
-              alt="Carneiro Filho Advocacia"
-              className="mx-auto h-auto w-44"
-              loading="eager"
-            />
+    <>
+      <ScrollToTop />
 
-            <div className="mt-6 flex justify-center">
-              <img
-                src={fotoFrancisco}
-                alt="Foto de Francisco de Assis Carneiro Filho"
-                className="h-24 w-24 rounded-full object-cover ring-2 ring-slate-200"
-                loading="eager"
-              />
-            </div>
+      <Routes>
+        {/* Rotas Definitivas de Produção */}
+        <Route path="/" element={<HomeStaging />} />
+        <Route path="/quem-somos" element={<QuemSomosStaging />} />
+        <Route path="/servicos" element={<ServicosStaging />} />
+        <Route path="/contato" element={<ContatoStaging />} />
+        
+        <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
+        
+        {/* HUB DE PARCERIAS */}
+        <Route path="/parcerias" element={<ParceriasPage />} />
+        
+        {/* Rota para Contabilidades */}
+        <Route path="/parceria-contabil" element={<ParceriaContabil />} />
 
-            <h1 className="mt-6 text-xl font-semibold text-slate-900">
-              Francisco de Assis Carneiro Filho
-            </h1>
+        {/* FUNIL DE CAPTAÇÃO E CARTÃO DIGITAL */}
+        <Route path="/diagnostico-planejamento-sucessorio" element={<DiagnosticoSucessorioPage />} />
+        <Route path="/cartao-digital" element={<CartaoDigital />} />
 
-            <p className="mt-1 text-sm font-medium text-blue-700">
-              Advogado e Consultor Empresarial
-            </p>
+        {/* Hierarquia Consolidada: Planejamento Sucessório */}
+        <Route path="/planejamento-sucessorio" element={<PlanejamentoSucessorioStaging />} />
+        <Route path="/planejamento-sucessorio/holding" element={<HoldingStaging />} />
+        <Route path="/planejamento-sucessorio/doacao" element={<DoacaoStaging />} />
+        <Route path="/planejamento-sucessorio/testamentos" element={<TestamentosStaging />} />
+        <Route path="/planejamento-sucessorio/abip" element={<AbipStaging />} />
+        <Route path="/planejamento-sucessorio/inventario" element={<InventarioPage />} />
 
-            <p className="mt-4 text-sm leading-relaxed text-slate-700">
-              Soluções integradas em Direito, Contabilidade e Gestão para proteção
-              patrimonial, prevenção de riscos e tomada de decisão segura.
-            </p>
-          </header>
-
-          <div className="px-6 pb-8 pt-6">
-            <div className="space-y-3">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir WhatsApp para atendimento rápido"
-                className="block w-full rounded-xl bg-emerald-600 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-200"
-              >
-                Atendimento rápido (WhatsApp)
-              </a>
-
-              <a
-                href="https://carneirofilho.com.br/diagnostico-planejamento-sucessorio"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir diagnóstico de planejamento sucessório e proteção patrimonial"
-                className="block w-full rounded-xl bg-blue-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200"
-              >
-                Diagnóstico — Planejamento Sucessório e Proteção Patrimonial
-              </a>
-
-              <a
-                href="https://carneirofilho.com.br/servicos"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Abrir página de serviços"
-                className="block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-200"
-              >
-                Ver serviços
-              </a>
-            </div>
-
-            <div className="mt-6 rounded-xl bg-slate-50 px-4 py-3 text-center">
-              <p className="text-xs text-slate-600">
-                Sorocaba e São Paulo • Atendimento: seg–sex, 9h–18h
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <p className="mt-4 text-center text-xs text-slate-500">
-          Encaminhe este link para quem precisar: carneirofilho.com.br/cartao-digital
-        </p>
-      </section>
-    </main>
+        {/* Redirects de Segurança */}
+        <Route path="/home-staging" element={<Navigate to="/" replace />} />
+        <Route path="/quem-somos-staging" element={<Navigate to="/quem-somos" replace />} />
+        <Route path="/servicos-staging" element={<Navigate to="/servicos" replace />} />
+        <Route path="/contato-staging" element={<Navigate to="/contato" replace />} />
+        <Route path="/planejamento-sucessorio-staging" element={<Navigate to="/planejamento-sucessorio" replace />} />
+      </Routes>
+    </>
   );
-};
+}
 
-export default CartaoDigital;
+export default App;
