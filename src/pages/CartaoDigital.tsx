@@ -25,10 +25,11 @@ const CartaoDigital: React.FC = () => {
             />
 
             <div className="mt-6 flex justify-center">
+              {/* Ajuste: object-top adicionado para evitar corte do topo da foto */}
               <img
                 src={fotoFrancisco}
                 alt="Foto de Francisco de Assis Carneiro Filho"
-                className="h-24 w-24 rounded-full object-cover ring-2 ring-slate-200"
+                className="h-24 w-24 rounded-full object-cover object-top ring-2 ring-slate-200"
                 loading="eager"
               />
             </div>
@@ -48,7 +49,7 @@ const CartaoDigital: React.FC = () => {
 
           <div className="px-6 pb-8 pt-6">
             <div className="space-y-3">
-              {/* ATENDIMENTO RÁPIDO (70% FOCO) */}
+              {/* ATENDIMENTO RÁPIDO - FOCO 70% */}
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -59,7 +60,7 @@ const CartaoDigital: React.FC = () => {
                 Atendimento rápido (WhatsApp)
               </a>
 
-              {/* DIAGNÓSTICO (20% FOCO) */}
+              {/* DIAGNÓSTICO - FOCO 20% */}
               <a
                 href="https://carneirofilho.com.br/diagnostico-planejamento-sucessorio"
                 target="_blank"
@@ -70,7 +71,7 @@ const CartaoDigital: React.FC = () => {
                 Diagnóstico — Planejamento Sucessório
               </a>
 
-              {/* SERVIÇOS GERAIS */}
+              {/* SERVIÇOS - Cor original mantida para diferenciar */}
               <a
                 href="https://carneirofilho.com.br/servicos"
                 target="_blank"
@@ -81,13 +82,13 @@ const CartaoDigital: React.FC = () => {
                 Ver serviços
               </a>
 
-              {/* HUB DE PARCERIAS (10% FOCO) */}
+              {/* PARCERIAS - COR ADICIONADA (Azul claro/secundário) */}
               <a
                 href="https://carneirofilho.com.br/parcerias"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Abrir página de parcerias"
-                className="block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-200"
+                className="block w-full rounded-xl bg-blue-50 px-4 py-3 text-center text-sm font-semibold text-blue-700 shadow-sm transition hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-100"
               >
                 Parcerias
               </a>
