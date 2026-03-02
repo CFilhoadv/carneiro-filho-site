@@ -42,13 +42,13 @@ const CartaoDigital: React.FC = () => {
             </p>
 
             <p className="mt-4 text-sm leading-relaxed text-slate-700">
-              Soluções integradas em Direito, Contabilidade e Gestão para proteção
-              patrimonial, prevenção de riscos e tomada de decisão segura.
+              Atendimento digital por WhatsApp, com orientação clara e condução técnica.
             </p>
           </header>
 
           <div className="px-6 pb-8 pt-6">
             <div className="space-y-3">
+              {/* ATENDIMENTO RÁPIDO - FOCO 70% */}
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -59,6 +59,7 @@ const CartaoDigital: React.FC = () => {
                 Atendimento rápido (WhatsApp)
               </a>
 
+              {/* DIAGNÓSTICO - FOCO 20% */}
               <a
                 href="https://carneirofilho.com.br/diagnostico-planejamento-sucessorio"
                 target="_blank"
@@ -66,9 +67,10 @@ const CartaoDigital: React.FC = () => {
                 aria-label="Abrir diagnóstico de planejamento sucessório e proteção patrimonial"
                 className="block w-full rounded-xl bg-blue-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-200"
               >
-                Diagnóstico — Planejamento Sucessório e Proteção Patrimonial
+                Diagnóstico — Planejamento Sucessório
               </a>
 
+              {/* SERVIÇOS */}
               <a
                 href="https://carneirofilho.com.br/servicos"
                 target="_blank"
@@ -78,11 +80,22 @@ const CartaoDigital: React.FC = () => {
               >
                 Ver serviços
               </a>
+
+              {/* PARCERIAS - FOCO 10% */}
+              <a
+                href="https://carneirofilho.com.br/parcerias"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir página de parcerias"
+                className="block w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-200"
+              >
+                Parcerias
+              </a>
             </div>
 
             <div className="mt-6 rounded-xl bg-slate-50 px-4 py-3 text-center">
               <p className="text-xs text-slate-600">
-                Sorocaba e São Paulo • Atendimento: seg–sex, 9h–18h
+                Base: Sorocaba (SP) • Atendimentos digitais em todo o Brasil
               </p>
             </div>
           </div>
