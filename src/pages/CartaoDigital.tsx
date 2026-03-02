@@ -48,7 +48,7 @@ const CartaoDigital: React.FC = () => {
 
           <div className="px-6 pb-8 pt-6">
             <div className="space-y-3">
-              {/* ATENDIMENTO RÁPIDO - FOCO 70% */}
+              {/* ATENDIMENTO RÁPIDO (70% FOCO) */}
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -59,7 +59,7 @@ const CartaoDigital: React.FC = () => {
                 Atendimento rápido (WhatsApp)
               </a>
 
-              {/* DIAGNÓSTICO - FOCO 20% */}
+              {/* DIAGNÓSTICO (20% FOCO) */}
               <a
                 href="https://carneirofilho.com.br/diagnostico-planejamento-sucessorio"
                 target="_blank"
@@ -70,7 +70,7 @@ const CartaoDigital: React.FC = () => {
                 Diagnóstico — Planejamento Sucessório
               </a>
 
-              {/* SERVIÇOS */}
+              {/* SERVIÇOS GERAIS */}
               <a
                 href="https://carneirofilho.com.br/servicos"
                 target="_blank"
@@ -81,7 +81,7 @@ const CartaoDigital: React.FC = () => {
                 Ver serviços
               </a>
 
-              {/* PARCERIAS - FOCO 10% */}
+              {/* HUB DE PARCERIAS (10% FOCO) */}
               <a
                 href="https://carneirofilho.com.br/parcerias"
                 target="_blank"
