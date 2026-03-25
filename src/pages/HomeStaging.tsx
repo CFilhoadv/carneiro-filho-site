@@ -36,21 +36,28 @@ const HomeStaging: React.FC = () => {
         <div className="container mx-auto px-4">
           <h3 className="text-center text-blue-900 font-bold text-xl uppercase tracking-widest mb-8">Como podemos te atender?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            
+            {/* 70% - ATENDIMENTO RÁPIDO - BORDA VERDE */}
             <a href={whatsappLink} target="_blank" rel="noopener" className="flex flex-col items-center p-6 border-2 border-green-500 rounded-sm hover:bg-green-50 transition-colors text-center group">
               <MessageCircle className="text-green-600 mb-4" size={32} />
               <span className="font-bold text-gray-900 uppercase text-sm mb-2">Atendimento rápido (WhatsApp)</span>
-              <p className="text-gray-600 text-xs">Triagem inicial e orientação sobre próximos passos.</p>
+              <p className="text-gray-600 text-xs italic">Para o cidadão comum que busca orientação, agilidade na solução de problemas do dia a dia.</p>
             </a>
+
+            {/* 20% - PLANEJAMENTO / PROTEÇÃO - BORDA AZUL ESCURO */}
             <Link to="/planejamento-sucessorio" className="flex flex-col items-center p-6 border-2 border-blue-900 rounded-sm hover:bg-blue-50 transition-colors text-center group">
               <ShieldCheck className="text-blue-900 mb-4" size={32} />
               <span className="font-bold text-gray-900 uppercase text-sm mb-2">Planejamento Sucessório / Proteção Patrimonial</span>
-              <p className="text-gray-600 text-xs">Indicado para múltiplos imóveis ou sucessão empresarial.</p>
+              <p className="text-gray-600 text-xs italic">Para quem possui imóveis ou empresas e busca soluções com segurança jurídica.</p>
             </Link>
-            <Link to="/parcerias" className="flex flex-col items-center p-6 border-2 border-gray-300 rounded-sm hover:bg-gray-50 transition-colors text-center group">
-              <Users className="text-gray-600 mb-4" size={32} />
-              <span className="font-bold text-gray-900 uppercase text-sm mb-2">Parcerias (contadores, imobiliárias, instituições)</span>
-              <p className="text-gray-600 text-xs">Alinhamento técnico e fluxo de indicação seguro.</p>
+
+            {/* 10% - PARCERIAS - AGORA COM BORDA DOURADA/AMBER PARA MAIOR RELEVÂNCIA */}
+            <Link to="/parcerias" className="flex flex-col items-center p-6 border-2 border-amber-500 rounded-sm hover:bg-amber-50 transition-colors text-center group">
+              <Users className="text-amber-600 mb-4" size={32} />
+              <span className="font-bold text-gray-900 uppercase text-sm mb-2">Parcerias Estratégicas</span>
+              <p className="text-gray-600 text-xs italic">Para profissionais técnicos (contadores, imobiliárias e empresas) que buscam parceria jurídica qualificada.</p>
             </Link>
+
           </div>
         </div>
       </section>
@@ -82,12 +89,11 @@ const HomeStaging: React.FC = () => {
             ))}
           </div>
 
-          {/* BOTÃO PRINCIPAL COM MICROTEXTO - AJUSTE CONFORME ITEM 3.1 */}
+          {/* BOTÃO PRINCIPAL COM MICROTEXTO */}
           <div className="mt-12 text-center">
             <a href={whatsappLink} target="_blank" rel="noopener" className="inline-flex items-center bg-[#25D366] text-white px-12 py-5 rounded-sm font-bold uppercase tracking-[0.15em] text-xs md:text-sm hover:bg-green-700 transition-all shadow-xl group">
               Iniciar Atendimento Digital <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
-            {/* AJUSTE A2: Microtexto atualizado conforme relatório */}
             <p className="mt-4 text-gray-500 text-xs md:text-sm font-medium">
               Atendimento inicial por WhatsApp para entender o caso e orientar os próximos passos.
             </p>
@@ -122,7 +128,7 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* RODAPÉ DA HOME COM CTAs SEPARADOS */}
+      {/* RODAPÉ DA HOME */}
       <section className="py-12 bg-gray-900 text-white border-t border-white/10">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
           <div className="text-center md:text-left">
