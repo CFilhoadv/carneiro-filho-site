@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import { 
   MessageCircle, Landmark, ShieldCheck, 
-  ChevronRight, Scale, FileText, 
-  HeartHandshake, Gavel, Building2, Briefcase 
+  ChevronRight, HeartHandshake, Gavel, 
+  Building2, Briefcase 
 } from 'lucide-react';
 
 const ServicosStaging: React.FC = () => {
