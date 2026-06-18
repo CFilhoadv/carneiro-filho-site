@@ -4,8 +4,7 @@ import MainLayout from '../components/layout/MainLayout';
 import bannerImg from '../assets/images/banner_familia.webp';
 import { ShieldCheck, Building2, Landmark, Scale, ChevronRight, MessageCircle, FileText, Users } from 'lucide-react';
 
-import fachadaSorocaba from '../assets/images/unidade-sorocaba.jpeg';
-import fachadaSaoPaulo from '../assets/images/unidade-sp.webp';
+import fachadaSorocaba from '../assets/images/edificio-avenida-paulista.jpeg';
 
 const HomeStaging: React.FC = () => {
   const whatsappLink = "https://wa.me/551531911432";
@@ -13,7 +12,7 @@ const HomeStaging: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* 1. BANNER - AJUSTE CONFORME ITEM 3.1 */}
+      {/* 1. BANNER */}
       <section className="relative h-[380px] md:h-[450px] flex items-center justify-center overflow-hidden bg-gray-900">
         <div className="absolute inset-0">
           <img src={bannerImg} alt="Banner Carneiro Filho" className="w-full h-full object-cover brightness-[0.45]" />
@@ -23,7 +22,6 @@ const HomeStaging: React.FC = () => {
             Proteção jurídica dos seus direitos e do seu patrimônio
           </h1>
           <div className="max-w-3xl mx-auto space-y-3">
-            {/* AJUSTE A1: Subtítulo da dobra atualizado conforme relatório */}
             <p className="text-blue-100 text-sm md:text-lg font-medium tracking-wide opacity-90">
               Atendimento digital por WhatsApp em Sorocaba e região, com orientação clara e condução técnica.
             </p>
@@ -38,24 +36,24 @@ const HomeStaging: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             
             {/* 70% - ATENDIMENTO RÁPIDO - BORDA VERDE */}
-            <a href={whatsappLink} target="_blank" rel="noopener" className="flex flex-col items-center p-6 border-2 border-green-500 rounded-sm hover:bg-green-50 transition-colors text-center group">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-6 border-2 border-green-500 rounded-sm hover:bg-green-50 transition-colors text-center group">
               <MessageCircle className="text-green-600 mb-4" size={32} />
-              <span className="font-bold text-gray-900 uppercase text-sm mb-2">Atendimento rápido (WhatsApp)</span>
-              <p className="text-gray-600 text-xs italic">Para o cidadão comum que busca orientação, agilidade na solução de problemas do dia a dia.</p>
+              <span className="font-bold text-gray-900 uppercase text-base mb-2">Atendimento rápido (WhatsApp)</span>
+              <p className="text-gray-700 text-sm leading-relaxed">Para o cidadão comum que busca orientação e agilidade na solução de problemas do dia a dia.</p>
             </a>
 
             {/* 20% - PLANEJAMENTO / PROTEÇÃO - BORDA AZUL ESCURO */}
             <Link to="/planejamento-sucessorio" className="flex flex-col items-center p-6 border-2 border-blue-900 rounded-sm hover:bg-blue-50 transition-colors text-center group">
               <ShieldCheck className="text-blue-900 mb-4" size={32} />
-              <span className="font-bold text-gray-900 uppercase text-sm mb-2">Planejamento Sucessório / Proteção Patrimonial</span>
-              <p className="text-gray-600 text-xs italic">Para quem possui imóveis ou empresas e busca soluções com segurança jurídica.</p>
+              <span className="font-bold text-gray-900 uppercase text-base mb-2">Planejamento Sucessório / Proteção Patrimonial</span>
+              <p className="text-gray-700 text-sm leading-relaxed">Para quem possui imóveis ou empresas e busca soluções estruturadas com segurança jurídica.</p>
             </Link>
 
-            {/* 10% - PARCERIAS - AGORA COM BORDA DOURADA/AMBER PARA MAIOR RELEVÂNCIA */}
+            {/* 10% - PARCERIAS - ENFOCANDO EXCLUSIVAMENTE ESCRITÓRIOS DE CONTABILIDADE */}
             <Link to="/parcerias" className="flex flex-col items-center p-6 border-2 border-amber-500 rounded-sm hover:bg-amber-50 transition-colors text-center group">
               <Users className="text-amber-600 mb-4" size={32} />
-              <span className="font-bold text-gray-900 uppercase text-sm mb-2">Parcerias Estratégicas</span>
-              <p className="text-gray-600 text-xs italic">Para profissionais técnicos (contadores, imobiliárias e empresas) que buscam parceria jurídica qualificada.</p>
+              <span className="font-bold text-gray-900 uppercase text-base mb-2">Parcerias Estratégicas</span>
+              <p className="text-gray-700 text-sm leading-relaxed">Para escritórios de contabilidade que demandam uma retaguarda jurídica e societária de alta complexidade.</p>
             </Link>
 
           </div>
@@ -79,10 +77,10 @@ const HomeStaging: React.FC = () => {
               { t: "Inventário e questões familiares", icon: <Building2 size={20} /> },
               { t: "Imóvel: regularização / documentação", icon: <Building2 size={20} /> }
             ].map((item, idx) => (
-              <a key={idx} href={whatsappLink} target="_blank" rel="noopener" className="flex items-center justify-between p-5 bg-white border border-gray-200 hover:border-blue-900 transition-all group">
+              <a key={idx} href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-5 bg-white border border-gray-200 hover:border-blue-900 transition-all group">
                 <div className="flex items-center gap-3">
                   <span className="text-blue-900">{item.icon}</span>
-                  <span className="text-sm font-bold text-gray-700 uppercase tracking-tight text-left">{item.t}</span>
+                  <span className="text-base font-bold text-gray-700 uppercase tracking-tight text-left">{item.t}</span>
                 </div>
                 <ChevronRight size={18} className="text-gray-400 group-hover:text-blue-900 group-hover:translate-x-1 transition-all" />
               </a>
@@ -91,38 +89,40 @@ const HomeStaging: React.FC = () => {
 
           {/* BOTÃO PRINCIPAL COM MICROTEXTO */}
           <div className="mt-12 text-center">
-            <a href={whatsappLink} target="_blank" rel="noopener" className="inline-flex items-center bg-[#25D366] text-white px-12 py-5 rounded-sm font-bold uppercase tracking-[0.15em] text-xs md:text-sm hover:bg-green-700 transition-all shadow-xl group">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#25D366] text-white px-12 py-5 rounded-sm font-bold uppercase tracking-[0.15em] text-xs md:text-sm hover:bg-green-700 transition-all shadow-xl group">
               Iniciar Atendimento Digital <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
-            <p className="mt-4 text-gray-500 text-xs md:text-sm font-medium">
+            <p className="mt-4 text-gray-600 text-base font-medium">
               Atendimento inicial por WhatsApp para entender o caso e orientar os próximos passos.
             </p>
           </div>
         </div>
       </section>
 
-      {/* UNIDADES */}
+      {/* UNIDADES - AJUSTADO PARA EXIBIR A FOTO INTEIRA SEM CORTES */}
       <section className="py-16 bg-white border-t border-gray-50">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="flex flex-col">
-              <img src={fachadaSorocaba} alt="Unidade Sorocaba" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-blue-900" />
-              <div className="px-2 text-left">
-                <h4 className="font-bold text-blue-900 text-lg uppercase tracking-widest mb-1">Sorocaba</h4>
-                <p className="text-gray-500 text-xs mb-4 uppercase tracking-tighter italic">Atendimento Presencial e Consultoria</p>
-                <p className="text-gray-600 text-sm mb-4">Av. Profa. Izoraida Marques Peres, 256 — Campolim</p>
-                <a href={telSorocaba} className="text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors italic">
-                  (15) 3191-1432
-                </a>
-              </div>
+        <div className="container mx-auto px-4 max-w-2xl">
+          <div className="flex flex-col items-center">
+            <div className="w-full bg-gray-50 rounded-sm shadow-md mb-6 border-b-4 border-blue-900 overflow-hidden flex items-center justify-center">
+              <img 
+                src={fachadaSorocaba} 
+                alt="Edifício Avenida Paulista - Campolim" 
+                className="w-auto h-auto max-h-[550px] md:max-h-[650px] object-contain"
+              />
             </div>
-            <div className="flex flex-col">
-              <img src={fachadaSaoPaulo} alt="Unidade São Paulo" className="w-full h-[320px] object-cover rounded-sm shadow-md mb-6 border-b-4 border-gray-300" />
-              <div className="px-2 text-left">
-                <h4 className="font-bold text-gray-800 text-lg uppercase tracking-widest mb-1">São Paulo</h4>
-                <p className="text-gray-500 text-xs mb-4 uppercase tracking-tighter italic">Escritório Administrativo</p>
-                <p className="text-gray-600 text-sm mb-4">Av. Brigadeiro Faria Lima, 1811 — Conj. 1119</p>
-              </div>
+            <div className="w-full px-2 text-center">
+              <h4 className="font-bold text-blue-900 text-xl uppercase tracking-widest mb-1">Sorocaba</h4>
+              <p className="text-red-800 bg-red-50 border border-red-200 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-sm inline-block mb-4">
+                ⚠️ Atendimento exclusivamente mediante agendamento prévio
+              </p>
+              <p className="text-gray-700 text-base font-medium leading-relaxed mb-4">
+                Av. Profa. Izoraida Marques Peres, 256, 9º andar<br />
+                Ed. Avenida Paulista — Campolim<br />
+                Sorocaba/SP — CEP 18048-110
+              </p>
+              <a href={telSorocaba} className="text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors italic block mt-2">
+                (15) 3191-1432
+              </a>
             </div>
           </div>
         </div>
@@ -132,14 +132,14 @@ const HomeStaging: React.FC = () => {
       <section className="py-12 bg-gray-900 text-white border-t border-white/10">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
           <div className="text-center md:text-left">
-            <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">Para clientes</p>
-            <a href={whatsappLink} target="_blank" rel="noopener" className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 font-bold uppercase text-xs tracking-widest transition-all">
+            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Para clientes</p>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 font-bold uppercase text-xs tracking-widest transition-all">
               Preciso de atendimento
             </a>
           </div>
           <div className="h-px w-12 bg-gray-700 md:h-12 md:w-px"></div>
           <div className="text-center md:text-left">
-            <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">Para profissionais</p>
+            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Para profissionais</p>
             <Link to="/parcerias" className="inline-block border border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 font-bold uppercase text-xs tracking-widest transition-all">
               Sou parceiro
             </Link>

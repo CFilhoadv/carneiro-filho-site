@@ -18,49 +18,40 @@ const Footer: React.FC = () => {
           {/* Coluna 1: Canais de Atendimento */}
           <div className="space-y-6">
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4 text-white">Atendimento</h3>
-            <div className="space-y-6 text-sm text-gray-400">
+            <div className="space-y-6 text-base text-gray-400">
               
               {/* Canal de E-mail */}
-              <div className="flex items-center">
+              <div className="flex items-center text-sm md:text-base text-gray-400">
                 <Mail size={16} className="mr-3 text-blue-900" /> 
                 <a href="mailto:contato@carneirofilho.com.br" className="hover:text-white transition-colors">
                   contato@carneirofilho.com.br
                 </a>
               </div>
               
-              {/* Unidade Sorocaba */}
+              {/* Unidade Sorocaba Única com Endereço Completo */}
               <div className="flex items-start border-t border-gray-800 pt-4">
                 <MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
                 <div>
-                  <span className="font-bold text-gray-300 uppercase block mb-1 text-xs tracking-wider">Unidade Sorocaba (Principal)</span>
-                  <p>Edifício Av. Paulista, 9º andar - Campolim</p>
-                  <p>Sorocaba/SP</p>
-                  <div className="flex items-center mt-2 text-blue-100 font-bold bg-blue-900/30 px-2 py-1 rounded-sm w-fit">
+                  <span className="font-bold text-gray-300 uppercase block mb-1 text-xs tracking-wider">Unidade Sorocaba</span>
+                  <p className="leading-relaxed">
+                    Av. Profa. Izoraida Marques Peres, 256, 9º andar<br />
+                    Ed. Avenida Paulista — Campolim<br />
+                    Sorocaba/SP — CEP 18048-110
+                  </p>
+                  <div className="flex items-center mt-3 text-blue-100 font-bold bg-blue-900/30 px-3 py-1.5 rounded-sm w-fit text-sm">
                     <Phone size={14} className="mr-2" />
                     <a href="tel:+551531911432" className="hover:text-white">(15) 3191-1432</a>
                   </div>
                 </div>
               </div>
 
-              {/* Unidade São Paulo */}
-              <div className="flex items-start opacity-70">
-                <MapPin size={16} className="mr-3 mt-1 text-blue-900" /> 
-                <div>
-                  <span className="font-bold text-gray-300 uppercase block mb-1 text-xs tracking-wider">Unidade Administrativa - SP</span>
-                  <p>Av. Brigadeiro Faria Lima, 1811</p>
-                  <div className="flex items-center mt-2 text-gray-400 font-medium">
-                    <Phone size={12} className="mr-2" />
-                    <a href="tel:+551142106194" className="hover:text-white">(11) 4210-6194</a>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
           {/* Coluna 2: Navegação */}
           <div>
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4">Navegação</h3>
-            <ul className="space-y-3 text-sm">
+            <ul className="space-y-3 text-base">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link to={link.href} className="text-gray-400 hover:text-white transition-colors">{link.title}</Link>
@@ -69,13 +60,13 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Coluna 3: Institucional - Transparência com as duas OABs */}
+          {/* Coluna 3: Institucional */}
           <div>
             <h3 className="text-xl font-semibold mb-6 uppercase tracking-widest border-l-4 border-blue-900 pl-4">Institucional</h3>
-            <div className="text-gray-400 text-sm space-y-3 bg-gray-800/50 p-6 rounded-sm border border-gray-800 shadow-inner">
+            <div className="text-gray-400 text-base space-y-4 bg-gray-800/50 p-6 rounded-sm border border-gray-800 shadow-inner">
               <div>
                 <p className="font-bold text-white uppercase text-xs mb-1">Carneiro Filho Advocacia</p>
-                <p className="text-[11px] text-gray-500 leading-relaxed">
+                <p className="text-xs text-gray-500 leading-relaxed">
                   Carneiro Filho Sociedade Individual de Advocacia<br/>
                   <span className="text-blue-200/70 font-semibold">OAB/SP nº 47.631</span>
                 </p>
@@ -83,8 +74,8 @@ const Footer: React.FC = () => {
               
               <div className="pt-3 border-t border-gray-700/50">
                 <p className="text-[10px] text-gray-500 uppercase font-bold tracking-tighter mb-1">Advogado Titular:</p>
-                <p className="text-gray-300 font-bold text-sm">Francisco de Assis Carneiro Filho</p>
-                <p className="text-blue-200/70 font-semibold text-xs mt-0.5">OAB/SP nº 189.404</p>
+                <p className="text-gray-300 font-bold text-base">Francisco de Assis Carneiro Filho</p>
+                <p className="text-blue-200/70 font-semibold text-sm mt-0.5">OAB/SP nº 189.404</p>
               </div>
             </div>
           </div>
