@@ -1,184 +1,153 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import Banner from '../components/ui/Banner';
+import bannerImg from '../assets/images/banner_familia.webp';
+import { ShieldCheck, Building2, Landmark, Scale, ChevronRight, MessageCircle, FileText, Users, Users2 } from 'lucide-react';
 
-const AnalisePreliminarPage: React.FC = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    window.location.href = "https://calendly.com/contato-carneirofilho";
-  };
+import fachadaSorocaba from '../assets/images/edificio-avenida-paulista.jpeg';
+
+const HomeStaging: React.FC = () => {
+  const whatsappLink = "https://wa.me/551531911432";
+  const telSorocaba = "tel:+551531911432";
 
   return (
     <MainLayout>
-      <div className="relative">
-        <Banner
-          subtitle="Fluxo de Atendimento Institucional"
-          title="Análise Preliminar da Demanda"
-          bgColor="bg-blue-900"
-        />
-
-        <main className="py-16 px-4 max-w-4xl mx-auto">
-          <div className="mb-10 text-gray-800 leading-relaxed">
-            <h1 className="text-3xl font-bold mb-6 text-gray-900">
-              Análise Preliminar da Demanda
-            </h1>
-            <p className="mb-4 text-justify text-lg">
-              Para oferecermos um atendimento especializado, solicitamos o preenchimento das informações abaixo. 
-              Esta etapa nos permite compreender o contexto do seu caso e verificar a viabilidade jurídica inicial.
+      {/* 1. BANNER */}
+      <section className="relative h-[380px] md:h-[450px] flex items-center justify-center overflow-hidden bg-gray-900">
+        <div className="absolute inset-0">
+          <img src={bannerImg} alt="Banner Carneiro Filho" className="w-full h-full object-cover brightness-[0.45]" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10 text-center text-white">
+          <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-widest mb-6 drop-shadow-2xl max-w-5xl mx-auto leading-tight">
+            Proteção jurídica dos seus direitos e do seu patrimônio
+          </h1>
+          <div className="max-w-3xl mx-auto space-y-3">
+            <p className="text-blue-100 text-sm md:text-lg font-medium tracking-wide opacity-90">
+              Atendimento digital por WhatsApp em Sorocaba e região, com orientação clara e condução técnica.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="mb-12 p-6 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
-            <h2 className="text-lg font-bold text-amber-900 mb-3">
-              Aviso Importante
-            </h2>
-            <p className="text-sm text-amber-900">
-              O envio das informações por meio deste formulário não constitui contratação de serviços
-              advocatícios, nem gera obrigação de resposta, nos termos da Lei nº 8.906/94 e do
-              Código de Ética e Disciplina da OAB.
-            </p>
+      {/* BLOCO DE DIRECIONAMENTO (70/20/10) */}
+      <section className="bg-white py-12 border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <h3 className="text-center text-blue-900 font-bold text-xl uppercase tracking-widest mb-8">Como podemos te atender?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            
+            {/* 70% - ATENDIMENTO RÁPIDO - INCLUINDO CIDADÃO E EMPRESAS */}
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-6 border-2 border-green-500 rounded-sm hover:bg-green-50 transition-colors text-center group">
+              <MessageCircle className="text-green-600 mb-4" size={32} />
+              <span className="font-bold text-gray-900 uppercase text-base mb-2">Atendimento rápido (WhatsApp)</span>
+              <p className="text-gray-700 text-sm leading-relaxed">Para o cidadão e empresas locais que buscam orientação ágil e solução para problemas do dia a dia.</p>
+            </a>
+
+            {/* 20% - PLANEJAMENTO / PROTEÇÃO */}
+            <Link to="/planejamento-sucessorio" className="flex flex-col items-center p-6 border-2 border-blue-900 rounded-sm hover:bg-blue-50 transition-colors text-center group">
+              <ShieldCheck className="text-blue-900 mb-4" size={32} />
+              <span className="font-bold text-gray-900 uppercase text-base mb-2">Planejamento Sucessório / Proteção Patrimonial</span>
+              <p className="text-gray-700 text-sm leading-relaxed">Para quem possui imóveis ou empresas e busca soluções estruturadas com segurança jurídica.</p>
+            </Link>
+
+            {/* 10% - PARCERIAS */}
+            <Link to="/parcerias" className="flex flex-col items-center p-6 border-2 border-amber-500 rounded-sm hover:bg-amber-50 transition-colors text-center group">
+              <Users className="text-amber-600 mb-4" size={32} />
+              <span className="font-bold text-gray-900 uppercase text-base mb-2">Parcerias Estratégicas</span>
+              <p className="text-gray-700 text-sm leading-relaxed">Para escritórios de contabilidade que demandam uma retaguarda jurídica e societária de alta complexidade.</p>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SITUAÇÕES MAIS COMUNS */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-blue-900 font-bold text-xl md:text-2xl uppercase tracking-widest mb-2">Situações mais comuns</h3>
+            <div className="h-1.5 w-16 bg-blue-900 mx-auto"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+            {[
+              { t: "INSS: benefício negado / BPC / aposentadoria", icon: <Landmark size={20} /> },
+              { t: "Mitigação de Riscos e Recuperação de Créditos Fiscais", icon: <FileText size={20} /> },
+              { t: "Divórcio, Guarda, Pensão, Inventários e Direitos de Família", icon: <Scale size={20} /> },
+              { t: "Contencioso Tributário Administrativo e Judicial", icon: <Building2 size={20} /> },
+              { t: "Defesa do Consumidor e Indenizações por Prejuízos", icon: <ShieldCheck size={20} /> },
+              { t: "Conflitos Societários, Contratos e Relações de Consumo", icon: <Users2 size={20} /> }
+            ].map((item, idx) => (
+              <a key={idx} href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-5 bg-white border border-gray-200 hover:border-blue-900 transition-all group">
+                <div className="flex items-center gap-3">
+                  <span className="text-blue-900">{item.icon}</span>
+                  <span className="text-base font-bold text-gray-700 uppercase tracking-tight text-left">{item.t}</span>
+                </div>
+                <ChevronRight size={18} className="text-gray-400 group-hover:text-blue-900 group-hover:translate-x-1 transition-all" />
+              </a>
+            ))}
           </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-6 bg-white p-8 rounded-lg border border-gray-200 shadow-md"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
-                  Nome completo *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Digite seu nome"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded
-                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                />
-              </div>
+          {/* BOTÃO PRINCIPAL COM MICROTEXTO */}
+          <div className="mt-12 text-center">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#25D366] text-white px-12 py-5 rounded-sm font-bold uppercase tracking-[0.15em] text-xs md:text-sm hover:bg-green-700 transition-all shadow-xl group">
+              Iniciar Atendimento Digital <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <p className="mt-4 text-gray-600 text-base font-medium">
+              Atendimento inicial por WhatsApp para entender o caso e orientar os próximos passos.
+            </p>
+          </div>
+        </div>
+      </section>
 
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
-                  E-mail de contato *
-                </label>
-                <input
-                  type="email"
-                  placeholder="exemplo@email.com"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded
-                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
-                  WhatsApp com DDD *
-                </label>
-                <input
-                  type="tel"
-                  placeholder="(00) 00000-0000"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded
-                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-1">
-                  Cidade / Estado *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Ex: São Paulo / SP"
-                  required
-                  className="w-full p-3 border border-gray-300 rounded
-                             focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1">
-                Área de interesse da demanda *
-              </label>
-              <select
-                required
-                className="w-full p-3 border border-gray-300 rounded bg-white
-                           focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-              >
-                <option value="">Selecione a área...</option>
-                <option value="Direito Civil">Direito Civil</option>
-                <option value="Direito de Família">Direito de Família</option>
-                <option value="Sucessões">Sucessões (Inventário/Herança)</option>
-                <option value="Direito Empresarial">Direito Empresarial</option>
-                <option value="Direito Tributário">Direito Tributário</option>
-                <option value="Direito Previdenciário">Direito Previdenciário</option>
-                <option value="Direito do Trabalho">Direito do Trabalho</option>
-                <option value="Outro">Outro</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1">
-                Resumo da sua necessidade *
-              </label>
-              <textarea
-                required
-                rows={6}
-                className="w-full p-3 border border-gray-300 rounded
-                           focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none"
-                placeholder="Por favor, descreva brevemente o que ocorreu para que possamos nos preparar para o agendamento."
+      {/* UNIDADES - ENDEREÇO COMPLETO E AVISO DE AGENDAMENTO */}
+      <section className="py-16 bg-white border-t border-gray-50">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <div className="flex flex-col items-center">
+            <div className="w-full bg-gray-50 rounded-sm shadow-md mb-6 border-b-4 border-blue-900 overflow-hidden flex items-center justify-center">
+              <img 
+                src={fachadaSorocaba} 
+                alt="Edifício Avenida Paulista - Campolim" 
+                className="w-auto h-auto max-h-[550px] md:max-h-[650px] object-contain"
               />
             </div>
-
-            <div className="p-4 bg-blue-50 border border-blue-100 rounded-lg text-center">
-              <p className="text-sm text-blue-900 font-medium">
-                <span className="block mb-1 font-bold">Próxima Etapa: Agendamento</span>
-                Ao clicar no botão abaixo, você será levado ao nosso calendário para escolher o horário e confirmar clicando em 
-                <span className="bg-blue-900 text-white px-2 py-0.5 rounded text-xs mx-1">Schedule Event</span>.
+            <div className="w-full px-2 text-center">
+              <h4 className="font-bold text-blue-900 text-xl uppercase tracking-widest mb-1">Sorocaba</h4>
+              <p className="text-red-800 bg-red-50 border border-red-200 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-sm inline-block mb-4">
+                ⚠️ Atendimento exclusivamente mediante agendamento prévio
               </p>
-            </div>
-
-            <div className="pt-4 text-center">
-              <button
-                type="submit"
-                className="bg-blue-900 text-white px-12 py-4 rounded-md
-                           hover:bg-blue-800 transition-all font-bold text-lg
-                           shadow-lg hover:shadow-xl active:transform active:scale-95 w-full md:w-auto"
-              >
-                👉 Prosseguir para agendamento
-              </button>
-            </div>
-
-            {/* OBSERVAÇÃO – SUPORTE VIA WHATSAPP (CORRIGIDO COM LINK EXTERNO PARA O ÍCONE) */}
-            <div className="pt-4 text-sm text-gray-600 text-center">
-              <p className="mb-2">
-                Observação: caso encontre alguma dificuldade técnica para concluir o agendamento,
-                clique no ícone do <strong>WhatsApp</strong> abaixo e teremos prazer em orientar.
+              <p className="text-gray-700 text-base font-medium leading-relaxed mb-4">
+                Av. Profa. Izoraida Marques Peres, 256, 9º andar<br />
+                Ed. Avenida Paulista — Campolim<br />
+                Sorocaba/SP — CEP 18048-110
               </p>
-
-              <a
-                href="https://wa.me/551142106194"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Contato via WhatsApp"
-                className="inline-flex justify-center"
-              >
-                {/* Usando imagem oficial do WhatsApp via link direto */}
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                  alt="WhatsApp"
-                  className="w-10 h-10 hover:opacity-80 transition-opacity"
-                />
+              <a href={telSorocaba} className="text-2xl font-bold text-blue-900 hover:text-blue-700 transition-colors italic block mt-2">
+                (15) 3191-1432
               </a>
             </div>
-          </form>
-        </main>
-      </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RODAPÉ DA HOME */}
+      <section className="py-12 bg-gray-900 text-white border-t border-white/10">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+          <div className="text-center md:text-left">
+            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Para clientes</p>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 font-bold uppercase text-xs tracking-widest transition-all">
+              Preciso de atendimento
+            </a>
+          </div>
+          <div className="h-px w-12 bg-gray-700 md:h-12 md:w-px"></div>
+          <div className="text-center md:text-left">
+            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Para profissionais</p>
+            <Link to="/parcerias" className="inline-block border border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 font-bold uppercase text-xs tracking-widest transition-all">
+              Sou parceiro
+            </Link>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
 };
 
-export default AnalisePreliminarPage;
+export default HomeStaging;
