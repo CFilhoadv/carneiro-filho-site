@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import bannerImg from '../assets/images/banner_familia.webp';
-import { ShieldCheck, Building2, Landmark, Scale, ChevronRight, MessageCircle, FileText, Users } from 'lucide-react';
+import { ShieldCheck, Building2, Landmark, Scale, ChevronRight, MessageCircle, FileText, Users, Users2, Home } from 'lucide-react';
 
 import fachadaSorocaba from '../assets/images/edificio-avenida-paulista.jpeg';
 
@@ -35,21 +35,21 @@ const HomeStaging: React.FC = () => {
           <h3 className="text-center text-blue-900 font-bold text-xl uppercase tracking-widest mb-8">Como podemos te atender?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             
-            {/* 70% - ATENDIMENTO RÁPIDO - BORDA VERDE */}
+            {/* 70% - ATENDIMENTO RÁPIDO - INCLUINDO CIDADÃO E EMPRESAS */}
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-6 border-2 border-green-500 rounded-sm hover:bg-green-50 transition-colors text-center group">
               <MessageCircle className="text-green-600 mb-4" size={32} />
               <span className="font-bold text-gray-900 uppercase text-base mb-2">Atendimento rápido (WhatsApp)</span>
-              <p className="text-gray-700 text-sm leading-relaxed">Para o cidadão comum que busca orientação e agilidade na solução de problemas do dia a dia.</p>
+              <p className="text-gray-700 text-sm leading-relaxed">Para o cidadão e empresas locais que buscam orientação ágil e solução para problemas do dia a dia.</p>
             </a>
 
-            {/* 20% - PLANEJAMENTO / PROTEÇÃO - BORDA AZUL ESCURO */}
+            {/* 20% - PLANEJAMENTO / PROTEÇÃO */}
             <Link to="/planejamento-sucessorio" className="flex flex-col items-center p-6 border-2 border-blue-900 rounded-sm hover:bg-blue-50 transition-colors text-center group">
               <ShieldCheck className="text-blue-900 mb-4" size={32} />
               <span className="font-bold text-gray-900 uppercase text-base mb-2">Planejamento Sucessório / Proteção Patrimonial</span>
               <p className="text-gray-700 text-sm leading-relaxed">Para quem possui imóveis ou empresas e busca soluções estruturadas com segurança jurídica.</p>
             </Link>
 
-            {/* 10% - PARCERIAS - ENFOCANDO EXCLUSIVAMENTE ESCRITÓRIOS DE CONTABILIDADE */}
+            {/* 10% - PARCERIAS */}
             <Link to="/parcerias" className="flex flex-col items-center p-6 border-2 border-amber-500 rounded-sm hover:bg-amber-50 transition-colors text-center group">
               <Users className="text-amber-600 mb-4" size={32} />
               <span className="font-bold text-gray-900 uppercase text-base mb-2">Parcerias Estratégicas</span>
@@ -60,7 +60,7 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* SITUAÇÕES MAIS COMUNS (FOCO 70%) */}
+      {/* SITUAÇÕES MAIS COMUNS */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -68,14 +68,14 @@ const HomeStaging: React.FC = () => {
             <div className="h-1.5 w-16 bg-blue-900 mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
             {[
               { t: "INSS: benefício negado / BPC / aposentadoria", icon: <Landmark size={20} /> },
-              { t: "Pensão, divórcio e guarda", icon: <Scale size={20} /> },
-              { t: "Cobrança indevida / negativação", icon: <ShieldCheck size={20} /> },
-              { t: "Dívidas e contratos", icon: <FileText size={20} /> },
-              { t: "Inventário e questões familiares", icon: <Building2 size={20} /> },
-              { t: "Imóvel: regularização / documentação", icon: <Building2 size={20} /> }
+              { t: "Mitigação de Riscos e Recuperação de Créditos Fiscais", icon: <FileText size={20} /> },
+              { t: "Divórcio, Guarda, Pensão, Inventários e Direitos de Família", icon: <Scale size={20} /> },
+              { t: "Contencioso Tributário Administrativo e Judicial", icon: <Building2 size={20} /> },
+              { t: "Defesa do Consumidor e Indenizações por Prejuízos", icon: <ShieldCheck size={20} /> },
+              { t: "Conflitos Societários, Contratos e Relações de Consumo", icon: <Users2 size={20} /> }
             ].map((item, idx) => (
               <a key={idx} href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-5 bg-white border border-gray-200 hover:border-blue-900 transition-all group">
                 <div className="flex items-center gap-3">
@@ -99,7 +99,7 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* UNIDADES - AJUSTADO PARA EXIBIR A FOTO INTEIRA SEM CORTES */}
+      {/* UNIDADES - ENDEREÇO COMPLETO E AVISO DE AGENDAMENTO */}
       <section className="py-16 bg-white border-t border-gray-50">
         <div className="container mx-auto px-4 max-w-2xl">
           <div className="flex flex-col items-center">
