@@ -1,107 +1,136 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Calendar, ShieldCheck, TrendingUp, Landmark } from 'lucide-react';
+import { Calendar, ShieldCheck, AlertTriangle, Landmark, FileText, Scale } from 'lucide-react';
 
 const ParceriaContabil: React.FC = () => {
   const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
 
   return (
     <MainLayout>
-      {/* Cabeçalho: Foco em Segurança Jurídica e Resultado */}
-      <section className="bg-white pt-8 pb-8 md:pt-12 md:pb-12 border-b border-gray-100 text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
-            Suporte Jurídico Estratégico
+      {/* Cabeçalho: Foco em Retaguarda e Cooperação Técnica */}
+      <section className="bg-[#0b132b] pt-12 pb-12 md:pt-16 md:pb-16 text-center text-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-blue-400 font-semibold text-xs md:text-sm uppercase tracking-widest mb-3">
+            RETAGUARDA JURÍDICA ESTRATÉGICA PARA ESCRITÓRIOS DE CONTABILIDADE
+          </p>
+          <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-tight leading-tight">
+            Hub de Parcerias: Proteção contra Pontos Cegos Societários e Fiscais
           </h1>
-          <div className="h-1 w-16 md:w-20 bg-blue-900 mx-auto mt-3 md:mt-4"></div>
+          <div className="h-1 w-16 md:w-20 bg-blue-400 mx-auto mt-4"></div>
         </div>
       </section>
 
-      {/* Conteúdo Principal: Tensão e Solução Pragmática */}
-      <section className="py-10 md:py-16 bg-white">
+      {/* Conteúdo Principal: Tensão Baseada na Dor do Contador */}
+      <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="space-y-8 text-gray-700 leading-relaxed text-base md:text-lg text-justify">
             
             <div className="text-center md:text-left">
-              <p className="text-blue-900 font-semibold text-xs md:text-sm uppercase tracking-widest mb-4">
-                (Parecer jurídico e sustentação técnica para decisões tributárias e societárias)
-              </p>
-              
-              <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-6">
-                A conformidade já não basta: o auto de infração não pergunta apenas "como foi calculado", mas "qual o fundamento jurídico da interpretação adotada".
+              <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-6 text-center md:text-left">
+                A conformidade fiscal mudou: O risco do seu cliente pode se tornar uma corresponsabilidade do seu escritório.
               </h2>
-
               <p className="mb-6">
-                Recuperações de crédito, reclassificações de insumos e planejamentos tributários nascem no campo contábil, mas morrem no campo jurídico. Quando a decisão envolve interpretação controvertida ou crédito expressivo, a exposição deixa de ser apenas operacional e passa a ser jurídica, alcançando inclusive a responsabilidade do assessor.
+                Planejamentos tributários, reestruturações societárias e holdings nascem na escrituração contábil, mas são julgados pelas amarras do campo jurídico. Quando a fiscalização municipal ou federal identifica um ponto cego, a crise não atinge apenas o caixa do empresário — ela gera um desgaste comercial devastador para o assessor contábil que assina o balanço.
               </p>
-
-              <div className="bg-gray-50 p-6 border-l-4 border-red-700 mb-8 shadow-sm">
-                <p className="font-bold text-gray-900 mb-3 text-sm md:text-base">
-                  Riscos que o cliente final corre sem sustentação jurídica prévia:
-                </p>
-                <ul className="list-disc pl-5 space-y-2 text-sm md:text-base text-gray-800">
-                  <li>Responsabilização técnica e solidária do assessor contábil e do empresário;</li>
-                  <li>Questionamentos estruturais sobre a validade jurídica de créditos e planejamentos;</li>
-                  <li>Insegurança na continuidade operacional perante o Fisco e o Judiciário.</li>
-                </ul>
-              </div>
             </div>
 
-            <hr className="my-12 border-gray-100" />
+            <hr className="my-8 border-gray-100" />
 
-            {/* Soluções Estratégicas para o Cliente Final */}
+            {/* Bloco de Alerta de Riscos Críticos (Gatilho de Urgência) */}
             <section>
-              <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-8 text-center md:text-left">
-                Soluções Estratégicas para o Cliente Final
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center"><TrendingUp size={16} className="mr-2"/> 1. Recuperação e Fluxo Produtivo</h3>
-                  <p className="text-sm">Identificação de créditos (ICMS, PIS e COFINS) através da análise profunda da operação — incluindo insumos e ativos imobilizados — com o devido enquadramento normativo e respaldo legal.</p>
+              <h3 className="text-lg md:text-xl font-bold text-red-700 uppercase tracking-wide mb-6 flex items-center justify-center md:justify-start">
+                <AlertTriangle size={22} className="mr-2 text-red-700" /> 3 Pontos Cegos que Podem Comprometer a Carteira de Clientes
+              </h3>
+              
+              <div className="space-y-6">
+                {/* Risco 1 - ITBI */}
+                <div className="bg-gray-50 p-6 border-l-4 border-red-700 shadow-sm">
+                  <h4 className="font-bold text-gray-900 text-base mb-2 flex items-center">
+                    1. A Ilusão da Imunidade do ITBI e o Prazo de Carência
+                  </h4>
+                  <p className="text-sm text-gray-700 mb-3">
+                    <strong>O Problema:</strong> Integralizar imóveis em uma holding familiar e iniciar a atividade operacional de locação ou venda sem o devido isolamento. O Art. 37 do CTN prevê uma apuração trienal da atividade preponderante.
+                  </p>
+                  <p className="text-sm text-red-800 italic font-medium">
+                    <strong>A Dor:</strong> Após o triênio de carência, a Prefeitura de Sorocaba cobra o imposto retroativo com juros e multas. O cliente se volta contra o contador por não ter mapeado o passivo.
+                  </p>
                 </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center"><Landmark size={16} className="mr-2"/> 2. Transição (Reforma Tributária)</h3>
-                  <p className="text-sm">Planejamento jurídico estratégico para a implementação do novo sistema (CBS/IBS), garantindo que o estoque de créditos atuais seja preservado e a transição ocorra sem sobressaltos operacionais.</p>
+
+                {/* Risco 2 - SINTER/CIB */}
+                <div className="bg-gray-50 p-6 border-l-4 border-red-700 shadow-sm">
+                  <h4 className="font-bold text-gray-900 text-base mb-2 flex items-center">
+                    2. O Cerco Digital aos Aluguéis (SINTER e CIB)
+                  </h4>
+                  <p className="text-sm text-gray-700 mb-3">
+                    <strong>O Problema:</strong> Cruzamento de dados 100% automatizado entre cartórios, prefeituras e o Cadastro Imobiliário Brasileiro, expondo contratos informais ou omissões na Pessoa Física.
+                  </p>
+                  <p className="text-sm text-red-800 italic font-medium">
+                    <strong>A Dor:</strong> O cliente é pego em malhas fiscais com multas qualificadas de até 150%, e o escritório de contabilidade precisa gerenciar uma contingência retroativa sob extrema pressão.
+                  </p>
                 </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center"><TrendingUp size={16} className="mr-2"/> 3. Incentivos Fiscais e Marketing</h3>
-                  <p className="text-sm">Fundamentação jurídica para o uso de benefícios como PAT e Leis de Incentivo (Rouanet/Audiovisual), permitindo o uso da renúncia fiscal para alavancar projetos de visibilidade institucional.</p>
-                </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center"><ShieldCheck size={16} className="mr-2"/> 4. Parecer de Sustentação Técnica</h3>
-                  <p className="text-sm">Emissão de parecer jurídico fundamentado sobre a decisão fiscal, com análise de precedentes administrativos e judiciais para delimitar com precisão o grau de risco jurídico.</p>
-                </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center"><ShieldCheck size={16} className="mr-2"/> 5. Formalização Probatória</h3>
-                  <p className="text-sm">Estruturação técnica da tese e organização de dossiê probatório (baseado em laudos e evidências materiais) apto a sustentar e encerrar questionamentos já na fase administrativa.</p>
-                </div>
-                <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-                  <h3 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center"><Landmark size={16} className="mr-2"/> 6. Regimes e Reorganização</h3>
-                  <p className="text-sm">Validação jurídica de regimes tributários e suporte em cisões ou planejamentos sucessórios para otimização do IRPJ, CSLL e redução de encargos previdenciários.</p>
+
+                {/* Risco 3 - Art. 977 */}
+                <div className="bg-gray-50 p-6 border-l-4 border-red-700 shadow-sm">
+                  <h4 className="font-bold text-gray-900 text-base mb-2 flex items-center">
+                    3. O Bloqueio Invisível do Art. 977 do Código Civil
+                  </h4>
+                  <p className="text-sm text-gray-700 mb-3">
+                    <strong>O Problema:</strong> Constituição de holdings onde os únicos sócios são maridos e esposas casados sob os regimes de Comunhão Universal ou Separação Obrigatória de Bens.
+                  </p>
+                  <p className="text-sm text-red-800 italic font-medium">
+                    <strong>A Dor:</strong> A Junta Comercial pode registrar, mas a sociedade é juridicamente nula. Anos de escrituração e planejamento são desfeitos em uma fiscalização ou litígio familiar.
+                  </p>
                 </div>
               </div>
             </section>
 
-            {/* Diferencial Especialista */}
+            <hr className="my-12 border-gray-100" />
+
+            {/* O Papel da Assessoria Jurídica de Retaguarda */}
+            <section>
+              <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-6 text-center md:text-left">
+                Como a Assessoria Jurídica Especializada Protege seu Escritório
+              </h2>
+              <p className="text-base text-gray-700 mb-8">
+                Nossa atuação não concorre com os serviços contábeis; nós servimos como um escudo de proteção técnica. Assumimos a responsabilidade jurídica e formal dos pareceres e desenhos societários, deixando o seu escritório livre para focar na conformidade e no atendimento de excelência.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-50 p-6 border-t-2 border-blue-900 shadow-sm">
+                  <h4 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center">
+                    <Scale size={16} className="mr-2"/> Pareceres de Sustentação
+                  </h4>
+                  <p className="text-sm">Emissão de parecer jurídico fundamentado com análise de precedentes administrativos para delimitar e mitigar o grau de risco operacional do seu cliente.</p>
+                </div>
+                <div className="bg-gray-50 p-6 border-t-2 border-blue-900 shadow-sm">
+                  <h4 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center">
+                    <FileText size={16} className="mr-2"/> Validação de Viabilidade
+                  </h4>
+                  <p className="text-sm">Pente-fino rigoroso em regimes de bens, certidões e documentações antes do arquivamento de atos na Jucesp, eliminando riscos de nulidade societária.</p>
+                </div>
+              </div>
+            </section>
+
+            {/* Diferencial do Especialista */}
             <div className="bg-blue-50 p-5 md:p-8 rounded-sm mt-12 border border-blue-100 shadow-sm">
-              <h3 className="font-bold text-blue-900 uppercase tracking-widest text-sm mb-4">Diferencial Especialista</h3>
+              <h3 className="font-bold text-blue-900 uppercase tracking-widest text-sm mb-4">Diferencial e Alinhamento de Governança</h3>
               <ul className="space-y-3 text-sm md:text-base text-gray-700">
                 <li className="flex items-start">
-                  <CheckCircle2 className="mr-2 text-blue-900 flex-shrink-0" size={18} />
-                  <span><strong>35 anos de atuação executiva:</strong> Larga experiência em ambientes corporativos e indústrias de grande porte integrando normas contábeis (FIPECAFI) e o Direito Tributário.</span>
+                  <span className="text-blue-900 mr-2 font-bold">•</span>
+                  <span><strong>Experiência em Controladoria:</strong> Bagagem construída integrando normas de contabilidade e o Direito Tributário em ambientes corporativos de grande porte.</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle2 className="mr-2 text-blue-900 flex-shrink-0" size={18} />
-                  <span><strong>Assunção de Responsabilidade:</strong> Minha atuação eleva o trabalho contábil através da fundamentação jurídica formal em cada análise realizada, com responsabilidade técnica direta sobre o parecer emitido.</span>
+                  <span className="text-blue-900 mr-2 font-bold">•</span>
+                  <span><strong>Garantia de Não-Concorrência:</strong> Pacto formal de proteção de carteira. Seus clientes continuam sendo seus. Atuamos exclusivamente na retaguarda técnica especializada.</span>
                 </li>
               </ul>
             </div>
 
-            {/* CTA Final */}
+            {/* CTA Final Conduzindo ao Calendly */}
             <div className="mt-16 py-10 border-t border-gray-100 text-center">
-              <h3 className="text-xl font-bold text-blue-900 uppercase tracking-widest mb-6">Viabilizar Conversa Técnica</h3>
+              <h3 className="text-xl font-bold text-blue-900 uppercase tracking-widest mb-4">Viabilizar Conversa Técnica</h3>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-sm md:text-base">
-                Agende uma reunião para avaliar como a formalização jurídica pode potencializar a segurança e a rentabilidade das decisões fiscais da sua carteira de clientes.
+                Identificou algum cliente com um desses perfis de risco ou tem uma demanda societária complexa travada? Agende um diagnóstico privado de 30 minutos no Calendly.
               </p>
               <a 
                 href={calendlyLink} 
@@ -109,7 +138,7 @@ const ParceriaContabil: React.FC = () => {
                 rel="noopener noreferrer" 
                 className="inline-flex items-center justify-center bg-blue-900 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-blue-800 transition-all shadow-lg"
               >
-                <Calendar size={18} className="mr-3" /> Agendar Conversa Técnica com Dr. Francisco
+                <Calendar size={18} className="mr-3" /> Agendar Alinhamento Técnico Privado
               </a>
             </div>
 
@@ -119,23 +148,5 @@ const ParceriaContabil: React.FC = () => {
     </MainLayout>
   );
 };
-
-const CheckCircle2 = ({ className, size }: { className?: string, size?: number }) => (
-  <svg 
-    xmlns="http://www.w3.org/2000/svg" 
-    width={size || 24} 
-    height={size || 24} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-    className={className}
-  >
-    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-    <path d="m9 12 2 2 4-4"/>
-  </svg>
-);
 
 export default ParceriaContabil;
