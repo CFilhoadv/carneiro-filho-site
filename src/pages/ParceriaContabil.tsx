@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Calendar, AlertTriangle, FileText, Scale } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 const ParceriaContabil: React.FC = () => {
   const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
