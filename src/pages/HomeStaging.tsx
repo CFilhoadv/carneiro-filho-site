@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import bannerImg from '../assets/images/banner_familia.webp';
-import { ShieldCheck, Building2, Landmark, Scale, ChevronRight, MessageCircle, FileText, Users, Users2, Home } from 'lucide-react';
+import { ShieldCheck, Building2, Landmark, Scale, ChevronRight, MessageCircle, FileText, Users, Users2 } from 'lucide-react';
 
 import fachadaSorocaba from '../assets/images/edificio-avenida-paulista.jpeg';
 
@@ -132,7 +132,7 @@ const HomeStaging: React.FC = () => {
       <section className="py-12 bg-gray-900 text-white border-t border-white/10">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
           <div className="text-center md:text-left">
-            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Para clientes</p>
+            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Para clients</p>
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 font-bold uppercase text-xs tracking-widest transition-all">
               Preciso de atendimento
             </a>
