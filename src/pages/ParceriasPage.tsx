@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Calendar, Download, MessageSquare } from 'lucide-react';
+import { Download, MessageSquare } from 'lucide-react';
 
-const ParceriaContabil: React.FC = () => {
+const ParceriasPage: React.FC = () => {
   // Configuração automática do link de WhatsApp utilizando o número fixo homologado do escritório
   const whatsappUrgentLink = "https://wa.me/551531911432?text=Olá%20Dr.%20Francisco,%20cliquei%20no%20botão%20de%20Urgência%20do%20Hub%20de%20Parcerias%20e%20preciso%20de%20um%20suporte%20jurídico%20imediato.";
 
@@ -39,7 +39,7 @@ const ParceriaContabil: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* Seção Superior Original - Mantida Integramente */}
+      {/* Seção Superior Original */}
       <section className="bg-[#0b132b] pt-12 pb-12 text-center text-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-blue-400 font-semibold text-xs uppercase tracking-widest mb-3">
@@ -52,7 +52,7 @@ const ParceriaContabil: React.FC = () => {
         </div>
       </section>
 
-      {/* Seção de Conteúdo Original - Mantida Integramente */}
+      {/* Seção de Conteúdo Original */}
       <section className="py-12 bg-white text-justify text-gray-700 max-w-4xl mx-auto px-4 space-y-6">
         <p>
           As demandas que envolvem reestruturações societárias e a engenharia tributária exigem uma análise minuciosa dos riscos jurídicos para assegurar a blindagem patrimonial e a segurança dos atos praticados.
@@ -61,7 +61,7 @@ const ParceriaContabil: React.FC = () => {
           Nossa atuação oferece o suporte necessário em pareceres de sustentação e validação de viabilidade, garantindo total conformidade com a legislação vigente e proteção técnica para o assessor contábil.
         </p>
 
-        {/* INTEGRANDO A ESTRUTURA DUAS PORTAS DE CONVERSÃO DO PLANO ATUALIZADO */}
+        {/* ESTRUTURA DUAS PORTAS DE CONVERSÃO */}
         <div className="border-t pt-12 mt-12">
           <div className="text-center mb-10">
             <h3 className="text-xl md:text-2xl font-bold text-gray-900 uppercase tracking-wide">
@@ -121,7 +121,6 @@ const ParceriaContabil: React.FC = () => {
                   onSubmit={handleSubmit}
                   className="space-y-3 text-left bg-white p-4 border border-gray-100 rounded-sm"
                 >
-                  {/* Identificador fundamental para o Netlify Forms mapear os leads */}
                   <input type="hidden" name="form-name" value="download-checklist-parcerias" />
                   
                   <div>
@@ -202,4 +201,4 @@ const ParceriaContabil: React.FC = () => {
   );
 };
 
-export default ParceriaContabil;
+export default ParceriasPage;
