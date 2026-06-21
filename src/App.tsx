@@ -15,14 +15,11 @@ import AbipStaging from './pages/AbipStaging';
 import InventarioPage from './pages/InventarioPage';
 import ContatoStaging from './pages/ContatoStaging';
 
-// NOVA ROTA: Hub de Parcerias Estratégicas (Arquitetura 2026)
+// ROTA UNIFICADA: Hub de Parcerias Estratégicas com Contadores (Duas Portas)
 import ParceriasPage from './pages/ParceriasPage';
 
 // ROTA: Domine a Reforma Tributária
 import DomineAReformaTributariaPage from './pages/domine-a-reforma-tributaria';
-
-// NOVA ROTA: Camada II - Parceria Estratégica com Contabilidades
-import ParceriaContabil from './pages/ParceriaContabil';
 
 // NOVO FUNIL B2C 2026: Diagnóstico Inicial de Planejamento Sucessório
 import DiagnosticoSucessorioPage from './pages/DiagnosticoSucessorioPage';
@@ -44,12 +41,9 @@ function App() {
         
         <Route path="/domine-a-reforma-tributaria" element={<DomineAReformaTributariaPage />} />
         
-        {/* HUB DE PARCERIAS */}
+        {/* HUB DE PARCERIAS (CONTADORES) */}
         <Route path="/parcerias" element={<ParceriasPage />} />
         
-        {/* Rota para Contabilidades */}
-        <Route path="/parceria-contabil" element={<ParceriaContabil />} />
-
         {/* FUNIL DE CAPTAÇÃO E CARTÃO DIGITAL */}
         <Route path="/diagnostico-planejamento-sucessorio" element={<DiagnosticoSucessorioPage />} />
         <Route path="/cartao-digital" element={<CartaoDigital />} />

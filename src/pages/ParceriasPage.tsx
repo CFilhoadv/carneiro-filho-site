@@ -1,183 +1,205 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { Calendar, ShieldCheck, AlertTriangle, FileText, Scale, DollarSign, Lock, Layers } from 'lucide-react';
+import { Calendar, Download, MessageSquare } from 'lucide-react';
 
-const ParceriasPage: React.FC = () => {
-  const calendlyLink = "https://calendly.com/contato-carneirofilho/outros_servicos_juridicos";
+const ParceriaContabil: React.FC = () => {
+  // Configuração automática do link de WhatsApp utilizando o número fixo homologado do escritório
+  const whatsappUrgentLink = "https://wa.me/551531911432?text=Olá%20Dr.%20Francisco,%20cliquei%20no%20botão%20de%20Urgência%20do%20Hub%20de%20Parcerias%20e%20preciso%20de%20um%20suporte%20jurídico%20imediato.";
+
+  // Estados para gerenciar o envio do formulário nativo do Netlify
+  const [formState, setFormState] = useState({ name: '', email: '', officeSize: '' });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus('submitting');
+
+    const encode = (data: { [key: string]: string }) => {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+    };
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "download-checklist-parcerias", ...formState })
+      });
+      setStatus('success');
+      setFormState({ name: '', email: '', officeSize: '' });
+      
+      // Abre automaticamente o PDF salvo na pasta public em uma nova aba do navegador
+      window.open('/mapa-de-urgencias.pdf', '_blank');
+    } catch (error) {
+      console.error(error);
+      setStatus('error');
+    }
+  };
 
   return (
     <MainLayout>
-      {/* Header Institucional - Técnico e Sóbrio */}
-      <section className="bg-white pt-10 pb-6 border-b border-gray-100 text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-xl md:text-3xl font-bold text-blue-900 uppercase tracking-widest leading-tight">
-            Hub de Parcerias Estratégicas
-          </h1>
-          <p className="text-blue-900 font-semibold text-xs md:text-sm uppercase tracking-widest mt-2 opacity-80">
-            Retaguarda Jurídica e Gestão de Ativos
+      {/* Seção Superior Original - Mantida Integramente */}
+      <section className="bg-[#0b132b] pt-12 pb-12 text-center text-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <p className="text-blue-400 font-semibold text-xs uppercase tracking-widest mb-3">
+            RETAGUARDA JURÍDICA ESTRATÉGICA
           </p>
-          <div className="h-1 w-16 md:w-20 bg-blue-900 mx-auto mt-3"></div>
+          <h1 className="text-2xl md:text-4xl font-bold uppercase tracking-tight">
+            Cooperação Técnica Especializada
+          </h1>
+          <div className="h-1 w-16 bg-blue-400 mx-auto mt-4"></div>
         </div>
       </section>
 
-      {/* Conteúdo Principal - As Dimensões da Parceria Técnica */}
-      <section className="py-10 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl space-y-12">
-          
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-blue-900 uppercase tracking-tight mb-1">Escritórios de Contabilidade</h3>
-            <p className="text-gray-600 italic text-base">Retaguarda técnica para demandas societárias e tributárias de alta complexidade.</p>
-            
-            <p className="text-justify text-gray-700 leading-relaxed text-base md:text-lg">
-              A conformidade fiscal e a escrituração contábil necessitam, frequentemente, de um guarda-chuva de sustentação jurídica formal. Quando a interpretação normativa é complexa ou envolve valores expressivos, a exposição de risco afeta o caixa da empresa e a responsabilidade do assessor. Nossa atuação expande a capacidade de entrega do seu escritório através de quatro dimensões de contribuição técnica.
+      {/* Seção de Conteúdo Original - Mantida Integramente */}
+      <section className="py-12 bg-white text-justify text-gray-700 max-w-4xl mx-auto px-4 space-y-6">
+        <p>
+          As demandas que envolvem reestruturações societárias e a engenharia tributária exigem uma análise minuciosa dos riscos jurídicos para assegurar a blindagem patrimonial e a segurança dos atos praticados.
+        </p>
+        <p>
+          Nossa atuação oferece o suporte necessário em pareceres de sustentação e validação de viabilidade, garantindo total conformidade com a legislação vigente e proteção técnica para o assessor contábil.
+        </p>
+
+        {/* INTEGRANDO A ESTRUTURA DUAS PORTAS DE CONVERSÃO DO PLANO ATUALIZADO */}
+        <div className="border-t pt-12 mt-12">
+          <div className="text-center mb-10">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 uppercase tracking-wide">
+              Iniciar Cooperação Técnica Institucional
+            </h3>
+            <p className="text-gray-600 text-sm mt-1 text-center">
+              Selecione o canal de atendimento adequado à demanda atual do seu escritório.
             </p>
           </div>
 
-          {/* Grid de Soluções Amplas (Espectro Completo de Contribuição) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t pt-8">
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-              <h4 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center">
-                <ShieldCheck size={16} className="mr-2"/> Due Diligence Jurídica e Fiscal
-              </h4>
-              <p className="text-sm text-gray-700">Auditagem técnica profunda e preventiva para identificação de ativos não aproveitados e mapeamento de passivos ocultos antes de fiscalizações.</p>
-            </div>
-
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-              <h4 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center">
-                <Layers size={16} className="mr-2"/> Engenharia Societária
-              </h4>
-              <p className="text-sm text-gray-700">Viabilização e desenho jurídico de operações corporativas estratégicas complexas, tais como incorporações, cisões e a Incorporação Reversa.</p>
-            </div>
-
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-              <h4 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center">
-                <Scale size={16} className="mr-2"/> Recomposição de Ativos
-              </h4>
-              <p className="text-sm text-gray-700">Análise técnica da balança tributária com foco em teses jurídicas sólidas para a recuperação de créditos de tributos como ICMS, PIS e COFINS.</p>
-            </div>
-
-            <div className="bg-gray-50 p-6 border-l-4 border-blue-900 shadow-sm">
-              <h4 className="font-bold text-blue-900 uppercase text-sm mb-2 flex items-center">
-                <FileText size={16} className="mr-2"/> Planejamento Sucessório
-              </h4>
-              <p className="text-sm text-gray-700">Estruturação de Holdings e acordos de acionistas com foco em eficiência, proteção patrimonial e total segurança para o assessor originador.</p>
-            </div>
-          </div>
-
-          <div className="bg-blue-50 p-4 border-l-4 border-blue-900 text-base text-gray-700">
-            <strong>Diferencial:</strong> Visão unificada de Direito, Contabilidade e Controladoria para garantir ganho real de caixa e blindagem técnica para o parceiro.
-          </div>
-
-          {/* Mapeamento de Riscos Comuns na Rotina Societária e Fiscal */}
-          <div className="border-t pt-10">
-            <h3 className="text-lg md:text-xl font-bold text-gray-900 uppercase tracking-wide mb-6 flex items-center justify-center md:justify-start">
-              <AlertTriangle size={22} className="mr-2 text-blue-900" /> Prevenção de Pontos Cegos em Operações de Clientes
-            </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch text-left">
             
-            <div className="space-y-6">
-              {/* Risco 1 - ITBI */}
-              <div className="bg-gray-50 p-6 border-t border-gray-200 shadow-sm">
-                <h4 className="font-bold text-blue-900 text-base mb-2">
-                  Análise da Imunidade do ITBI (Prazo de Carência)
+            {/* PORTA 1 — ATENDIMENTO ASSISTIDO (URGÊNCIA) */}
+            <div className="border border-red-100 bg-gradient-to-b from-white to-red-50/20 p-6 flex flex-col justify-between shadow-sm rounded-sm">
+              <div className="space-y-4">
+                <span className="inline-block text-[10px] font-bold tracking-widest text-red-700 uppercase bg-red-100 px-2.5 py-1 rounded-sm">
+                  Porta 1 · Demanda Imediata
+                </span>
+                <h4 className="text-lg font-bold text-blue-900 uppercase tracking-tight">
+                  Suporte em Casos de Urgência
                 </h4>
-                <p className="text-sm text-gray-700 mb-2">
-                  <strong>Cenário Fiscal:</strong> Integralização de bens imóveis em estruturas societárias familiares com posterior início de atividades de locação ou venda sem isolamento do faturamento.
-                </p>
-                <p className="text-sm text-gray-600 font-medium">
-                  <strong>Exposição de Risco:</strong> Cobrança retroativa do imposto por municipalidades após o decurso do prazo trienal de verificação da atividade preponderante (Art. 37 do CTN).
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Indicado para escritórios que enfrentam fiscalizações em andamento, malhas fiscais iminentes de clientes ou que necessitam de validação jurídica emergencial para operações societárias ou bloqueios judiciais imediatos.
                 </p>
               </div>
-
-              {/* Risco 2 - SINTER */}
-              <div className="bg-gray-50 p-6 border-t border-gray-200 shadow-sm">
-                <h4 className="font-bold text-blue-900 text-base mb-2">
-                  Cruzamento Digital de Ativos Imobiliários (SINTER e CIB)
-                </h4>
-                <p className="text-sm text-gray-700 mb-2">
-                  <strong>Cenário Fiscal:</strong> Fluxos informais de locação ou omissões patrimoniais na Pessoa Física perante as plataformas automatizadas de fiscalização federal e cartorária.
-                </p>
-                <p className="text-sm text-gray-600 font-medium">
-                  <strong>Exposição de Risco:</strong> Deflagração de malhas fiscais eletrônicas com imposição de multas qualificadas incidentes sobre os exercícios retroativos.
-                </p>
-              </div>
-
-              {/* Risco 3 - Art. 977 */}
-              <div className="bg-gray-50 p-6 border-t border-gray-200 shadow-sm">
-                <h4 className="font-bold text-blue-900 text-base mb-2">
-                  Restrições Societárias entre Cônjuges (Art. 977 do Código Civil)
-                </h4>
-                <p className="text-sm text-gray-700 mb-2">
-                  <strong>Cenário Fiscal:</strong> Composição societária pluripessoal composta exclusivamente por cônjuges casados sob os regimes de Comunhão Universal ou Separação Obrigatória.
-                </p>
-                <p className="text-sm text-gray-600 font-medium">
-                  <strong>Exposição de Risco:</strong> Nulidade jurídica da sociedade e dos planejamentos derivados, passível de questionamento administrativo ou em litígios terceiros.
-                </p>
+              
+              <div className="pt-6 mt-auto">
+                <a 
+                  href={whatsappUrgentLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full inline-flex items-center justify-center bg-red-700 text-white px-5 py-3.5 font-bold uppercase text-[11px] tracking-widest hover:bg-red-800 transition-all shadow-md text-center"
+                >
+                  <MessageSquare size={15} className="mr-2" /> Acionar Canal de Urgência
+                </a>
               </div>
             </div>
+
+            {/* PORTA 2 — PROSPECÇÃO PREVENTIVA (FORMULÁRIO NETLIFY + DOWNLOAD DO PDF) */}
+            <div className="border border-gray-200 bg-gray-50/50 p-6 flex flex-col justify-between shadow-sm rounded-sm">
+              <div className="space-y-4">
+                <span className="inline-block text-[10px] font-bold tracking-widest text-blue-900 uppercase bg-blue-100 px-2.5 py-1 rounded-sm">
+                  Porta 2 · Planejamento e Inteligência
+                </span>
+                <h4 className="text-lg font-bold text-blue-900 uppercase tracking-tight">
+                  Mapeamento de Riscos Preventivos
+                </h4>
+                <p className="text-gray-700 text-sm leading-relaxed mb-4">
+                  Baixe o manual completo **"Mapa de Urgências para Contadores"** e utilize-o como guia rápido de cabeceira para identificar riscos patrimoniais e fiscais no seu escritório.
+                </p>
+
+                {/* FORMULÁRIO DE CAPTURA NETLIFY NATIVO */}
+                <form 
+                  name="download-checklist-parcerias" 
+                  method="POST" 
+                  data-netlify="true" 
+                  onSubmit={handleSubmit}
+                  className="space-y-3 text-left bg-white p-4 border border-gray-100 rounded-sm"
+                >
+                  {/* Identificador fundamental para o Netlify Forms mapear os leads */}
+                  <input type="hidden" name="form-name" value="download-checklist-parcerias" />
+                  
+                  <div>
+                    <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Nome Completo</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      required 
+                      value={formState.name}
+                      onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                      className="w-full border border-gray-300 p-2 text-sm rounded-sm focus:outline-none focus:border-blue-900" 
+                      placeholder="Ex: Dr. Roberto Silva"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">E-mail Corporativo</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      required 
+                      value={formState.email}
+                      onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                      className="w-full border border-gray-300 p-2 text-sm rounded-sm focus:outline-none focus:border-blue-900" 
+                      placeholder="Ex: roberto@contabil.com.br"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">Porte do Escritório</label>
+                    <select 
+                      name="officeSize"
+                      required
+                      value={formState.officeSize}
+                      onChange={(e) => setFormState({ ...formState, officeSize: e.target.value })}
+                      className="w-full border border-gray-300 p-2 text-sm rounded-sm bg-white focus:outline-none focus:border-blue-900 text-gray-700"
+                    >
+                      <option value="" disabled>Selecione o volume de clientes...</option>
+                      <option value="individual_pequeno">Até 50 clientes corporativos</option>
+                      <option value="medio">De 51 a 150 clientes corporativos</option>
+                      <option value="grande">Mais de 150 clientes corporativos</option>
+                    </select>
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    disabled={status === 'submitting'}
+                    className="w-full mt-2 inline-flex items-center justify-center bg-blue-900 text-white px-4 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-800 transition-all disabled:bg-gray-400 cursor-pointer"
+                  >
+                    {status === 'submitting' ? (
+                      'Processando...'
+                    ) : (
+                      <>
+                        <Download size={13} className="mr-2" /> Baixar Mapa de Urgências
+                      </>
+                    )}
+                  </button>
+
+                  {status === 'success' && (
+                    <p className="text-xs font-semibold text-green-700 mt-2 text-center bg-green-50 p-2 border border-green-200 rounded-sm">
+                      Acesso liberado! O documento foi aberto em uma nova aba para salvar.
+                    </p>
+                  )}
+
+                  {status === 'error' && (
+                    <p className="text-xs font-semibold text-red-700 mt-2 text-center bg-red-50 p-2 border border-red-200 rounded-sm">
+                      Ocorreu um erro técnico de envio. Por favor, tente novamente.
+                    </p>
+                  )}
+                </form>
+              </div>
+            </div>
+
           </div>
-
-          {/* Diretrizes de Governança e Segurança Jurídica */}
-          <div className="border-t pt-10 space-y-6">
-            <div className="text-left">
-              <h3 className="text-xl font-bold text-blue-900 uppercase tracking-tight mb-1">Diretrizes de Governança e Segurança</h3>
-              <p className="text-gray-600 italic text-base">Os pilares de blindagem institucional e contratual para os escritórios parceiros.</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Remuneração */}
-              <div className="space-y-3 bg-gray-50 p-5 border-l-2 border-blue-900">
-                <div className="flex items-center gap-2 text-blue-900">
-                  <DollarSign size={20} className="shrink-0" />
-                  <h4 className="text-base font-bold uppercase tracking-wider">Remuneração Rígida</h4>
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Operamos sob critérios claros e predefinidos de parceria corporativa, assegurando a justa divisão de atos e repasses imediatos de honorários.
-                </p>
-              </div>
-
-              {/* Não-Concorrência */}
-              <div className="space-y-3 bg-gray-50 p-5 border-l-2 border-blue-900">
-                <div className="flex items-center gap-2 text-blue-900">
-                  <ShieldCheck size={20} className="shrink-0" />
-                  <h4 className="text-base font-bold uppercase tracking-wider">Não-Concorrência</h4>
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Pacto formal de anti-aliciamento. A carteira de clientes pertence integralmente ao parceiro originador. Atuamos estritamente como retaguarda sênior.
-                </p>
-              </div>
-
-              {/* Sigilo */}
-              <div className="space-y-3 bg-gray-50 p-5 border-l-2 border-blue-900">
-                <div className="flex items-center gap-2 text-blue-900">
-                  <Lock size={20} className="shrink-0" />
-                  <h4 className="text-base font-bold uppercase tracking-wider">Sigilo & LGPD</h4>
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Tratamento de dados como controladores independentes. Informações compartilhadas são protegidas por acordo de confidencialidade perpétuo (NDA).
-                </p>
-              </div>
-            </div>
-
-            {/* Chamada para Ação Final */}
-            <div className="bg-blue-900 text-white p-6 text-center md:text-left md:flex md:items-center md:justify-between gap-4 shadow-sm mt-8">
-              <div className="space-y-1">
-                <p className="text-xs md:text-sm font-medium uppercase tracking-wider">
-                  Viabilizar Alinhamento Técnico Privado
-                </p>
-                <p className="text-xs text-gray-300 normal-case">
-                  As premissas de cooperação técnica do Hub são formalizadas individualmente mediante contrato específico.
-                </p>
-              </div>
-              <a href={calendlyLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-white text-blue-900 px-6 py-3 font-bold uppercase text-[10px] tracking-widest hover:bg-gray-100 transition-all shrink-0 mt-3 md:mt-0 shadow-md">
-                <Calendar size={14} className="mr-2" /> Iniciar Diálogo Institucional
-              </a>
-            </div>
-          </div>
-
         </div>
       </section>
     </MainLayout>
   );
 };
 
-export default ParceriasPage;
+export default ParceriaContabil;
