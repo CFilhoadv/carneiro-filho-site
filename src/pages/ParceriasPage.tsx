@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Script from 'next/script';
 import MainLayout from '../components/layout/MainLayout';
 import { Download, MessageSquare } from 'lucide-react';
 
@@ -9,6 +10,15 @@ const ParceriasPage: React.FC = () => {
   // Estados para gerenciar o envio do formulário nativo do Netlify
   const [formState, setFormState] = useState({ name: '', email: '', officeSize: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  // Função para disparar a conversão do Google Ads no clique do WhatsApp
+  const handleWhatsappClick = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17786597651/kyYDCKup6MMcEJPip6FC'
+      });
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,6 +49,20 @@ const ParceriasPage: React.FC = () => {
 
   return (
     <MainLayout>
+      {/* Carga Otimizada da Tag Global do Google (gtag.js) */}
+      <Script 
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17786597651" 
+        strategy="afterInteractive" 
+      />
+      <Script id="google-ads-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17786597651');
+        `}
+      </Script>
+
       {/* Seção Superior Original */}
       <section className="bg-[#0b132b] pt-12 pb-12 text-center text-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -58,7 +82,7 @@ const ParceriasPage: React.FC = () => {
           As demandas que envolvem reestruturações societárias e a engenharia tributária exigem uma análise minuciosa dos riscos jurídicos para assegurar a blindagem patrimonial e a segurança dos atos praticados.
         </p>
         <p>
-          Nossa atuação oferece o suporte necessário em pareceres de sustentação e validação de viabilidade, garantindo total conformidade com a legislação vigente e proteção técnica para o assessor contábil.
+          Nossa atuação offers o suporte necessário em pareceres de sustentação e validação de viabilidade, garantindo total conformidade com a legislação vigente e proteção técnica para o assessor contábil.
         </p>
 
         {/* ESTRUTURA DUAS PORTAS DE CONVERSÃO */}
@@ -84,7 +108,7 @@ const ParceriasPage: React.FC = () => {
                   Suporte em Casos de Urgência
                 </h4>
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  Indicado para escritórios que enfrentam fiscalizações em andamento, malhas fiscais iminentes de clientes ou que necessitam de validação jurídica emergencial para operações societárias ou bloqueios judiciais imediatos.
+                  Indicado para escritórios que enfrentam fiscalizações em shopping, malhas fiscais iminentes de clientes ou que necessitam de validação jurídica emergencial para operações societárias ou bloqueios judiciais imediatos.
                 </p>
               </div>
               
@@ -93,6 +117,7 @@ const ParceriasPage: React.FC = () => {
                   href={whatsappUrgentLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
+                  onClick={handleWhatsappClick}
                   className="w-full inline-flex items-center justify-center bg-red-700 text-white px-5 py-3.5 font-bold uppercase text-[11px] tracking-widest hover:bg-red-800 transition-all shadow-md text-center"
                 >
                   <MessageSquare size={15} className="mr-2" /> Acionar Canal de Urgência
@@ -139,7 +164,7 @@ const ParceriasPage: React.FC = () => {
                   <div>
                     <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">E-mail Corporativo</label>
                     <input 
-                      type="email" 
+                      type="type" 
                       name="email"
                       required 
                       value={formState.email}
