@@ -4,7 +4,7 @@ import MainLayout from '../components/layout/MainLayout';
 import { 
   MessageCircle, Landmark, ShieldCheck, 
   ChevronRight, HeartHandshake, Gavel, 
-  Building2, Briefcase 
+  Building2, Briefcase, Scale 
 } from 'lucide-react';
 
 const ServicosStaging: React.FC = () => {
@@ -16,6 +16,18 @@ const ServicosStaging: React.FC = () => {
       descricao: "Resolução técnica de conflitos familiares e organização sucessória com foco em segurança jurídica e preservação de direitos.",
       itens: ["Inventários e Partilhas", "Divórcios e União Estável", "Pensão Alimentícia", "Guarda e Convivência"],
       icon: <HeartHandshake size={36} />,
+    },
+    {
+      titulo: "Direito Empresarial e Societário",
+      descricao: "Atuação estratégica voltada à organização, proteção e continuidade das atividades empresariais, com foco na prevenção e resolução de conflitos societários.",
+      itens: ["Conflitos entre Sócios", "Retirada e Exclusão de Sócios", "Apuração de Haveres", "Contratos Empresariais", "Acordos de Quotistas", "Reorganização Societária"],
+      icon: <Building2 size={36} />,
+    },
+    {
+      titulo: "Direito Tributário e Fiscal",
+      descricao: "Assessoria técnica preventiva e contenciosa para pessoas físicas e empresas em questões tributárias, fiscais e administrativas.",
+      itens: ["Autos de Infração", "Execuções Fiscais", "Defesas Administrativas", "Parcelamentos Tributários", "Planejamento Tributário"],
+      icon: <Scale size={36} />,
     },
     {
       titulo: "Direito Previdenciário (INSS)",
