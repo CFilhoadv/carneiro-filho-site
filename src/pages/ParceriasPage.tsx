@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Script from 'next/script';
+import React, { useState, useEffect } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import { Download, MessageSquare } from 'lucide-react';
 
@@ -10,6 +9,27 @@ const ParceriasPage: React.FC = () => {
   // Estados para gerenciar o envio do formulário nativo do Netlify
   const [formState, setFormState] = useState({ name: '', email: '', officeSize: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+
+  // Injeção segura e nativa das Tags do Google Ads no ecossistema Vite/React
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // 1. Carrega o script externo do Google Analytics / Ads
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=AW-17786597651";
+      script.async = true;
+      document.head.appendChild(script);
+
+      // 2. Inicializa a configuração global da conta
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      const gtagFn = function () {
+        (window as any).dataLayer.push(arguments);
+      };
+      (window as any).gtag = (window as any).gtag || gtagFn;
+      
+      (window as any).gtag('js', new Date());
+      (window as any).gtag('config', 'AW-17786597651');
+    }
+  }, []);
 
   // Função para disparar a conversão do Google Ads no clique do WhatsApp
   const handleWhatsappClick = () => {
@@ -49,20 +69,6 @@ const ParceriasPage: React.FC = () => {
 
   return (
     <MainLayout>
-      {/* Carga Otimizada da Tag Global do Google (gtag.js) */}
-      <Script 
-        src="https://www.googletagmanager.com/gtag/js?id=AW-17786597651" 
-        strategy="afterInteractive" 
-      />
-      <Script id="google-ads-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17786597651');
-        `}
-      </Script>
-
       {/* Seção Superior Original */}
       <section className="bg-[#0b132b] pt-12 pb-12 text-center text-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -82,7 +88,7 @@ const ParceriasPage: React.FC = () => {
           As demandas que envolvem reestruturações societárias e a engenharia tributária exigem uma análise minuciosa dos riscos jurídicos para assegurar a blindagem patrimonial e a segurança dos atos praticados.
         </p>
         <p>
-          Nossa atuação offers o suporte necessário em pareceres de sustentação e validação de viabilidade, garantindo total conformidade com a legislação vigente e proteção técnica para o assessor contábil.
+          Nossa atuação oferece o suporte necessário em pareceres de sustentação e validação de viabilidade, garantindo total conformidade com a legislação vigente e proteção técnica para o assessor contábil.
         </p>
 
         {/* ESTRUTURA DUAS PORTAS DE CONVERSÃO */}
@@ -108,7 +114,7 @@ const ParceriasPage: React.FC = () => {
                   Suporte em Casos de Urgência
                 </h4>
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  Indicado para escritórios que enfrentam fiscalizações em shopping, malhas fiscais iminentes de clientes ou que necessitam de validação jurídica emergencial para operações societárias ou bloqueios judiciais imediatos.
+                  Indicado para escritórios que enfrentam fiscalizações em andamento, malhas fiscais iminentes de clientes ou que necessitam de validação jurídica emergencial para operações societárias ou bloqueios judiciais imediatos.
                 </p>
               </div>
               
@@ -164,7 +170,7 @@ const ParceriasPage: React.FC = () => {
                   <div>
                     <label className="block text-[11px] font-bold text-gray-700 uppercase mb-1">E-mail Corporativo</label>
                     <input 
-                      type="type" 
+                      type="email" 
                       name="email"
                       required 
                       value={formState.email}
