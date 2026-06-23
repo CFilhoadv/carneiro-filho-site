@@ -35,26 +35,41 @@ const HomeStaging: React.FC = () => {
           <h3 className="text-center text-blue-900 font-bold text-xl uppercase tracking-widest mb-8">Como podemos te atender?</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             
-            {/* 70% - ATENDIMENTO RÁPIDO - INCLUINDO CIDADÃO E EMPRESAS */}
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-6 border-2 border-green-500 rounded-sm hover:bg-green-50 transition-colors text-center group">
-              <MessageCircle className="text-green-600 mb-4" size={32} />
-              <span className="font-bold text-gray-900 uppercase text-base mb-2">Atendimento rápido (WhatsApp)</span>
-              <p className="text-gray-700 text-sm leading-relaxed">Para o cidadão e empresas locais que buscam orientação ágil e solução para problemas do dia a dia.</p>
-            </a>
+            {/* ATENDIMENTO RÁPIDO */}
+            <div className="flex flex-col p-6 border-2 border-green-500 rounded-sm text-center">
+              <div className="flex flex-col items-center flex-grow">
+                <MessageCircle className="text-green-600 mb-4" size={32} />
+                <span className="font-bold text-gray-900 uppercase text-base mb-2">Atendimento rápido (WhatsApp)</span>
+                <p className="text-gray-700 text-sm leading-relaxed mb-6">Para o cidadão e empresas locais que buscam orientação ágil e solução para problemas do dia a dia.</p>
+              </div>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="w-full bg-green-600 text-white py-3 font-bold uppercase text-xs hover:bg-green-700 transition-colors">
+                Falar no WhatsApp
+              </a>
+            </div>
 
-            {/* 20% - PLANEJAMENTO / PROTEÇÃO */}
-            <Link to="/planejamento-sucessorio" className="flex flex-col items-center p-6 border-2 border-blue-900 rounded-sm hover:bg-blue-50 transition-colors text-center group">
-              <ShieldCheck className="text-blue-900 mb-4" size={32} />
-              <span className="font-bold text-gray-900 uppercase text-base mb-2">Planejamento Sucessório / Proteção Patrimonial</span>
-              <p className="text-gray-700 text-sm leading-relaxed">Para quem possui imóveis ou empresas e busca soluções estruturadas com segurança jurídica.</p>
-            </Link>
+            {/* PLANEJAMENTO */}
+            <div className="flex flex-col p-6 border-2 border-blue-900 rounded-sm text-center">
+              <div className="flex flex-col items-center flex-grow">
+                <ShieldCheck className="text-blue-900 mb-4" size={32} />
+                <span className="font-bold text-gray-900 uppercase text-base mb-2">Planejamento Sucessório / Proteção Patrimonial</span>
+                <p className="text-gray-700 text-sm leading-relaxed mb-6">Para quem possui imóveis ou empresas e busca soluções estruturadas com segurança jurídica.</p>
+              </div>
+              <Link to="/planejamento-sucessorio" className="w-full bg-blue-900 text-white py-3 font-bold uppercase text-xs hover:bg-blue-800 transition-colors">
+                Conhecer Soluções
+              </Link>
+            </div>
 
-            {/* 10% - PARCERIAS */}
-            <Link to="/parcerias" className="flex flex-col items-center p-6 border-2 border-amber-500 rounded-sm hover:bg-amber-50 transition-colors text-center group">
-              <Users className="text-amber-600 mb-4" size={32} />
-              <span className="font-bold text-gray-900 uppercase text-base mb-2">Parcerias Estratégicas</span>
-              <p className="text-gray-700 text-sm leading-relaxed">Para escritórios de contabilidade que demandam uma retaguarda jurídica e societária de alta complexidade.</p>
-            </Link>
+            {/* PARCERIAS */}
+            <div className="flex flex-col p-6 border-2 border-amber-500 rounded-sm text-center">
+              <div className="flex flex-col items-center flex-grow">
+                <Users className="text-amber-600 mb-4" size={32} />
+                <span className="font-bold text-gray-900 uppercase text-base mb-2">Parcerias Estratégicas</span>
+                <p className="text-gray-700 text-sm leading-relaxed mb-6">Para escritórios de contabilidade que demandam uma retaguarda jurídica e societária de alta complexidade.</p>
+              </div>
+              <Link to="/parcerias" className="w-full bg-amber-600 text-white py-3 font-bold uppercase text-xs hover:bg-amber-700 transition-colors">
+                Acessar Hub de Parcerias
+              </Link>
+            </div>
 
           </div>
         </div>
@@ -86,8 +101,7 @@ const HomeStaging: React.FC = () => {
               </a>
             ))}
           </div>
-
-          {/* BOTÃO PRINCIPAL COM MICROTEXTO */}
+          
           <div className="mt-12 text-center">
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-[#25D366] text-white px-12 py-5 rounded-sm font-bold uppercase tracking-[0.15em] text-xs md:text-sm hover:bg-green-700 transition-all shadow-xl group">
               Iniciar Atendimento Digital <ChevronRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
@@ -99,16 +113,12 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* UNIDADES - ENDEREÇO COMPLETO E AVISO DE AGENDAMENTO */}
+      {/* UNIDADES */}
       <section className="py-16 bg-white border-t border-gray-50">
         <div className="container mx-auto px-4 max-w-2xl">
           <div className="flex flex-col items-center">
             <div className="w-full bg-gray-50 rounded-sm shadow-md mb-6 border-b-4 border-blue-900 overflow-hidden flex items-center justify-center">
-              <img 
-                src={fachadaSorocaba} 
-                alt="Edifício Avenida Paulista - Campolim" 
-                className="w-auto h-auto max-h-[550px] md:max-h-[650px] object-contain"
-              />
+              <img src={fachadaSorocaba} alt="Edifício Avenida Paulista - Campolim" className="w-auto h-auto max-h-[550px] md:max-h-[650px] object-contain" />
             </div>
             <div className="w-full px-2 text-center">
               <h4 className="font-bold text-blue-900 text-xl uppercase tracking-widest mb-1">Sorocaba</h4>
@@ -128,7 +138,7 @@ const HomeStaging: React.FC = () => {
         </div>
       </section>
 
-      {/* RODAPÉ DA HOME */}
+      {/* RODAPÉ */}
       <section className="py-12 bg-gray-900 text-white border-t border-white/10">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
           <div className="text-center md:text-left">
