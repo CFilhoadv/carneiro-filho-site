@@ -1,6 +1,5 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { ShieldCheck, Building2, Landmark, Scale, FileText, Users, Users2 } from 'lucide-react';
 import '../index.css';
 
 const PlanejamentoSucessorioStaging: React.FC = () => {
