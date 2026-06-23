@@ -56,7 +56,9 @@ const ParceriasPage: React.FC = () => {
               <div className="space-y-4">
                 <span className="inline-block text-[10px] font-bold tracking-widest text-red-700 uppercase bg-red-100 px-2.5 py-1 rounded-sm">Porta 1 · Demanda Imediata</span>
                 <h4 className="text-lg font-bold text-blue-900 uppercase tracking-tight">Suporte em Casos de Urgência</h4>
-                <p className="text-gray-700 text-sm leading-relaxed">Indicado para escritórios que enfrentam fiscalizações em andamento ou necessitam de validação jurídica emergencial para operações societárias.</p>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Indicado para situações em que a demanda ultrapassa a esfera contábil e exige análise jurídica rápida para apoiar decisões, reduzir riscos e oferecer segurança ao cliente.
+                </p>
               </div>
               <div className="pt-6 mt-auto">
                 <a href={whatsappUrgentLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsappClick} className="w-full inline-flex items-center justify-center bg-red-700 text-white px-5 py-3.5 font-bold uppercase text-[11px] tracking-widest hover:bg-red-800 transition-all shadow-md text-center">
