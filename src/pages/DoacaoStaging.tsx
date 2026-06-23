@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
-import { Phone, ClipboardCheck } from 'lucide-react';
+import { ClipboardCheck } from 'lucide-react';
 
 const DoacaoStaging: React.FC = () => {
-  const telSorocaba = "tel:+551531911432";
-  const telSP = "tel:+551142106194";
-
   return (
     <MainLayout>
       {/* Cabeçalho Padronizado */}
@@ -69,81 +66,32 @@ const DoacaoStaging: React.FC = () => {
               </div>
             </div>
 
-            {/* Bloco de Atendimento Padronizado */}
-            <div className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-gray-100">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* CARD SOROCABA E REGIÃO */}
-                <div className="bg-blue-900 p-6 md:p-8 rounded-sm text-white shadow-lg flex flex-col justify-between border-t-4 border-blue-400">
-                  <div>
-                    <h3 className="font-bold uppercase tracking-[0.2em] text-xs md:text-sm mb-1 border-blue-800 pb-1 text-blue-200 text-left">
-                      Sorocaba e região • Diagnóstico Digital
-                    </h3>
-                    <p className="text-blue-100 text-[10px] md:text-xs leading-relaxed mb-6 italic opacity-80 text-left">
-                      Preencha o diagnóstico para iniciarmos sua análise individualizada.
-                    </p>
-                  </div>
+            {/* CTA ÚNICO DE CONVERSÃO */}
+            <div className="mt-12 md:mt-16 pt-10 border-t border-gray-100 text-center">
+              <h3 className="text-xl font-bold text-blue-900 mb-6 uppercase tracking-widest">Deseja analisar seu patrimônio?</h3>
+              <Link
+                to="/diagnostico-planejamento-sucessorio"
+                className="inline-flex items-center justify-center bg-blue-900 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-blue-800 transition-all shadow-lg"
+              >
+                <ClipboardCheck size={20} className="mr-2" /> Iniciar Diagnóstico Online
+              </Link>
+            </div>
 
-                  <div className="space-y-3">
-                    <Link
-                      to="/diagnostico-planejamento-sucessorio"
-                      className="flex flex-col items-center justify-center bg-green-600 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-green-700 transition-all shadow-md group"
-                    >
-                      <div className="flex items-center">
-                        <ClipboardCheck size={16} className="mr-2" /> Iniciar Diagnóstico Online
-                      </div>
-                    </Link>
+            {/* Navegação Interna */}
+            <div className="mt-12 flex flex-col items-center space-y-4">
+              <Link
+                to="/planejamento-sucessorio"
+                className="text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:underline flex items-center"
+              >
+                ← Voltar para Planejamento Sucessório
+              </Link>
 
-                    <p className="text-[9px] text-blue-200 text-center leading-tight">
-                      Preencha o diagnóstico para termos os dados iniciais. Após o envio, você agendará a reunião de devolutiva.
-                    </p>
-
-                    <a
-                      href={telSorocaba}
-                      className="flex items-center justify-center bg-blue-800 text-white py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-all shadow-md border border-blue-400"
-                    >
-                      <Phone size={16} className="mr-2" /> (15) 3191-1432
-                    </a>
-                  </div>
-                </div>
-
-                {/* UNIDADE SÃO PAULO */}
-                <div className="bg-gray-50 p-6 md:p-8 rounded-sm border border-gray-200 flex flex-col justify-between shadow-sm text-left">
-                  <div>
-                    <h3 className="font-bold text-blue-900 uppercase tracking-[0.2em] text-xs md:text-sm mb-3 md:mb-4 border-b border-gray-200 pb-2">
-                      São Paulo • Administrativo
-                    </h3>
-                    <p className="text-gray-600 text-[10px] md:text-xs leading-relaxed mb-6 italic">
-                      Suporte estratégico especializado para gestão de ativos.
-                    </p>
-                  </div>
-
-                  <div className="space-y-3">
-                    <a
-                      href={telSP}
-                      className="flex items-center justify-center bg-white text-blue-900 py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] border-2 border-blue-900 hover:bg-gray-100 transition-all shadow-sm"
-                    >
-                      <Phone size={16} className="mr-2" /> (11) 4210-6194
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Navegação Interna */}
-              <div className="mt-12 flex flex-col items-center space-y-4">
-                <Link
-                  to="/planejamento-sucessorio"
-                  className="text-blue-900 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:underline flex items-center"
-                >
-                  ← Voltar para Planejamento Sucessório
-                </Link>
-
-                <Link
-                  to="/servicos"
-                  className="text-gray-400 hover:text-gray-600 font-bold uppercase tracking-widest text-[9px] md:text-[10px] transition-all"
-                >
-                  Ver todos os serviços
-                </Link>
-              </div>
+              <Link
+                to="/servicos"
+                className="text-gray-400 hover:text-gray-600 font-bold uppercase tracking-widest text-[9px] md:text-[10px] transition-all"
+              >
+                Ver todos os serviços
+              </Link>
             </div>
           </div>
         </div>
