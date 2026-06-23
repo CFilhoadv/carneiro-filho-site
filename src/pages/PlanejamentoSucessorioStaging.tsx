@@ -57,27 +57,27 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
           </div>
         </section>
 
-        {/* SOLUÇÕES TÉCNICAS */}
+        {/* SOLUÇÕES TÉCNICAS (LINKS CORRIGIDOS PARA AS ROTAS DO APP.TSX) */}
         <section className="py-12">
           <h2 className="text-2xl font-bold text-blue-900 uppercase mb-8">Soluções Técnicas</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/DoacaoStaging" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
+            <a href="/planejamento-sucessorio/doacao" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
               <h3 className="text-lg font-bold text-blue-900 mb-2">DOAÇÃO COM USUFRUTO</h3>
               <p className="text-sm text-gray-600">Antecipação de herança com orientação técnica sobre posse e renda para os pais.</p>
             </a>
-            <a href="/TestamentosStaging" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
+            <a href="/planejamento-sucessorio/testamentos" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
               <h3 className="text-lg font-bold text-blue-900 mb-2">TESTAMENTOS</h3>
               <p className="text-sm text-gray-600">Organização da vontade com segurança jurídica e análise de sucessão.</p>
             </a>
-            <a href="/HoldingStaging" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
+            <a href="/planejamento-sucessorio/holding" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
               <h3 className="text-lg font-bold text-blue-900 mb-2">HOLDING FAMILIAR</h3>
               <p className="text-sm text-gray-600">Estruturação para organização de bens e busca por eficiência tributária.</p>
             </a>
-            <a href="/AbipStaging" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
+            <a href="/planejamento-sucessorio/abip" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
               <h3 className="text-lg font-bold text-blue-900 mb-2">GESTÃO PATRIMONIAL (ABIP)</h3>
               <p className="text-sm text-gray-600">Administração técnica de ativos próprios conforme normas vigentes.</p>
             </a>
-            <a href="/InventarioPage" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
+            <a href="/planejamento-sucessorio/inventario" className="p-6 border border-gray-200 hover:border-blue-900 transition-all block rounded-sm">
               <h3 className="text-lg font-bold text-blue-900 mb-2">INVENTÁRIO E PARTILHA</h3>
               <p className="text-sm text-gray-600">Regularização de bens quando não houve planejamento sucessório prévio.</p>
             </a>
@@ -91,7 +91,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
           <div className="mb-6">
             <a href="tel:+551531911432" className="text-xl font-bold text-blue-900 underline">(15) 3191-1432</a>
           </div>
-          <a href="/diagnostico-online" className="inline-block bg-blue-900 text-white px-8 py-3 rounded font-bold hover:bg-blue-800 transition">
+          <a href="/diagnostico-planejamento-sucessorio" className="inline-block bg-blue-900 text-white px-8 py-3 rounded font-bold hover:bg-blue-800 transition">
             Iniciar Mapeamento do Patrimônio →
           </a>
         </section>
