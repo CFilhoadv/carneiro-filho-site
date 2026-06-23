@@ -35,7 +35,7 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
           </div>
         </section>
 
-        {/* DIFERENCIAIS TÉCNICOS (NOVO BLOCO DE AUTORIDADE) */}
+        {/* DIFERENCIAIS TÉCNICOS */}
         <section className="py-12 bg-gray-50 rounded-lg">
           <div className="grid md:grid-cols-3 gap-8 px-6 text-center">
             <div>
@@ -85,12 +85,8 @@ const PlanejamentoSucessorioStaging: React.FC = () => {
 
         {/* CTA FINAL */}
         <section className="py-12 text-center bg-gray-100 rounded-lg border-l-4 border-blue-900">
-          <h2 className="text-2xl font-bold text-blue-900 mb-4">Pronto para estruturar seu planejamento?</h2>
-          <p className="mb-6 text-gray-700">Agende uma conversa técnica para avaliar seu cenário patrimonial.</p>
-          <div className="mb-6">
-            <a href="tel:+551531911432" className="text-xl font-bold text-blue-900 underline">(15) 3191-1432</a>
-          </div>
-          <a href="/diagnostico-planejamento-sucessorio" className="inline-block bg-blue-900 text-white px-8 py-3 rounded font-bold hover:bg-blue-800 transition">
+          <h2 className="text-2xl font-bold text-blue-900 mb-6">Pronto para estruturar seu planejamento?</h2>
+          <a href="/diagnostico-planejamento-sucessorio" className="inline-block bg-blue-900 text-white px-8 py-4 rounded font-bold text-lg hover:bg-blue-800 transition">
             Agendar minha reunião técnica →
           </a>
         </section>
